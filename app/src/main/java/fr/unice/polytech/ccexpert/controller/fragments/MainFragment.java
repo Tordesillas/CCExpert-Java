@@ -2,17 +2,20 @@ package fr.unice.polytech.ccexpert.controller.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
-import fr.unice.polytech.ccexpert.view.MainAdapter;
+import fr.unice.polytech.ccexpert.view.CardAdapter;
 
 public class MainFragment extends Fragment {
     public static MainFragment newInstance() {
@@ -29,14 +32,30 @@ public class MainFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle bundle) {
-        List<String> titles = new ArrayList<>();
-        titles.add("Héros");
-        titles.add("Simulateurs");
-        titles.add("Donjons");
+        final List<String> titles = Arrays.asList("Héros", "Simulateurs", "Donjons");
 
-        ListAdapter la = new MainAdapter(this.getContext(), titles);
+        ListAdapter la = new CardAdapter(this.getContext(), titles);
         GridView gridView = (GridView) getView().findViewById(R.id.grid);
         gridView.setAdapter(la);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                switch (position) {
+                    case 0:
+                        break;
+                    case 1:
+                        transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance());
+                        break;
+                    case 2:
+                        break;
+                    default:
+                        break;
+                }
+                transaction.commit();
+            }
+        });
 
         super.onActivityCreated(bundle);
     }

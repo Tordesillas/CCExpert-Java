@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import fr.unice.polytech.ccexpert.controller.fragments.MainFragment;
+import fr.unice.polytech.ccexpert.controller.fragments.SimulatorsFragment;
 
 public class CCExpertMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private FragmentTransaction transaction;
@@ -50,22 +51,22 @@ public class CCExpertMain extends AppCompatActivity implements NavigationView.On
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        transaction = getSupportFragmentManager().beginTransaction();
+
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
+        if (id == R.id.nav_home) {
+            transaction.replace(R.id.main_fragment, MainFragment.newInstance());
         } else if (id == R.id.nav_manage) {
 
+        } else if (id == R.id.nav_simulator) {
+            transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance());
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
         }
+        transaction.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

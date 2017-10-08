@@ -12,8 +12,8 @@ import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
 
-public class MainAdapter extends ArrayAdapter<String> {
-    public MainAdapter(Context context, List<String> titles) {
+public class CardAdapter extends ArrayAdapter<String> {
+    public CardAdapter(Context context, List<String> titles) {
         super(context, 0, titles);
     }
 
@@ -29,8 +29,23 @@ public class MainAdapter extends ArrayAdapter<String> {
         viewTitle.setText(page);
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.image);
-        imageView.setImageResource(R.drawable.donjons);
+        imageView.setImageResource(findPicture(page));
 
         return convertView;
+    }
+
+    private int findPicture(String title) {
+        switch (title) {
+            case "Héros":
+                return R.drawable.heroes;
+            case "Simulateurs":
+                return R.drawable.boss;
+            case "Donjons":
+                return R.drawable.donjons;
+            case "Guerre de guilde":
+                return R.drawable.guild_wars;
+            default:
+                return R.drawable.exorcist;
+        }
     }
 }
