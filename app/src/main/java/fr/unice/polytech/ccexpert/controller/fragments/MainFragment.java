@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -46,13 +45,15 @@ public class MainFragment extends Fragment {
                     case 0:
                         break;
                     case 1:
-                        transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance());
+                        transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance(), "main");
                         break;
                     case 2:
+                        transaction.replace(R.id.main_fragment, DungeonsFragment.newInstance(), "main");
                         break;
                     default:
                         break;
                 }
+                transaction.addToBackStack("main");
                 transaction.commit();
             }
         });

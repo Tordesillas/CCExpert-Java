@@ -1,9 +1,14 @@
 package fr.unice.polytech.ccexpert.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Dungeon {
+public class Dungeon implements Parcelable {
     private URL urlYoutube;
     private int door;
     private int base;
@@ -11,7 +16,7 @@ public class Dungeon {
     private boolean f2p;
     private boolean allFlames;
 
-    Dungeon(String urlYoutube, int door, int base, int compo1, int compo2, int compo3, int compo4, int compo5, int compo6, int f2p, int allFlames) {
+    public Dungeon(String urlYoutube, int door, int base, int compo1, int compo2, int compo3, int compo4, int compo5, int compo6, int f2p, int allFlames) {
         try {
             this.urlYoutube = new URL(urlYoutube);
         } catch (MalformedURLException e) {
@@ -47,4 +52,46 @@ public class Dungeon {
     public boolean isAllFlames() {
         return allFlames;
     }
+
+    private Dungeon(Parcel in) {
+        try {
+            this.urlYoutube = new URL(in.readString());
+        } catch (MalformedURLException e) { e.printStackTrace(); }
+        this.door = in.readInt();
+        this.base = in.readInt();
+        List<Integer> tmp = new ArrayList<>();
+        in.readList(tmp, getClass().getClassLoader());
+        this.heroesIds = new int[]{in.readInt(), in.readInt(), in.readInt(), in.readInt(), in.readInt(), in.readInt()};
+        this.f2p = in.readByte() == 1;
+        this.allFlames = in.readByte() == 1;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(urlYoutube.toString());
+        dest.writeInt(door);
+        dest.writeInt(base);
+        for (int id : heroesIds) {
+            dest.writeInt(id);
+        }
+        dest.writeByte((byte) (f2p ? 1 : 0));
+        dest.writeByte((byte) (allFlames ? 1 : 0));
+    }
+
+    public static final Parcelable.Creator<Dungeon> CREATOR = new Parcelable.Creator<Dungeon>() {
+        @Override
+        public Dungeon createFromParcel(Parcel source) {
+            return new Dungeon(source);
+        }
+
+        @Override
+        public Dungeon[] newArray(int size) {
+            return new Dungeon[size];
+        }
+    };
 }
