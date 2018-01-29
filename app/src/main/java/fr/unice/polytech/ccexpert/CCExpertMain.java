@@ -2,7 +2,6 @@ package fr.unice.polytech.ccexpert;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import fr.unice.polytech.ccexpert.controller.activity.BaseActivity;
@@ -17,12 +16,6 @@ public class CCExpertMain extends BaseActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.main_fragment, MainFragment.newInstance()).commit();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
-        return true;
     }
 
     @Override

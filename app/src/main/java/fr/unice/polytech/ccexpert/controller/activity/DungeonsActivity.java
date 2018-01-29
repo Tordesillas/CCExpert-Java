@@ -4,13 +4,10 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentTransaction;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.NumberPicker;
 
 import fr.unice.polytech.ccexpert.R;
-import fr.unice.polytech.ccexpert.controller.fragment.MainFragment;
 
 public class DungeonsActivity extends BaseActivity {
     @Override

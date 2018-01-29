@@ -27,6 +27,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         super.setContentView(fullLayout);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         NavigationView navigationView = findViewById(R.id.navigationView);
         setSupportActionBar(toolbar);
 
@@ -34,6 +35,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
                 this, fullLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
 
         fullLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
