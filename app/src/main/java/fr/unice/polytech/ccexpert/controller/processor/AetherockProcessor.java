@@ -1,4 +1,4 @@
-package fr.unice.polytech.ccexpert.controller;
+package fr.unice.polytech.ccexpert.controller.processor;
 
 public class AetherockProcessor {/*
     private static final int[] AETHEROCKS_BY_LEVEL = {0, 0, 8410, 12265, 17700, 25075, 34750, 47085, 62440, 81175, 103650, 130225, 161260, 197115, 238150, 284725, 337200, 395935, 461290, 533625, 613300};

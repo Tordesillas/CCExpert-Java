@@ -1,4 +1,4 @@
-package fr.unice.polytech.ccexpert.controller.fragments;
+package fr.unice.polytech.ccexpert.controller.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

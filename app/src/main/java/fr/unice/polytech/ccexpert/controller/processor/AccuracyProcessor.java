@@ -1,4 +1,4 @@
-package fr.unice.polytech.ccexpert.controller;
+package fr.unice.polytech.ccexpert.controller.processor;
 
 public class AccuracyProcessor {/*
     private L10NManager l10n;

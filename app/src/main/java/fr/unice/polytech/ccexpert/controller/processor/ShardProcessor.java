@@ -1,4 +1,4 @@
-package fr.unice.polytech.ccexpert.controller;
+package fr.unice.polytech.ccexpert.controller.processor;
 
 public class ShardProcessor {/*
     private static final int[] EXP_BY_LEVEL = {0, 2000, 10000, 30000, 70000, 120000, 200000, 500000, 800000, 1600000};

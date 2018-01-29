@@ -1,4 +1,4 @@
-package fr.unice.polytech.ccexpert.controller;
+package fr.unice.polytech.ccexpert.controller.processor;
 
 public class AttackSpeedProcessor {
     private double[] skill = {1, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.55};

@@ -1,4 +1,4 @@
-package fr.unice.polytech.ccexpert.controller;
+package fr.unice.polytech.ccexpert.controller.processor;
 
 public class StatsGuildWar {
     private static final double[] fameTab = {0.45, 0.39, 0.36, 0.33, 0.30};
