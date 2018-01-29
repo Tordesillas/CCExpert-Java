@@ -26,10 +26,10 @@ public class DungeonsFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle bundle) {
-        ViewPager viewPager = (ViewPager)getView().findViewById(R.id.viewpager);
+        ViewPager viewPager = getView().findViewById(R.id.viewpager);
         viewPager.setAdapter(new DungeonsAdapter(getChildFragmentManager()));
 
-        TabLayout tabLayout = (TabLayout)getView().findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = getView().findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
 
         super.onActivityCreated(bundle);

@@ -37,7 +37,7 @@ public class DungeonsListFragment extends Fragment {
         final List<Dungeon> dungeons = filterPlaces(b.getInt("position"));
 
         ListAdapter la = new DungeonsListAdapter(this.getContext(), dungeons);
-        GridView gridView = (GridView) getView().findViewById(R.id.grid);
+        GridView gridView = getView().findViewById(R.id.grid);
         gridView.setAdapter(la);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

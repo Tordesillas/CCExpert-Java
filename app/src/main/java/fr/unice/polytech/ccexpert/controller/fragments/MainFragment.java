@@ -34,7 +34,7 @@ public class MainFragment extends Fragment {
         final List<String> titles = Arrays.asList("Héros", "Simulateurs", "Donjons");
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
-        GridView gridView = (GridView) getView().findViewById(R.id.grid);
+        GridView gridView = getView().findViewById(R.id.grid);
         gridView.setAdapter(la);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

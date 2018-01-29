@@ -27,10 +27,10 @@ public class DungeonsListAdapter extends ArrayAdapter<Dungeon> {
 
         Dungeon dungeon = getItem(position);
 
-        TextView viewTitle = (TextView) convertView.findViewById(R.id.text);
+        TextView viewTitle = convertView.findViewById(R.id.text);
         viewTitle.setText(dungeon.getDoor() + " - " + dungeon.getBase());
 
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.logo);
+        ImageView imageView = convertView.findViewById(R.id.logo);
         imageView.setImageResource(R.drawable.donjons);
 
         return convertView;

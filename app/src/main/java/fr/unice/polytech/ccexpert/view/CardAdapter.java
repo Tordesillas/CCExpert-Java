@@ -25,10 +25,10 @@ public class CardAdapter extends ArrayAdapter<String> {
         }
 
         String page = getItem(position);
-        TextView viewTitle = (TextView) convertView.findViewById(R.id.title);
+        TextView viewTitle = convertView.findViewById(R.id.title);
         viewTitle.setText(page);
 
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.image);
+        ImageView imageView = convertView.findViewById(R.id.image);
         imageView.setImageResource(findPicture(page));
 
         return convertView;

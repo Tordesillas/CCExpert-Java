@@ -32,7 +32,7 @@ public class SimulatorsFragment extends Fragment {
         final List<String> titles = Arrays.asList("Guerre de guilde", "Cristaux bleus", "Esquive");
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
-        GridView gridView = (GridView) getView().findViewById(R.id.grid);
+        GridView gridView = getView().findViewById(R.id.grid);
         gridView.setAdapter(la);
 
         super.onActivityCreated(bundle);
