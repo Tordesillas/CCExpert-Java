@@ -1,11 +1,9 @@
 package fr.unice.polytech.ccexpert.model;
 
-import android.media.Image;
-
 public class Hero {
     private String nom;
     private String name;
-    private Image picture;
+    private int picture;
 
     private int attackSpeed;
     private int attack;
@@ -24,7 +22,7 @@ public class Hero {
     private String talent;
     private String equipmentTalent;
 
-    public Hero(String nom, String name, Image picture, int attackSpeed, int attack, int attackByLvl,
+    public Hero(String nom, String name, int picture, int attackSpeed, int attack, int attackByLvl,
                 int healthPoints, int healthByLvl, int speed, int speedByLvl, int criticalHit,
                 int criticalDamage, int criticalResist, int accuracy, int dodge, int range) {
         this.nom = nom;
@@ -49,7 +47,7 @@ public class Hero {
         return nom;
     }
 
-    public Image getPicture() {
+    public int getPicture() {
         return picture;
     }
 

@@ -7,12 +7,29 @@ import android.view.MenuItem;
 import fr.unice.polytech.ccexpert.controller.activity.BaseActivity;
 import fr.unice.polytech.ccexpert.controller.fragment.MainFragment;
 import fr.unice.polytech.ccexpert.controller.fragment.SimulatorsFragment;
+import fr.unice.polytech.ccexpert.model.Database;
+import fr.unice.polytech.ccexpert.model.Sets;
 
 public class CCExpertMain extends BaseActivity {
+    private boolean firstLaunch = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (firstLaunch) {
+            Database database = new Database(this);
+            try {
+                database.createDataBase();
+                database.openDataBase();
+                Sets sets = database.execute();
+                database.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            firstLaunch = false;
+        }
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.main_fragment, MainFragment.newInstance()).commit();
