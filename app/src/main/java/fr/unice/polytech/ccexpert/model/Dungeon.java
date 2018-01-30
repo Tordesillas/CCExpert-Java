@@ -3,13 +3,11 @@ package fr.unice.polytech.ccexpert.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dungeon implements Parcelable {
-    private URL urlYoutube;
+    private String urlYoutube;
     private int door;
     private int base;
     private int[] heroesIds;
@@ -17,11 +15,7 @@ public class Dungeon implements Parcelable {
     private boolean allFlames;
 
     public Dungeon(String urlYoutube, int door, int base, int compo1, int compo2, int compo3, int compo4, int compo5, int compo6, int f2p, int allFlames) {
-        try {
-            this.urlYoutube = new URL(urlYoutube);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        this.urlYoutube = urlYoutube;
         this.door = door;
         this.base = base;
         heroesIds = new int[]{compo1, compo2, compo3, compo4, compo5, compo6};
@@ -29,7 +23,7 @@ public class Dungeon implements Parcelable {
         this.allFlames = allFlames == 1;
     }
 
-    public URL getUrlYoutube() {
+    public String getUrlYoutube() {
         return urlYoutube;
     }
 
@@ -54,9 +48,7 @@ public class Dungeon implements Parcelable {
     }
 
     private Dungeon(Parcel in) {
-        try {
-            this.urlYoutube = new URL(in.readString());
-        } catch (MalformedURLException e) { e.printStackTrace(); }
+        this.urlYoutube = in.readString();
         this.door = in.readInt();
         this.base = in.readInt();
         List<Integer> tmp = new ArrayList<>();
@@ -73,7 +65,7 @@ public class Dungeon implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(urlYoutube.toString());
+        dest.writeString(urlYoutube);
         dest.writeInt(door);
         dest.writeInt(base);
         for (int id : heroesIds) {

@@ -3,6 +3,7 @@ package fr.unice.polytech.ccexpert.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
@@ -57,7 +58,13 @@ public class Sets {
         return heroesFaculties.get(id);
     }
 
-    public List<Dungeon> getDungeonSet() {
-        return dungeonSet;
+    public Collection<Dungeon> getDungeonSet(int door, int base) {
+        Collection<Dungeon> matchingDungeons = new HashSet<>();
+        for (Dungeon dungeon : dungeonSet) {
+            if (dungeon.getBase() == base && dungeon.getDoor() == door) {
+                matchingDungeons.add(dungeon);
+            }
+        }
+        return matchingDungeons;
     }
 }

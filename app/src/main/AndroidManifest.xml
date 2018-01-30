@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.unice.polytech.ccexpert">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -20,6 +21,7 @@
         </activity>
         <activity android:name=".controller.activity.DungeonsActivity" />
         <activity android:name=".controller.activity.BaseActivity" />
+        <activity android:name=".controller.activity.DungeonActivity" />
     </application>
 
 </manifest>
