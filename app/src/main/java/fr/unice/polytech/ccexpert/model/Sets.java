@@ -7,16 +7,25 @@ import java.util.List;
 import java.util.Map;
 
 public class Sets {
+    private static Sets mInstance = null;
+
     private Map<Integer, Hero> heroesIds;
     private Map<String, Hero> heroesNames;
     private Map<Integer, HeroFaculties> heroesFaculties;
     private List<Dungeon> dungeonSet;
 
-    Sets() {
+    private Sets() {
         heroesIds = new HashMap<>();
         heroesNames = new HashMap<>();
         heroesFaculties = new HashMap<>();
         dungeonSet = new ArrayList<>();
+    }
+
+    public static Sets getInstance(){
+        if (mInstance == null) {
+            mInstance = new Sets();
+        }
+        return mInstance;
     }
 
     void addHero(Hero hero, int id) {

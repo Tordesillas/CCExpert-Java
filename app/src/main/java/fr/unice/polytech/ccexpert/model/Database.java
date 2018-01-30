@@ -23,7 +23,7 @@ public class Database extends SQLiteOpenHelper {
     public Database(Context context) {
         super(context, DB_NAME, null, 1);
         this.myContext = context;
-        this.sets = new Sets();
+        this.sets = Sets.getInstance();
     }
 
     public void openDataBase() throws SQLException, IOException {
@@ -31,12 +31,10 @@ public class Database extends SQLiteOpenHelper {
         db = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
     }
 
-    public Sets execute() {
+    public void execute() {
         loadHeroes();
         loadCompoHeroes();
         loadDungeons();
-
-        return sets;
     }
 
     public void createDataBase() throws IOException {

@@ -8,7 +8,6 @@ import fr.unice.polytech.ccexpert.controller.activity.BaseActivity;
 import fr.unice.polytech.ccexpert.controller.fragment.MainFragment;
 import fr.unice.polytech.ccexpert.controller.fragment.SimulatorsFragment;
 import fr.unice.polytech.ccexpert.model.Database;
-import fr.unice.polytech.ccexpert.model.Sets;
 
 public class CCExpertMain extends BaseActivity {
     private boolean firstLaunch = true;
@@ -23,7 +22,7 @@ public class CCExpertMain extends BaseActivity {
             try {
                 database.createDataBase();
                 database.openDataBase();
-                Sets sets = database.execute();
+                database.execute();
                 database.close();
             } catch (Exception e) {
                 e.printStackTrace();
