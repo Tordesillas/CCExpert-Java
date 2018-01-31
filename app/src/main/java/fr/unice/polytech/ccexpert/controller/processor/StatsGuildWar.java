@@ -1,27 +1,26 @@
 package fr.unice.polytech.ccexpert.controller.processor;
 
+import android.content.Context;
+import android.widget.Toast;
+
 public class StatsGuildWar {
     private static final double[] fameTab = {0.45, 0.39, 0.36, 0.33, 0.30};
-/*
-    public Container printStats(int power, int score) {
+
+    public String printStats(Context context, int power, int score) {
         double scoreOnPower = (power == 0) ? 0 : score / (double)power;
         int averagePower = (scoreOnPower < 0.005) ? 0 : Math.round((float)(0.14*(score-50-2.5*Math.sqrt(power))));
 
-        Container c = new Container(new BoxLayout(BoxLayout.Y_AXIS));
-        c.addComponent(new Label("Puissance moyenne attaquée : " + averagePower +" 000"));
-
-        if (averagePower == 0) {
-            Dialog.show("Erreur", "Les données saisies sont incorrectes.", "ok", null);
+        if (averagePower <= 0) {
+            Toast.makeText(context, "Il semble que les données saisies sont incorrectes.", Toast.LENGTH_SHORT).show();
+            return null;
         }
-        return c;
+
+        return "Le joueur attaque en moyenne des adversaires à " + averagePower +"k de puissance.";
     }
 
-    public Container printFameStats(int score, int position) {
+    public String printFameStats(int score, int position) {
         int fame = (int)(score * (float)fameTab[position]);
 
-        Container c = new Container(new BoxLayout(BoxLayout.Y_AXIS));
-        c.addComponent(new Label("Gloire obtenue : " + fame));
-
-        return c;
-    }*/
+        return "Avec un tel score, le joueur obtiendra " + fame + " gloires.";
+    }
 }
