@@ -10,11 +10,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
         android:padding="10dp"
-        android:textSize="15sp"/>
+        android:textSize="20sp"/>
 
     <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
         android:id="@+id/youtube_player_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textHeroes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textSize="15sp"/>
+
+    <GridView
+        android:id="@+id/listHeroes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp"
+        android:numColumns="3"/>
 </LinearLayout>

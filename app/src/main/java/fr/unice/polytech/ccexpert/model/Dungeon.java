@@ -19,7 +19,7 @@ public class Dungeon implements Parcelable {
         this.door = door;
         this.base = base;
         heroesIds = new int[]{compo1, compo2, compo3, compo4, compo5, compo6};
-        this.f2p = f2p == 1;
+        this.f2p = f2p == 0;
         this.allFlames = allFlames == 1;
     }
 

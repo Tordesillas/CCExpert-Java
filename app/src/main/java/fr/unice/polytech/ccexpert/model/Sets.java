@@ -50,7 +50,7 @@ public class Sets {
         return heroesNames.get(name);
     }
 
-    public Collection<Hero> getHeroes() {
+    public Collection<Hero> getHeroesFaculties() {
         return heroesNames.values();
     }
 
@@ -66,5 +66,13 @@ public class Sets {
             }
         }
         return matchingDungeons;
+    }
+
+    public List<HeroFaculties> getHeroesFaculties(int[] ids) {
+        List<HeroFaculties> heroes = new ArrayList<>();
+        for (int id : ids) {
+            heroes.add(heroesFaculties.get(id));
+        }
+        return heroes;
     }
 }

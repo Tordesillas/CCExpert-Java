@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dungeons"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/dungeonsTitle"
@@ -12,7 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:textSize="25sp"
+        android:textSize="26sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
         android:text="Sélectionner un donjon"/>
 
     <LinearLayout
@@ -22,43 +24,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/doorText"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_gravity="center"
-            android:textSize="15sp"
-            android:text="Porte :"/>
+            android:padding="10dp"
+            android:background="@color/colorPrimaryDark">
 
-        <NumberPicker
-            android:id="@+id/door"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/donjons" />
 
-        <TextView
-            android:id="@+id/baseText"
+            <NumberPicker
+                android:id="@+id/door"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:theme="@style/AppTheme.Picker"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_gravity="center"
-            android:textSize="15sp"
-            android:text="Base :"/>
+            android:padding="10dp"
+            android:background="@color/colorPrimaryDark">
 
-        <NumberPicker
-            android:id="@+id/base"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="94dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/dungeon_logo" />
+
+            <NumberPicker
+                android:id="@+id/base"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:theme="@style/AppTheme.Picker"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <Button
         android:id="@+id/dungeonsButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/secondaryLightColor"
+        android:layout_marginHorizontal="5dp"
         android:text="Valider"
         android:layout_below="@id/layoutPickers"/>
 

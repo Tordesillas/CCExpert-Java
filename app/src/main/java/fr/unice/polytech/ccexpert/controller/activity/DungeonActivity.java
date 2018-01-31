@@ -2,13 +2,19 @@ package fr.unice.polytech.ccexpert.controller.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.GridView;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import com.pierfrancescosoffritti.youtubeplayer.player.*;
+import com.pierfrancescosoffritti.youtubeplayer.player.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayer;
+import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerInitListener;
+import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView;
 
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.model.Dungeon;
 import fr.unice.polytech.ccexpert.model.Sets;
+import fr.unice.polytech.ccexpert.view.HeroCardAdapter;
 
 public class DungeonActivity extends BaseActivity {
     private YouTubePlayerView youTubePlayerView;
@@ -31,7 +37,8 @@ public class DungeonActivity extends BaseActivity {
         }
         final String urlYoutube = dungeon != null ? dungeon.getUrlYoutube() : "https://www.youtube.com/watch?v=Z5FPjcbUaKE&index=41&list=PL9fQGS1-vUVSvQ7VI_fx06MiWRmU4LJnq";
 
-        ((TextView) findViewById(R.id.dungeonName)).setText("Donjon " + door + " / " + base);
+        String title = getResources().getString(R.string.dungeon) + " " + door + " / " + base;
+        ((TextView) findViewById(R.id.dungeonName)).setText(title);
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         youTubePlayerView.initialize(new YouTubePlayerInitListener() {
@@ -41,11 +48,17 @@ public class DungeonActivity extends BaseActivity {
                     @Override
                     public void onReady() {
                         String videoId = urlYoutube.split("v=")[1].split("&list")[0];
-                        initializedYouTubePlayer.loadVideo(videoId, 0);
+                        initializedYouTubePlayer.loadVideo(videoId, 10);
                     }
                 });
             }
         }, true);
+
+        ((TextView) findViewById(R.id.textHeroes)).setText(R.string.heroesInDungeon);
+
+        ListAdapter la = new HeroCardAdapter(this, Sets.getInstance().getHeroesFaculties(dungeon.getHeroesIds()));
+        GridView gridView = findViewById(R.id.listHeroes);
+        gridView.setAdapter(la);
     }
 
     @Override
