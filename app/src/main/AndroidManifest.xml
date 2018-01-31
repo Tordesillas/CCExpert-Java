@@ -22,6 +22,7 @@
         <activity android:name=".controller.activity.DungeonsActivity" />
         <activity android:name=".controller.activity.BaseActivity" />
         <activity android:name=".controller.activity.DungeonActivity" />
+        <activity android:name=".controller.activity.GuildWarActivity" />
     </application>
 
 </manifest>

@@ -5,4 +5,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="dungeon">Donjon</string>
     <string name="heroesInDungeon">Héros utilisés dans la vidéo :</string>
+    <string name="analyze">Analyser</string>
 </resources>
