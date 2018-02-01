@@ -2,6 +2,7 @@ package fr.unice.polytech.ccexpert.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -72,6 +73,25 @@ public class Sets {
         List<HeroFaculties> heroes = new ArrayList<>();
         for (int id : ids) {
             heroes.add(heroesFaculties.get(id));
+        }
+        return heroes;
+    }
+
+    public List<Hero> getHeroSorted(boolean byName) {
+        List<Hero> heroes = new ArrayList<>();
+        if (byName) {
+            List<String> sortedKeys = new ArrayList<>(heroesNames.keySet());
+            Collections.sort(sortedKeys);
+            for (String name : sortedKeys) {
+                heroes.add(heroesNames.get(name));
+            }
+        } else {
+            List<Integer> sortedKeys = new ArrayList<>(heroesIds.keySet());
+            Collections.sort(sortedKeys);
+            Collections.reverse(sortedKeys);
+            for (int id : sortedKeys) {
+                heroes.add(heroesIds.get(id));
+            }
         }
         return heroes;
     }

@@ -84,10 +84,19 @@ public class StringToResource {
     }};
 
     public static int getHeroPicture(String frenchName) {
-        return nameToHeroRes.get(frenchName);
+        try {
+            return nameToHeroRes.get(frenchName);
+        } catch (Exception e) {
+            return R.drawable.anubis;
+        }
     }
 
     public static int getTalentPicture(String frenchName) {
-        return nameToTalentRes.get(frenchName.toLowerCase());
+        try {
+            return nameToTalentRes.get(frenchName.toLowerCase());
+
+        } catch (Exception e) {
+            return R.drawable.psyshield;
+        }
     }
 }

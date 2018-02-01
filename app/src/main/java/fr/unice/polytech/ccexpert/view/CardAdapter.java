@@ -1,6 +1,7 @@
 package fr.unice.polytech.ccexpert.view;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +26,10 @@ public class CardAdapter extends ArrayAdapter<String> {
         }
 
         String page = getItem(position);
+
         TextView viewTitle = convertView.findViewById(R.id.title);
         viewTitle.setText(page);
+        viewTitle.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "Script1Rager.otf"));
 
         ImageView imageView = convertView.findViewById(R.id.image);
         imageView.setImageResource(findPicture(page));

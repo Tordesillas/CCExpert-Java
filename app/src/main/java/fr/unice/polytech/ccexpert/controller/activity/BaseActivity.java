@@ -66,4 +66,13 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        if (fullLayout.isDrawerOpen(GravityCompat.START)) {
+            fullLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 }

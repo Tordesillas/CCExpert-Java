@@ -2,19 +2,19 @@ package fr.unice.polytech.ccexpert.controller.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.controller.processor.StatsGuildWar;
 
 public class GuildWarActivity extends BaseActivity {
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,7 @@ public class GuildWarActivity extends BaseActivity {
 
         final StatsGuildWar sgw = new StatsGuildWar();
 
+        ((TextView) findViewById(R.id.guildWarTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
         final EditText playerPower = findViewById(R.id.playerPower);
         final EditText playerScore = findViewById(R.id.playerScore);
         final RadioGroup radioGroupPosition = findViewById(R.id.radioGroupPosition);
@@ -30,12 +31,10 @@ public class GuildWarActivity extends BaseActivity {
         (findViewById(R.id.firstButtonGuild)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("TEEEEST", playerPower.getText() + " hey " + playerScore.getText());
                 if (playerPower.getText().length() <= 1 || playerScore.getText().length() <= 1) {
                     Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Log.d("TEEEEST2", playerPower.getText().length() + " hey " + playerScore.getText().length());
                 createDialog(sgw.printStats(GuildWarActivity.this,
                         Integer.parseInt(playerPower.getText().toString()),
                         Integer.parseInt(playerScore.getText().toString())));

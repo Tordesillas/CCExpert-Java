@@ -3,10 +3,12 @@ package fr.unice.polytech.ccexpert.controller.activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 
 import java.util.Collection;
 
@@ -19,6 +21,8 @@ public class DungeonsActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dungeons);
+
+        ((TextView) findViewById(R.id.dungeonsTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         final NumberPicker doorPicker = findViewById(R.id.door);
         final NumberPicker basePicker = findViewById(R.id.base);

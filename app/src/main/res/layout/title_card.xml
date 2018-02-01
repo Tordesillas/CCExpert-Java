@@ -8,35 +8,31 @@
         android:layout_width="match_parent"
         android:layout_height="180dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black" >
-
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="Image"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true" />
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="9dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:textColor="@color/secondaryLightColor"
                 android:shadowColor="@color/black"
+                android:gravity="center"
+                android:textSize="20sp"
                 android:shadowDx="5"
                 android:shadowDy="5"
-                android:shadowRadius="5"
-                android:fontFamily="casual" />
+                android:shadowRadius="5" />
 
-        </RelativeLayout>
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

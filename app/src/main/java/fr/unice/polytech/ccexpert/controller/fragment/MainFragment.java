@@ -16,6 +16,7 @@ import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.controller.activity.DungeonsActivity;
+import fr.unice.polytech.ccexpert.controller.activity.HeroesActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
 
 public class MainFragment extends Fragment {
@@ -44,6 +45,7 @@ public class MainFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 switch (position) {
                     case 0:
+                        startActivity(new Intent(getActivity(), HeroesActivity.class));
                         break;
                     case 1:
                         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();

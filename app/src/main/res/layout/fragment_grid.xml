@@ -9,7 +9,6 @@
         android:id="@+id/grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/primaryLightColor"
         android:verticalSpacing="5dp"
         android:numColumns="1" />
 
