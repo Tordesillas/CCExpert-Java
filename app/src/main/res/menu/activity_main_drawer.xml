@@ -6,29 +6,29 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Accueil" />
         <item
-            android:id="@+id/nav_simulator"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Simulateurs" />
+            android:id="@+id/nav_heroes"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Héros" />
         <item
             android:id="@+id/nav_dungeons"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Donjons" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Simulateurs">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_guildwar"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Guerre de guilde" />
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Cristaux bleus" />
+            <item
+                android:id="@+id/nav_send42"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Esquive" />
         </menu>
     </item>
 

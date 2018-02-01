@@ -53,14 +53,11 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home :
                 startActivity(new Intent(this, CCExpertMain.class));
                 return true;
-            case R.id.nav_simulator :
-                startActivity(new Intent(this, CCExpertMain.class));
-                return true;
             case R.id.nav_dungeons :
                 startActivity(new Intent(this, DungeonsActivity.class));
                 return true;
-            case R.id.nav_manage :
-                startActivity(new Intent(this, CCExpertMain.class));
+            case R.id.nav_heroes :
+                startActivity(new Intent(this, HeroesActivity.class));
                 return true;
         }
 

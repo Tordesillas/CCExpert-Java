@@ -6,7 +6,6 @@ import android.view.MenuItem;
 
 import fr.unice.polytech.ccexpert.controller.activity.BaseActivity;
 import fr.unice.polytech.ccexpert.controller.fragment.MainFragment;
-import fr.unice.polytech.ccexpert.controller.fragment.SimulatorsFragment;
 import fr.unice.polytech.ccexpert.model.Database;
 
 public class CCExpertMain extends BaseActivity {
@@ -36,17 +35,10 @@ public class CCExpertMain extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        switch (item.getItemId()) {
-            case R.id.nav_home :
-                transaction.replace(R.id.main_fragment, MainFragment.newInstance()).commit();
-                return true;
-            case R.id.nav_simulator :
-                transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance(), "main");
-                transaction.addToBackStack("main");
-                transaction.commit();
-                return true;
+        if (item.getItemId() == R.id.nav_home) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.main_fragment, MainFragment.newInstance()).commit();
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
