@@ -24,6 +24,7 @@
         <activity android:name=".controller.activity.DungeonActivity" />
         <activity android:name=".controller.activity.GuildWarActivity" />
         <activity android:name=".controller.activity.HeroesActivity" />
+        <activity android:name=".controller.activity.HeroActivity" />
     </application>
 
 </manifest>

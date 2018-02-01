@@ -1,16 +1,19 @@
 package fr.unice.polytech.ccexpert.controller.activity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
+import fr.unice.polytech.ccexpert.model.Hero;
 import fr.unice.polytech.ccexpert.model.Sets;
 import fr.unice.polytech.ccexpert.view.HeroesAdapter;
 
@@ -28,10 +31,10 @@ public class HeroesActivity extends BaseActivity {
                 Sets.getInstance().getHeroSorted(false)
         };
 
-        final HeroesAdapter adapterByName = new HeroesAdapter(this, heroes[0]);
-        final HeroesAdapter adapterByAlphabet = new HeroesAdapter(this, heroes[1]);
+        final HeroesAdapter adapterByAlphabet = new HeroesAdapter(this, heroes[0]);
+        final HeroesAdapter adapterByOrder = new HeroesAdapter(this, heroes[1]);
         final GridView gridView = findViewById(R.id.heroesGrid);
-        gridView.setAdapter(adapterByName);
+        gridView.setAdapter(adapterByAlphabet);
 
         final FloatingActionButton sortButton = findViewById(R.id.sortButton);
         sortButton.setOnClickListener(new View.OnClickListener() {
@@ -40,12 +43,27 @@ public class HeroesActivity extends BaseActivity {
                 if (sortedByName[0]) {
                     sortButton.setImageResource(R.drawable.ic_sort_by_order);
                     sortedByName[0] = false;
-                    gridView.setAdapter(adapterByAlphabet);
+                    gridView.setAdapter(adapterByOrder);
                 } else {
                     sortButton.setImageResource(R.drawable.ic_sort_by_alphabet);
                     sortedByName[0] = true;
-                    gridView.setAdapter(adapterByName);
+                    gridView.setAdapter(adapterByAlphabet);
                 }
+            }
+        });
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
+                String heroName;
+                if (sortedByName[0]) {
+                    heroName = ((Hero) heroes[0].get(position)).getFrenchName();
+                } else {
+                    heroName = ((Hero) heroes[1].get(position)).getFrenchName();
+                }
+                intent.putExtra("heroName", heroName);
+                startActivity(intent);
             }
         });
     }
