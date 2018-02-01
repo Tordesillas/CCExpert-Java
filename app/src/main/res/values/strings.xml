@@ -6,4 +6,10 @@
     <string name="dungeon">Donjon</string>
     <string name="heroesInDungeon">Héros utilisés dans la vidéo :</string>
     <string name="analyze">Analyser</string>
+
+    <string-array name="heroType">
+        <item>Légendaire</item>
+        <item>Élite</item>
+        <item>Ordinaire</item>
+    </string-array>
 </resources>

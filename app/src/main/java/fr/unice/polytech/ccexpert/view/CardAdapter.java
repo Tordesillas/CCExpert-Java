@@ -47,6 +47,8 @@ public class CardAdapter extends ArrayAdapter<String> {
                 return R.drawable.donjons;
             case "Guerre de guilde":
                 return R.drawable.guild_wars;
+            case "Fragments":
+                return R.drawable.shards;
             default:
                 return R.drawable.exorcist;
         }

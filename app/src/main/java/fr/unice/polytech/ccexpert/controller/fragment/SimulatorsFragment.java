@@ -15,6 +15,7 @@ import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.controller.activity.GuildWarActivity;
+import fr.unice.polytech.ccexpert.controller.activity.ShardActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
 
 public class SimulatorsFragment extends Fragment {
@@ -32,7 +33,7 @@ public class SimulatorsFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle bundle) {
-        final List<String> titles = Arrays.asList("Guerre de guilde", "Cristaux bleus", "Esquive");
+        final List<String> titles = Arrays.asList("Guerre de guilde", "Fragments", "Cristaux bleus", "Esquive");
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
         GridView gridView = getView().findViewById(R.id.grid);
@@ -46,8 +47,11 @@ public class SimulatorsFragment extends Fragment {
                         startActivity(new Intent(getActivity(), GuildWarActivity.class));
                         break;
                     case 1:
+                        startActivity(new Intent(getActivity(), ShardActivity.class));
                         break;
                     case 2:
+                        break;
+                    case 3:
                         break;
                 }
 
