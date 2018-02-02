@@ -9,33 +9,33 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import fr.unice.polytech.ccexpert.R;
-import fr.unice.polytech.ccexpert.controller.processor.CrystalProcessor;
+import fr.unice.polytech.ccexpert.controller.processor.AetherockProcessor;
 
-public class CrystalActivity extends BaseActivity {
+public class AetherockActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crystal);
+        setContentView(R.layout.activity_aetherock);
 
-        ((TextView) findViewById(R.id.crystalTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
+        ((TextView) findViewById(R.id.aetherockTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        final CrystalProcessor cp = new CrystalProcessor();
+        final AetherockProcessor ap = new AetherockProcessor();
         final NumberPicker currentLvlPicker = findViewById(R.id.currentLvl);
         final NumberPicker aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
         aimLvlPicker.setMinValue(1);
-        currentLvlPicker.setMaxValue(99);
-        aimLvlPicker.setMaxValue(100);
+        currentLvlPicker.setMaxValue(19);
+        aimLvlPicker.setMaxValue(20);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
-        findViewById(R.id.crystalButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.aetherockButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-                    Toast.makeText(CrystalActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AetherockActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
                 } else {
-                    createSimulatorDialog(cp.printCrystalAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+                    createSimulatorDialog(ap.printAetherockAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
                 }
             }
         });

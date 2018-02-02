@@ -51,6 +51,8 @@ public class CardAdapter extends ArrayAdapter<String> {
                 return R.drawable.shards;
             case "Cristaux bleus":
                 return R.drawable.crystal;
+            case "Aura-guerrières":
+                return R.drawable.aetherock;
             default:
                 return R.drawable.exorcist;
         }
