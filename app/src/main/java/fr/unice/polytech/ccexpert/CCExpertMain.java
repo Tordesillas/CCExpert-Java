@@ -9,7 +9,7 @@ import fr.unice.polytech.ccexpert.controller.fragment.MainFragment;
 import fr.unice.polytech.ccexpert.model.Database;
 
 public class CCExpertMain extends BaseActivity {
-    private boolean firstLaunch = true;
+    private static boolean firstLaunch = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

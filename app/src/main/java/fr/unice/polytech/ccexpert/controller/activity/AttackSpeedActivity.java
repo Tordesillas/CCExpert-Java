@@ -4,7 +4,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -33,14 +32,11 @@ public class AttackSpeedActivity extends BaseActivity {
         barLayout.setVisibility(View.GONE);
 
         final Switch switchTalent = findViewById(R.id.talentSwitch);
-        switchTalent.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    barLayout.setVisibility(View.VISIBLE);
-                } else {
-                    barLayout.setVisibility(View.GONE);
-                }
+        switchTalent.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                barLayout.setVisibility(View.VISIBLE);
+            } else {
+                barLayout.setVisibility(View.GONE);
             }
         });
         final TextView talentLvlText = findViewById(R.id.talentLvlText);
@@ -65,14 +61,11 @@ public class AttackSpeedActivity extends BaseActivity {
         final Switch furySwitch = findViewById(R.id.furySwitch);
         final LinearLayout furyLayout = findViewById(R.id.layoutFuryBar);
         furyLayout.setVisibility(View.GONE);
-        furySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    furyLayout.setVisibility(View.VISIBLE);
-                } else {
-                    furyLayout.setVisibility(View.GONE);
-                }
+        furySwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                furyLayout.setVisibility(View.VISIBLE);
+            } else {
+                furyLayout.setVisibility(View.GONE);
             }
         });
 
@@ -96,14 +89,11 @@ public class AttackSpeedActivity extends BaseActivity {
         final Switch dukeSwitch = findViewById(R.id.dukeSwitch);
         final LinearLayout dukeLayout = findViewById(R.id.layoutDukeBar);
         dukeLayout.setVisibility(View.GONE);
-        dukeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    dukeLayout.setVisibility(View.VISIBLE);
-                } else {
-                    dukeLayout.setVisibility(View.GONE);
-                }
+        dukeSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                dukeLayout.setVisibility(View.VISIBLE);
+            } else {
+                dukeLayout.setVisibility(View.GONE);
             }
         });
 
@@ -129,7 +119,7 @@ public class AttackSpeedActivity extends BaseActivity {
         dukeProcBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dukeProcText.setText("Coups que le duc a effectué : " + progress + "/4");
+                dukeProcText.setText("Coups que le duca effectué le duc : " + progress + "/4");
             }
 
             @Override
@@ -139,23 +129,20 @@ public class AttackSpeedActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        findViewById(R.id.speedButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (speedField.getText().length() <= 1) {
-                    Toast.makeText(AttackSpeedActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
-                } else {
-                    createSimulatorDialog(asp.printAttackSpeedAmount(
-                            Integer.parseInt(speedField.getText().toString()),
-                            (switchTalent.isChecked()) ? talentBar.getProgress() : 0,
-                            blitzSwitch.isChecked(),
-                            (furySwitch.isChecked()) ? furyBar.getProgress() : 0,
-                            (dukeSwitch.isChecked()) ? dukeProgressBar.getProgress() : 0,
-                            (dukeSwitch.isChecked()) ? dukeProcBar.getProgress() : 0,
-                            5
-                    ));
-                    speedField.setText("");
-                }
+        findViewById(R.id.speedButton).setOnClickListener(v -> {
+            if (speedField.getText().length() <= 1) {
+                Toast.makeText(AttackSpeedActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+            } else {
+                createSimulatorDialog(asp.printAttackSpeedAmount(
+                        Integer.parseInt(speedField.getText().toString()),
+                        (switchTalent.isChecked()) ? talentBar.getProgress() : 0,
+                        blitzSwitch.isChecked(),
+                        (furySwitch.isChecked()) ? furyBar.getProgress() : 0,
+                        (dukeSwitch.isChecked()) ? dukeProgressBar.getProgress() : 0,
+                        (dukeSwitch.isChecked()) ? dukeProcBar.getProgress() : 0,
+                        5
+                ));
+                speedField.setText("");
             }
         });
     }

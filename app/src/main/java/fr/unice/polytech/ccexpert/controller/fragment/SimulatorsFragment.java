@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 
@@ -45,33 +44,30 @@ public class SimulatorsFragment extends Fragment {
         GridView gridView = getView().findViewById(R.id.grid);
         gridView.setAdapter(la);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                switch (position) {
-                    case 0:
-                        startActivity(new Intent(getActivity(), GuildWarActivity.class));
-                        break;
-                    case 1:
-                        startActivity(new Intent(getActivity(), ShardActivity.class));
-                        break;
-                    case 2:
-                        startActivity(new Intent(getActivity(), CrystalActivity.class));
-                        break;
-                    case 3:
-                        startActivity(new Intent(getActivity(), AetherockActivity.class));
-                        break;
-                    case 4:
-                        startActivity(new Intent(getActivity(), DodgeActivity.class));
-                        break;
-                    case 5:
-                        startActivity(new Intent(getActivity(), AccuracyActivity.class));
-                        break;
-                    case 6:
-                        startActivity(new Intent(getActivity(), AttackSpeedActivity.class));
-                }
-
+        gridView.setOnItemClickListener((parent, v, position, id) -> {
+            switch (position) {
+                case 0:
+                    startActivity(new Intent(getActivity(), GuildWarActivity.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(getActivity(), ShardActivity.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(getActivity(), CrystalActivity.class));
+                    break;
+                case 3:
+                    startActivity(new Intent(getActivity(), AetherockActivity.class));
+                    break;
+                case 4:
+                    startActivity(new Intent(getActivity(), DodgeActivity.class));
+                    break;
+                case 5:
+                    startActivity(new Intent(getActivity(), AccuracyActivity.class));
+                    break;
+                case 6:
+                    startActivity(new Intent(getActivity(), AttackSpeedActivity.class));
             }
+
         });
 
         super.onActivityCreated(bundle);

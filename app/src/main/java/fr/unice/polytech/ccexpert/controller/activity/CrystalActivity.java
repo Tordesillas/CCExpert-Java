@@ -3,7 +3,6 @@ package fr.unice.polytech.ccexpert.controller.activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,14 +28,11 @@ public class CrystalActivity extends BaseActivity {
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
-        findViewById(R.id.crystalButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-                    Toast.makeText(CrystalActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
-                } else {
-                    createSimulatorDialog(cp.printCrystalAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
-                }
+        findViewById(R.id.crystalButton).setOnClickListener(v -> {
+            if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
+                Toast.makeText(CrystalActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
+            } else {
+                createSimulatorDialog(cp.printCrystalAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             }
         });
     }

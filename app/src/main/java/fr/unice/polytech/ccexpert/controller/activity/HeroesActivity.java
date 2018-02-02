@@ -5,8 +5,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -37,34 +35,28 @@ public class HeroesActivity extends BaseActivity {
         gridView.setAdapter(adapterByAlphabet);
 
         final FloatingActionButton sortButton = findViewById(R.id.sortButton);
-        sortButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (sortedByName[0]) {
-                    sortButton.setImageResource(R.drawable.ic_sort_by_order);
-                    sortedByName[0] = false;
-                    gridView.setAdapter(adapterByOrder);
-                } else {
-                    sortButton.setImageResource(R.drawable.ic_sort_by_alphabet);
-                    sortedByName[0] = true;
-                    gridView.setAdapter(adapterByAlphabet);
-                }
+        sortButton.setOnClickListener(v -> {
+            if (sortedByName[0]) {
+                sortButton.setImageResource(R.drawable.ic_sort_by_order);
+                sortedByName[0] = false;
+                gridView.setAdapter(adapterByOrder);
+            } else {
+                sortButton.setImageResource(R.drawable.ic_sort_by_alphabet);
+                sortedByName[0] = true;
+                gridView.setAdapter(adapterByAlphabet);
             }
         });
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
-                String heroName;
-                if (sortedByName[0]) {
-                    heroName = ((Hero) heroes[0].get(position)).getFrenchName();
-                } else {
-                    heroName = ((Hero) heroes[1].get(position)).getFrenchName();
-                }
-                intent.putExtra("heroName", heroName);
-                startActivity(intent);
+        gridView.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
+            String heroName;
+            if (sortedByName[0]) {
+                heroName = ((Hero) heroes[0].get(position)).getFrenchName();
+            } else {
+                heroName = ((Hero) heroes[1].get(position)).getFrenchName();
             }
+            intent.putExtra("heroName", heroName);
+            startActivity(intent);
         });
     }
 }

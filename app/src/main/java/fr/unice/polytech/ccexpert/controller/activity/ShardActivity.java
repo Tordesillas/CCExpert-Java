@@ -33,20 +33,19 @@ public class ShardActivity extends BaseActivity {
 
         final Spinner heroType = findViewById(R.id.heroTypeSpinner);
 
-        findViewById(R.id.shardButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-                    Toast.makeText(ShardActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
-                } else {
-                    createSimulatorDialog(sp.printShardAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
-                }
+        findViewById(R.id.shardButton).setOnClickListener(v -> {
+            if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
+                Toast.makeText(ShardActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
+            } else {
+                createSimulatorDialog(sp.printShardAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
             }
         });
 
         heroType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.white));
+                try {
+                    ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.white));
+                } catch (Exception ignored) {}
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });

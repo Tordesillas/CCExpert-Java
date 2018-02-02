@@ -1,38 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollDungeon"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/dungeonName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:padding="10dp"
-        android:textSize="20sp"/>
+        android:orientation="vertical" >
 
-    <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
-        android:id="@+id/youtube_player_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/dungeonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/textHeroes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:padding="10dp"
-        android:textSize="15sp"/>
+        <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <GridView
-        android:id="@+id/listHeroes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:verticalSpacing="4dp"
-        android:horizontalSpacing="4dp"
-        android:numColumns="3"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/textHeroes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="15sp"/>
+
+        <fr.unice.polytech.ccexpert.view.ExpandedGridView
+            android:id="@+id/listHeroes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="4dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="3" />
+
+    </LinearLayout>
+</ScrollView>

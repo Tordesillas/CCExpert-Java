@@ -25,7 +25,8 @@ public class HeroCardAdapter extends ArrayAdapter<HeroFaculties> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.hero_card, null);
+//            convertView = inflater.inflate(R.layout.hero_card, null);
+            convertView = inflater.inflate(R.layout.hero_littlecard, null);
         }
 
         HeroFaculties heroFaculties = getItem(position);
@@ -33,11 +34,11 @@ public class HeroCardAdapter extends ArrayAdapter<HeroFaculties> {
 
         ((ImageView) convertView.findViewById(R.id.imageHero)).setImageResource(StringToResource.getHeroPicture(hero.getFrenchName()));
         ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getFrenchName());
-        ((TextView) convertView.findViewById(R.id.heroLvl)).setText("Niveau " + heroFaculties.getLevel());
+/*        ((TextView) convertView.findViewById(R.id.heroLvl)).setText("Niveau " + heroFaculties.getLevel());
         ((TextView) convertView.findViewById(R.id.heroPower)).setText("Pouvoir niv. " + heroFaculties.getPowerLevel());
         ((ImageView) convertView.findViewById(R.id.imageTalent)).setImageResource(StringToResource.getTalentPicture(heroFaculties.getTalentName()));
         ((TextView) convertView.findViewById(R.id.heroTalent)).setText("Talent niv. " + heroFaculties.getTalentLevel());
-
+*/
         return convertView;
     }
 }

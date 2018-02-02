@@ -3,7 +3,6 @@ package fr.unice.polytech.ccexpert.controller.activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -26,32 +25,26 @@ public class GuildWarActivity extends BaseActivity {
         final RadioGroup radioGroupPosition = findViewById(R.id.radioGroupPosition);
         final EditText score = findViewById(R.id.score);
 
-        (findViewById(R.id.firstButtonGuild)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (playerPower.getText().length() <= 1 || playerScore.getText().length() <= 1) {
-                    Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                createSimulatorDialog(sgw.printStats(GuildWarActivity.this,
-                        Integer.parseInt(playerPower.getText().toString()),
-                        Integer.parseInt(playerScore.getText().toString())));
-                playerPower.setText("");
-                playerScore.setText("");
+        (findViewById(R.id.firstButtonGuild)).setOnClickListener(v -> {
+            if (playerPower.getText().length() <= 1 || playerScore.getText().length() <= 1) {
+                Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                return;
             }
+            createSimulatorDialog(sgw.printStats(GuildWarActivity.this,
+                    Integer.parseInt(playerPower.getText().toString()),
+                    Integer.parseInt(playerScore.getText().toString())));
+            playerPower.setText("");
+            playerScore.setText("");
         });
 
-        (findViewById(R.id.secondButtonGuild)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (score.getText().toString().length() <= 1) {
-                    Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                createSimulatorDialog(sgw.printFameStats(Integer.parseInt(score.getText().toString()),
-                        findPosition(radioGroupPosition.getCheckedRadioButtonId())));
-                score.setText("");
+        (findViewById(R.id.secondButtonGuild)).setOnClickListener(v -> {
+            if (score.getText().toString().length() <= 1) {
+                Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                return;
             }
+            createSimulatorDialog(sgw.printFameStats(Integer.parseInt(score.getText().toString()),
+                    findPosition(radioGroupPosition.getCheckedRadioButtonId())));
+            score.setText("");
         });
     }
 

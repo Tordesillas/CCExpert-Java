@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 
@@ -40,25 +39,22 @@ public class MainFragment extends Fragment {
         GridView gridView = getView().findViewById(R.id.grid);
         gridView.setAdapter(la);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                switch (position) {
-                    case 0:
-                        startActivity(new Intent(getActivity(), HeroesActivity.class));
-                        break;
-                    case 1:
-                        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance(), "main");
-                        transaction.addToBackStack("main");
-                        transaction.commit();
-                        break;
-                    case 2:
-                        startActivity(new Intent(getActivity(), DungeonsActivity.class));
-                        break;
-                }
-
+        gridView.setOnItemClickListener((parent, v, position, id) -> {
+            switch (position) {
+                case 0:
+                    startActivity(new Intent(getActivity(), HeroesActivity.class));
+                    break;
+                case 1:
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance(), "main");
+                    transaction.addToBackStack("main");
+                    transaction.commit();
+                    break;
+                case 2:
+                    startActivity(new Intent(getActivity(), DungeonsActivity.class));
+                    break;
             }
+
         });
 
         super.onActivityCreated(bundle);
