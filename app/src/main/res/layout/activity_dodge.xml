@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dodgeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        android:textSize="26sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:text="Esquive"/>
+
+    <TextView
+        android:id="@+id/dodgeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:text="Esquive de base du héros :"/>
+
+    <EditText
+        android:id="@+id/dodgeField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:layout_marginBottom="20dp"
+        android:hint="Insérer l'esquive du héros"/>
+
+    <TextView
+        android:id="@+id/dodgeEquipLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:text="Esquive ajoutée par les équipements :"/>
+
+    <EditText
+        android:id="@+id/dodgeEquipField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:layout_marginBottom="20dp"
+        android:hint="Insérer l'esquive supplémentaire"/>
+
+    <TextView
+        android:id="@+id/talentLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:text="Le héros possède-t'il le talent Brûlure ?"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/talentPicture"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <Switch
+            android:id="@+id/talentSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutTalentBar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/talentLvlText"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <SeekBar
+                android:id="@+id/talentProgressBar"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:max="8" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/artefactLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:text="Le héros possède-t'il l'artefact Pierre de Foudre ?"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/artefactPicture"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <Switch
+            android:id="@+id/artefactSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dodgeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/secondaryLightColor"
+        android:layout_marginTop="10dp"
+        android:text="@string/analyze"/>
+
+</LinearLayout>

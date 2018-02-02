@@ -14,8 +14,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
+import fr.unice.polytech.ccexpert.controller.activity.AccuracyActivity;
 import fr.unice.polytech.ccexpert.controller.activity.AetherockActivity;
+import fr.unice.polytech.ccexpert.controller.activity.AttackSpeedActivity;
 import fr.unice.polytech.ccexpert.controller.activity.CrystalActivity;
+import fr.unice.polytech.ccexpert.controller.activity.DodgeActivity;
 import fr.unice.polytech.ccexpert.controller.activity.GuildWarActivity;
 import fr.unice.polytech.ccexpert.controller.activity.ShardActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
@@ -35,7 +38,8 @@ public class SimulatorsFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle bundle) {
-        final List<String> titles = Arrays.asList("Guerre de guilde", "Fragments", "Cristaux bleus", "Aura-guerrières", "Esquive");
+        final List<String> titles = Arrays.asList("Guerre de guilde", "Fragments", "Cristaux bleus", "Aura-guerrières",
+                "Esquive", "Précision", "Vitesse d'attaque");
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
         GridView gridView = getView().findViewById(R.id.grid);
@@ -58,7 +62,13 @@ public class SimulatorsFragment extends Fragment {
                         startActivity(new Intent(getActivity(), AetherockActivity.class));
                         break;
                     case 4:
+                        startActivity(new Intent(getActivity(), DodgeActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(getActivity(), AccuracyActivity.class));
+                        break;
+                    case 6:
+                        startActivity(new Intent(getActivity(), AttackSpeedActivity.class));
                 }
 
             }

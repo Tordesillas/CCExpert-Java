@@ -53,6 +53,12 @@ public class CardAdapter extends ArrayAdapter<String> {
                 return R.drawable.crystal;
             case "Aura-guerrières":
                 return R.drawable.aetherock;
+            case "Esquive":
+                return R.drawable.pierre_de_foudre;
+            case "Précision":
+                return R.drawable.garuda;
+            case "Vitesse d'attaque":
+                return R.drawable.blitz;
             default:
                 return R.drawable.exorcist;
         }
