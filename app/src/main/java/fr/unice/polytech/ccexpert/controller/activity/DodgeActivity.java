@@ -79,6 +79,8 @@ public class DodgeActivity extends BaseActivity {
                             switchArtefact.isChecked(),
                             equip
                     ));
+                    dodgeField.setText("");
+                    dodgeEquipField.setText("");
                 }
             }
         });
