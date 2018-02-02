@@ -55,11 +55,32 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home :
                 startActivity(new Intent(this, CCExpertMain.class));
                 return true;
+            case R.id.nav_heroes :
+                startActivity(new Intent(this, HeroesActivity.class));
+                return true;
             case R.id.nav_dungeons :
                 startActivity(new Intent(this, DungeonsActivity.class));
                 return true;
-            case R.id.nav_heroes :
-                startActivity(new Intent(this, HeroesActivity.class));
+            case R.id.nav_guildwar :
+                startActivity(new Intent(this, GuildWarActivity.class));
+                return true;
+            case R.id.nav_shard :
+                startActivity(new Intent(this, ShardActivity.class));
+                return true;
+            case R.id.nav_crystal :
+                startActivity(new Intent(this, CrystalActivity.class));
+                return true;
+            case R.id.nav_aetherock :
+                startActivity(new Intent(this, AetherockActivity.class));
+                return true;
+            case R.id.nav_dodge :
+                startActivity(new Intent(this, DodgeActivity.class));
+                return true;
+            case R.id.nav_accuracy :
+                startActivity(new Intent(this, AccuracyActivity.class));
+                return true;
+            case R.id.nav_speedAttack :
+                startActivity(new Intent(this, AttackSpeedActivity.class));
                 return true;
         }
 

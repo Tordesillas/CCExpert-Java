@@ -19,20 +19,25 @@
         <menu>
             <item
                 android:id="@+id/nav_guildwar"
-                android:icon="@drawable/ic_menu_manage"
                 android:title="Guerre de guilde" />
             <item
                 android:id="@+id/nav_shard"
-                android:icon="@drawable/ic_menu_manage"
                 android:title="Fragments"/>
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_manage"
+                android:id="@+id/nav_crystal"
                 android:title="Cristaux bleus" />
             <item
-                android:id="@+id/nav_send42"
-                android:icon="@drawable/ic_menu_manage"
+                android:id="@+id/nav_aetherock"
+                android:title="Aura-guerrières" />
+            <item
+                android:id="@+id/nav_dodge"
                 android:title="Esquive" />
+            <item
+                android:id="@+id/nav_accuracy"
+                android:title="Précision" />
+            <item
+                android:id="@+id/nav_speedAttack"
+                android:title="Vitesse d'attaque" />
         </menu>
     </item>
 
