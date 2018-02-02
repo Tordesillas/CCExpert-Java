@@ -1,166 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
-    android:orientation="vertical" >
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/guildWarTitle"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginBottom="20dp"
-        android:textSize="26sp"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
-        android:text="Guerre de Guilde"/>
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/playerPowerLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        android:text="Puissance :"/>
-
-    <EditText
-        android:id="@+id/playerPower"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textSize="14sp"
-        android:inputType="number"
-        android:maxLength="6"
-        android:hint="Insérer la puissance du joueur"/>
-
-    <TextView
-        android:id="@+id/playerScoreLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        android:text="Score :"/>
-
-    <EditText
-        android:id="@+id/playerScore"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textSize="14sp"
-        android:inputType="number"
-        android:maxLength="4"
-        android:hint="Insérer le score du joueur"/>
-
-    <Button
-        android:id="@+id/firstButtonGuild"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@color/secondaryLightColor"
-        android:layout_marginTop="10dp"
-        android:text="@string/analyze"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"/>
-
-    <TextView
-        android:id="@+id/guildPosition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        android:text="Position de la guilde :"/>
-
-    <RadioGroup
-        android:id="@+id/radioGroupPosition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:checkedButton="@id/radio1">
-
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/guildWarTitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/secondaryLightColor"
-            android:textColor="@color/white"
-            android:layout_marginEnd="20dp"
-            android:text="1"/>
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:textSize="26sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:text="Guerre de Guilde"/>
 
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/playerPowerLabel"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/secondaryLightColor"
+            android:textSize="16sp"
             android:textColor="@color/white"
-            android:layout_marginEnd="20dp"
-            android:text="2"/>
+            android:textStyle="bold|italic"
+            android:text="Puissance :"/>
 
-        <RadioButton
-            android:id="@+id/radio3"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/playerPower"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/secondaryLightColor"
-            android:textColor="@color/white"
-            android:layout_marginEnd="20dp"
-            android:text="3"/>
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="6"
+            android:hint="Insérer la puissance du joueur"/>
 
-        <RadioButton
-            android:id="@+id/radio4"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/playerScoreLabel"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/secondaryLightColor"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            android:layout_marginEnd="20dp"
-            android:text="4"/>
+            android:textStyle="bold|italic"
+            android:text="Score :"/>
 
-        <RadioButton
-            android:id="@+id/radio5"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/playerScore"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/secondaryLightColor"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:hint="Insérer le score du joueur"/>
+
+        <Button
+            android:id="@+id/firstButtonGuild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/secondaryLightColor"
+            android:layout_marginTop="10dp"
+            android:text="@string/analyze"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/guildPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:textColor="@color/white"
-            android:text="5"/>
-    </RadioGroup>
+            android:textStyle="bold|italic"
+            android:text="Position de la guilde :"/>
 
-    <TextView
-        android:id="@+id/scoreLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
-        android:text="Score :"/>
+        <RadioGroup
+            android:id="@+id/radioGroupPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@id/radio1">
 
-    <EditText
-        android:id="@+id/score"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
-        android:textSize="14sp"
-        android:inputType="number"
-        android:maxLength="4"
-        android:hint="Insérer le score du joueur"/>
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryLightColor"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"
+                android:text="1"/>
 
-    <Button
-        android:id="@+id/secondButtonGuild"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@color/secondaryLightColor"
-        android:layout_marginTop="10dp"
-        android:text="@string/analyze"/>
-</LinearLayout>
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryLightColor"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"
+                android:text="2"/>
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryLightColor"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"
+                android:text="3"/>
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryLightColor"
+                android:textColor="@color/white"
+                android:layout_marginEnd="20dp"
+                android:text="4"/>
+
+            <RadioButton
+                android:id="@+id/radio5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/secondaryLightColor"
+                android:textColor="@color/white"
+                android:text="5"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/scoreLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Score :"/>
+
+        <EditText
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="4"
+            android:hint="Insérer le score du joueur"/>
+
+        <Button
+            android:id="@+id/secondButtonGuild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/secondaryLightColor"
+            android:layout_marginTop="10dp"
+            android:text="@string/analyze"/>
+    </LinearLayout>
+</ScrollView>

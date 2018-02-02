@@ -1,6 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/speedTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:textSize="26sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:text="Vitesse d'attaque"/>
+
+        <TextView
+            android:id="@+id/speedLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Vitesse d'attaque de base du héros :"/>
+
+        <EditText
+            android:id="@+id/speedField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="5"
+            android:layout_marginBottom="20dp"
+            android:hint="Insérer la vitesse d'attaque du héros"/>
+
+        <TextView
+            android:id="@+id/ffLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Le héros possède-t'il le talent Fou Furieux ?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/talentPicture"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Switch
+                android:id="@+id/talentSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layoutTalentBar"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/talentLvlText"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:id="@+id/talentProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:max="8" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/blitzLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Le héros possède-t'il l'artefact Blitzkrieg ?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/blitzPicture"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Switch
+                android:id="@+id/blitzSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/furyLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Le héros possède-t'il le second talent Fury ?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/furyPicture"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Switch
+                android:id="@+id/furySwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layoutFuryBar"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/furyText"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:id="@+id/furyProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:max="5" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dukeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:text="Le héros a t'il à ses côté le Duc ?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dukePicture"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <Switch
+                android:id="@+id/dukeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:id="@+id/layoutDukeBar"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dukeText"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:id="@+id/dukeProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:max="10" />
+
+                <TextView
+                    android:id="@+id/dukeProcText"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:id="@+id/dukeProcBar"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:max="4" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/speedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/secondaryLightColor"
+            android:layout_marginTop="10dp"
+            android:text="@string/analyze"/>
+
+    </LinearLayout>
+
+</ScrollView>
