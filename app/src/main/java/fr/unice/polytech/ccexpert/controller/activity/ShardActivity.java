@@ -1,7 +1,5 @@
 package fr.unice.polytech.ccexpert.controller.activity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -41,7 +39,7 @@ public class ShardActivity extends BaseActivity {
                 if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
                     Toast.makeText(ShardActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
                 } else {
-                    createDialog(sp.printShardAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
+                    createSimulatorDialog(sp.printShardAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
                 }
             }
         });
@@ -52,19 +50,5 @@ public class ShardActivity extends BaseActivity {
             }
             public void onNothingSelected(AdapterView<?> parent) {}
         });
-    }
-
-    private void createDialog(String message) {
-        if (message == null) {
-            return;
-        }
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Simulation terminée")
-                .setMessage(message)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {}
-                })
-                .show();
     }
 }

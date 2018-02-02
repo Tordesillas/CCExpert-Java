@@ -49,6 +49,8 @@ public class CardAdapter extends ArrayAdapter<String> {
                 return R.drawable.guild_wars;
             case "Fragments":
                 return R.drawable.shards;
+            case "Cristaux bleus":
+                return R.drawable.crystal;
             default:
                 return R.drawable.exorcist;
         }

@@ -1,7 +1,5 @@
 package fr.unice.polytech.ccexpert.controller.activity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -35,7 +33,7 @@ public class GuildWarActivity extends BaseActivity {
                     Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                createDialog(sgw.printStats(GuildWarActivity.this,
+                createSimulatorDialog(sgw.printStats(GuildWarActivity.this,
                         Integer.parseInt(playerPower.getText().toString()),
                         Integer.parseInt(playerScore.getText().toString())));
                 playerPower.setText("");
@@ -50,25 +48,11 @@ public class GuildWarActivity extends BaseActivity {
                     Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                createDialog(sgw.printFameStats(Integer.parseInt(score.getText().toString()),
+                createSimulatorDialog(sgw.printFameStats(Integer.parseInt(score.getText().toString()),
                         findPosition(radioGroupPosition.getCheckedRadioButtonId())));
                 score.setText("");
             }
         });
-    }
-
-    private void createDialog(String message) {
-        if (message == null) {
-            return;
-        }
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Simulation terminée")
-                .setMessage(message)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {}
-                })
-                .show();
     }
 
     private int findPosition(int id) {

@@ -26,6 +26,7 @@
         <activity android:name=".controller.activity.HeroesActivity" />
         <activity android:name=".controller.activity.HeroActivity" />
         <activity android:name=".controller.activity.ShardActivity" />
+        <activity android:name=".controller.activity.CrystalActivity" />
     </application>
 
 </manifest>

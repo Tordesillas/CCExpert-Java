@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
+import fr.unice.polytech.ccexpert.controller.activity.CrystalActivity;
 import fr.unice.polytech.ccexpert.controller.activity.GuildWarActivity;
 import fr.unice.polytech.ccexpert.controller.activity.ShardActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
@@ -50,6 +51,7 @@ public class SimulatorsFragment extends Fragment {
                         startActivity(new Intent(getActivity(), ShardActivity.class));
                         break;
                     case 2:
+                        startActivity(new Intent(getActivity(), CrystalActivity.class));
                         break;
                     case 3:
                         break;
