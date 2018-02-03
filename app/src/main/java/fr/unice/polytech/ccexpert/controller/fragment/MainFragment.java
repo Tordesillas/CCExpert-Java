@@ -33,7 +33,11 @@ public class MainFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle bundle) {
-        final List<String> titles = Arrays.asList("Héros", "Simulateurs", "Donjons");
+        final List<String> titles = Arrays.asList(
+                getResources().getString(R.string.heroes),
+                getResources().getString(R.string.simulators),
+                getResources().getString(R.string.dungeons)
+        );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
         GridView gridView = getView().findViewById(R.id.grid);

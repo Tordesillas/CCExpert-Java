@@ -1,10 +1,19 @@
 package fr.unice.polytech.ccexpert.controller.processor;
 
+import android.content.res.Resources;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import fr.unice.polytech.ccexpert.R;
+
 public class AccuracyProcessor {
+    private Resources res;
     private final static int[] PERCENTAGES = {12, 32, 46, 82};
+
+    public AccuracyProcessor(Resources res) {
+        this.res = res;
+    }
 
     public String printAccuracyAmount(int basic, boolean artefactBool, int extra) {
         double amountArtefact = (artefactBool) ? 0.2 : 0;
@@ -13,26 +22,28 @@ public class AccuracyProcessor {
         NumberFormat f = NumberFormat.getNumberInstance(Locale.FRANCE);
 
         StringBuilder sb = new StringBuilder();
-        sb.append("Le héros a ")
+        sb.append(res.getString(R.string.processorText1))
                 .append(f.format(100 + amount*100))
-                .append("% de chance de toucher le héros adverse.\nIl a donc 100% de chance d'attendre un héros possédant ")
+                .append(res.getString(R.string.processorText2))
                 .append(f.format(Math.round(amount*100)))
-                .append("% d'esquive.\n\n");
+                .append(res.getString(R.string.processorText3))
+                .append("\n\n");
 
         for (int nb : PERCENTAGES) {
             double res = Math.round(100 + amount*100 - nb);
             if (res >= 100) {
-                sb.append("Contre un héros à ")
+                sb.append(this.res.getString(R.string.processorText4))
                         .append(nb)
-                        .append("% d'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de ")
+                        .append(this.res.getString(R.string.processorText5))
                         .append(res)
                         .append("%.\n");
             } else {
-                sb.append("Contre un héros à ")
+                sb.append(this.res.getString(R.string.processorText4))
                         .append(nb)
-                        .append("% d'esquive, le héros a ")
+                        .append(this.res.getString(R.string.processorText6))
                         .append(res)
-                        .append("% de chance de toucher sa cible.\n");
+                        .append(this.res.getString(R.string.processorText7))
+                        .append("\n");
             }
         }
         return sb.toString();

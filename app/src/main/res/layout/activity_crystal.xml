@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="vertical" >
 
@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="Cristaux bleus"/>
+            android:text="@string/crystal"/>
 
         <TextView
             android:id="@+id/currentlvlLabel"
@@ -29,7 +29,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Niveau actuel du héros :"/>
+            android:text="@string/spinnerText1"/>
 
         <NumberPicker
             android:id="@+id/currentLvl"
@@ -45,7 +45,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Niveau à atteindre :"/>
+            android:text="@string/spinnerText2"/>
 
         <NumberPicker
             android:id="@+id/aimLvl"

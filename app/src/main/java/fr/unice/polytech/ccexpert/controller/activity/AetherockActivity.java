@@ -18,7 +18,7 @@ public class AetherockActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.aetherockTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        final AetherockProcessor ap = new AetherockProcessor();
+        final AetherockProcessor ap = new AetherockProcessor(getResources());
         final NumberPicker currentLvlPicker = findViewById(R.id.currentLvl);
         final NumberPicker aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
@@ -30,7 +30,7 @@ public class AetherockActivity extends BaseActivity {
 
         findViewById(R.id.aetherockButton).setOnClickListener(v -> {
             if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-                Toast.makeText(AetherockActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AetherockActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT).show();
             } else {
                 createSimulatorDialog(ap.printAetherockAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             }

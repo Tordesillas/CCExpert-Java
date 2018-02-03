@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="vertical" >
 
@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="Guerre de Guilde"/>
+            android:text="@string/guildWar"/>
 
         <TextView
             android:id="@+id/playerPowerLabel"
@@ -29,7 +29,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Puissance :"/>
+            android:text="@string/guildWarText1"/>
 
         <EditText
             android:id="@+id/playerPower"
@@ -39,7 +39,7 @@
             android:textSize="14sp"
             android:inputType="number"
             android:maxLength="6"
-            android:hint="Insérer la puissance du joueur"/>
+            android:hint="@string/guildWarText2"/>
 
         <TextView
             android:id="@+id/playerScoreLabel"
@@ -49,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Score :"/>
+            android:text="@string/guildWarText3"/>
 
         <EditText
             android:id="@+id/playerScore"
@@ -59,7 +59,7 @@
             android:textSize="14sp"
             android:inputType="number"
             android:maxLength="4"
-            android:hint="Insérer le score du joueur"/>
+            android:hint="@string/guildWarText4"/>
 
         <Button
             android:id="@+id/firstButtonGuild"
@@ -84,7 +84,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Position de la guilde :"/>
+            android:text="@string/guildWarText5"/>
 
         <RadioGroup
             android:id="@+id/radioGroupPosition"
@@ -146,7 +146,7 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Score :"/>
+            android:text="@string/guildWarText3"/>
 
         <EditText
             android:id="@+id/score"
@@ -156,7 +156,7 @@
             android:textSize="14sp"
             android:inputType="number"
             android:maxLength="4"
-            android:hint="Insérer le score du joueur"/>
+            android:hint="@string/guildWarText4"/>
 
         <Button
             android:id="@+id/secondButtonGuild"

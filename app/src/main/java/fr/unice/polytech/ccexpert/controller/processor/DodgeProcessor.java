@@ -1,10 +1,19 @@
 package fr.unice.polytech.ccexpert.controller.processor;
 
+import android.content.res.Resources;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import fr.unice.polytech.ccexpert.R;
+
 public class DodgeProcessor {
+    private Resources res;
     private static final double AMOUNTS_TALENT[] = {0, 0.05, 0.06, 0.07, 0.08, 0.09, 0.15, 0.35, 0.5};
+
+    public DodgeProcessor(Resources res) {
+        this.res = res;
+    }
 
     public String printDodgeAmount(int basic, int talentLvl, boolean artefactBool, int extra) {
         double amountTalent = AMOUNTS_TALENT[talentLvl];
@@ -13,7 +22,7 @@ public class DodgeProcessor {
 
         NumberFormat f = NumberFormat.getNumberInstance(Locale.FRANCE);
 
-        return "Le héros sera capable d'esquiver " + f.format(Math.round(amount*100)) + "% des attaques adverses.\n" +
-                "Il esquivera donc environ " + f.format(Math.round(amount*10)) +" coups sur 10.";
+        return res.getString(R.string.processorText18) + f.format(Math.round(amount*100)) + res.getString(R.string.processorText19) +
+                "\n" + res.getString(R.string.processorText20) + f.format(Math.round(amount*10)) + res.getString(R.string.processorText21);
     }
 }

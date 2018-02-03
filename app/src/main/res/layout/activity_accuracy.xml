@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="vertical" >
 
@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="Précision"/>
+            android:text="@string/accuracy"/>
 
         <TextView
             android:id="@+id/accuracyLabel"
@@ -29,7 +29,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Précision de base du héros :"/>
+            android:text="@string/accuracyText1"/>
 
         <EditText
             android:id="@+id/accuracyField"
@@ -40,7 +40,7 @@
             android:inputType="number"
             android:maxLength="4"
             android:layout_marginBottom="20dp"
-            android:hint="Insérer la précision du héros"/>
+            android:hint="@string/accuracyText2"/>
 
         <TextView
             android:id="@+id/accuracyEquipLabel"
@@ -49,7 +49,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Précision ajoutée par les équipements :"/>
+            android:text="@string/accuracyText3"/>
 
         <EditText
             android:id="@+id/accuracyEquipField"
@@ -60,7 +60,7 @@
             android:inputType="number"
             android:maxLength="4"
             android:layout_marginBottom="20dp"
-            android:hint="Insérer la précision supplémentaire"/>
+            android:hint="@string/accuracyText4"/>
 
         <TextView
             android:id="@+id/artefactLabel"
@@ -69,7 +69,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros possède-t'il l'artefact Garuda ?"/>
+            android:text="@string/accuracyText5"/>
 
         <LinearLayout
             android:layout_width="match_parent"

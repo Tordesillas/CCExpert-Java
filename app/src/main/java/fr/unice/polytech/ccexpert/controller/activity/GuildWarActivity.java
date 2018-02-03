@@ -17,7 +17,7 @@ public class GuildWarActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guildwar);
 
-        final StatsGuildWar sgw = new StatsGuildWar();
+        final StatsGuildWar sgw = new StatsGuildWar(getResources());
 
         ((TextView) findViewById(R.id.guildWarTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
         final EditText playerPower = findViewById(R.id.playerPower);
@@ -27,7 +27,7 @@ public class GuildWarActivity extends BaseActivity {
 
         (findViewById(R.id.firstButtonGuild)).setOnClickListener(v -> {
             if (playerPower.getText().length() <= 1 || playerScore.getText().length() <= 1) {
-                Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GuildWarActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
                 return;
             }
             createSimulatorDialog(sgw.printStats(GuildWarActivity.this,
@@ -39,7 +39,7 @@ public class GuildWarActivity extends BaseActivity {
 
         (findViewById(R.id.secondButtonGuild)).setOnClickListener(v -> {
             if (score.getText().toString().length() <= 1) {
-                Toast.makeText(GuildWarActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GuildWarActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
                 return;
             }
             createSimulatorDialog(sgw.printFameStats(Integer.parseInt(score.getText().toString()),

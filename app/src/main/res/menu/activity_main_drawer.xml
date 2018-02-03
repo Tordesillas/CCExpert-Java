@@ -4,40 +4,40 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Accueil" />
+            android:title="@string/home" />
         <item
             android:id="@+id/nav_heroes"
             android:icon="@drawable/ic_menu_send"
-            android:title="Héros" />
+            android:title="@string/heroes" />
         <item
             android:id="@+id/nav_dungeons"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Donjons" />
+            android:title="@string/dungeons" />
     </group>
 
-    <item android:title="Simulateurs">
+    <item android:title="@string/simulators">
         <menu>
             <item
                 android:id="@+id/nav_guildwar"
-                android:title="Guerre de guilde" />
+                android:title="@string/guildWar" />
             <item
                 android:id="@+id/nav_shard"
-                android:title="Fragments"/>
+                android:title="@string/shard"/>
             <item
                 android:id="@+id/nav_crystal"
-                android:title="Cristaux bleus" />
+                android:title="@string/crystal" />
             <item
                 android:id="@+id/nav_aetherock"
-                android:title="Aura-guerrières" />
+                android:title="@string/aetherock" />
             <item
                 android:id="@+id/nav_dodge"
-                android:title="Esquive" />
+                android:title="@string/dodge" />
             <item
                 android:id="@+id/nav_accuracy"
-                android:title="Précision" />
+                android:title="@string/accuracy" />
             <item
                 android:id="@+id/nav_speedAttack"
-                android:title="Vitesse d'attaque" />
+                android:title="@string/attackSpeed" />
         </menu>
     </item>
 

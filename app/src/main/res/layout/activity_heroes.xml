@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="Autel des Héros  "/>
+            android:text="@string/altarHeroes"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/sortButton"

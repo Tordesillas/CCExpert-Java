@@ -21,7 +21,7 @@ public class AccuracyActivity extends BaseActivity {
         ((TextView) findViewById(R.id.accuracyTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
         final EditText accuracyField = findViewById(R.id.accuracyField);
         final EditText accuracyEquipField = findViewById(R.id.accuracyEquipField);
-        final AccuracyProcessor ap = new AccuracyProcessor();
+        final AccuracyProcessor ap = new AccuracyProcessor(getResources());
 
         ((ImageView) findViewById(R.id.artefactPicture)).setImageResource(R.drawable.garuda);
 
@@ -29,7 +29,7 @@ public class AccuracyActivity extends BaseActivity {
 
         findViewById(R.id.accuracyButton).setOnClickListener(v -> {
             if (accuracyField.getText().length() <= 1) {
-                Toast.makeText(AccuracyActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AccuracyActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
             } else {
                 int equip = 0;
                 if (accuracyEquipField.getText().length() >= 1) {

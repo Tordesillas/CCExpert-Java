@@ -22,7 +22,7 @@ public class AttackSpeedActivity extends BaseActivity {
         setContentView(R.layout.activity_attackspeed);
 
         ((TextView) findViewById(R.id.speedTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
-        final AttackSpeedProcessor asp = new AttackSpeedProcessor();
+        final AttackSpeedProcessor asp = new AttackSpeedProcessor(getResources());
         final EditText speedField = findViewById(R.id.speedField);
 
         ((ImageView) findViewById(R.id.talentPicture)).setImageResource(R.drawable.berserk);
@@ -40,11 +40,11 @@ public class AttackSpeedActivity extends BaseActivity {
             }
         });
         final TextView talentLvlText = findViewById(R.id.talentLvlText);
-        talentLvlText.setText("Niveau du talent : 0/8");
+        talentLvlText.setText(getResources().getString(R.string.talentLevel) + "0/8");
         talentBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                talentLvlText.setText("Niveau du talent : " + progress + "/8");
+                talentLvlText.setText(getResources().getString(R.string.talentLevel) + progress + "/8");
             }
 
             @Override
@@ -70,12 +70,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView furyText = findViewById(R.id.furyText);
-        furyText.setText("Niveau du talent : 0/5");
+        furyText.setText(getResources().getString(R.string.talentLevel) + "0/5");
         final SeekBar furyBar = findViewById(R.id.furyProgressBar);
         furyBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                furyText.setText("Niveau du talent : " + progress + "/5");
+                furyText.setText(getResources().getString(R.string.talentLevel) + progress + "/5");
             }
 
             @Override
@@ -98,12 +98,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView dukeText = findViewById(R.id.dukeText);
-        dukeText.setText("Niveau du pouvoir du duc : 0/10");
+        dukeText.setText(getResources().getString(R.string.dukeLevel) + "0/10");
         final SeekBar dukeProgressBar = findViewById(R.id.dukeProgressBar);
         dukeProgressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dukeText.setText("Niveau du pouvoir du duc : " + progress + "/10");
+                dukeText.setText(getResources().getString(R.string.dukeLevel) + progress + "/10");
             }
 
             @Override
@@ -114,12 +114,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView dukeProcText = findViewById(R.id.dukeProcText);
-        dukeProcText.setText("Coups que le duc a effectué : 0/4");
+        dukeProcText.setText(getResources().getString(R.string.dukeProcs) + "0/4");
         final SeekBar dukeProcBar = findViewById(R.id.dukeProcBar);
         dukeProcBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dukeProcText.setText("Coups que le duca effectué le duc : " + progress + "/4");
+                dukeProcText.setText(getResources().getString(R.string.dukeProcs) + progress + "/4");
             }
 
             @Override
@@ -131,7 +131,7 @@ public class AttackSpeedActivity extends BaseActivity {
 
         findViewById(R.id.speedButton).setOnClickListener(v -> {
             if (speedField.getText().length() <= 1) {
-                Toast.makeText(AttackSpeedActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AttackSpeedActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
             } else {
                 createSimulatorDialog(asp.printAttackSpeedAmount(
                         Integer.parseInt(speedField.getText().toString()),

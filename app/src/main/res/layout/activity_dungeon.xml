@@ -1,45 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollDungeon"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dungeonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/dungeonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textSize="20sp"/>
-
-        <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
-            android:id="@+id/youtube_player_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:id="@+id/textHeroes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:padding="10dp"
-            android:textSize="15sp"/>
-
-        <fr.unice.polytech.ccexpert.view.ExpandedGridView
-            android:id="@+id/listHeroes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:verticalSpacing="4dp"
-            android:horizontalSpacing="4dp"
-            android:numColumns="3" />
-
-    </LinearLayout>
-</ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="@string/wait"/>
+</LinearLayout>

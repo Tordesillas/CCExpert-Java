@@ -37,8 +37,15 @@ public class SimulatorsFragment extends Fragment {
 
     @Override
     public void onActivityCreated(Bundle bundle) {
-        final List<String> titles = Arrays.asList("Guerre de guilde", "Fragments", "Cristaux bleus", "Aura-guerrières",
-                "Esquive", "Précision", "Vitesse d'attaque");
+        final List<String> titles = Arrays.asList(
+                getResources().getString(R.string.guildWar),
+                getResources().getString(R.string.shard),
+                getResources().getString(R.string.crystal),
+                getResources().getString(R.string.aetherock),
+                getResources().getString(R.string.dodge),
+                getResources().getString(R.string.accuracy),
+                getResources().getString(R.string.attackSpeed)
+        );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
         GridView gridView = getView().findViewById(R.id.grid);

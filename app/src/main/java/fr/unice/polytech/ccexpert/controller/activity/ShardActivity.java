@@ -21,7 +21,7 @@ public class ShardActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.shardTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        final ShardProcessor sp = new ShardProcessor();
+        final ShardProcessor sp = new ShardProcessor(getResources());
         final NumberPicker currentLvlPicker = findViewById(R.id.currentLvl);
         final NumberPicker aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);
@@ -35,7 +35,7 @@ public class ShardActivity extends BaseActivity {
 
         findViewById(R.id.shardButton).setOnClickListener(v -> {
             if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-                Toast.makeText(ShardActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ShardActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT).show();
             } else {
                 createSimulatorDialog(sp.printShardAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
             }

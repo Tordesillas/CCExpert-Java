@@ -24,7 +24,7 @@ public class DodgeActivity extends BaseActivity {
         ((TextView) findViewById(R.id.dodgeTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
         final EditText dodgeField = findViewById(R.id.dodgeField);
         final EditText dodgeEquipField = findViewById(R.id.dodgeEquipField);
-        final DodgeProcessor dp = new DodgeProcessor();
+        final DodgeProcessor dp = new DodgeProcessor(getResources());
 
         ((ImageView) findViewById(R.id.talentPicture)).setImageResource(R.drawable.scorch);
 
@@ -41,11 +41,11 @@ public class DodgeActivity extends BaseActivity {
            }
         });
         final TextView talentLvlText = findViewById(R.id.talentLvlText);
-        talentLvlText.setText("Niveau du talent : 0/8");
+        talentLvlText.setText(getResources().getString(R.string.talentLevel) + "0/8");
         talentBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                talentLvlText.setText("Niveau du talent : " + progress + "/8");
+                talentLvlText.setText(getResources().getString(R.string.talentLevel) + progress + "/8");
             }
 
             @Override
@@ -61,7 +61,7 @@ public class DodgeActivity extends BaseActivity {
 
         findViewById(R.id.dodgeButton).setOnClickListener(v -> {
             if (dodgeField.getText().length() <= 1) {
-                Toast.makeText(DodgeActivity.this, "Des données sont manquantes.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DodgeActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
             } else {
                 int equip = 0;
                 if (dodgeEquipField.getText().length() >= 1) {

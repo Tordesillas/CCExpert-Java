@@ -18,7 +18,7 @@ public class CrystalActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.crystalTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        final CrystalProcessor cp = new CrystalProcessor();
+        final CrystalProcessor cp = new CrystalProcessor(getResources());
         final NumberPicker currentLvlPicker = findViewById(R.id.currentLvl);
         final NumberPicker aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
@@ -30,7 +30,7 @@ public class CrystalActivity extends BaseActivity {
 
         findViewById(R.id.crystalButton).setOnClickListener(v -> {
             if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-                Toast.makeText(CrystalActivity.this, "Le héros ne peut pas perdre de niveau.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CrystalActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT).show();
             } else {
                 createSimulatorDialog(cp.printCrystalAmount(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             }

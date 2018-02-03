@@ -102,7 +102,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             return;
         }
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Simulation terminée")
+        alertDialogBuilder.setTitle(getResources().getString(R.string.simulationCompleted))
                 .setMessage(message)
                 .setPositiveButton("OK", (dialog, which) -> {})
                 .show();

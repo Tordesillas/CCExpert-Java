@@ -7,7 +7,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/dungeons"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/dungeonsTitle"
@@ -19,7 +19,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="20dp"
-            android:text="Sélectionner un donjon"/>
+            android:text="@string/selectDungeon"/>
 
         <LinearLayout
             android:id="@+id/layoutPickers"

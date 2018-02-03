@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="vertical" >
 
@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="Vitesse d'attaque"/>
+            android:text="@string/attackSpeed"/>
 
         <TextView
             android:id="@+id/speedLabel"
@@ -29,7 +29,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Vitesse d'attaque de base du héros :"/>
+            android:text="@string/attackSpeedText1"/>
 
         <EditText
             android:id="@+id/speedField"
@@ -40,7 +40,7 @@
             android:inputType="number"
             android:maxLength="5"
             android:layout_marginBottom="20dp"
-            android:hint="Insérer la vitesse d'attaque du héros"/>
+            android:hint="@string/attackSpeedText2"/>
 
         <TextView
             android:id="@+id/ffLabel"
@@ -49,7 +49,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros possède-t'il le talent Fou Furieux ?"/>
+            android:text="@string/accuracyText3"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,7 +96,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros possède-t'il l'artefact Blitzkrieg ?"/>
+            android:text="@string/attackSpeedText4"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,7 +122,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros possède-t'il le second talent Fury ?"/>
+            android:text="@string/attackSpeedText5"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -170,7 +170,7 @@
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros a t'il à ses côté le Duc ?"/>
+            android:text="@string/attackSpeedText6"/>
 
         <LinearLayout
             android:layout_width="match_parent"

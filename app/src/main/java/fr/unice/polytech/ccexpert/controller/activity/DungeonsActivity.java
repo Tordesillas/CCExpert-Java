@@ -54,8 +54,8 @@ public class DungeonsActivity extends BaseActivity {
 
     private void createDialog(final Collection<Dungeon> dungeons) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Choix de donjon")
-                .setMessage("Deux vidéos correspondent à votre demande, quelle version voulez-vous ?")
+        alertDialogBuilder.setTitle(getResources().getString(R.string.dungeonChoice))
+                .setMessage(getResources().getString(R.string.twoVideos))
                 .setNegativeButton("F2P", (dialog, which) -> {
                     Intent intent = new Intent(DungeonsActivity.this, DungeonActivity.class);
                     Dungeon d = dungeons.iterator().next();
@@ -77,7 +77,7 @@ public class DungeonsActivity extends BaseActivity {
 
     private void createErrorDialog() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Choix de donjon").setMessage("Aucune vidéo n'a été trouvée.")
+        alertDialogBuilder.setTitle(getResources().getString(R.string.dungeonChoice)).setMessage(getResources().getString(R.string.noVideo))
                 .setNegativeButton("OK", (dialog, which) -> {})
                 .show();
     }

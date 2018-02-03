@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:orientation="vertical" >
 
@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="Esquive"/>
+            android:text="@string/dodge"/>
 
         <TextView
             android:id="@+id/dodgeLabel"
@@ -29,7 +29,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Esquive de base du héros :"/>
+            android:text="@string/dodgeText1"/>
 
         <EditText
             android:id="@+id/dodgeField"
@@ -40,7 +40,7 @@
             android:inputType="number"
             android:maxLength="4"
             android:layout_marginBottom="20dp"
-            android:hint="Insérer l'esquive du héros"/>
+            android:hint="@string/dodgeText2"/>
 
         <TextView
             android:id="@+id/dodgeEquipLabel"
@@ -49,7 +49,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Esquive ajoutée par les équipements :"/>
+            android:text="@string/dodgeText3"/>
 
         <EditText
             android:id="@+id/dodgeEquipField"
@@ -60,7 +60,7 @@
             android:inputType="number"
             android:maxLength="4"
             android:layout_marginBottom="20dp"
-            android:hint="Insérer l'esquive supplémentaire"/>
+            android:hint="@string/dodgeText4"/>
 
         <TextView
             android:id="@+id/talentLabel"
@@ -70,7 +70,7 @@
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros possède-t'il le talent Brûlure ?"/>
+            android:text="@string/dodgeText5"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,7 +117,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:text="Le héros possède-t'il l'artefact Pierre de Foudre ?"/>
+            android:text="@string/dodgeText6"/>
 
         <LinearLayout
             android:layout_width="match_parent"
