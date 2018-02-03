@@ -129,6 +129,34 @@ public class AttackSpeedActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
+        ((ImageView) findViewById(R.id.mikaPicture)).setImageResource(R.drawable.michael);
+        final Switch mikaSwitch = findViewById(R.id.mikaSwitch);
+        final LinearLayout mikaLayout = findViewById(R.id.mikaLayout);
+        mikaLayout.setVisibility(View.GONE);
+        mikaSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                mikaLayout.setVisibility(View.VISIBLE);
+            } else {
+                mikaLayout.setVisibility(View.GONE);
+            }
+        });
+
+        final TextView mikaText = findViewById(R.id.mikaLvlText);
+        mikaText.setText(getResources().getString(R.string.mikaLevel) + "0/10");
+        final SeekBar mikaBar = findViewById(R.id.mikaProgressBar);
+        mikaBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mikaText.setText(getResources().getString(R.string.mikaLevel) + progress + "/10");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
         findViewById(R.id.speedButton).setOnClickListener(v -> {
             if (speedField.getText().length() <= 1) {
                 Toast.makeText(AttackSpeedActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
@@ -140,7 +168,7 @@ public class AttackSpeedActivity extends BaseActivity {
                         (furySwitch.isChecked()) ? furyBar.getProgress() : 0,
                         (dukeSwitch.isChecked()) ? dukeProgressBar.getProgress() : 0,
                         (dukeSwitch.isChecked()) ? dukeProcBar.getProgress() : 0,
-                        5
+                        (mikaSwitch.isChecked()) ? mikaBar.getProgress() : 0
                 ));
                 speedField.setText("");
             }

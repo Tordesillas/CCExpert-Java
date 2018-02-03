@@ -1,17 +1,16 @@
 package fr.unice.polytech.ccexpert.controller.activity;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
-import fr.unice.polytech.ccexpert.model.Hero;
 import fr.unice.polytech.ccexpert.model.Sets;
 import fr.unice.polytech.ccexpert.view.HeroesAdapter;
 
@@ -48,7 +47,7 @@ public class HeroesActivity extends BaseActivity {
         });
 
         gridView.setOnItemClickListener((parent, view, position, id) -> {
-            Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
+            /*Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
             String heroName;
             if (sortedByName[0]) {
                 heroName = ((Hero) heroes[0].get(position)).getFrenchName();
@@ -56,7 +55,8 @@ public class HeroesActivity extends BaseActivity {
                 heroName = ((Hero) heroes[1].get(position)).getFrenchName();
             }
             intent.putExtra("heroName", heroName);
-            startActivity(intent);
+            startActivity(intent);*/
+            Toast.makeText(HeroesActivity.this, getResources().getString(R.string.onNextVersion), Toast.LENGTH_SHORT).show();
         });
     }
 }

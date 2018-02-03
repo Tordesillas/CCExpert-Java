@@ -33,7 +33,7 @@
     <string name="accuracyText2">Insérer la précision du héros</string>
     <string name="accuracyText3">Précision ajoutée par les équipements :</string>
     <string name="accuracyText4">Insérer la précision supplémentaire</string>
-    <string name="accuracyText5">Le héros possède-t\'il l'artefact Garuda ?</string>
+    <string name="accuracyText5">Le héros possède-t\'il l\'artefact Garuda ?</string>
 
     <string name="aetherock">Aura-guerrières</string>
 
@@ -46,7 +46,8 @@
     <string name="attackSpeedText3">Le héros possède-t\'il le talent Fou Furieux ?</string>
     <string name="attackSpeedText4">Le héros possède-t\'il l\'artefact Blitzkrieg ?</string>
     <string name="attackSpeedText5">Le héros possède-t\'il le second talent Fury ?</string>
-    <string name="attackSpeedText6">Le héros a t\'il à ses côté le Duc ?</string>
+    <string name="attackSpeedText6">Le héros a t\'il à ses côté Duc ?</string>
+    <string name="attackSpeedText7">Le héros a t\'il à ses côté Mickael ?</string>
 
     <string name="crystal">Cristaux bleus</string>
 
@@ -65,7 +66,8 @@
     <string name="guildWarText4">Insérer le score du joueur</string>
     <string name="guildWarText5">Position de la guilde :</string>
 
-    <string name="altarHeroes">Autel des Héros  </string>
+    <string name="altarHeroes">Autel des Héros\ \ </string>
+    <string name="onNextVersion">Cette fonctionnalité sera disponible à la prochaine mise à jour.</string>
 
     <string name="shard">Fragments</string>
     <string name="shardText">Catégorie du héros :</string>
@@ -74,41 +76,39 @@
     <string name="loseLevel">Le héros ne peut pas perdre de niveau.</string>
     <string name="incorrectData">Il semble que les données saisies sont incorrectes.</string>
 
-    <string name="talentLevel">Niveau du talent : </string>
-    <string name="dukeLevel">Niveau du pouvoir du duc : </string>
-    <string name="dukeProcs">Coups que le duc a effectués : </string>
+    <string name="talentLevel">Niveau du talent :\ </string>
+    <string name="dukeLevel">Niveau du pouvoir du duc :\ </string>
+    <string name="dukeProcs">Coups que le duc a effectués :\ </string>
+    <string name="mikaLevel">Niveau du talent de Mickael :\ </string>
 
     <string name="simulationCompleted">Simulation terminée</string>
 
-    <string name="processorText1">Le héros a </string>
-    <string name="processorText2">% de chance de toucher le héros adverse. Il a donc 100% de chance d\'attendre un héros possédant </string>
+    <string name="processorText1">Le héros a\ </string>
+    <string name="processorText2">% de chance de toucher le héros adverse. Il a donc 100% de chance d\'attendre un héros possédant\ </string>
     <string name="processorText3">% d\'esquive.</string>
-    <string name="processorText4">Contre un héros à </string>
-    <string name="processorText5">% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de </string>
-    <string name="processorText6">% d\'esquive, le héros a </string>
+    <string name="processorText4">Contre un héros à\ </string>
+    <string name="processorText5">% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de\ </string>
+    <string name="processorText6">% d\'esquive, le héros a\ </string>
     <string name="processorText7">% de chance de toucher sa cible.</string>
-    <string name="processorText8">Aura-guerrières à dépenser : </string>
-    <string name="processorText9">Dégats supplémentaires : </string>
-    <string name="processorText10">Points de vie obtenus : </string>
-    <string name="processorText11">Nouvelle vitesse d\'attaque : </string>
-    <string name="processorText12">Le héros attaquera donc une fois toutes les </string>
-    <string name="processorText13">Cristaux à dépenser : </string>
-    <string name="processorText14">Mana à dépenser : </string>
-    <string name="processorText15">Vie gagnée : </string>
-    <string name="processorText16">Attaque gagnée : </string>
-    <string name="processorText17">Puissance gagnée : </string>
-    <string name="processorText18">Le héros sera capable d\'esquiver </string>
+    <string name="processorText8">Aura-guerrières à dépenser :\ </string>
+    <string name="processorText9">Dégats supplémentaires :\ </string>
+    <string name="processorText10">Points de vie obtenus :\ </string>
+    <string name="processorText11">Nouvelle vitesse d\'attaque :\ </string>
+    <string name="processorText12">Le héros attaquera donc une fois toutes les\ </string>
+    <string name="processorText13">Cristaux à dépenser :\ </string>
+    <string name="processorText14">Mana à dépenser :\ </string>
+    <string name="processorText15">Vie gagnée :\ </string>
+    <string name="processorText16">Attaque gagnée :\ </string>
+    <string name="processorText17">Puissance gagnée :\ </string>
+    <string name="processorText18">Le héros sera capable d\'esquiver\ </string>
     <string name="processorText19">% des attaques adverses.</string>
-    <string name="processorText20">Il esquivera donc environ </string>
-    <string name="processorText21"> coups sur 10.</string>
-    <string name="processorText22">Pour acquérir </string>
-    <string name="processorText23"> points d\'expérience, il faudra dépenser </string>
-    <string name="processorText24"> fragments.</string>
-    <string name="processorText25">Le joueur attaque en moyenne des adversaires à </string>
+    <string name="processorText20">Il esquivera donc environ\ </string>
+    <string name="processorText21">\ coups sur 10.</string>
+    <string name="processorText22">Pour acquérir\ </string>
+    <string name="processorText23">\ points d\'expérience, il faudra dépenser\ </string>
+    <string name="processorText24">\ fragments.</string>
+    <string name="processorText25">Le joueur attaque en moyenne des adversaires à\ </string>
     <string name="processorText26">k de puissance.</string>
-    <string name="processorText27">Avec un tel score, le joueur obtiendra </string>
-    <string name="processorText28"> gloires.</string>
-    <string name="processorText29"></string>
-    <string name="processorText30"></string>
-    <string name="processorText31"></string>
+    <string name="processorText27">Avec un tel score, le joueur obtiendra\ </string>
+    <string name="processorText28">\ gloires.</string>
 </resources>
