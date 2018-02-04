@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.model.Hero;
@@ -29,7 +30,12 @@ public class HeroesAdapter extends ArrayAdapter<Hero> {
         Hero hero = getItem(position);
 
         ((ImageView) convertView.findViewById(R.id.imageHero)).setImageResource(StringToResource.getHeroPicture(hero.getFrenchName()));
-        ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getFrenchName());
+        if ("french".equals(Locale.getDefault().getDisplayLanguage().toLowerCase()) ||
+                "français".equals(Locale.getDefault().getDisplayLanguage().toLowerCase())) {
+            ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getFrenchName());
+        } else {
+            ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getEnglishName());
+        }
 
         return convertView;
     }

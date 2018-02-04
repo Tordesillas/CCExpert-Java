@@ -47,6 +47,10 @@ public class Hero {
         return nom;
     }
 
+    public String getEnglishName() {
+        return name;
+    }
+
     public int getPicture() {
         return picture;
     }
