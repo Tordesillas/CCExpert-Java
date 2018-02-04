@@ -4,111 +4,111 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="dungeon">Donjon</string>
-    <string name="selectDungeon">Sélectionner un donjon</string>
-    <string name="dungeonChoice">Choix de donjon</string>
-    <string name="twoVideos">Deux vidéos correspondent à votre demande, quelle version voulez-vous ?</string>
-    <string name="noVideo">Aucune vidéo n\'a été trouvée.</string>
-    <string name="wait">Chargement de la vidéo en cours…</string>
+    <string name="dungeon">Dungeon</string>
+    <string name="selectDungeon">Select a dungeon</string>
+    <string name="dungeonChoice">Choice of dungeon</string>
+    <string name="twoVideos">Two videos correspond to your request, what version do you want ?</string>
+    <string name="noVideo">No video was found.</string>
+    <string name="wait">The video is loading…</string>
 
-    <string name="analyze">Analyser</string>
-    <string name="validate">Valider</string>
+    <string name="analyze">Analyse</string>
+    <string name="validate">Validate</string>
 
-    <string name="home">Accueil</string>
-    <string name="heroes">Héros</string>
-    <string name="dungeons">Donjons</string>
-    <string name="simulators">Simulateurs</string>
+    <string name="home">Home</string>
+    <string name="heroes">Heroes</string>
+    <string name="dungeons">Dungeons</string>
+    <string name="simulators">Simulators</string>
 
-    <string name="legendary">Légendaire</string>
-    <string name="elite">Élite</string>
-    <string name="ordinary">Ordinaire</string>
+    <string name="legendary">Legendary</string>
+    <string name="elite">Elite</string>
+    <string name="ordinary">Ordinary</string>
     <string-array name="heroType">
         <item>@string/legendary</item>
         <item>@string/elite</item>
         <item>@string/ordinary</item>
     </string-array>
 
-    <string name="accuracy">Précision</string>
-    <string name="accuracyText1">Précision de base du héros :</string>
-    <string name="accuracyText2">Insérer la précision du héros</string>
-    <string name="accuracyText3">Précision ajoutée par les équipements :</string>
-    <string name="accuracyText4">Insérer la précision supplémentaire</string>
-    <string name="accuracyText5">Le héros possède-t\'il l\'artefact Garuda ?</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="accuracyText1">Basic accuracy of the hero :</string>
+    <string name="accuracyText2">Insert the accuracy of the hero</string>
+    <string name="accuracyText3">Accuracy added by the equipments :</string>
+    <string name="accuracyText4">Insert the additional accuracy</string>
+    <string name="accuracyText5">Has the hero the artifact Garuda ?</string>
 
-    <string name="aetherock">Aura-guerrières</string>
+    <string name="aetherock">Aetherocks</string>
 
-    <string name="spinnerText1">Niveau actuel du héros :</string>
-    <string name="spinnerText2">Niveau à atteindre :</string>
+    <string name="spinnerText1">Current level of the hero :</string>
+    <string name="spinnerText2">Level to reach :</string>
 
-    <string name="attackSpeed">Vitesse d\'attaque</string>
-    <string name="attackSpeedText1">Vitesse d\'attaque de base du héros :</string>
-    <string name="attackSpeedText2">Insérer la vitesse d\'attaque du héros</string>
-    <string name="attackSpeedText3">Le héros possède-t\'il le talent Fou Furieux ?</string>
-    <string name="attackSpeedText4">Le héros possède-t\'il l\'artefact Blitzkrieg ?</string>
-    <string name="attackSpeedText5">Le héros possède-t\'il le second talent Fury ?</string>
-    <string name="attackSpeedText6">Le héros a t\'il à ses côté Duc ?</string>
-    <string name="attackSpeedText7">Le héros a t\'il à ses côté Mickael ?</string>
+    <string name="attackSpeed">Attack speed</string>
+    <string name="attackSpeedText1">Basic attack speed of the hero :</string>
+    <string name="attackSpeedText2">Insert the attack speed of the hero</string>
+    <string name="attackSpeedText3">Has the hero the talent Berserk ?</string>
+    <string name="attackSpeedText4">Has the hero the artifact Blitz Scroll ?</string>
+    <string name="attackSpeedText5">Has the hero the second talent Fury ?</string>
+    <string name="attackSpeedText6">Has the hero a Pumpkin Duke by his side ?</string>
+    <string name="attackSpeedText7">Has the hero a Michael by his side ?</string>
 
-    <string name="crystal">Cristaux bleus</string>
+    <string name="crystal">Blue crystals</string>
 
-    <string name="dodge">Esquive</string>
-    <string name="dodgeText1">Esquive de base du héros :</string>
-    <string name="dodgeText2">Insérer l\'esquive du héros</string>
-    <string name="dodgeText3">Esquive ajoutée par les équipements :</string>
-    <string name="dodgeText4">Insérer l\'esquive supplémentaire</string>
-    <string name="dodgeText5">Le héros possède-t\'il le talent Brûlure ?</string>
-    <string name="dodgeText6">Le héros possède-t\'il l\'artefact Pierre de Foudre ?</string>
+    <string name="dodge">Dodge</string>
+    <string name="dodgeText1">Basic dodge of the hero :</string>
+    <string name="dodgeText2">Insert the dodge of the hero</string>
+    <string name="dodgeText3">Dodge added by the equipments :</string>
+    <string name="dodgeText4">Insert the additional dodge</string>
+    <string name="dodgeText5">Has the hero the talent Scorch ?</string>
+    <string name="dodgeText6">Has the hero the artifact Lightning Rock ?</string>
     
-    <string name="guildWar">Guerre de guilde</string>
-    <string name="guildWarText1">Puissance :</string>
-    <string name="guildWarText2">Insérer la puissance du joueur</string>
+    <string name="guildWar">Guild war</string>
+    <string name="guildWarText1">Power :</string>
+    <string name="guildWarText2">Insert the power of the player</string>
     <string name="guildWarText3">Score :</string>
-    <string name="guildWarText4">Insérer le score du joueur</string>
-    <string name="guildWarText5">Position de la guilde :</string>
+    <string name="guildWarText4">Insert the score of the player</string>
+    <string name="guildWarText5">Position of the guild :</string>
 
-    <string name="altarHeroes">Autel des Héros\ \ </string>
-    <string name="onNextVersion">Cette fonctionnalité sera disponible à la prochaine mise à jour.</string>
+    <string name="altarHeroes">"Altar of the Heroes     "</string>
+    <string name="onNextVersion">This feature will be available on the next update.</string>
 
-    <string name="shard">Fragments</string>
-    <string name="shardText">Catégorie du héros :</string>
+    <string name="shard">Shards</string>
+    <string name="shardText">Category of the hero :</string>
 
-    <string name="missingData">Des données sont manquantes.</string>
-    <string name="loseLevel">Le héros ne peut pas perdre de niveau.</string>
-    <string name="incorrectData">Il semble que les données saisies sont incorrectes.</string>
+    <string name="missingData">Data are missing.</string>
+    <string name="loseLevel">The hero cannot lose levels.</string>
+    <string name="incorrectData">It seems that the data entered are incorrect.</string>
 
-    <string name="talentLevel">Niveau du talent :\ </string>
-    <string name="dukeLevel">Niveau du pouvoir du duc :\ </string>
-    <string name="dukeProcs">Coups que le duc a effectués :\ </string>
-    <string name="mikaLevel">Niveau du talent de Mickael :\ </string>
+    <string name="talentLevel">"Level of the talent : "</string>
+    <string name="dukeLevel">"Level of the power of Duke : "</string>
+    <string name="dukeProcs">"Hits which the duke made : "</string>
+    <string name="mikaLevel">"Level of the talent of Michael : "</string>
 
-    <string name="simulationCompleted">Simulation terminée</string>
+    <string name="simulationCompleted">Simulation completed</string>
 
-    <string name="processorText1">Le héros a\ </string>
-    <string name="processorText2">% de chance de toucher le héros adverse. Il a donc 100% de chance d\'attendre un héros possédant\ </string>
-    <string name="processorText3">% d\'esquive.</string>
-    <string name="processorText4">Contre un héros à\ </string>
-    <string name="processorText5">% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de\ </string>
-    <string name="processorText6">% d\'esquive, le héros a\ </string>
-    <string name="processorText7">% de chance de toucher sa cible.</string>
-    <string name="processorText8">Aura-guerrières à dépenser :\ </string>
-    <string name="processorText9">Dégats supplémentaires :\ </string>
-    <string name="processorText10">Points de vie obtenus :\ </string>
-    <string name="processorText11">Nouvelle vitesse d\'attaque :\ </string>
-    <string name="processorText12">Le héros attaquera donc une fois toutes les\ </string>
-    <string name="processorText13">Cristaux à dépenser :\ </string>
-    <string name="processorText14">Mana à dépenser :\ </string>
-    <string name="processorText15">Vie gagnée :\ </string>
-    <string name="processorText16">Attaque gagnée :\ </string>
-    <string name="processorText17">Puissance gagnée :\ </string>
-    <string name="processorText18">Le héros sera capable d\'esquiver\ </string>
-    <string name="processorText19">% des attaques adverses.</string>
-    <string name="processorText20">Il esquivera donc environ\ </string>
-    <string name="processorText21">\ coups sur 10.</string>
-    <string name="processorText22">Pour acquérir\ </string>
-    <string name="processorText23">\ points d\'expérience, il faudra dépenser\ </string>
-    <string name="processorText24">\ fragments.</string>
-    <string name="processorText25">Le joueur attaque en moyenne des adversaires à\ </string>
-    <string name="processorText26">k de puissance.</string>
-    <string name="processorText27">Avec un tel score, le joueur obtiendra\ </string>
-    <string name="processorText28">\ gloires.</string>
+    <string name="processorText1">"The hero has a "</string>
+    <string name="processorText2">"% chance to hit the opposing hero. So, he has a 100% chance to reach a hero having "</string>
+    <string name="processorText3">% of dodge.</string>
+    <string name="processorText4">"Against a hero with "</string>
+    <string name="processorText5">"% of dodge, the hero will hit his target for sure with technically a probability of "</string>
+    <string name="processorText6">"% of dodge, the hero has a "</string>
+    <string name="processorText7">% chance to hit his target.</string>
+    <string name="processorText8">"Aetherocks to spend : "</string>
+    <string name="processorText9">"Additional damages : "</string>
+    <string name="processorText10">"Health points obtained : "</string>
+    <string name="processorText11">"New attack speed : "</string>
+    <string name="processorText12">"So, the hero will attack once every "</string>
+    <string name="processorText13">"Crystals to spend : "</string>
+    <string name="processorText14">"Mana to spend : "</string>
+    <string name="processorText15">"Life won : "</string>
+    <string name="processorText16">"Attack won : "</string>
+    <string name="processorText17">"Power won : "</string>
+    <string name="processorText18">"The hero will be able to dodge "</string>
+    <string name="processorText19">% of the opposite attacks.</string>
+    <string name="processorText20">"So, he will dodge approximately "</string>
+    <string name="processorText21">" hits on 10."</string>
+    <string name="processorText22">"To acquire "</string>
+    <string name="processorText23">" experience points, it will be necessary to spend "</string>
+    <string name="processorText24">" shards."</string>
+    <string name="processorText25">"The player attacks on average opponents with "</string>
+    <string name="processorText26">K of power.</string>
+    <string name="processorText27">"With such a score, he will get "</string>
+    <string name="processorText28">" glories."</string>
 </resources>

@@ -40,7 +40,7 @@ public class DungeonsActivity extends BaseActivity {
                     intent.putExtra("door", d.getDoor());
                     intent.putExtra("base", d.getBase());
                     intent.putExtra("f2p", d.isF2p());
-                    startActivity(new Intent(DungeonsActivity.this, DungeonActivity.class));
+                    startActivity(intent);
                     break;
                 case 2:
                     createDialog(dungeons);

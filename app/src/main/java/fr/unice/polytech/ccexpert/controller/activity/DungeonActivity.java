@@ -12,6 +12,8 @@ import com.pierfrancescosoffritti.youtubeplayer.player.AbstractYouTubePlayerList
 import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayer;
 import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView;
 
+import java.util.Collection;
+
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.model.Dungeon;
 import fr.unice.polytech.ccexpert.model.Sets;
@@ -30,13 +32,19 @@ public class DungeonActivity extends Activity {
         boolean f2p = getIntent().getBooleanExtra("f2p", false);
         Dungeon dungeon = null;
 
-        for (Dungeon d : Sets.getInstance().getDungeonSet(door, base)) {
-            if (d.isF2p() == f2p) {
-                dungeon = d;
-                break;
+        Collection<Dungeon> dungeons = Sets.getInstance().getDungeonSet(door, base);
+        if (dungeons.size() == 1) {
+            dungeon = dungeons.iterator().next();
+        } else {
+            for (Dungeon d : dungeons) {
+                if (d.isF2p() == f2p) {
+                    dungeon = d;
+                    break;
+                }
             }
         }
-        final String urlYoutube = dungeon != null ? dungeon.getUrlYoutube() : "https://www.youtube.com/watch?v=Z5FPjcbUaKE&index=41&list=PL9fQGS1-vUVSvQ7VI_fx06MiWRmU4LJnq";
+
+        final String urlYoutube = dungeon != null ? dungeon.getUrlYoutube() : "Z5FPjcbUaKE";
 
         String title = getResources().getString(R.string.dungeon) + " " + door + " / " + base;
         TextView dungeonName = findViewById(R.id.dungeonName);
@@ -50,8 +58,7 @@ public class DungeonActivity extends Activity {
                 public void onReady() {
                     DungeonActivity.this.initializedYouTubePlayer = initializedYouTubePlayer;
 
-                    String videoId = urlYoutube.split("v=")[1].split("&list")[0];
-                    initializedYouTubePlayer.loadVideo("nHeNMXCDan0", 10);
+                    initializedYouTubePlayer.loadVideo(urlYoutube, 10);
 
                     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                     getWindow().getDecorView().setSystemUiVisibility(

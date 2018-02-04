@@ -40,24 +40,34 @@ public class CardAdapter extends ArrayAdapter<String> {
     private int findPicture(String title) {
         switch (title) {
             case "Héros":
+            case "Heroes":
                 return R.drawable.heroes;
             case "Simulateurs":
+            case "Simulators":
                 return R.drawable.boss;
             case "Donjons":
+            case "Dungeons":
                 return R.drawable.donjons;
             case "Guerre de guilde":
+            case "Guild war":
                 return R.drawable.guild_wars;
             case "Fragments":
+            case "Shards":
                 return R.drawable.shards;
             case "Cristaux bleus":
+            case "Blue crystals":
                 return R.drawable.crystal;
             case "Aura-guerrières":
+            case "Aetherocks":
                 return R.drawable.aetherock;
             case "Esquive":
+            case "Dodge":
                 return R.drawable.pierre_de_foudre;
             case "Précision":
+            case "Accuracy":
                 return R.drawable.garuda;
             case "Vitesse d'attaque":
+            case "Attack speed":
                 return R.drawable.blitz;
             default:
                 return R.drawable.exorcist;
