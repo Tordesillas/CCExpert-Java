@@ -77,8 +77,8 @@
     <string name="incorrectData">Il semble que les données saisies sont incorrectes.</string>
 
     <string name="talentLevel">Niveau du talent :\ </string>
-    <string name="dukeLevel">Niveau du pouvoir du duc :\ </string>
-    <string name="dukeProcs">Coups que le duc a effectués :\ </string>
+    <string name="dukeLevel">Niveau du pouvoir du Duc :\ </string>
+    <string name="dukeProcs">Coups que le Duc a effectués :\ </string>
     <string name="mikaLevel">Niveau du talent de Mickael :\ </string>
 
     <string name="simulationCompleted">Simulation terminée</string>

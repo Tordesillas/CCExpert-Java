@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class Sets {
@@ -43,10 +44,6 @@ public class Sets {
         dungeonSet.add(dungeon);
     }
 
-    public Hero getHero(int id) {
-        return heroesIds.get(id);
-    }
-
     public Hero getHero(String name) {
         return heroesNames.get(name);
     }
@@ -80,11 +77,7 @@ public class Sets {
     public List<Hero> getHeroSorted(boolean byName) {
         List<Hero> heroes = new ArrayList<>();
         if (byName) {
-            List<String> sortedKeys = new ArrayList<>(heroesNames.keySet());
-            Collections.sort(sortedKeys);
-            for (String name : sortedKeys) {
-                heroes.add(heroesNames.get(name));
-            }
+            heroes = getHeroesListSorted();
         } else {
             List<Integer> sortedKeys = new ArrayList<>(heroesIds.keySet());
             Collections.sort(sortedKeys);
@@ -94,5 +87,30 @@ public class Sets {
             }
         }
         return heroes;
+    }
+
+    private List<Hero> getHeroesListSorted() {
+        List<String> nameSorted = new ArrayList<>();
+        List<Hero> heroesSorted = new ArrayList<>();
+        if ("french".equals(Locale.getDefault().getDisplayLanguage().toLowerCase()) ||
+                "français".equals(Locale.getDefault().getDisplayLanguage().toLowerCase())) {
+            nameSorted = new ArrayList<>(heroesNames.keySet());
+            Collections.sort(nameSorted);
+            for (String name : nameSorted) {
+                heroesSorted.add(heroesNames.get(name));
+            }
+        } else {
+            Map<String, Hero> enHeroes = new HashMap<>();
+            for (Hero hero : heroesNames.values()) {
+                nameSorted.add(hero.getEnglishName());
+                enHeroes.put(hero.getEnglishName(), hero);
+            }
+            Collections.sort(nameSorted);
+            for (String name : nameSorted) {
+                heroesSorted.add(enHeroes.get(name));
+            }
+        }
+
+        return heroesSorted;
     }
 }

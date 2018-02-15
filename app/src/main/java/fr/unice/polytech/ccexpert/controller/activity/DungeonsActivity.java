@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
@@ -22,11 +23,11 @@ public class DungeonsActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.dungeonsTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        final NumberPicker doorPicker = findViewById(R.id.door);
-        final NumberPicker basePicker = findViewById(R.id.base);
+        NumberPicker doorPicker = findViewById(R.id.door);
+        NumberPicker basePicker = findViewById(R.id.base);
         doorPicker.setMinValue(1);
         basePicker.setMinValue(1);
-        doorPicker.setMaxValue(10);
+        doorPicker.setMaxValue(8);
         basePicker.setMaxValue(10);
         doorPicker.setWrapSelectorWheel(true);
         basePicker.setWrapSelectorWheel(true);
@@ -50,6 +51,11 @@ public class DungeonsActivity extends BaseActivity {
                     break;
             }
         });
+
+        ImageView dungeonDoor = findViewById(R.id.dungeonDoor);
+        dungeonDoor.setImageResource(R.drawable.dungeon1);
+        doorPicker.setOnValueChangedListener((numberPicker, i, i1) ->
+                dungeonDoor.setImageResource(getResources().getIdentifier("dungeon" + i1, "drawable", getPackageName())));
     }
 
     private void createDialog(final Collection<Dungeon> dungeons) {

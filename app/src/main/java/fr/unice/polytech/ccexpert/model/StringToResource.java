@@ -62,6 +62,7 @@ public class StringToResource {
         put("Athéna", R.drawable.athene);
         put("Wandigo", R.drawable.sasquatch);
         put("Spirita", R.drawable.espirita);
+        put("Chasseuse de Coeurs", R.drawable.dove_keeper);
     }};
 
     private static Map<String, Integer> nameToTalentRes = new HashMap<String, Integer>() {{
