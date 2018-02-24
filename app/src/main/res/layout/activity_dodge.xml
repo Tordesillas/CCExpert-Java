@@ -98,6 +98,8 @@
                     android:id="@+id/talentLvlText"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 

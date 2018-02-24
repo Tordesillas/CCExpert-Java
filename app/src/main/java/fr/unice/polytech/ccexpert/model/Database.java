@@ -38,18 +38,16 @@ public class Database extends SQLiteOpenHelper {
     }
 
     public void createDataBase() throws IOException {
-        boolean dbExist = checkDataBase();
-        if (!dbExist) {
-            this.getReadableDatabase();
-            try {
-                copyDataBase();
-            } catch (IOException e) {
-                throw new Error("Error copying database", e);
-            }
+        checkDataBase();
+        this.getReadableDatabase();
+        try {
+            copyDataBase();
+        } catch (IOException e) {
+            throw new Error("Error copying database", e);
         }
     }
 
-    private boolean checkDataBase() {
+    private void checkDataBase() {
         SQLiteDatabase checkDB = null;
         try {
             String myPath = myContext.getDatabasePath(DB_NAME).getAbsolutePath();
@@ -60,7 +58,6 @@ public class Database extends SQLiteOpenHelper {
         if (checkDB != null) {
             checkDB.close();
         }
-        return checkDB != null;
     }
 
     private void copyDataBase() throws IOException{

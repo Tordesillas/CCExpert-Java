@@ -100,9 +100,9 @@
     <string name="processorText15">"Life won : "</string>
     <string name="processorText16">"Attack won : "</string>
     <string name="processorText17">"Power won : "</string>
-    <string name="processorText18">"The hero will be able to dodge "</string>
-    <string name="processorText19">% of the opposite attacks.</string>
-    <string name="processorText20">"So, he will dodge approximately "</string>
+    <string name="processorText18">"The hero will be able to cancel "</string>
+    <string name="processorText19">% of the opposite attacks damages.</string>
+    <string name="processorText20">"So, he will cancel approximately "</string>
     <string name="processorText21">" hits on 10."</string>
     <string name="processorText22">"To acquire "</string>
     <string name="processorText23">" experience points, it will be necessary to spend "</string>

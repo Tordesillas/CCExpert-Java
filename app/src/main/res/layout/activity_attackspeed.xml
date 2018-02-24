@@ -77,6 +77,8 @@
                     android:id="@+id/talentLvlText"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -150,6 +152,8 @@
                     android:id="@+id/furyText"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -196,10 +200,12 @@
 
                 <TextView
                     android:id="@+id/dukeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
 
                 <SeekBar
                     android:id="@+id/dukeProgressBar"
@@ -212,6 +218,8 @@
                     android:id="@+id/dukeProcText"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -259,6 +267,8 @@
                     android:id="@+id/mikaLvlText"
                     android:layout_gravity="center"
                     android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 

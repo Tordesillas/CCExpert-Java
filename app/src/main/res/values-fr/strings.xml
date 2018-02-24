@@ -100,9 +100,9 @@
     <string name="processorText15">Vie gagnée :\ </string>
     <string name="processorText16">Attaque gagnée :\ </string>
     <string name="processorText17">Puissance gagnée :\ </string>
-    <string name="processorText18">Le héros sera capable d\'esquiver\ </string>
-    <string name="processorText19">% des attaques adverses.</string>
-    <string name="processorText20">Il esquivera donc environ\ </string>
+    <string name="processorText18">Le héros sera capable d\'annuler les dégâts de\ </string>
+    <string name="processorText19">% des attaques reçues.</string>
+    <string name="processorText20">Il annulera donc environ\ </string>
     <string name="processorText21">\ coups sur 10.</string>
     <string name="processorText22">Pour acquérir\ </string>
     <string name="processorText23">\ points d\'expérience, il faudra dépenser\ </string>
