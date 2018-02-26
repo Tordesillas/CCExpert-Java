@@ -12,8 +12,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import fr.unice.polytech.ccexpert.R;
-
 public class Database extends SQLiteOpenHelper {
     private static String DB_NAME = "ccexpert_database";
     private SQLiteDatabase db;
@@ -33,7 +31,7 @@ public class Database extends SQLiteOpenHelper {
 
     public void execute() {
         loadHeroes();
-        loadCompoHeroes();
+        //loadCompoHeroes();
         loadDungeons();
     }
 
@@ -94,29 +92,24 @@ public class Database extends SQLiteOpenHelper {
         c.moveToFirst();
         Hero hero;
         while (!c.isAfterLast()) {
-            hero = new Hero(c.getString(1), c.getString(2), R.drawable.anubis,
-                    c.getInt(4), c.getInt(5), c.getInt(6), c.getInt(7), c.getInt(8),
-                    c.getInt(9), c.getInt(10), c.getInt(11), c.getInt(12),c.getInt(13),
-                    c.getInt(14), c.getInt(15),c.getInt(16));
+            hero = new Hero(c.getString(1), c.getString(2));
             sets.addHero(hero, c.getInt(0));
             c.moveToNext();
         }
         c.close();
     }
 
-    private void loadCompoHeroes() {
+    /*private void loadCompoHeroes() {
         Cursor c = db.rawQuery("select * from Compositionhero", null);
         c.moveToFirst();
         HeroFaculties heroFaculties;
         while (!c.isAfterLast()) {
             heroFaculties = new HeroFaculties(c.getInt(1), c.getInt(2), c.getInt(3), c.getString(4),
-                    c.getInt(5), c.getInt(6), c.getString(7), c.getInt(8), c.getInt(9),
-                    c.getInt(10), c.getInt(11));
-            sets.addHeroCompo(heroFaculties, c.getInt(0));
+                    c.getInt(5), c.getInt(6), c.getInt(7));
             c.moveToNext();
         }
         c.close();
-    }
+    }*/
 
     private void loadDungeons() {
         Cursor c = db.rawQuery("select * from Dungeons", null);

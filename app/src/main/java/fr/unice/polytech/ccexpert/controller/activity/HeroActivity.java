@@ -23,6 +23,6 @@ public class HeroActivity extends BaseActivity {
         heroName.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
         heroName.setText(hero.getFrenchName());
 
-        ((ImageView) findViewById(R.id.heroPic)).setImageResource(StringToResource.getHeroPicture(hero.getFrenchName()));
+        ((ImageView) findViewById(R.id.heroPic)).setImageResource(getResources().getIdentifier(hero.getPicture(), "drawable", getPackageName()));
     }
 }
