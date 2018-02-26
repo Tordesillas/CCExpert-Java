@@ -9,7 +9,6 @@ import android.widget.TextView;
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.model.Hero;
 import fr.unice.polytech.ccexpert.model.Sets;
-import fr.unice.polytech.ccexpert.model.StringToResource;
 
 public class HeroActivity extends BaseActivity {
     @Override

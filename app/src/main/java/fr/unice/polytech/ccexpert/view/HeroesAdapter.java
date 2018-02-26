@@ -13,7 +13,6 @@ import java.util.Locale;
 
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.model.Hero;
-import fr.unice.polytech.ccexpert.model.StringToResource;
 
 public class HeroesAdapter extends ArrayAdapter<Hero> {
     public HeroesAdapter(Context context, List<Hero> heroes) {

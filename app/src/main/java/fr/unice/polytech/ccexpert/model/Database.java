@@ -24,18 +24,17 @@ public class Database extends SQLiteOpenHelper {
         this.sets = Sets.getInstance();
     }
 
-    public void openDataBase() throws SQLException, IOException {
+    public void openDataBase() {
         String myPath = myContext.getDatabasePath(DB_NAME).getAbsolutePath();
         db = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
     }
 
     public void execute() {
         loadHeroes();
-        //loadCompoHeroes();
         loadDungeons();
     }
 
-    public void createDataBase() throws IOException {
+    public void createDataBase() {
         checkDataBase();
         this.getReadableDatabase();
         try {
@@ -99,26 +98,12 @@ public class Database extends SQLiteOpenHelper {
         c.close();
     }
 
-    /*private void loadCompoHeroes() {
-        Cursor c = db.rawQuery("select * from Compositionhero", null);
-        c.moveToFirst();
-        HeroFaculties heroFaculties;
-        while (!c.isAfterLast()) {
-            heroFaculties = new HeroFaculties(c.getInt(1), c.getInt(2), c.getInt(3), c.getString(4),
-                    c.getInt(5), c.getInt(6), c.getInt(7));
-            c.moveToNext();
-        }
-        c.close();
-    }*/
-
     private void loadDungeons() {
         Cursor c = db.rawQuery("select * from Dungeons", null);
         c.moveToFirst();
         Dungeon d;
         while (!c.isAfterLast()) {
-            d = new Dungeon(c.getString(1), c.getInt(2), c.getInt(3), c.getInt(4),
-                    c.getInt(5), c.getInt(6), c.getInt(7), c.getInt(8),
-                    c.getInt(9), c.getInt(10));
+            d = new Dungeon(c.getString(1), c.getInt(2), c.getInt(3), c.getInt(4));
             sets.addDungeon(d);
             c.moveToNext();
         }
