@@ -36,15 +36,10 @@ public class DungeonsActivity extends BaseActivity {
             Collection<Dungeon> dungeons = Sets.getInstance().getDungeonSet(doorPicker.getValue(), basePicker.getValue());
             switch (dungeons.size()) {
                 case 1:
-                    Intent intent = new Intent(DungeonsActivity.this, DungeonActivity.class);
-                    Dungeon d = dungeons.iterator().next();
-                    intent.putExtra("door", d.getDoor());
-                    intent.putExtra("base", d.getBase());
-                    intent.putExtra("f2p", d.isF2p());
-                    startActivity(intent);
+                    createDialogNoChoice(dungeons.iterator().next());
                     break;
                 case 2:
-                    createDialog(dungeons);
+                    createDialogWithChoices(dungeons);
                     break;
                 default:
                     createErrorDialog();
@@ -58,7 +53,7 @@ public class DungeonsActivity extends BaseActivity {
                 dungeonDoor.setImageResource(getResources().getIdentifier("dungeon" + i1, "drawable", getPackageName())));
     }
 
-    private void createDialog(final Collection<Dungeon> dungeons) {
+    private void createDialogWithChoices(final Collection<Dungeon> dungeons) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle(getResources().getString(R.string.dungeonChoice))
                 .setMessage(getResources().getString(R.string.twoVideos))
@@ -76,6 +71,22 @@ public class DungeonsActivity extends BaseActivity {
                     intent.putExtra("door", d.getDoor());
                     intent.putExtra("base", d.getBase());
                     intent.putExtra("f2p", false);
+                    startActivity(intent);
+                })
+                .show();
+    }
+
+    private void createDialogNoChoice(Dungeon dungeon) {
+        String textDialog = (dungeon.isF2p()) ? getResources().getString(R.string.onlyF2P) : getResources().getString(R.string.onlyP2W);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle(getResources().getString(R.string.dungeonChoice))
+                .setMessage(textDialog)
+                .setNegativeButton(getResources().getString(R.string.dungeonNegativeButton), (dialog, which) -> {})
+                .setPositiveButton(getResources().getString(R.string.dungeonPositiveButton), (arg0, arg1) -> {
+                    Intent intent = new Intent(DungeonsActivity.this, DungeonActivity.class);
+                    intent.putExtra("door", dungeon.getDoor());
+                    intent.putExtra("base", dungeon.getBase());
+                    intent.putExtra("f2p", dungeon.isF2p());
                     startActivity(intent);
                 })
                 .show();

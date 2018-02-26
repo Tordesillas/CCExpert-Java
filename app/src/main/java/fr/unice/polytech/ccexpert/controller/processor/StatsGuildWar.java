@@ -16,7 +16,7 @@ public class StatsGuildWar {
 
     public String printStats(Context context, int power, int score) {
         double scoreOnPower = (power == 0) ? 0 : score / (double)power;
-        int averagePower = (scoreOnPower < 0.005) ? 0 : Math.round((float)(0.14*(score-50-2.5*Math.sqrt(power))));
+        int averagePower = (scoreOnPower < 0.005) ? 0 : Math.round(240 * score - 120000 - (float)1.5 * power);
 
         if (averagePower <= 0) {
             Toast.makeText(context, res.getString(R.string.incorrectData), Toast.LENGTH_SHORT).show();

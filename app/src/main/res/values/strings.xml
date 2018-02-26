@@ -10,6 +10,10 @@
     <string name="twoVideos">Two videos correspond to your request, what version do you want ?</string>
     <string name="noVideo">No video was found.</string>
     <string name="wait">The video is loading…</string>
+    <string name="onlyF2P">For this choice, there is only a F2P video available. Do you want to continue ?</string>
+    <string name="onlyP2W">For this choice, there is only a P2W video available. Do you want to continue ?</string>
+    <string name="dungeonNegativeButton">No</string>
+    <string name="dungeonPositiveButton">Yes</string>
 
     <string name="analyze">Analyse</string>
     <string name="validate">Validate</string>

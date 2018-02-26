@@ -22,6 +22,10 @@ public class DodgeProcessor {
 
         NumberFormat f = NumberFormat.getNumberInstance(Locale.FRANCE);
 
+        if (amount > 1) {
+            amount = 1;
+        }
+
         return res.getString(R.string.processorText18) + f.format(Math.round(amount*100)) + res.getString(R.string.processorText19) +
                 "\n" + res.getString(R.string.processorText20) + f.format(Math.round(amount*10)) + res.getString(R.string.processorText21);
     }

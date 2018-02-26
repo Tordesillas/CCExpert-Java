@@ -125,7 +125,7 @@ public class Database extends SQLiteOpenHelper {
         while (!c.isAfterLast()) {
             d = new Dungeon(c.getString(1), c.getInt(2), c.getInt(3), c.getInt(4),
                     c.getInt(5), c.getInt(6), c.getInt(7), c.getInt(8),
-                    c.getInt(9), c.getInt(10), c.getInt(11));
+                    c.getInt(9), c.getInt(10));
             sets.addDungeon(d);
             c.moveToNext();
         }
