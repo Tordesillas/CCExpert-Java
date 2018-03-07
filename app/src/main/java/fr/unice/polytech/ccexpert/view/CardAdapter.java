@@ -62,15 +62,15 @@ public class CardAdapter extends ArrayAdapter<String> {
                 return R.drawable.aetherock;
             case "Esquive":
             case "Dodge":
-                return R.drawable.pierre_de_foudre;
+                return R.drawable.lightning_rock;
             case "Précision":
             case "Accuracy":
-                return R.drawable.garuda;
+                return R.drawable.eye_of_garuda;
             case "Vitesse d'attaque":
             case "Attack speed":
-                return R.drawable.blitz;
+                return R.drawable.blitz_scroll;
             default:
-                return R.drawable.exorcist;
+                return R.drawable.ccexpert_rounded;
         }
     }
 }

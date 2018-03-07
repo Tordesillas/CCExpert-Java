@@ -55,7 +55,7 @@ public class DodgeActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        ((ImageView) findViewById(R.id.artefactPicture)).setImageResource(R.drawable.pierre_de_foudre);
+        ((ImageView) findViewById(R.id.artefactPicture)).setImageResource(R.drawable.lightning_rock);
 
         final Switch switchArtefact = findViewById(R.id.artefactSwitch);
 

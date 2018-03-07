@@ -54,10 +54,10 @@ public class AttackSpeedActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        ((ImageView) findViewById(R.id.blitzPicture)).setImageResource(R.drawable.blitz);
+        ((ImageView) findViewById(R.id.blitzPicture)).setImageResource(R.drawable.blitz_scroll);
         final Switch blitzSwitch = findViewById(R.id.blitzSwitch);
 
-        ((ImageView) findViewById(R.id.furyPicture)).setImageResource(R.drawable.fury);
+        ((ImageView) findViewById(R.id.furyPicture)).setImageResource(R.drawable.unbridled_fury);
         final Switch furySwitch = findViewById(R.id.furySwitch);
         final LinearLayout furyLayout = findViewById(R.id.layoutFuryBar);
         furyLayout.setVisibility(View.GONE);

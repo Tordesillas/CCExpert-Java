@@ -28,7 +28,8 @@
         <activity android:name=".controller.activity.DungeonActivity" />
         <activity android:name=".controller.activity.GuildWarActivity" />
         <activity android:name=".controller.activity.HeroesActivity" />
-        <activity android:name=".controller.activity.HeroActivity" />
+        <activity android:name=".controller.activity.HeroActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity android:name=".controller.activity.ShardActivity" />
         <activity android:name=".controller.activity.CrystalActivity" />
         <activity android:name=".controller.activity.AetherockActivity" />

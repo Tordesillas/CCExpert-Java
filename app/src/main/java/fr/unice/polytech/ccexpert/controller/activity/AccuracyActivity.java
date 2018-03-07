@@ -23,7 +23,7 @@ public class AccuracyActivity extends BaseActivity {
         final EditText accuracyEquipField = findViewById(R.id.accuracyEquipField);
         final AccuracyProcessor ap = new AccuracyProcessor(getResources());
 
-        ((ImageView) findViewById(R.id.artefactPicture)).setImageResource(R.drawable.garuda);
+        ((ImageView) findViewById(R.id.artefactPicture)).setImageResource(R.drawable.eye_of_garuda);
 
         final Switch switchArtefact = findViewById(R.id.artefactSwitch);
 

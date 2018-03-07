@@ -15,14 +15,18 @@ public class Sets {
     private Map<Integer, Hero> heroesIds;
     private Map<String, Hero> heroesNames;
     private List<Dungeon> dungeonSet;
+    private Map<String, Artifact> artifacts;
+    private Map<String, Talent> talents;
 
     private Sets() {
         heroesIds = new HashMap<>();
         heroesNames = new HashMap<>();
         dungeonSet = new ArrayList<>();
+        artifacts = new HashMap<>();
+        talents = new HashMap<>();
     }
 
-    public static Sets getInstance(){
+    public static Sets getInstance() {
         if (mInstance == null) {
             mInstance = new Sets();
         }
@@ -38,8 +42,24 @@ public class Sets {
         dungeonSet.add(dungeon);
     }
 
+    void addArtifact(Artifact artifact) {
+        artifacts.put(artifact.getFrenchName(), artifact);
+    }
+
+    void addTalent(Talent talent) {
+        talents.put(talent.getFrenchName(), talent);
+    }
+
     public Hero getHero(String name) {
         return heroesNames.get(name);
+    }
+
+    public Artifact getArtifact(String name) {
+        return artifacts.get(name);
+    }
+
+    public Talent getTalent(String name) {
+        return talents.get(name);
     }
 
     public Collection<Dungeon> getDungeonSet(int door, int base) {

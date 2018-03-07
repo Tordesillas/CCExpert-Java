@@ -31,6 +31,8 @@ public class Database extends SQLiteOpenHelper {
     public void execute() {
         loadHeroes();
         loadDungeons();
+        loadTalents();
+        loadArtifacts();
     }
 
     public void createDataBase() {
@@ -104,6 +106,30 @@ public class Database extends SQLiteOpenHelper {
         while (!c.isAfterLast()) {
             d = new Dungeon(c.getString(1), c.getInt(2), c.getInt(3), c.getInt(4));
             sets.addDungeon(d);
+            c.moveToNext();
+        }
+        c.close();
+    }
+
+    private void loadTalents() {
+        Cursor c = db.rawQuery("select * from talents", null);
+        c.moveToFirst();
+        Talent t;
+        while (!c.isAfterLast()) {
+            t = new Talent(c.getString(0), c.getString(1));
+            sets.addTalent(t);
+            c.moveToNext();
+        }
+        c.close();
+    }
+
+    private void loadArtifacts() {
+        Cursor c = db.rawQuery("select * from artifacts", null);
+        c.moveToFirst();
+        Artifact a;
+        while (!c.isAfterLast()) {
+            a = new Artifact(c.getString(0), c.getString(1));
+            sets.addArtifact(a);
             c.moveToNext();
         }
         c.close();
