@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -30,24 +29,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginBottom="4dp"
+                android:layout_weight="1"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="10dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/rectangle_corners">
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_corners"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:text="Mode GdG - Attaque"
+                        android:text="@string/heroText1"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -85,14 +84,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/rectangle_corners"
                     android:orientation="vertical"
-                    android:padding="10dp"
-                    android:background="@drawable/rectangle_corners">
+                    android:padding="10dp">
 
-                <TextView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:text="Mode GdG - Défense"
+                        android:text="@string/heroText2"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -131,22 +130,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="10dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/rectangle_corners">
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_corners"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-                <TextView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:text="Mode Donjon"
+                        android:text="@string/heroText3"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -184,14 +183,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/rectangle_corners"
                     android:orientation="vertical"
-                    android:padding="10dp"
-                    android:background="@drawable/rectangle_corners">
+                    android:padding="10dp">
 
-                <TextView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
-                        android:text="Enchantements"
+                        android:text="@string/heroText4"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
@@ -230,8 +229,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -258,16 +257,16 @@
                         android:id="@+id/pet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
                         android:layout_margin="30dp"
+                        android:adjustViewBounds="true"
                         android:src="@drawable/purrsalot" />
 
                     <android.support.design.widget.FloatingActionButton
                         android:id="@+id/evoHero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_avatar"
                         android:layout_marginBottom="30dp"
+                        android:src="@drawable/ic_avatar"
                         app:backgroundTint="@color/colorPrimary"
                         app:fabSize="normal" />
                 </LinearLayout>

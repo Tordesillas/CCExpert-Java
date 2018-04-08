@@ -115,4 +115,9 @@
     <string name="processorText26">K of power.</string>
     <string name="processorText27">"With such a score, he will get "</string>
     <string name="processorText28">" glories."</string>
+
+    <string name="heroText1">GW mode - Attack</string>
+    <string name="heroText2">GW mode - Defence</string>
+    <string name="heroText3">Dungeon mode</string>
+    <string name="heroText4">Enchantments</string>
 </resources>

@@ -115,4 +115,9 @@
     <string name="processorText26">k de puissance.</string>
     <string name="processorText27">Avec un tel score, le joueur obtiendra\ </string>
     <string name="processorText28">\ gloires.</string>
+
+    <string name="heroText1">Mode GdG - Attaque</string>
+    <string name="heroText2">Mode GdG - Défense</string>
+    <string name="heroText3">Mode Donjon</string>
+    <string name="heroText4">Enchantements</string>
 </resources>
