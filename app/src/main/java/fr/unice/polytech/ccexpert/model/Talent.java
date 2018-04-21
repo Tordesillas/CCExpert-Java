@@ -23,4 +23,5 @@ public class Talent {
 
     public String getCrestResource() {
         return getTalentResource() + "_crest";
-    }}
+    }
+}

@@ -1,10 +1,10 @@
 package fr.unice.polytech.ccexpert.model;
 
-public class Artifact {
+public class Pet {
     private String nom;
     private String name;
 
-    public Artifact(String nom, String name) {
+    public Pet(String nom, String name) {
         this.nom = nom;
         this.name = name;
     }

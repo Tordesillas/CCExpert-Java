@@ -33,6 +33,7 @@ public class Database extends SQLiteOpenHelper {
         loadDungeons();
         loadTalents();
         loadArtifacts();
+        loadPets();
     }
 
     public void createDataBase() {
@@ -130,6 +131,18 @@ public class Database extends SQLiteOpenHelper {
         while (!c.isAfterLast()) {
             a = new Artifact(c.getString(0), c.getString(1));
             sets.addArtifact(a);
+            c.moveToNext();
+        }
+        c.close();
+    }
+
+    private void loadPets() {
+        Cursor c = db.rawQuery("select * from pets", null);
+        c.moveToFirst();
+        Pet p;
+        while (!c.isAfterLast()) {
+            p = new Pet(c.getString(0), c.getString(1));
+            sets.addPet(p);
             c.moveToNext();
         }
         c.close();

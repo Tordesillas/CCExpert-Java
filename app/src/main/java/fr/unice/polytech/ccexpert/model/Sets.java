@@ -17,6 +17,7 @@ public class Sets {
     private List<Dungeon> dungeonSet;
     private Map<String, Artifact> artifacts;
     private Map<String, Talent> talents;
+    private Map<String, Pet> pets;
 
     private Sets() {
         heroesIds = new HashMap<>();
@@ -24,6 +25,7 @@ public class Sets {
         dungeonSet = new ArrayList<>();
         artifacts = new HashMap<>();
         talents = new HashMap<>();
+        pets = new HashMap<>();
     }
 
     public static Sets getInstance() {
@@ -50,6 +52,10 @@ public class Sets {
         talents.put(talent.getFrenchName(), talent);
     }
 
+    void addPet(Pet pet) {
+        pets.put(pet.getFrenchName(), pet);
+    }
+
     public Hero getHero(String name) {
         return heroesNames.get(name);
     }
@@ -60,6 +66,10 @@ public class Sets {
 
     public Talent getTalent(String name) {
         return talents.get(name);
+    }
+
+    public Pet getPet(String name) {
+        return pets.get(name);
     }
 
     public Collection<Dungeon> getDungeonSet(int door, int base) {
