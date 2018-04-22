@@ -23,8 +23,10 @@ public class HeroActivity extends BaseActivity {
         heroName.setText(hero.getFrenchName());
 
         final boolean[] evo = {false};
+
         int resHero = getResources().getIdentifier(hero.getPicture() + "2", "drawable", getPackageName());
         int resHeroEvo = getResources().getIdentifier(hero.getPicture() + "3", "drawable", getPackageName());
+
         ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
 
         findViewById(R.id.evoHero).setOnClickListener(view -> {
@@ -36,5 +38,32 @@ public class HeroActivity extends BaseActivity {
                 evo[0] = true;
             }
         });
+
+        int resPet = getResources().getIdentifier(hero.getPetPicture(), "drawable", getPackageName());
+        ((ImageView) findViewById(R.id.pet)).setImageResource(resPet);
+
+        int resTalent1 = getResources().getIdentifier(hero.getTalentGwAttack(), "drawable", getPackageName());
+        int resTalent2 = getResources().getIdentifier(hero.getTalentGwDefense(), "drawable", getPackageName());
+        int resTalent3 = getResources().getIdentifier(hero.getTalentDungeon(), "drawable", getPackageName());
+
+        ((ImageView) findViewById(R.id.talent1)).setImageResource(resTalent1);
+        ((ImageView) findViewById(R.id.talent2)).setImageResource(resTalent2);
+        ((ImageView) findViewById(R.id.talent3)).setImageResource(resTalent3);
+
+        int resCrest1 = getResources().getIdentifier(hero.getCrestGwAttack(), "drawable", getPackageName());
+        int resCrest2 = getResources().getIdentifier(hero.getCrestGwDefense(), "drawable", getPackageName());
+        int resCrest3 = getResources().getIdentifier(hero.getCrestDungeon(), "drawable", getPackageName());
+
+        ((ImageView) findViewById(R.id.crest1)).setImageResource(resCrest1);
+        ((ImageView) findViewById(R.id.crest2)).setImageResource(resCrest2);
+        ((ImageView) findViewById(R.id.crest3)).setImageResource(resCrest3);
+
+        int resArtifact1 = getResources().getIdentifier(hero.getArtifactGwAttack(), "drawable", getPackageName());
+        int resArtifact2 = getResources().getIdentifier(hero.getArtifactGwDefense(), "drawable", getPackageName());
+        int resArtifact3 = getResources().getIdentifier(hero.getArtifactDungeon(), "drawable", getPackageName());
+
+        ((ImageView) findViewById(R.id.artifact1)).setImageResource(resArtifact1);
+        ((ImageView) findViewById(R.id.artifact2)).setImageResource(resArtifact2);
+        ((ImageView) findViewById(R.id.artifact3)).setImageResource(resArtifact3);
     }
 }

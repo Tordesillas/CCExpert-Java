@@ -93,7 +93,8 @@ public class Database extends SQLiteOpenHelper {
         c.moveToFirst();
         Hero hero;
         while (!c.isAfterLast()) {
-            hero = new Hero(c.getString(1), c.getString(2));
+            hero = new Hero(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6),
+                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
             sets.addHero(hero, c.getInt(0));
             c.moveToNext();
         }

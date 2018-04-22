@@ -71,7 +71,7 @@
     <string name="guildWarText5">Guild position :</string>
 
     <string name="altarHeroes">Hero Altar</string>
-    <string name="onNextVersion">This feature will be available on the next update.</string>
+    <string name="propNotAvailable">There is no suggestion for this hero.</string>
 
     <string name="shard">Shards</string>
     <string name="shardText">Hero\'s category :</string>

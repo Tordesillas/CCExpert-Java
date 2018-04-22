@@ -71,7 +71,7 @@
     <string name="guildWarText5">Position de la guilde :</string>
 
     <string name="altarHeroes">Autel des Héros\ \ </string>
-    <string name="onNextVersion">Cette fonctionnalité sera disponible à la prochaine mise à jour.</string>
+    <string name="propNotAvailable">Il n\'y a aucune suggestion pour ce héros.</string>
 
     <string name="shard">Fragments</string>
     <string name="shardText">Catégorie du héros :</string>

@@ -58,25 +58,25 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/talent1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/deadly_strike" />
+                            android:adjustViewBounds="true"/>
 
                         <ImageView
+                            android:id="@+id/crest1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/blade_shell_crest" />
+                            android:adjustViewBounds="true"/>
 
                         <ImageView
+                            android:id="@+id/artifact1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/goblet_of_life" />
+                            android:adjustViewBounds="true"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -103,25 +103,25 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/talent2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/deadly_strike" />
+                            android:adjustViewBounds="true"/>
 
                         <ImageView
+                            android:id="@+id/crest2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/blade_shell_crest" />
+                            android:adjustViewBounds="true"/>
 
                         <ImageView
+                            android:id="@+id/artifact2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/goblet_of_life" />
+                            android:adjustViewBounds="true"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -157,25 +157,25 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/talent3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/deadly_strike" />
+                            android:adjustViewBounds="true"/>
 
                         <ImageView
+                            android:id="@+id/crest3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/blade_shell_crest" />
+                            android:adjustViewBounds="true"/>
 
                         <ImageView
+                            android:id="@+id/artifact3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/goblet_of_life" />
+                            android:adjustViewBounds="true"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -258,8 +258,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="30dp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/purrsalot" />
+                        android:adjustViewBounds="true"/>
 
                     <android.support.design.widget.FloatingActionButton
                         android:id="@+id/evoHero"

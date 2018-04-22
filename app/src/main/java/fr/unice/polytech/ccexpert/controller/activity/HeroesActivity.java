@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -48,16 +49,21 @@ public class HeroesActivity extends BaseActivity {
         });
 
         gridView.setOnItemClickListener((parent, view, position, id) -> {
-            Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
-            String heroName;
+            Hero hero;
             if (sortedByName[0]) {
-                heroName = ((Hero) heroes[0].get(position)).getFrenchName();
+                hero = (Hero) heroes[0].get(position);
             } else {
-                heroName = ((Hero) heroes[1].get(position)).getFrenchName();
+                hero = (Hero) heroes[1].get(position);
             }
-            intent.putExtra("heroName", heroName);
-            startActivity(intent);
-            //Toast.makeText(HeroesActivity.this, getResources().getString(R.string.onNextVersion), Toast.LENGTH_SHORT).show();
+
+            try {
+                hero.getTalentDungeon();
+                Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
+                intent.putExtra("heroName", hero.getFrenchName());
+                startActivity(intent);
+            } catch (NullPointerException e) {
+                Toast.makeText(HeroesActivity.this, getResources().getString(R.string.propNotAvailable), Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
