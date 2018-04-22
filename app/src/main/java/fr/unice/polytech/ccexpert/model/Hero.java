@@ -1,5 +1,8 @@
 package fr.unice.polytech.ccexpert.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hero {
     private String nom;
     private String name;
@@ -13,8 +16,11 @@ public class Hero {
     private String crestDungeon;
     private String artifactDungeon;
     private String pet;
+    private List<String> enchantments;
 
-    public Hero(String nom, String name, String talentGwAttack, String crestGwAttack, String artifactGwAttack, String talentGwDefense, String crestGwDefense, String artifactGwDefense, String talentDungeon, String crestDungeon, String artifactDungeon, String pet) {
+    public Hero(String nom, String name, String talentGwAttack, String crestGwAttack, String artifactGwAttack, String talentGwDefense,
+                String crestGwDefense, String artifactGwDefense, String talentDungeon, String crestDungeon, String artifactDungeon,
+                String pet, List<String> enchantments) {
         this.nom = nom;
         this.name = name;
         this.talentGwAttack = talentGwAttack;
@@ -27,6 +33,7 @@ public class Hero {
         this.crestDungeon = crestDungeon;
         this.artifactDungeon = artifactDungeon;
         this.pet = pet;
+        this.enchantments = enchantments;
     }
 
     public String getFrenchName() {
@@ -79,6 +86,14 @@ public class Hero {
 
     public String getArtifactDungeon() {
         return parseName(Sets.getInstance().getArtifact(artifactDungeon).getName());
+    }
+
+    public List<String> getEnchantments() {
+        List<String> newEnchantments = new ArrayList<>();
+        for (String enchantment : enchantments) {
+            newEnchantments.add(parseName(Sets.getInstance().getTalent(enchantment).getName()));
+        }
+        return newEnchantments;
     }
 
     private String parseName(String name) {

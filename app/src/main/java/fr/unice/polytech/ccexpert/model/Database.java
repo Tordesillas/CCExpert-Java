@@ -10,6 +10,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Database extends SQLiteOpenHelper {
     private static String DB_NAME = "ccexpert_database";
@@ -92,10 +94,20 @@ public class Database extends SQLiteOpenHelper {
         Cursor c = db.rawQuery("select * from heroes", null);
         c.moveToFirst();
         Hero hero;
+        List<String> enchantments;
+
         while (!c.isAfterLast()) {
+            enchantments = new ArrayList<>();
+            for (int i = 13; i <= 15; i++) {
+                if (!c.isNull(i)) {
+                    enchantments.add(c.getString(i));
+                }
+            }
+
             hero = new Hero(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6),
-                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12));
+                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12), enchantments);
             sets.addHero(hero, c.getInt(0));
+
             c.moveToNext();
         }
         c.close();
