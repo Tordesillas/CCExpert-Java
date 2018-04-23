@@ -120,4 +120,7 @@
     <string name="heroText2">GW mode - Defence</string>
     <string name="heroText3">Dungeon mode</string>
     <string name="heroText4">Enchantments</string>
+
+    <string name="destiny">Destiny</string>
+    <string name="zero">0</string>
 </resources>

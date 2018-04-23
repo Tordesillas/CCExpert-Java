@@ -83,6 +83,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_speedAttack :
                 startActivity(new Intent(this, AttackSpeedActivity.class));
                 return true;
+            case R.id.nav_destiny :
+                startActivity(new Intent(this, DestinyActivity.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

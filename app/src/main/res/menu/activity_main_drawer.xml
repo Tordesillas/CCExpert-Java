@@ -38,6 +38,9 @@
             <item
                 android:id="@+id/nav_speedAttack"
                 android:title="@string/attackSpeed" />
+            <item
+                android:id="@+id/nav_destiny"
+                android:title="@string/destiny" />
         </menu>
     </item>
 

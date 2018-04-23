@@ -69,6 +69,9 @@ public class CardAdapter extends ArrayAdapter<String> {
             case "Vitesse d'attaque":
             case "Attack speed":
                 return R.drawable.blitz_scroll;
+            case "Destinée":
+            case "Destiny":
+                return R.drawable.karmic_rock1;
             default:
                 return R.drawable.ccexpert_rounded;
         }

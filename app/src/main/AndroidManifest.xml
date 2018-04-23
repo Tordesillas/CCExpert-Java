@@ -36,6 +36,7 @@
         <activity android:name=".controller.activity.AccuracyActivity" />
         <activity android:name=".controller.activity.AttackSpeedActivity" />
         <activity android:name=".controller.activity.DodgeActivity" />
+        <activity android:name=".controller.activity.DestinyActivity" />
     </application>
 
 </manifest>

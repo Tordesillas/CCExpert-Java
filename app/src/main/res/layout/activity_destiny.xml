@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/shardTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/destiny"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentlvlLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spinnerText1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <NumberPicker
+            android:id="@+id/currentLvl"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:theme="@style/AppTheme.Picker" />
+
+        <TextView
+            android:id="@+id/aimLvlLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spinnerText2"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <NumberPicker
+            android:id="@+id/aimLvl"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:theme="@style/AppTheme.Picker" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_corners"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/fame"/>
+
+                <TextView
+                    android:id="@+id/fameAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/legendary_hero_card"/>
+
+                <TextView
+                    android:id="@+id/heroCardsAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/crystals"/>
+
+                <TextView
+                    android:id="@+id/crystalsAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/ih"/>
+
+                <TextView
+                    android:id="@+id/ihAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/gold"/>
+
+                <TextView
+                    android:id="@+id/goldAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

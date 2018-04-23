@@ -120,4 +120,7 @@
     <string name="heroText2">Mode GdG - Défense</string>
     <string name="heroText3">Mode Donjon</string>
     <string name="heroText4">Enchantements</string>
+
+    <string name="destiny">Destinée</string>
+    <string name="zero">0</string>
 </resources>
