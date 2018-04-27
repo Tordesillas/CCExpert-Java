@@ -7,11 +7,11 @@
     <string name="dungeon">Dungeon</string>
     <string name="selectDungeon">Select a dungeon</string>
     <string name="dungeonChoice">Dungeon choice</string>
-    <string name="twoVideos">Two videos correspond to your request, what version do you want ?</string>
+    <string name="twoVideos">Two videos correspond to your request, what version do you want?</string>
     <string name="noVideo">No video was found.</string>
     <string name="wait">The video is loading…</string>
-    <string name="onlyF2P">For this choice, there is only a F2P video available. Do you want to continue ?</string>
-    <string name="onlyP2W">For this choice, there is only a P2W video available. Do you want to continue ?</string>
+    <string name="onlyF2P">For this choice, there is only a F2P video available. Do you want to continue?</string>
+    <string name="onlyP2W">For this choice, there is only a P2W video available. Do you want to continue?</string>
     <string name="dungeonNegativeButton">No</string>
     <string name="dungeonPositiveButton">Yes</string>
 
@@ -33,57 +33,57 @@
     </string-array>
 
     <string name="accuracy">Accuracy</string>
-    <string name="accuracyText1">Hero\'s basic accuracy :</string>
+    <string name="accuracyText1">Hero\'s basic accuracy:</string>
     <string name="accuracyText2">Insert the hero\'s accuracy</string>
-    <string name="accuracyText3">Accuracy added by the equipments :</string>
+    <string name="accuracyText3">Accuracy added by the equipments:</string>
     <string name="accuracyText4">Insert the additional accuracy</string>
-    <string name="accuracyText5">Has the hero the artifact Garuda ?</string>
+    <string name="accuracyText5">Has the hero the artifact Garuda?</string>
 
     <string name="aetherock">Aetherocks</string>
 
-    <string name="spinnerText1">Hero\'s current level :</string>
-    <string name="spinnerText2">Level to reach :</string>
+    <string name="spinnerText1">Hero\'s current level:</string>
+    <string name="spinnerText2">Level to reach:</string>
 
     <string name="attackSpeed">Attack speed</string>
-    <string name="attackSpeedText1">Hero\'s basic attack speed :</string>
+    <string name="attackSpeedText1">Hero\'s basic attack speed:</string>
     <string name="attackSpeedText2">Insert the hero\'s attack speed</string>
-    <string name="attackSpeedText3">Has the hero the talent Berserk ?</string>
-    <string name="attackSpeedText4">Has the hero the artifact Blitz Scroll ?</string>
-    <string name="attackSpeedText5">Has the hero the second talent Fury ?</string>
-    <string name="attackSpeedText6">Has the hero a Pumpkin Duke by his side ?</string>
-    <string name="attackSpeedText7">Has the hero a Michael by his side ?</string>
+    <string name="attackSpeedText3">Has the hero the talent Berserk?</string>
+    <string name="attackSpeedText4">Has the hero the artifact Blitz Scroll?</string>
+    <string name="attackSpeedText5">Has the hero the second talent Fury?</string>
+    <string name="attackSpeedText6">Has the hero a Pumpkin Duke by his side?</string>
+    <string name="attackSpeedText7">Has the hero a Michael by his side?</string>
 
     <string name="crystal">Blue crystals</string>
 
     <string name="dodge">Dodge</string>
-    <string name="dodgeText1">Hero\'s basic dodge :</string>
+    <string name="dodgeText1">Hero\'s basic dodge:</string>
     <string name="dodgeText2">Insert the hero\'s dodge</string>
-    <string name="dodgeText3">Dodge added by the equipments :</string>
+    <string name="dodgeText3">Dodge added by the equipments:</string>
     <string name="dodgeText4">Insert the additional dodge</string>
-    <string name="dodgeText5">Has the hero the talent Scorch ?</string>
-    <string name="dodgeText6">Has the hero the artifact Lightning Rock ?</string>
+    <string name="dodgeText5">Has the hero the talent Scorch?</string>
+    <string name="dodgeText6">Has the hero the artifact Lightning Rock?</string>
     
     <string name="guildWar">Guild war</string>
-    <string name="guildWarText1">Power :</string>
+    <string name="guildWarText1">Power:</string>
     <string name="guildWarText2">Insert the player\'s power</string>
-    <string name="guildWarText3">Score :</string>
+    <string name="guildWarText3">Score:</string>
     <string name="guildWarText4">Insert the player\'s score</string>
-    <string name="guildWarText5">Guild position :</string>
+    <string name="guildWarText5">Guild position:</string>
 
     <string name="altarHeroes">Hero Altar</string>
     <string name="propNotAvailable">There is no suggestion for this hero.</string>
 
     <string name="shard">Shards</string>
-    <string name="shardText">Hero\'s category :</string>
+    <string name="shardText">Hero\'s category:</string>
 
     <string name="missingData">Data are missing.</string>
     <string name="loseLevel">The hero cannot lose levels.</string>
     <string name="incorrectData">It seems that the data entered are incorrect.</string>
 
-    <string name="talentLevel">"Talent level : "</string>
-    <string name="dukeLevel">"Power level of Duke : "</string>
-    <string name="dukeProcs">"Hits which the Duke made : "</string>
-    <string name="mikaLevel">"Michael's talent level : "</string>
+    <string name="talentLevel">"Talent level: "</string>
+    <string name="dukeLevel">"Power level of Duke: "</string>
+    <string name="dukeProcs">"Hits which the Duke made: "</string>
+    <string name="mikaLevel">"Michael's talent level: "</string>
 
     <string name="simulationCompleted">Simulation completed</string>
 
@@ -94,16 +94,16 @@
     <string name="processorText5">"% of dodge, the hero will hit his target for sure with technically a probability of "</string>
     <string name="processorText6">"% of dodge, the hero has a "</string>
     <string name="processorText7">% chance to hit his target.</string>
-    <string name="processorText8">"Aetherocks to spend : "</string>
-    <string name="processorText9">"Additional damages : "</string>
-    <string name="processorText10">"Health points obtained : "</string>
-    <string name="processorText11">"New attack speed : "</string>
+    <string name="processorText8">"Aetherocks to spend: "</string>
+    <string name="processorText9">"Additional damages: "</string>
+    <string name="processorText10">"Health points obtained: "</string>
+    <string name="processorText11">"New attack speed: "</string>
     <string name="processorText12">"So, the hero will attack once every "</string>
-    <string name="processorText13">"Crystals to spend : "</string>
-    <string name="processorText14">"Mana to spend : "</string>
-    <string name="processorText15">"Life won : "</string>
-    <string name="processorText16">"Attack won : "</string>
-    <string name="processorText17">"Power won : "</string>
+    <string name="processorText13">"Crystals to spend: "</string>
+    <string name="processorText14">"Mana to spend: "</string>
+    <string name="processorText15">"Life won: "</string>
+    <string name="processorText16">"Attack won: "</string>
+    <string name="processorText17">"Power won: "</string>
     <string name="processorText18">"The hero will be able to cancel "</string>
     <string name="processorText19">% of the opposite attacks damages.</string>
     <string name="processorText20">"So, he will cancel approximately "</string>
@@ -122,5 +122,7 @@
     <string name="heroText4">Enchantments</string>
 
     <string name="destiny">Destiny</string>
+    <string name="destinyText">Resources to spend:</string>
     <string name="zero">0</string>
+    <string name="error">An error occurred.</string>
 </resources>

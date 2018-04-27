@@ -122,5 +122,7 @@
     <string name="heroText4">Enchantements</string>
 
     <string name="destiny">Destinée</string>
+    <string name="destinyText">Ressources à dépenser :</string>
     <string name="zero">0</string>
+    <string name="error">Une erreur est survenue.</string>
 </resources>

@@ -53,6 +53,14 @@
             android:layout_gravity="center"
             android:theme="@style/AppTheme.Picker" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/destinyText"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,15 +1,18 @@
 package fr.unice.polytech.ccexpert.controller.activity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Locale;
 
+import fr.unice.polytech.ccexpert.CCExpertMain;
 import fr.unice.polytech.ccexpert.R;
 import fr.unice.polytech.ccexpert.model.Hero;
 import fr.unice.polytech.ccexpert.model.Sets;
@@ -24,11 +27,19 @@ public class HeroActivity extends BaseActivity {
 
         TextView heroName = findViewById(R.id.heroTitle);
         heroName.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
-        if ("french".equals(Locale.getDefault().getDisplayLanguage().toLowerCase()) ||
-                "français".equals(Locale.getDefault().getDisplayLanguage().toLowerCase())) {
-            heroName.setText(hero.getFrenchName());
-        } else {
-            heroName.setText(hero.getEnglishName());
+
+        try {
+            if ("french".equals(Locale.getDefault().getDisplayLanguage().toLowerCase()) ||
+                    "français".equals(Locale.getDefault().getDisplayLanguage().toLowerCase())) {
+                heroName.setText(hero.getFrenchName());
+            } else {
+                heroName.setText(hero.getEnglishName());
+            }
+        } catch (NullPointerException e) {
+            Toast.makeText(HeroActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
+            Intent closeActivitiesIntent = new Intent(this, CCExpertMain.class);
+            closeActivitiesIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(closeActivitiesIntent);
         }
 
         final boolean[] evo = {false};
