@@ -6,6 +6,7 @@ import java.util.List;
 public class Hero {
     private String nom;
     private String name;
+    private String nameGerman;
     private String talentGwAttack;
     private String crestGwAttack;
     private String artifactGwAttack;
@@ -18,11 +19,12 @@ public class Hero {
     private String pet;
     private List<String> enchantments;
 
-    public Hero(String nom, String name, String talentGwAttack, String crestGwAttack, String artifactGwAttack, String talentGwDefense,
-                String crestGwDefense, String artifactGwDefense, String talentDungeon, String crestDungeon, String artifactDungeon,
-                String pet, List<String> enchantments) {
+    public Hero(String nom, String name, String nameGerman, String talentGwAttack, String crestGwAttack, String artifactGwAttack,
+                String talentGwDefense, String crestGwDefense, String artifactGwDefense, String talentDungeon, String crestDungeon,
+                String artifactDungeon, String pet, List<String> enchantments) {
         this.nom = nom;
         this.name = name;
+        this.nameGerman = nameGerman;
         this.talentGwAttack = talentGwAttack;
         this.crestGwAttack = crestGwAttack;
         this.artifactGwAttack = artifactGwAttack;
@@ -42,6 +44,10 @@ public class Hero {
 
     public String getEnglishName() {
         return name;
+    }
+
+    public String getGermanName() {
+        return nameGerman;
     }
 
     public String getPicture() {

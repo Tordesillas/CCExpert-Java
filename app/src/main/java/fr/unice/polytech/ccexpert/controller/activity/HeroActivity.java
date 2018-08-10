@@ -29,11 +29,15 @@ public class HeroActivity extends BaseActivity {
         heroName.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         try {
-            if ("french".equals(Locale.getDefault().getDisplayLanguage().toLowerCase()) ||
-                    "français".equals(Locale.getDefault().getDisplayLanguage().toLowerCase())) {
-                heroName.setText(hero.getFrenchName());
-            } else {
-                heroName.setText(hero.getEnglishName());
+            switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
+                case "french":
+                case "français":
+                    heroName.setText(hero.getFrenchName()); break;
+                case "german":
+                case "deutsch":
+                    heroName.setText(hero.getGermanName()); break;
+                default:
+                    heroName.setText(hero.getEnglishName());
             }
         } catch (NullPointerException e) {
             Toast.makeText(HeroActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
