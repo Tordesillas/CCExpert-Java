@@ -15,7 +15,6 @@ public class Sets {
     private Map<Integer, Hero> heroesIds;
     private Map<String, Hero> heroesNames;
     private List<Dungeon> dungeonSet;
-    private Map<String, Artifact> artifacts;
     private Map<String, Talent> talents;
     private Map<String, Pet> pets;
 
@@ -23,7 +22,6 @@ public class Sets {
         heroesIds = new HashMap<>();
         heroesNames = new HashMap<>();
         dungeonSet = new ArrayList<>();
-        artifacts = new HashMap<>();
         talents = new HashMap<>();
         pets = new HashMap<>();
     }
@@ -44,10 +42,6 @@ public class Sets {
         dungeonSet.add(dungeon);
     }
 
-    void addArtifact(Artifact artifact) {
-        artifacts.put(artifact.getFrenchName(), artifact);
-    }
-
     void addTalent(Talent talent) {
         talents.put(talent.getFrenchName(), talent);
     }
@@ -58,10 +52,6 @@ public class Sets {
 
     public Hero getHero(String name) {
         return heroesNames.get(name);
-    }
-
-    public Artifact getArtifact(String name) {
-        return artifacts.get(name);
     }
 
     public Talent getTalent(String name) {

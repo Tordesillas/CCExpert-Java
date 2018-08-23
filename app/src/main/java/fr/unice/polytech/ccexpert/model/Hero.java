@@ -9,31 +9,24 @@ public class Hero {
     private String nameGerman;
     private String talentGwAttack;
     private String crestGwAttack;
-    private String artifactGwAttack;
     private String talentGwDefense;
     private String crestGwDefense;
-    private String artifactGwDefense;
     private String talentDungeon;
     private String crestDungeon;
-    private String artifactDungeon;
     private String pet;
     private List<String> enchantments;
 
-    public Hero(String nom, String name, String nameGerman, String talentGwAttack, String crestGwAttack, String artifactGwAttack,
-                String talentGwDefense, String crestGwDefense, String artifactGwDefense, String talentDungeon, String crestDungeon,
-                String artifactDungeon, String pet, List<String> enchantments) {
+    public Hero(String nom, String name, String nameGerman, String talentGwAttack, String crestGwAttack, String talentGwDefense,
+                String crestGwDefense, String talentDungeon, String crestDungeon, String pet, List<String> enchantments) {
         this.nom = nom;
         this.name = name;
         this.nameGerman = nameGerman;
         this.talentGwAttack = talentGwAttack;
         this.crestGwAttack = crestGwAttack;
-        this.artifactGwAttack = artifactGwAttack;
         this.talentGwDefense = talentGwDefense;
         this.crestGwDefense = crestGwDefense;
-        this.artifactGwDefense = artifactGwDefense;
         this.talentDungeon = talentDungeon;
         this.crestDungeon = crestDungeon;
-        this.artifactDungeon = artifactDungeon;
         this.pet = pet;
         this.enchantments = enchantments;
     }
@@ -66,10 +59,6 @@ public class Hero {
         return parseName(Sets.getInstance().getTalent(crestGwAttack).getName()) + "_crest";
     }
 
-    public String getArtifactGwAttack() {
-        return parseName(Sets.getInstance().getArtifact(artifactGwAttack).getName());
-    }
-
     public String getTalentGwDefense() {
         return parseName(Sets.getInstance().getTalent(talentGwDefense).getName());
     }
@@ -78,20 +67,12 @@ public class Hero {
         return parseName(Sets.getInstance().getTalent(crestGwDefense).getName()) + "_crest";
     }
 
-    public String getArtifactGwDefense() {
-        return parseName(Sets.getInstance().getArtifact(artifactGwDefense).getName());
-    }
-
     public String getTalentDungeon() {
         return parseName(Sets.getInstance().getTalent(talentDungeon).getName());
     }
 
     public String getCrestDungeon() {
         return parseName(Sets.getInstance().getTalent(crestDungeon).getName()) + "_crest";
-    }
-
-    public String getArtifactDungeon() {
-        return parseName(Sets.getInstance().getArtifact(artifactDungeon).getName());
     }
 
     public List<String> getEnchantments() {

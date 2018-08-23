@@ -112,32 +112,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/artefactLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:text="@string/dodgeText6"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/artefactPicture"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
-
-            <Switch
-                android:id="@+id/artefactSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp" />
-        </LinearLayout>
-
         <Button
             android:id="@+id/dodgeButton"
             android:layout_width="match_parent"

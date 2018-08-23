@@ -34,7 +34,6 @@ public class Database extends SQLiteOpenHelper {
         loadHeroes();
         loadDungeons();
         loadTalents();
-        loadArtifacts();
         loadPets();
     }
 
@@ -105,8 +104,7 @@ public class Database extends SQLiteOpenHelper {
             }
 
             hero = new Hero(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6),
-                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12),
-                    c.getString(13), enchantments);
+                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), enchantments);
             sets.addHero(hero, c.getInt(0));
 
             c.moveToNext();
@@ -133,18 +131,6 @@ public class Database extends SQLiteOpenHelper {
         while (!c.isAfterLast()) {
             t = new Talent(c.getString(0), c.getString(1));
             sets.addTalent(t);
-            c.moveToNext();
-        }
-        c.close();
-    }
-
-    private void loadArtifacts() {
-        Cursor c = db.rawQuery("select * from artifacts", null);
-        c.moveToFirst();
-        Artifact a;
-        while (!c.isAfterLast()) {
-            a = new Artifact(c.getString(0), c.getString(1));
-            sets.addArtifact(a);
             c.moveToNext();
         }
         c.close();

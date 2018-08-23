@@ -70,13 +70,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:adjustViewBounds="true"/>
-
-                        <ImageView
-                            android:id="@+id/artifact1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -111,13 +104,6 @@
 
                         <ImageView
                             android:id="@+id/crest2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
-
-                        <ImageView
-                            android:id="@+id/artifact2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -165,13 +151,6 @@
 
                         <ImageView
                             android:id="@+id/crest3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
-
-                        <ImageView
-                            android:id="@+id/artifact3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

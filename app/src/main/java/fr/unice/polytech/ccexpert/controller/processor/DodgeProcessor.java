@@ -15,10 +15,9 @@ public class DodgeProcessor {
         this.res = res;
     }
 
-    public String printDodgeAmount(int basic, int talentLvl, boolean artefactBool, int extra) {
+    public String printDodgeAmount(int basic, int talentLvl, int extra) {
         double amountTalent = AMOUNTS_TALENT[talentLvl];
-        double amountArtefact = (artefactBool) ? 0.15 : 0;
-        double amount = amountTalent + (1-amountTalent)*amountArtefact + (1-amountTalent)*(1-amountArtefact)*(basic+extra)/10000;
+        double amount = amountTalent + (1-amountTalent)*(basic+extra)/10000;
 
         NumberFormat f = NumberFormat.getNumberInstance(Locale.FRANCE);
 

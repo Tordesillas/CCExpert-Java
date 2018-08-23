@@ -82,14 +82,6 @@ public class HeroActivity extends BaseActivity {
         ((ImageView) findViewById(R.id.crest2)).setImageResource(resCrest2);
         ((ImageView) findViewById(R.id.crest3)).setImageResource(resCrest3);
 
-        int resArtifact1 = getResources().getIdentifier(hero.getArtifactGwAttack(), "drawable", getPackageName());
-        int resArtifact2 = getResources().getIdentifier(hero.getArtifactGwDefense(), "drawable", getPackageName());
-        int resArtifact3 = getResources().getIdentifier(hero.getArtifactDungeon(), "drawable", getPackageName());
-
-        ((ImageView) findViewById(R.id.artifact1)).setImageResource(resArtifact1);
-        ((ImageView) findViewById(R.id.artifact2)).setImageResource(resArtifact2);
-        ((ImageView) findViewById(R.id.artifact3)).setImageResource(resArtifact3);
-
         List<String> enchantments = hero.getEnchantments();
         switch (enchantments.size()) {
             case 0:

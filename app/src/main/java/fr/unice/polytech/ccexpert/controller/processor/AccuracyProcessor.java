@@ -15,9 +15,8 @@ public class AccuracyProcessor {
         this.res = res;
     }
 
-    public String printAccuracyAmount(int basic, boolean artefactBool, int extra) {
-        double amountArtefact = (artefactBool) ? 0.2 : 0;
-        double amount = amountArtefact + (1-amountArtefact)*(basic+extra)/10000;
+    public String printAccuracyAmount(int basic, int extra) {
+        double amount = (basic+extra)/10000;
 
         NumberFormat f = NumberFormat.getNumberInstance(Locale.FRANCE);
 

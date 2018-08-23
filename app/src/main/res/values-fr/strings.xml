@@ -37,7 +37,6 @@
     <string name="accuracyText2">Insérer la précision du héros</string>
     <string name="accuracyText3">Précision ajoutée par les équipements :</string>
     <string name="accuracyText4">Insérer la précision supplémentaire</string>
-    <string name="accuracyText5">Le héros possède-t\'il l\'artefact Garuda ?</string>
 
     <string name="aetherock">Aura-guerrières</string>
 
@@ -48,7 +47,6 @@
     <string name="attackSpeedText1">Vitesse d\'attaque de base du héros :</string>
     <string name="attackSpeedText2">Insérer la vitesse d\'attaque du héros</string>
     <string name="attackSpeedText3">Le héros possède-t\'il le talent Fou Furieux ?</string>
-    <string name="attackSpeedText4">Le héros possède-t\'il l\'artefact Blitzkrieg ?</string>
     <string name="attackSpeedText5">Le héros possède-t\'il le second talent Fury ?</string>
     <string name="attackSpeedText6">Le héros a t\'il à ses côté Duc ?</string>
     <string name="attackSpeedText7">Le héros a t\'il à ses côté Mickael ?</string>
@@ -61,7 +59,6 @@
     <string name="dodgeText3">Esquive ajoutée par les équipements :</string>
     <string name="dodgeText4">Insérer l\'esquive supplémentaire</string>
     <string name="dodgeText5">Le héros possède-t\'il le talent Brûlure ?</string>
-    <string name="dodgeText6">Le héros possède-t\'il l\'artefact Pierre de Foudre ?</string>
 
     <string name="guildWar">Guerre de guilde</string>
     <string name="guildWarText1">Puissance :</string>

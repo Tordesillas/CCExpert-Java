@@ -54,9 +54,6 @@ public class AttackSpeedActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        ((ImageView) findViewById(R.id.blitzPicture)).setImageResource(R.drawable.blitz_scroll);
-        final Switch blitzSwitch = findViewById(R.id.blitzSwitch);
-
         ((ImageView) findViewById(R.id.furyPicture)).setImageResource(R.drawable.unbridled_fury);
         final Switch furySwitch = findViewById(R.id.furySwitch);
         final LinearLayout furyLayout = findViewById(R.id.layoutFuryBar);
@@ -164,7 +161,6 @@ public class AttackSpeedActivity extends BaseActivity {
                 createSimulatorDialog(asp.printAttackSpeedAmount(
                         Integer.parseInt(speedField.getText().toString()),
                         (switchTalent.isChecked()) ? talentBar.getProgress() : 0,
-                        blitzSwitch.isChecked(),
                         (furySwitch.isChecked()) ? furyBar.getProgress() : 0,
                         (dukeSwitch.isChecked()) ? dukeProgressBar.getProgress() : 0,
                         (dukeSwitch.isChecked()) ? dukeProcBar.getProgress() : 0,

@@ -37,7 +37,6 @@
     <string name="accuracyText2">Insert the hero\'s accuracy</string>
     <string name="accuracyText3">Accuracy added by the equipments:</string>
     <string name="accuracyText4">Insert the additional accuracy</string>
-    <string name="accuracyText5">Has the hero the artifact Garuda?</string>
 
     <string name="aetherock">Aetherocks</string>
 
@@ -48,7 +47,6 @@
     <string name="attackSpeedText1">Hero\'s basic attack speed:</string>
     <string name="attackSpeedText2">Insert the hero\'s attack speed</string>
     <string name="attackSpeedText3">Has the hero the talent Berserk?</string>
-    <string name="attackSpeedText4">Has the hero the artifact Blitz Scroll?</string>
     <string name="attackSpeedText5">Has the hero the second talent Fury?</string>
     <string name="attackSpeedText6">Has the hero a Pumpkin Duke by his side?</string>
     <string name="attackSpeedText7">Has the hero a Michael by his side?</string>
@@ -61,8 +59,7 @@
     <string name="dodgeText3">Dodge added by the equipments:</string>
     <string name="dodgeText4">Insert the additional dodge</string>
     <string name="dodgeText5">Has the hero the talent Scorch?</string>
-    <string name="dodgeText6">Has the hero the artifact Lightning Rock?</string>
-    
+
     <string name="guildWar">Guild war</string>
     <string name="guildWarText1">Power:</string>
     <string name="guildWarText2">Insert the player\'s power</string>

@@ -55,10 +55,6 @@ public class DodgeActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
-        ((ImageView) findViewById(R.id.artefactPicture)).setImageResource(R.drawable.lightning_rock);
-
-        final Switch switchArtefact = findViewById(R.id.artefactSwitch);
-
         findViewById(R.id.dodgeButton).setOnClickListener(v -> {
             if (dodgeField.getText().length() <= 1) {
                 Toast.makeText(DodgeActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
@@ -70,7 +66,6 @@ public class DodgeActivity extends BaseActivity {
                 createSimulatorDialog(dp.printDodgeAmount(
                         Integer.parseInt(dodgeField.getText().toString()),
                         (switchTalent.isChecked()) ? talentBar.getProgress() : 0,
-                        switchArtefact.isChecked(),
                         equip
                 ));
                 dodgeField.setText("");
