@@ -13,6 +13,10 @@
             android:id="@+id/nav_dungeons"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/dungeons" />
+        <item
+            android:id="@+id/nav_archdemons"
+            android:icon="@drawable/ic_dragon"
+            android:title="@string/archdemons" />
     </group>
 
     <item android:title="@string/simulators">

@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
+import fr.unice.polytech.ccexpert.controller.activity.ArchdemonsActivity;
 import fr.unice.polytech.ccexpert.controller.activity.DungeonsActivity;
 import fr.unice.polytech.ccexpert.controller.activity.HeroesActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
@@ -36,7 +37,8 @@ public class MainFragment extends Fragment {
         final List<String> titles = Arrays.asList(
                 getResources().getString(R.string.heroes),
                 getResources().getString(R.string.simulators),
-                getResources().getString(R.string.dungeons)
+                getResources().getString(R.string.dungeons),
+                getResources().getString(R.string.archdemons)
         );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
@@ -56,6 +58,9 @@ public class MainFragment extends Fragment {
                     break;
                 case 2:
                     startActivity(new Intent(getActivity(), DungeonsActivity.class));
+                    break;
+                case 3:
+                    startActivity(new Intent(getActivity(), ArchdemonsActivity.class));
                     break;
             }
 

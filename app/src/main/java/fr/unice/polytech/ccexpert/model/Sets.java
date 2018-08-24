@@ -17,6 +17,7 @@ public class Sets {
     private List<Dungeon> dungeonSet;
     private Map<String, Talent> talents;
     private Map<String, Pet> pets;
+    private List<Archdemon> archdemons;
 
     private Sets() {
         heroesIds = new HashMap<>();
@@ -24,6 +25,7 @@ public class Sets {
         dungeonSet = new ArrayList<>();
         talents = new HashMap<>();
         pets = new HashMap<>();
+        archdemons = new ArrayList<>();
     }
 
     public static Sets getInstance() {
@@ -48,6 +50,10 @@ public class Sets {
 
     void addPet(Pet pet) {
         pets.put(pet.getFrenchName(), pet);
+    }
+
+    void addArchdemon(Archdemon archdemon) {
+        archdemons.add(archdemon);
     }
 
     public Hero getHero(String name) {
@@ -90,25 +96,48 @@ public class Sets {
     private List<Hero> getHeroesListSorted() {
         List<String> nameSorted = new ArrayList<>();
         List<Hero> heroesSorted = new ArrayList<>();
-        if ("french".equals(Locale.getDefault().getDisplayLanguage().toLowerCase()) ||
-                "français".equals(Locale.getDefault().getDisplayLanguage().toLowerCase())) {
-            nameSorted = new ArrayList<>(heroesNames.keySet());
-            Collections.sort(nameSorted);
-            for (String name : nameSorted) {
-                heroesSorted.add(heroesNames.get(name));
-            }
-        } else {
-            Map<String, Hero> enHeroes = new HashMap<>();
-            for (Hero hero : heroesNames.values()) {
-                nameSorted.add(hero.getEnglishName());
-                enHeroes.put(hero.getEnglishName(), hero);
-            }
-            Collections.sort(nameSorted);
-            for (String name : nameSorted) {
-                heroesSorted.add(enHeroes.get(name));
-            }
+
+        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
+            case "french":
+            case "français":
+                nameSorted = new ArrayList<>(heroesNames.keySet());
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    heroesSorted.add(heroesNames.get(name));
+                }
+                break;
+            case "german":
+            case "deutsch":
+                Map<String, Hero> geHeroes = new HashMap<>();
+                for (Hero hero : heroesNames.values()) {
+                    nameSorted.add(hero.getGermanName());
+                    geHeroes.put(hero.getEnglishName(), hero);
+                }
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    heroesSorted.add(geHeroes.get(name));
+                }
+                break;
+            default:
+                Map<String, Hero> enHeroes = new HashMap<>();
+                for (Hero hero : heroesNames.values()) {
+                    nameSorted.add(hero.getEnglishName());
+                    enHeroes.put(hero.getEnglishName(), hero);
+                }
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    heroesSorted.add(enHeroes.get(name));
+                }
         }
 
         return heroesSorted;
+    }
+
+    public Archdemon getArchdemon(int position) {
+        return archdemons.get(position);
+    }
+
+    public int getArchdemonsSize() {
+        return archdemons.size();
     }
 }

@@ -39,29 +39,29 @@ public class HeroActivity extends BaseActivity {
                 default:
                     heroName.setText(hero.getEnglishName());
             }
+
+            final boolean[] evo = {false};
+
+            int resHero = getResources().getIdentifier(hero.getPicture() + "2", "drawable", getPackageName());
+            int resHeroEvo = getResources().getIdentifier(hero.getPicture() + "3", "drawable", getPackageName());
+
+            ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
+
+            findViewById(R.id.evoHero).setOnClickListener(view -> {
+                if (evo[0]) {
+                    ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
+                    evo[0] = false;
+                } else {
+                    ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroEvo);
+                    evo[0] = true;
+                }
+            });
         } catch (NullPointerException e) {
             Toast.makeText(HeroActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
             Intent closeActivitiesIntent = new Intent(this, CCExpertMain.class);
             closeActivitiesIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(closeActivitiesIntent);
         }
-
-        final boolean[] evo = {false};
-
-        int resHero = getResources().getIdentifier(hero.getPicture() + "2", "drawable", getPackageName());
-        int resHeroEvo = getResources().getIdentifier(hero.getPicture() + "3", "drawable", getPackageName());
-
-        ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
-
-        findViewById(R.id.evoHero).setOnClickListener(view -> {
-            if (evo[0]) {
-                ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
-                evo[0] = false;
-            } else {
-                ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroEvo);
-                evo[0] = true;
-            }
-        });
 
         int resPet = getResources().getIdentifier(hero.getPetPicture(), "drawable", getPackageName());
         ((ImageView) findViewById(R.id.pet)).setImageResource(resPet);

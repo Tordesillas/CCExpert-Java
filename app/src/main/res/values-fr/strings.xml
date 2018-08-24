@@ -122,4 +122,7 @@
     <string name="destinyText">Ressources à dépenser :</string>
     <string name="zero">0</string>
     <string name="error">Une erreur est survenue.</string>
+
+    <string name="archdemons">Archidémons</string>
+    <string name="archdemon">Archidémon</string>
 </resources>

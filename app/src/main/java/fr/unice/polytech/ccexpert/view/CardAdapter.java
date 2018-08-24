@@ -72,6 +72,9 @@ public class CardAdapter extends ArrayAdapter<String> {
             case "Destinée":
             case "Destiny":
                 return R.drawable.karmic_rock1;
+            case "Archidémons":
+            case "Archdemons":
+                return R.drawable.archdemon;
             default:
                 return R.drawable.ccexpert_rounded;
         }

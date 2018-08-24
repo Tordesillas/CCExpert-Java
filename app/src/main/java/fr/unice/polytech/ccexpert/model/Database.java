@@ -35,6 +35,7 @@ public class Database extends SQLiteOpenHelper {
         loadDungeons();
         loadTalents();
         loadPets();
+        loadArchdemons();
     }
 
     public void createDataBase() {
@@ -97,7 +98,7 @@ public class Database extends SQLiteOpenHelper {
 
         while (!c.isAfterLast()) {
             enchantments = new ArrayList<>();
-            for (int i = 14; i <= 16; i++) {
+            for (int i = 11; i <= 13; i++) {
                 if (!c.isNull(i)) {
                     enchantments.add(c.getString(i));
                 }
@@ -143,6 +144,22 @@ public class Database extends SQLiteOpenHelper {
         while (!c.isAfterLast()) {
             p = new Pet(c.getString(0), c.getString(1));
             sets.addPet(p);
+            c.moveToNext();
+        }
+        c.close();
+    }
+
+    private void loadArchdemons() {
+        Cursor c = db.rawQuery("select * from archdemons", null);
+        c.moveToFirst();
+        Archdemon a;
+        while (!c.isAfterLast()) {
+            String[] heroes = {c.getString(2), c.getString(5), c.getString(8), c.getString(11), c.getString(14), c.getString(17)};
+            String[] talents = {c.getString(3), c.getString(6), c.getString(9), c.getString(12), c.getString(15), c.getString(18)};
+            String[] crests = {c.getString(4), c.getString(7), c.getString(10), c.getString(13), c.getString(16), c.getString(19)};
+
+            a = new Archdemon(c.getString(0), c.getString(1), heroes, talents, crests);
+            sets.addArchdemon(a);
             c.moveToNext();
         }
         c.close();

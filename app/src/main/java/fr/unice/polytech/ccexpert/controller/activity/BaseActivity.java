@@ -86,6 +86,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_destiny :
                 startActivity(new Intent(this, DestinyActivity.class));
                 return true;
+            case R.id.nav_archdemons :
+                startActivity(new Intent(this, ArchdemonsActivity.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
