@@ -49,7 +49,6 @@ public class DestinyActivity extends BaseActivity {
         crystalsAmount = findViewById(R.id.crystalsAmount);
 
         currentLvlPicker.setOnValueChangedListener((numberPicker, i, i1) -> updateNumbers());
-
         aimLvlPicker.setOnValueChangedListener((numberPicker, i, i1) -> updateNumbers());
     }
 
@@ -62,6 +61,7 @@ public class DestinyActivity extends BaseActivity {
             heroCardsAmount.setText("0");
             crystalsAmount.setText("0");
         } else {
+            toast.cancel();
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             fameAmount.setText(dp.computeFame(firstLevel, secondLevel));
@@ -73,7 +73,7 @@ public class DestinyActivity extends BaseActivity {
     }
 
     @Override
-    protected void onStop () {
+    protected void onStop() {
         super.onStop();
         toast.cancel();
     }

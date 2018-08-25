@@ -20,6 +20,7 @@ import fr.unice.polytech.ccexpert.controller.activity.CrystalActivity;
 import fr.unice.polytech.ccexpert.controller.activity.DestinyActivity;
 import fr.unice.polytech.ccexpert.controller.activity.DodgeActivity;
 import fr.unice.polytech.ccexpert.controller.activity.GuildWarActivity;
+import fr.unice.polytech.ccexpert.controller.activity.ProtectorsActivity;
 import fr.unice.polytech.ccexpert.controller.activity.ShardActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
 
@@ -46,7 +47,8 @@ public class SimulatorsFragment extends Fragment {
                 getResources().getString(R.string.dodge),
                 getResources().getString(R.string.accuracy),
                 getResources().getString(R.string.attackSpeed),
-                getResources().getString(R.string.destiny)
+                getResources().getString(R.string.destiny),
+                getResources().getString(R.string.protectors)
         );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
@@ -78,6 +80,9 @@ public class SimulatorsFragment extends Fragment {
                     break;
                 case 7:
                     startActivity(new Intent(getActivity(), DestinyActivity.class));
+                    break;
+                case 8:
+                    startActivity(new Intent(getActivity(), ProtectorsActivity.class));
             }
         });
 

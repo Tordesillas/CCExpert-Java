@@ -125,4 +125,11 @@
 
     <string name="archdemons">Archidémons</string>
     <string name="archdemon">Archidémon</string>
+
+    <string name="protectors">Gardiens</string>
+    <string name="prophet">Prophète</string>
+    <string name="saint">Saint</string>
+    <string name="brawler">Damné</string>
+    <string name="protectorSpinnerText">Niveau actuel du gardien :</string>
+    <string name="protectorText">Bonus acquis :</string>
 </resources>

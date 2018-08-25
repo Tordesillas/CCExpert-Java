@@ -75,6 +75,9 @@ public class CardAdapter extends ArrayAdapter<String> {
             case "Archidémons":
             case "Archdemons":
                 return R.drawable.archdemon;
+            case "Gardiens":
+            case "Protectors":
+                return R.drawable.brawler;
             default:
                 return R.drawable.ccexpert_rounded;
         }
