@@ -4,6 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import fr.unice.polytech.ccexpert.controller.activity.BaseActivity;
 import fr.unice.polytech.ccexpert.controller.fragment.MainFragment;
 import fr.unice.polytech.ccexpert.model.Database;
@@ -13,8 +18,19 @@ public class CCExpertMain extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this,"ca-app-pub-7552728611291260~3834633923"); //for tests: ca-app-pub-3940256099942544~3347511713
+        InterstitialAd mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-7552728611291260/7325665684"); //for tests: ca-app-pub-3940256099942544/1033173712
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                mInterstitialAd.show();
+            }
+        });
 
         if (firstLaunch) {
             Database database = new Database(this);
@@ -26,6 +42,9 @@ public class CCExpertMain extends BaseActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+            mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
             firstLaunch = false;
         }
 
