@@ -111,7 +111,7 @@ public class Sets {
                 Map<String, Hero> geHeroes = new HashMap<>();
                 for (Hero hero : heroesNames.values()) {
                     nameSorted.add(hero.getGermanName());
-                    geHeroes.put(hero.getEnglishName(), hero);
+                    geHeroes.put(hero.getGermanName(), hero);
                 }
                 Collections.sort(nameSorted);
                 for (String name : nameSorted) {
