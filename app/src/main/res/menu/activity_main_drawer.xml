@@ -17,6 +17,10 @@
             android:id="@+id/nav_archdemons"
             android:icon="@drawable/ic_dragon"
             android:title="@string/archdemons" />
+        <item
+            android:id="@+id/nav_items"
+            android:icon="@drawable/merits"
+            android:title="@string/items" />
     </group>
 
     <item android:title="@string/simulators">

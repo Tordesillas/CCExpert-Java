@@ -38,7 +38,8 @@ public class MainFragment extends Fragment {
                 getResources().getString(R.string.heroes),
                 getResources().getString(R.string.simulators),
                 getResources().getString(R.string.dungeons),
-                getResources().getString(R.string.archdemons)
+                getResources().getString(R.string.archdemons),
+                getResources().getString(R.string.items)
         );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
@@ -61,6 +62,12 @@ public class MainFragment extends Fragment {
                     break;
                 case 3:
                     startActivity(new Intent(getActivity(), ArchdemonsActivity.class));
+                    break;
+                case 4:
+                    FragmentTransaction tr = getActivity().getSupportFragmentManager().beginTransaction();
+                    tr.replace(R.id.main_fragment, ItemsFragment.newInstance(), "main");
+                    tr.addToBackStack("main");
+                    tr.commit();
                     break;
             }
 

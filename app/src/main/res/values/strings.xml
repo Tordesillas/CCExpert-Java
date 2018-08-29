@@ -132,4 +132,8 @@
     <string name="brawler">Brawler</string>
     <string name="protectorSpinnerText">Protector\'s current level:</string>
     <string name="protectorText">Bonus amounts earned:</string>
+
+    <string name="talents">Talents</string>
+    <string name="enchantments">Enchantments</string>
+    <string name="items">Items</string>
 </resources>

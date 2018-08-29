@@ -40,6 +40,9 @@
         <activity android:name=".controller.activity.DestinyActivity" />
         <activity android:name=".controller.activity.ArchdemonsActivity" />
         <activity android:name=".controller.activity.ProtectorsActivity" />
+        <activity android:name=".controller.activity.TalentsActivity" />
+        <activity android:name=".controller.activity.TalentActivity" />
+        <activity android:name=".controller.activity.EnchantmentsActivity" />
     </application>
 
 </manifest>

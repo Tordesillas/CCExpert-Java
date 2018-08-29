@@ -140,4 +140,24 @@ public class Sets {
     public int getArchdemonsSize() {
         return archdemons.size();
     }
+
+    public List<Talent> getTalents() {
+        List<Talent> talentList = new ArrayList<>();
+        for (Talent t : talents.values()) {
+            if (!t.isEnchantment()) {
+                talentList.add(t);
+            }
+        }
+        return talentList;
+    }
+
+    public List<Talent> getEnchantments() {
+        List<Talent> enchantmentList = new ArrayList<>();
+        for (Talent t : talents.values()) {
+            if (t.isEnchantment()) {
+                enchantmentList.add(t);
+            }
+        }
+        return enchantmentList;
+    }
 }

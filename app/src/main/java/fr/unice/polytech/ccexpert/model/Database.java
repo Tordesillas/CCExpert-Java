@@ -130,7 +130,10 @@ public class Database extends SQLiteOpenHelper {
         c.moveToFirst();
         Talent t;
         while (!c.isAfterLast()) {
-            t = new Talent(c.getString(0), c.getString(1));
+            boolean b = c.getInt(2) != 0;
+            t = new Talent(c.getString(0), c.getString(1), b, c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7),
+                    c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12), c.getString(13),
+                    c.getString(14), c.getString(15), c.getString(16), c.getString(17), c.getString(18));
             sets.addTalent(t);
             c.moveToNext();
         }

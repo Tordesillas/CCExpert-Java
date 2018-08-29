@@ -132,4 +132,8 @@
     <string name="brawler">Damné</string>
     <string name="protectorSpinnerText">Niveau actuel du gardien :</string>
     <string name="protectorText">Bonus acquis :</string>
+
+    <string name="talents">Talents</string>
+    <string name="enchantments">Enchantements</string>
+    <string name="items">Items</string>
 </resources>
