@@ -53,44 +53,50 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_home :
+            case R.id.nav_home:
                 startActivity(new Intent(this, CCExpertMain.class));
                 return true;
-            case R.id.nav_heroes :
+            case R.id.nav_heroes:
                 startActivity(new Intent(this, HeroesActivity.class));
                 return true;
-            case R.id.nav_dungeons :
+            case R.id.nav_dungeons:
                 startActivity(new Intent(this, DungeonsActivity.class));
                 return true;
-            case R.id.nav_guildwar :
+            case R.id.nav_guildwar:
                 startActivity(new Intent(this, GuildWarActivity.class));
                 return true;
-            case R.id.nav_shard :
+            case R.id.nav_shard:
                 startActivity(new Intent(this, ShardActivity.class));
                 return true;
-            case R.id.nav_crystal :
+            case R.id.nav_crystal:
                 startActivity(new Intent(this, CrystalActivity.class));
                 return true;
-            case R.id.nav_aetherock :
+            case R.id.nav_aetherock:
                 startActivity(new Intent(this, AetherockActivity.class));
                 return true;
-            case R.id.nav_dodge :
+            case R.id.nav_dodge:
                 startActivity(new Intent(this, DodgeActivity.class));
                 return true;
-            case R.id.nav_accuracy :
+            case R.id.nav_accuracy:
                 startActivity(new Intent(this, AccuracyActivity.class));
                 return true;
-            case R.id.nav_speedAttack :
+            case R.id.nav_speedAttack:
                 startActivity(new Intent(this, AttackSpeedActivity.class));
                 return true;
-            case R.id.nav_destiny :
+            case R.id.nav_destiny:
                 startActivity(new Intent(this, DestinyActivity.class));
                 return true;
-            case R.id.nav_archdemons :
+            case R.id.nav_archdemons:
                 startActivity(new Intent(this, ArchdemonsActivity.class));
                 return true;
-            case R.id.nav_protectors :
+            case R.id.nav_protectors:
                 startActivity(new Intent(this, ProtectorsActivity.class));
+                return true;
+            case R.id.nav_talents:
+                startActivity(new Intent(this, TalentsActivity.class));
+                return true;
+            case R.id.nav_enchantments:
+                startActivity(new Intent(this, EnchantmentsActivity.class));
                 return true;
         }
 

@@ -22,10 +22,12 @@ public class EnchantmentsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talents);
 
-        ((TextView) findViewById(R.id.talentsTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
+        TextView title = findViewById(R.id.talentsTitle);
+        title.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
+        title.setText(R.string.enchantments);
 
         if (enchantments == null) {
-            enchantments = Sets.getInstance().getTalents();
+            enchantments = Sets.getInstance().getEnchantments();
         }
 
         GridView gridTalents = findViewById(R.id.talentsGrid);

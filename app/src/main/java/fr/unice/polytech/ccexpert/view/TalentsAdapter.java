@@ -23,7 +23,7 @@ public class TalentsAdapter extends ArrayAdapter<Talent> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.hero_littlecard, null);
+            convertView = inflater.inflate(R.layout.talent_littlecard, null);
         }
 
         Talent talent = getItem(position);

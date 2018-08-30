@@ -14,8 +14,7 @@
         android:textSize="26sp"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
-        android:paddingTop="10dp"
-        android:text="@string/talents" />
+        android:paddingTop="10dp"/>
 
     <GridView
         android:id="@+id/talentsGrid"

@@ -22,7 +22,9 @@ public class TalentsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_talents);
 
-        ((TextView) findViewById(R.id.talentsTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
+        TextView title = findViewById(R.id.talentsTitle);
+        title.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
+        title.setText(R.string.talents);
 
         if (talents == null) {
             talents = Sets.getInstance().getTalents();

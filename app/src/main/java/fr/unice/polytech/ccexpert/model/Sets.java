@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -142,22 +143,46 @@ public class Sets {
     }
 
     public List<Talent> getTalents() {
-        List<Talent> talentList = new ArrayList<>();
-        for (Talent t : talents.values()) {
-            if (!t.isEnchantment()) {
-                talentList.add(t);
-            }
-        }
-        return talentList;
+        return getTalentsOrEnchantments(false);
     }
 
     public List<Talent> getEnchantments() {
-        List<Talent> enchantmentList = new ArrayList<>();
-        for (Talent t : talents.values()) {
-            if (t.isEnchantment()) {
-                enchantmentList.add(t);
-            }
+        return getTalentsOrEnchantments(true);
+    }
+
+    private List<Talent> getTalentsOrEnchantments(boolean isEnchantment) {
+        List<String> nameSorted;
+        List<Talent> talentsSorted = new LinkedList<>();
+        Talent t;
+
+        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
+            case "french":
+            case "français":
+                nameSorted = new LinkedList<>(talents.keySet());
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    t = talents.get(name);
+                    if (t.isEnchantment() == isEnchantment) {
+                        talentsSorted.add(t);
+                    }
+                }
+                break;
+            default:
+                Map<String, Talent> enTalents = new HashMap<>();
+                nameSorted = new LinkedList<>();
+                for (Talent talent : talents.values()) {
+                    nameSorted.add(talent.getName());
+                    enTalents.put(talent.getName(), talent);
+                }
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    t = enTalents.get(name);
+                    if (t.isEnchantment() == isEnchantment) {
+                        talentsSorted.add(t);
+                    }
+                }
         }
-        return enchantmentList;
+
+        return talentsSorted;
     }
 }
