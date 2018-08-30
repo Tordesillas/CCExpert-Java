@@ -29,7 +29,13 @@ public class ArchdemonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_archdemon, container, false);
 
-        int position = getArguments().getInt(KEY_POSITION, -1);
+        int position = getArguments().getInt(KEY_POSITION, 0);
+
+        if (position < 0) {
+            position = 0;
+        } else if (position >= Sets.getInstance().getArchdemonsSize()) {
+            position = Sets.getInstance().getArchdemonsSize() - 1;
+        }
 
         Archdemon archdemon = Sets.getInstance().getArchdemon(position);
 
