@@ -136,4 +136,6 @@
     <string name="talents">Talents</string>
     <string name="enchantments">Enchantments</string>
     <string name="items">Items</string>
+    <string name="level">Level</string>
+    <string name="description">Description</string>
 </resources>

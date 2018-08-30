@@ -1,5 +1,7 @@
 package fr.unice.polytech.ccexpert.model;
 
+import java.util.Locale;
+
 public class Talent {
     private String nom;
     private String name;
@@ -35,5 +37,15 @@ public class Talent {
 
     public boolean isEnchantment() {
         return isEnchantment;
+    }
+
+    public String[] getDescription() {
+        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
+            case "french":
+            case "français":
+                return desFr;
+            default:
+                return desEn;
+        }
     }
 }

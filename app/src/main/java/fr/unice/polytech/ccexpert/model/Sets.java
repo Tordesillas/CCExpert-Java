@@ -61,10 +61,6 @@ public class Sets {
         return heroesNames.get(name);
     }
 
-    public Talent getTalent(String name) {
-        return talents.get(name);
-    }
-
     public Pet getPet(String name) {
         return pets.get(name);
     }
@@ -185,4 +181,19 @@ public class Sets {
 
         return talentsSorted;
     }
+
+    public Talent getTalent(String name) {
+        if (talents.containsKey(name)) {
+            return talents.get(name);
+        }
+        else {
+            for (Talent t : talents.values()) {
+                if (t.getName().equals(name)) {
+                    return t;
+                }
+            }
+            return talents.get("Feinte");
+        }
+    }
+
 }

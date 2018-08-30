@@ -38,6 +38,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
     testImplementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.shawnlin:number-picker:2.4.6'
 }
 
 repositories {
