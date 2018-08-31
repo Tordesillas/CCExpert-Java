@@ -54,8 +54,7 @@ public class CardAdapter extends ArrayAdapter<String> {
             case "Niveau du talent":
             case "Talent level":
                 return R.drawable.shards;
-            case "Cristaux bleus":
-            case "Blue crystals":
+            case "Inscription":
                 return R.drawable.crystal;
             case "Aura-guerrières":
             case "Aetherocks":

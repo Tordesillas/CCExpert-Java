@@ -51,7 +51,7 @@
     <string name="attackSpeedText6">Le héros a t\'il à ses côté Duc ?</string>
     <string name="attackSpeedText7">Le héros a t\'il à ses côté Mickael ?</string>
 
-    <string name="crystal">Cristaux bleus</string>
+    <string name="crystal">Inscription</string>
 
     <string name="dodge">Esquive</string>
     <string name="dodgeText1">Esquive de base du héros :</string>
@@ -96,11 +96,6 @@
     <string name="processorText10">Points de vie obtenus :\ </string>
     <string name="processorText11">Nouvelle vitesse d\'attaque :\ </string>
     <string name="processorText12">Le héros attaquera donc une fois toutes les\ </string>
-    <string name="processorText13">Cristaux à dépenser :\ </string>
-    <string name="processorText14">Mana à dépenser :\ </string>
-    <string name="processorText15">Vie gagnée :\ </string>
-    <string name="processorText16">Attaque gagnée :\ </string>
-    <string name="processorText17">Puissance gagnée :\ </string>
     <string name="processorText18">Le héros sera capable d\'annuler les dégâts de\ </string>
     <string name="processorText19">% des attaques reçues.</string>
     <string name="processorText20">Il annulera donc environ\ </string>
@@ -117,7 +112,7 @@
     <string name="heroText4">Enchantements</string>
 
     <string name="destiny">Destinée</string>
-    <string name="destinyText">Ressources à dépenser :</string>
+    <string name="destinyText">Ressources à dépenser</string>
     <string name="zero">0</string>
     <string name="error">Une erreur est survenue.</string>
 
@@ -128,8 +123,8 @@
     <string name="prophet">Prophète</string>
     <string name="saint">Saint</string>
     <string name="brawler">Damné</string>
-    <string name="protectorSpinnerText">Niveau actuel du gardien :</string>
-    <string name="protectorText">Bonus acquis :</string>
+    <string name="protectorSpinnerText">Niveau actuel du gardien</string>
+    <string name="protectorText">Bonus acquis</string>
 
     <string name="talents">Talents</string>
     <string name="enchantments">Enchantements</string>
