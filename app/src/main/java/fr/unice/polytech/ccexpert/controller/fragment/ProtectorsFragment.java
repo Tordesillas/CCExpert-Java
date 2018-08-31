@@ -59,7 +59,6 @@ public class ProtectorsFragment extends Fragment {
                 ((ImageView) rootView.findViewById(R.id.birthrock)).setImageResource(R.drawable.birthrock_prophet);
         }
 
-        toast = Toast.makeText(getContext(), getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
         pp = new ProtectorsProcessor();
 
         currentLvlPicker = rootView.findViewById(R.id.currentLvl);
@@ -91,6 +90,10 @@ public class ProtectorsFragment extends Fragment {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
+            if (toast == null || !toast.getView().isShown()) {
+                toast = Toast.makeText(ProtectorsFragment.this.getActivity(), getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
+                toast.show();
+            }
             toast.show();
             meritAmount.setText("0");
             birthrockAmount.setText("0");
@@ -102,7 +105,9 @@ public class ProtectorsFragment extends Fragment {
             critAmount.setText("0");
             dmgAmount.setText("0");
         } else {
-            toast.cancel();
+            if (toast != null) {
+                toast.cancel();
+            }
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             meritAmount.setText(pp.computeMerit(firstLevel, secondLevel));
@@ -119,7 +124,9 @@ public class ProtectorsFragment extends Fragment {
 
     @Override
     public void onStop() {
+        if (toast != null) {
+            toast.cancel();
+        }
         super.onStop();
-        toast.cancel();
     }
 }

@@ -51,8 +51,8 @@ public class CardAdapter extends ArrayAdapter<String> {
             case "Guerre de guilde":
             case "Guild war":
                 return R.drawable.guild_wars;
-            case "Fragments":
-            case "Shards":
+            case "Niveau du talent":
+            case "Talent level":
                 return R.drawable.shards;
             case "Cristaux bleus":
             case "Blue crystals":

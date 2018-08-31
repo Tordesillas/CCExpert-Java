@@ -40,8 +40,8 @@
 
     <string name="aetherock">Aetherocks</string>
 
-    <string name="spinnerText1">Hero\'s current level:</string>
-    <string name="spinnerText2">Level to reach:</string>
+    <string name="spinnerText1">Current level</string>
+    <string name="spinnerText2">Level to reach</string>
 
     <string name="attackSpeed">Attack speed</string>
     <string name="attackSpeedText1">Hero\'s basic attack speed:</string>
@@ -70,8 +70,8 @@
     <string name="altarHeroes">Hero Altar</string>
     <string name="propNotAvailable">There is no suggestion for this hero.</string>
 
-    <string name="shard">Shards</string>
-    <string name="shardText">Hero\'s category:</string>
+    <string name="shard">Talent level</string>
+    <string name="shardText">Hero\'s category</string>
 
     <string name="missingData">Data are missing.</string>
     <string name="loseLevel">The hero cannot lose levels.</string>
@@ -106,8 +106,6 @@
     <string name="processorText20">"So, he will cancel approximately "</string>
     <string name="processorText21">" hits on 10."</string>
     <string name="processorText22">"To acquire "</string>
-    <string name="processorText23">" experience points, it will be necessary to spend "</string>
-    <string name="processorText24">" shards."</string>
     <string name="processorText25">"The player attacks on average opponents with "</string>
     <string name="processorText26">K of power.</string>
     <string name="processorText27">"With such a score, he will get "</string>

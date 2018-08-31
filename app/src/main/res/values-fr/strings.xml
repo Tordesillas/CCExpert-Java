@@ -40,8 +40,8 @@
 
     <string name="aetherock">Aura-guerrières</string>
 
-    <string name="spinnerText1">Niveau actuel du héros :</string>
-    <string name="spinnerText2">Niveau à atteindre :</string>
+    <string name="spinnerText1">Niveau actuel</string>
+    <string name="spinnerText2">Niveau à atteindre</string>
 
     <string name="attackSpeed">Vitesse d\'attaque</string>
     <string name="attackSpeedText1">Vitesse d\'attaque de base du héros :</string>
@@ -70,8 +70,8 @@
     <string name="altarHeroes">Autel des Héros\ \ </string>
     <string name="propNotAvailable">Il n\'y a aucune suggestion pour ce héros.</string>
 
-    <string name="shard">Fragments</string>
-    <string name="shardText">Catégorie du héros :</string>
+    <string name="shard">Niveau du talent</string>
+    <string name="shardText">Catégorie du héros</string>
 
     <string name="missingData">Des données sont manquantes.</string>
     <string name="loseLevel">Le héros ne peut pas perdre de niveau.</string>
@@ -106,8 +106,6 @@
     <string name="processorText20">Il annulera donc environ\ </string>
     <string name="processorText21">\ coups sur 10.</string>
     <string name="processorText22">Pour acquérir\ </string>
-    <string name="processorText23">\ points d\'expérience, il faudra dépenser\ </string>
-    <string name="processorText24">\ fragments.</string>
     <string name="processorText25">Le joueur attaque en moyenne des adversaires à\ </string>
     <string name="processorText26">k de puissance.</string>
     <string name="processorText27">Avec un tel score, le joueur obtiendra\ </string>

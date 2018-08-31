@@ -22,64 +22,245 @@
             android:paddingTop="10dp"
             android:text="@string/shard"/>
 
-        <TextView
-            android:id="@+id/heroTypeLabel"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:text="@string/shardText"/>
+            android:padding="5dp"
+            android:background="@drawable/rectangle_corners"
+            android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/heroTypeSpinner"
+            <TextView
+                android:id="@+id/heroTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:text="@string/shardText"/>
+
+            <Spinner
+                android:id="@+id/heroTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white"
+                android:entries="@array/heroType"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/white"
-            android:entries="@array/heroType"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/currentlvlLabel"
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rectangle_corners"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currentlvlLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold|italic"
+                    android:text="@string/spinnerText1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <NumberPicker
+                        android:id="@+id/currentLvl"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"
+                        android:theme="@style/AppTheme.Picker"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_corners"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/aimLvlLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold|italic"
+                    android:text="@string/spinnerText2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <NumberPicker
+                        android:id="@+id/aimLvl"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"
+                        android:theme="@style/AppTheme.Picker"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:text="@string/spinnerText1"/>
-
-        <NumberPicker
-            android:id="@+id/currentLvl"
-            android:layout_width="200dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center"
-            android:theme="@style/AppTheme.Picker"/>
-
-        <TextView
-            android:id="@+id/aimLvlLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:text="@string/spinnerText2"/>
-
-        <NumberPicker
-            android:id="@+id/aimLvl"
-            android:layout_width="200dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center"
-            android:theme="@style/AppTheme.Picker"/>
-
-        <Button
-            android:id="@+id/shardButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@color/secondaryLightColor"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
             android:layout_marginTop="10dp"
-            android:text="@string/analyze"/>
+            android:background="@drawable/rectangle_corners"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/exp"/>
+
+                <TextView
+                    android:id="@+id/expAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/fragment"/>
+
+                <TextView
+                    android:id="@+id/shardAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/sacrifice4"/>
+
+                <TextView
+                    android:id="@+id/s4Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/sacrifice3"/>
+
+                <TextView
+                    android:id="@+id/s3Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/sacrifice2"/>
+
+                <TextView
+                    android:id="@+id/s2Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/sacrifice1"/>
+
+                <TextView
+                    android:id="@+id/s1Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -30,7 +30,6 @@ public class DestinyActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.shardTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        toast = Toast.makeText(DestinyActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
         dp = new DestinyProcessor();
 
         currentLvlPicker = findViewById(R.id.currentLvl);
@@ -54,14 +53,19 @@ public class DestinyActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            toast.show();
+            if (!DestinyActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
+                toast = Toast.makeText(DestinyActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
+                toast.show();
+            }
             fameAmount.setText("0");
             goldAmount.setText("0");
             ihAmount.setText("0");
             heroCardsAmount.setText("0");
             crystalsAmount.setText("0");
         } else {
-            toast.cancel();
+            if (toast != null) {
+                toast.cancel();
+            }
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             fameAmount.setText(dp.computeFame(firstLevel, secondLevel));
@@ -74,7 +78,9 @@ public class DestinyActivity extends BaseActivity {
 
     @Override
     protected void onStop() {
+        if (toast != null) {
+            toast.cancel();
+        }
         super.onStop();
-        toast.cancel();
     }
 }
