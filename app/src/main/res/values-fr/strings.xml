@@ -38,7 +38,7 @@
     <string name="accuracyText3">Précision ajoutée par les équipements :</string>
     <string name="accuracyText4">Insérer la précision supplémentaire</string>
 
-    <string name="aetherock">Aura-guerrières</string>
+    <string name="aetherock">Équipement</string>
 
     <string name="spinnerText1">Niveau actuel</string>
     <string name="spinnerText2">Niveau à atteindre</string>
@@ -91,9 +91,6 @@
     <string name="processorText5">% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de\ </string>
     <string name="processorText6">% d\'esquive, le héros a\ </string>
     <string name="processorText7">% de chance de toucher sa cible.</string>
-    <string name="processorText8">Aura-guerrières à dépenser :\ </string>
-    <string name="processorText9">Dégats supplémentaires :\ </string>
-    <string name="processorText10">Points de vie obtenus :\ </string>
     <string name="processorText11">Nouvelle vitesse d\'attaque :\ </string>
     <string name="processorText12">Le héros attaquera donc une fois toutes les\ </string>
     <string name="processorText18">Le héros sera capable d\'annuler les dégâts de\ </string>

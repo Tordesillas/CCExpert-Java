@@ -38,7 +38,7 @@
     <string name="accuracyText3">Accuracy added by the equipments:</string>
     <string name="accuracyText4">Insert the additional accuracy</string>
 
-    <string name="aetherock">Aetherocks</string>
+    <string name="aetherock">Equipment</string>
 
     <string name="spinnerText1">Current level</string>
     <string name="spinnerText2">Level to reach</string>
@@ -91,9 +91,6 @@
     <string name="processorText5">"% of dodge, the hero will hit his target for sure with technically a probability of "</string>
     <string name="processorText6">"% of dodge, the hero has a "</string>
     <string name="processorText7">% chance to hit his target.</string>
-    <string name="processorText8">"Aetherocks to spend: "</string>
-    <string name="processorText9">"Additional damages: "</string>
-    <string name="processorText10">"Health points obtained: "</string>
     <string name="processorText11">"New attack speed: "</string>
     <string name="processorText12">"So, the hero will attack once every "</string>
     <string name="processorText18">"The hero will be able to cancel "</string>

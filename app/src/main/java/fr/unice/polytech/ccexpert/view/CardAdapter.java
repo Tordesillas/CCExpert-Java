@@ -56,8 +56,8 @@ public class CardAdapter extends ArrayAdapter<String> {
                 return R.drawable.shards;
             case "Inscription":
                 return R.drawable.crystal;
-            case "Aura-guerrières":
-            case "Aetherocks":
+            case "Équipement":
+            case "Equipment":
                 return R.drawable.aetherock;
             case "Esquive":
             case "Dodge":
