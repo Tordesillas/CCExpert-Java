@@ -98,6 +98,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_enchantments:
                 startActivity(new Intent(this, EnchantmentsActivity.class));
                 return true;
+            case R.id.nav_skins:
+                startActivity(new Intent(this, SkinsActivity.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

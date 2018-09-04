@@ -38,54 +38,42 @@ public class CardAdapter extends ArrayAdapter<String> {
     }
 
     private int findPicture(String title) {
-        switch (title) {
-            case "Héros":
-            case "Heroes":
-                return R.drawable.heroes;
-            case "Simulateurs":
-            case "Simulators":
-                return R.drawable.boss;
-            case "Donjons":
-            case "Dungeons":
-                return R.drawable.donjons;
-            case "Guerre de guilde":
-            case "Guild war":
-                return R.drawable.guild_wars;
-            case "Niveau du talent":
-            case "Talent level":
-                return R.drawable.shards;
-            case "Inscription":
-                return R.drawable.crystal;
-            case "Équipement":
-            case "Equipment":
-                return R.drawable.aetherock;
-            case "Esquive":
-            case "Dodge":
-                return R.drawable.lightning_rock;
-            case "Précision":
-            case "Accuracy":
-                return R.drawable.eye_of_garuda;
-            case "Vitesse d'attaque":
-            case "Attack speed":
-                return R.drawable.blitz_scroll;
-            case "Destinée":
-            case "Destiny":
-                return R.drawable.karmic_rock1;
-            case "Archidémons":
-            case "Archdemons":
-                return R.drawable.archdemon;
-            case "Gardiens":
-            case "Protectors":
-                return R.drawable.brawler;
-            case "Talents":
-                return R.drawable.talents;
-            case "Items":
-                return R.drawable.mana;
-            case "Enchantements":
-            case "Enchantments":
-                return R.drawable.enchantments;
-            default:
-                return R.drawable.ccexpert_rounded;
+        if (title.equals(getContext().getResources().getString(R.string.heroes))) {
+            return R.drawable.heroes;
+        } else if (title.equals(getContext().getResources().getString(R.string.simulators))) {
+            return R.drawable.boss;
+        } else if (title.equals(getContext().getResources().getString(R.string.dungeons))) {
+            return R.drawable.donjons;
+        } else if (title.equals(getContext().getResources().getString(R.string.guildWar))) {
+            return R.drawable.guild_wars;
+        } else if (title.equals(getContext().getResources().getString(R.string.shard))) {
+            return R.drawable.shards;
+        } else if (title.equals(getContext().getResources().getString(R.string.crystal))) {
+            return R.drawable.crystal;
+        } else if (title.equals(getContext().getResources().getString(R.string.aetherock))) {
+            return R.drawable.aetherock;
+        } else if (title.equals(getContext().getResources().getString(R.string.dodge))) {
+            return R.drawable.lightning_rock;
+        } else if (title.equals(getContext().getResources().getString(R.string.accuracy))) {
+            return R.drawable.eye_of_garuda;
+        } else if (title.equals(getContext().getResources().getString(R.string.attackSpeed))) {
+            return R.drawable.blitz_scroll;
+        } else if (title.equals(getContext().getResources().getString(R.string.destiny))) {
+            return R.drawable.karmic_rock1;
+        } else if (title.equals(getContext().getResources().getString(R.string.archdemons))) {
+            return R.drawable.archdemon;
+        } else if (title.equals(getContext().getResources().getString(R.string.protectors))) {
+            return R.drawable.saint;
+        } else if (title.equals(getContext().getResources().getString(R.string.talents))) {
+            return R.drawable.talents;
+        } else if (title.equals(getContext().getResources().getString(R.string.items))) {
+            return R.drawable.mana;
+        } else if (title.equals(getContext().getResources().getString(R.string.enchantments))) {
+            return R.drawable.enchantments;
+        } else if (title.equals(getContext().getResources().getString(R.string.skinTitle))) {
+            return R.drawable.dove_keeper4;
+        } else {
+            return R.drawable.ccexpert_rounded;
         }
     }
 }

@@ -43,6 +43,7 @@
         <activity android:name=".controller.activity.TalentsActivity" />
         <activity android:name=".controller.activity.TalentActivity" />
         <activity android:name=".controller.activity.EnchantmentsActivity" />
+        <activity android:name=".controller.activity.SkinsActivity" />
     </application>
 
 </manifest>

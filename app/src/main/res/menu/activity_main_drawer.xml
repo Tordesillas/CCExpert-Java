@@ -48,6 +48,9 @@
             <item
                 android:id="@+id/nav_protectors"
                 android:title="@string/protectors" />
+            <item
+                android:id="@+id/nav_skins"
+                android:title="@string/skinTitle" />
         </menu>
     </item>
 
