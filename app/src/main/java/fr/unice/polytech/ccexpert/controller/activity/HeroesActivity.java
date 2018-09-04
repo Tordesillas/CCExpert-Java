@@ -57,7 +57,7 @@ public class HeroesActivity extends BaseActivity {
             }
 
             try {
-                hero.getTalentDungeon();
+                hero.getPetPicture();
                 Intent intent = new Intent(HeroesActivity.this, HeroActivity.class);
                 intent.putExtra("heroName", hero.getFrenchName());
                 startActivity(intent);

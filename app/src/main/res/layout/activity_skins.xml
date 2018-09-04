@@ -160,7 +160,7 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/dove_keeper5"/>
+                    android:src="@drawable/dove_keeper_scrap"/>
 
                 <TextView
                     android:id="@+id/scrapAmount"

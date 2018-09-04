@@ -18,6 +18,11 @@ import fr.unice.polytech.ccexpert.model.Hero;
 import fr.unice.polytech.ccexpert.model.Sets;
 
 public class HeroActivity extends BaseActivity {
+    private int appearance;
+    private int resHero;
+    private int resHeroEvo;
+    private int resHeroSkin;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,22 +45,15 @@ public class HeroActivity extends BaseActivity {
                     heroName.setText(hero.getEnglishName());
             }
 
-            final boolean[] evo = {false};
+            appearance = 2;
 
-            int resHero = getResources().getIdentifier(hero.getPicture() + "2", "drawable", getPackageName());
-            int resHeroEvo = getResources().getIdentifier(hero.getPicture() + "3", "drawable", getPackageName());
+            resHero = getResources().getIdentifier(hero.getPicture() + "2", "drawable", getPackageName());
+            resHeroEvo = getResources().getIdentifier(hero.getPicture() + "3", "drawable", getPackageName());
+            resHeroSkin = getResources().getIdentifier(hero.getPicture() + "4", "drawable", getPackageName());
 
-            ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
+            changePicture();
 
-            findViewById(R.id.evoHero).setOnClickListener(view -> {
-                if (evo[0]) {
-                    ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
-                    evo[0] = false;
-                } else {
-                    ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroEvo);
-                    evo[0] = true;
-                }
-            });
+            findViewById(R.id.evoHero).setOnClickListener(view -> changePicture());
         } catch (NullPointerException e) {
             Toast.makeText(HeroActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
             Intent closeActivitiesIntent = new Intent(this, CCExpertMain.class);
@@ -100,5 +98,32 @@ public class HeroActivity extends BaseActivity {
                 int resEnchantment1 = getResources().getIdentifier(enchantments.get(0), "drawable", getPackageName());
                 ((ImageView) findViewById(R.id.enchantment1)).setImageResource(resEnchantment1);
         }
+    }
+
+    private void changePicture() {
+        try {
+            switch (appearance) {
+                case 2:
+                    ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHero);
+                    appearance++;
+                    break;
+                case 3:
+                    ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroEvo);
+                    appearance++;
+                    break;
+                case 4:
+                    appearance = 2;
+                    if (resHeroSkin == 0) {
+                        changePicture();
+                    } else {
+                        ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroSkin);
+                    }
+                    break;
+                default:
+                    appearance = 2;
+                    changePicture();
+                    break;
+            }
+        } catch (Exception ignored) { }
     }
 }
