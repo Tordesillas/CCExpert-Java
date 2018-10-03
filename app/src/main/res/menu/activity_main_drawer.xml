@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group>
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home"
-            android:title="@string/home" />
-        <item
-            android:id="@+id/nav_heroes"
-            android:icon="@drawable/ic_heroes"
-            android:title="@string/heroes" />
-        <item
-            android:id="@+id/nav_dungeons"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/dungeons" />
-        <item
-            android:id="@+id/nav_archdemons"
-            android:icon="@drawable/ic_dragon"
-            android:title="@string/archdemons" />
-    </group>
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <item android:title="@string/recommendations">
+        <menu>
+            <item
+                android:id="@+id/nav_heroes"
+                android:title="@string/heroes" />
+            <item
+                android:id="@+id/nav_dungeons"
+                android:title="@string/dungeons" />
+            <item
+                android:id="@+id/nav_archdemons"
+                android:title="@string/archdemons" />
+        </menu>
+    </item>
+
+    <item android:title="@string/encyclopedia">
+        <menu>
+            <item
+                android:id="@+id/nav_talents"
+                android:title="@string/talents" />
+            <item
+                android:id="@+id/nav_enchantments"
+                android:title="@string/enchantments" />
+        </menu>
+    </item>
 
     <item android:title="@string/simulators">
         <menu>
@@ -51,17 +62,9 @@
             <item
                 android:id="@+id/nav_skins"
                 android:title="@string/skinTitle" />
-        </menu>
-    </item>
-
-    <item android:title="@string/items">
-        <menu>
             <item
-                android:id="@+id/nav_talents"
-                android:title="@string/talents" />
-            <item
-                android:id="@+id/nav_enchantments"
-                android:title="@string/enchantments" />
+                android:id="@+id/nav_roll"
+                android:title="@string/roll"/>
         </menu>
     </item>
 </menu>

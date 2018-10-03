@@ -101,6 +101,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_skins:
                 startActivity(new Intent(this, SkinsActivity.class));
                 return true;
+            case R.id.nav_roll:
+                startActivity(new Intent(this, RollActivity.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

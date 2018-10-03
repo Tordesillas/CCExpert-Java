@@ -197,7 +197,7 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/sacrifice4"/>
+                    android:src="@drawable/master_slime"/>
 
                 <TextView
                     android:id="@+id/s4Amount"
@@ -215,7 +215,7 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/sacrifice3"/>
+                    android:src="@drawable/gelatinous_champion"/>
 
                 <TextView
                     android:id="@+id/s3Amount"
@@ -233,7 +233,7 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/sacrifice2"/>
+                    android:src="@drawable/crystal_ooze"/>
 
                 <TextView
                     android:id="@+id/s2Amount"
@@ -251,7 +251,7 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/sacrifice1"/>
+                    android:src="@drawable/slime"/>
 
                 <TextView
                     android:id="@+id/s1Amount"

@@ -13,22 +13,13 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
-import fr.unice.polytech.ccexpert.controller.activity.AccuracyActivity;
-import fr.unice.polytech.ccexpert.controller.activity.AetherockActivity;
-import fr.unice.polytech.ccexpert.controller.activity.AttackSpeedActivity;
-import fr.unice.polytech.ccexpert.controller.activity.CrystalActivity;
-import fr.unice.polytech.ccexpert.controller.activity.DestinyActivity;
-import fr.unice.polytech.ccexpert.controller.activity.DodgeActivity;
 import fr.unice.polytech.ccexpert.controller.activity.EnchantmentsActivity;
-import fr.unice.polytech.ccexpert.controller.activity.GuildWarActivity;
-import fr.unice.polytech.ccexpert.controller.activity.ProtectorsActivity;
-import fr.unice.polytech.ccexpert.controller.activity.ShardActivity;
 import fr.unice.polytech.ccexpert.controller.activity.TalentsActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
 
-public class ItemsFragment extends Fragment {
-    public static ItemsFragment newInstance() {
-        ItemsFragment fragment = new ItemsFragment();
+public class EncyclopediaFragment extends Fragment {
+    public static EncyclopediaFragment newInstance() {
+        EncyclopediaFragment fragment = new EncyclopediaFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;

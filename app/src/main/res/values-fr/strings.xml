@@ -125,8 +125,10 @@
 
     <string name="talents">Talents</string>
     <string name="enchantments">Enchantements</string>
-    <string name="items">Items</string>
+    <string name="encyclopedia">Encyclopédie</string>
     <string name="level">Niveau</string>
     <string name="description">Description</string>
     <string name="skinTitle">Niveau du skin</string>
+    <string name="roll">Simulateur de tirages</string>
+    <string name="recommendations">Recommandations</string>
 </resources>

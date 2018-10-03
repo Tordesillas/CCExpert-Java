@@ -1,8 +1,8 @@
 package fr.unice.polytech.ccexpert.controller.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +13,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.unice.polytech.ccexpert.R;
+import fr.unice.polytech.ccexpert.controller.activity.ArchdemonsActivity;
+import fr.unice.polytech.ccexpert.controller.activity.DungeonsActivity;
+import fr.unice.polytech.ccexpert.controller.activity.HeroesActivity;
 import fr.unice.polytech.ccexpert.view.CardAdapter;
 
-public class MainFragment extends Fragment {
-    public static MainFragment newInstance() {
-        MainFragment fragment = new MainFragment();
+public class RecommendationsFragment extends Fragment {
+    public static RecommendationsFragment newInstance() {
+        RecommendationsFragment fragment = new RecommendationsFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -31,9 +34,9 @@ public class MainFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle bundle) {
         final List<String> titles = Arrays.asList(
-                getResources().getString(R.string.recommendations),
-                getResources().getString(R.string.encyclopedia),
-                getResources().getString(R.string.simulators)
+                getResources().getString(R.string.heroes),
+                getResources().getString(R.string.dungeons),
+                getResources().getString(R.string.archdemons)
         );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
@@ -41,20 +44,17 @@ public class MainFragment extends Fragment {
         gridView.setAdapter(la);
 
         gridView.setOnItemClickListener((parent, v, position, id) -> {
-            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             switch (position) {
                 case 0:
-                    transaction.replace(R.id.main_fragment, RecommendationsFragment.newInstance(), "main");
+                    startActivity(new Intent(getActivity(), HeroesActivity.class));
                     break;
                 case 1:
-                    transaction.replace(R.id.main_fragment, EncyclopediaFragment.newInstance(), "main");
+                    startActivity(new Intent(getActivity(), DungeonsActivity.class));
                     break;
                 case 2:
-                    transaction.replace(R.id.main_fragment, SimulatorsFragment.newInstance(), "main");
+                    startActivity(new Intent(getActivity(), ArchdemonsActivity.class));
                     break;
             }
-            transaction.addToBackStack("main");
-            transaction.commit();
         });
 
         super.onActivityCreated(bundle);

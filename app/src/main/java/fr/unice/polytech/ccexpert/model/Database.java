@@ -36,6 +36,7 @@ public class Database extends SQLiteOpenHelper {
         loadTalents();
         loadPets();
         loadArchdemons();
+        loadHeroesFromRoll();
     }
 
     public void createDataBase() {
@@ -165,6 +166,19 @@ public class Database extends SQLiteOpenHelper {
             sets.addArchdemon(a);
             c.moveToNext();
         }
+        c.close();
+    }
+
+    private void loadHeroesFromRoll() {
+        Cursor c = db.rawQuery("select * from heroes_roll", null);
+        c.moveToFirst();
+        HeroRoll h;
+        while (!c.isAfterLast()) {
+            h = new HeroRoll(c.getString(0), c.getString(1), c.getString(2), c.getInt(3), c.getInt(4));
+            sets.addHeroRoll(h);
+            c.moveToNext();
+        }
+        sets.createRollSet();
         c.close();
     }
 }

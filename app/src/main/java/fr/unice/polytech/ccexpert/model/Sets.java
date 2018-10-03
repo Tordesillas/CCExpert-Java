@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
@@ -19,6 +20,8 @@ public class Sets {
     private Map<String, Talent> talents;
     private Map<String, Pet> pets;
     private List<Archdemon> archdemons;
+    private Map<String, HeroRoll> heroesRoll;
+    private List<String> heroNamesSet;
 
     private Sets() {
         heroesIds = new HashMap<>();
@@ -27,6 +30,8 @@ public class Sets {
         talents = new HashMap<>();
         pets = new HashMap<>();
         archdemons = new ArrayList<>();
+        heroesRoll = new HashMap<>();
+        heroNamesSet = new LinkedList<>();
     }
 
     public static Sets getInstance() {
@@ -55,6 +60,10 @@ public class Sets {
 
     void addArchdemon(Archdemon archdemon) {
         archdemons.add(archdemon);
+    }
+
+    void addHeroRoll(HeroRoll hero) {
+        heroesRoll.put(hero.getNameFr(), hero);
     }
 
     public Hero getHero(String name) {
@@ -196,4 +205,27 @@ public class Sets {
         }
     }
 
+    private static final int STEP = 5;
+    void createRollSet() {
+        for (HeroRoll h : heroesRoll.values()) {
+            for (int i = 0; i < h.getProba() / STEP; i++) {
+                heroNamesSet.add(h.getNameFr());
+            }
+        }
+    }
+
+    public HeroRoll getHeroRoll() {
+        Collections.shuffle(heroNamesSet);
+        return heroesRoll.get(heroNamesSet.iterator().next());
+    }
+
+    public List<HeroRoll> getHeroesRoll(int rolls) {
+        Collections.shuffle(heroNamesSet);
+        Iterator<String> it = heroNamesSet.iterator();
+        List<HeroRoll> res = new LinkedList<>();
+        for (int i = 0; i < rolls; i++) {
+            res.add(heroesRoll.get(it.next()));
+        }
+        return res;
+    }
 }

@@ -41,9 +41,9 @@ public class CardAdapter extends ArrayAdapter<String> {
         if (title.equals(getContext().getResources().getString(R.string.heroes))) {
             return R.drawable.heroes;
         } else if (title.equals(getContext().getResources().getString(R.string.simulators))) {
-            return R.drawable.boss;
+            return R.drawable.guild_building2;
         } else if (title.equals(getContext().getResources().getString(R.string.dungeons))) {
-            return R.drawable.donjons;
+            return R.drawable.dungeon;
         } else if (title.equals(getContext().getResources().getString(R.string.guildWar))) {
             return R.drawable.guild_wars;
         } else if (title.equals(getContext().getResources().getString(R.string.shard))) {
@@ -66,14 +66,18 @@ public class CardAdapter extends ArrayAdapter<String> {
             return R.drawable.saint;
         } else if (title.equals(getContext().getResources().getString(R.string.talents))) {
             return R.drawable.talents;
-        } else if (title.equals(getContext().getResources().getString(R.string.items))) {
-            return R.drawable.mana;
+        } else if (title.equals(getContext().getResources().getString(R.string.encyclopedia))) {
+            return R.drawable.guild_building;
         } else if (title.equals(getContext().getResources().getString(R.string.enchantments))) {
             return R.drawable.enchantments;
         } else if (title.equals(getContext().getResources().getString(R.string.skinTitle))) {
             return R.drawable.dove_keeper4;
+        } else if (title.equals(getContext().getResources().getString(R.string.roll))) {
+            return R.drawable.roll;
+        } else if (title.equals(getContext().getResources().getString(R.string.recommendations))) {
+            return R.drawable.armory_building;
         } else {
-            return R.drawable.ccexpert_rounded;
+            return R.drawable.ccexpert_logo;
         }
     }
 }
