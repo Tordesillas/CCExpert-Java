@@ -5,11 +5,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 
 public class Sets {
     private static Sets mInstance = null;
@@ -215,17 +215,8 @@ public class Sets {
     }
 
     public HeroRoll getHeroRoll() {
-        Collections.shuffle(heroNamesSet);
-        return heroesRoll.get(heroNamesSet.iterator().next());
-    }
-
-    public List<HeroRoll> getHeroesRoll(int rolls) {
-        Collections.shuffle(heroNamesSet);
-        Iterator<String> it = heroNamesSet.iterator();
-        List<HeroRoll> res = new LinkedList<>();
-        for (int i = 0; i < rolls; i++) {
-            res.add(heroesRoll.get(it.next()));
-        }
-        return res;
+        Random rand = new Random();
+        int i = rand.nextInt(heroNamesSet.size());
+        return heroesRoll.get(heroNamesSet.get(i));
     }
 }

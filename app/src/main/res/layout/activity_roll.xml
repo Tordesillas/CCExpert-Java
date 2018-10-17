@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:textSize="26sp"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
@@ -25,10 +25,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rectangle_corners"
             android:padding="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <RelativeLayout
                 android:layout_width="0dp"
@@ -75,14 +76,36 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/gemsAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="textEnd"
+                        android:paddingEnd="3dp"
+                        android:text="@string/zero"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/gem"/>
+                </LinearLayout>
+
+                <ImageView
                     android:id="@+id/rollButton"
-                    android:layout_centerInParent="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Roll"/>
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/roll150"/>
             </RelativeLayout>
-
         </LinearLayout>
 
         <LinearLayout
@@ -98,18 +121,19 @@
                 android:textStyle="bold|italic"
                 android:text="@string/legendary"/>
 
-            <GridLayout
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/legendaryScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:horizontalSpacing="4dp"
-                android:rowCount="1"/>
-
+                android:layout_height="50dp"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:orientation="vertical">
 
             <TextView
@@ -120,12 +144,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold|italic"/>
 
-            <GridLayout
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/eliteScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:horizontalSpacing="4dp"
-                android:rowCount="1"/>
+                android:layout_height="50dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -141,12 +165,12 @@
                 android:textSize="16sp"
                 android:textStyle="bold|italic"/>
 
-            <GridLayout
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/ordinaryScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:horizontalSpacing="4dp"
-                android:rowCount="1"/>
+                android:layout_height="50dp"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

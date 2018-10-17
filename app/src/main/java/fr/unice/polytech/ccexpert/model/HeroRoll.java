@@ -6,6 +6,7 @@ public class HeroRoll {
     private String deName;
     private int proba;
     private int type;
+    private int occurrences;
 
     public HeroRoll(String nameFr, String enName, String deName, int proba, int type) {
         this.nameFr = nameFr;
@@ -13,6 +14,7 @@ public class HeroRoll {
         this.deName = deName;
         this.proba = proba;
         this.type = type;
+        occurrences = 0;
     }
 
     public String getNameFr() {
@@ -37,5 +39,10 @@ public class HeroRoll {
 
     public String getPicture() {
         return enName.toLowerCase().trim().replace(' ', '_').replace("-", "_");
+    }
+
+    public int getOccurrencesAndInc() {
+        occurrences++;
+        return occurrences;
     }
 }
