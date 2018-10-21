@@ -37,11 +37,7 @@ public class RollAdapter extends RecyclerView.Adapter<RollAdapter.ViewHolder> {
 
         viewHolder.heroCount.setText("x" + hero.getOccurrencesAndInc());
 
-        String pic = hero.getPicture();
-        if (!"Gelatinous Champion".equals(hero.getEnName()) && !"Crystal Ooze".equals(hero.getEnName()) && !"Slime".equals(hero.getEnName())) {
-            pic += "_card";
-        }
-
+        String pic = hero.getPicture() + "_card";
         viewHolder.imageHero.setImageResource(context.getResources().getIdentifier(pic, "drawable", context.getPackageName()));
     }
 

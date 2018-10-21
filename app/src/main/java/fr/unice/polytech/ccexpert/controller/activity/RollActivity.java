@@ -1,5 +1,6 @@
 package fr.unice.polytech.ccexpert.controller.activity;
 
+import android.content.res.Configuration;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -22,12 +23,18 @@ import fr.unice.polytech.ccexpert.view.RollAdapter;
 
 public class RollActivity extends BaseActivity {
     private TextView heroName;
+    private TextView heroName2;
+    private TextView heroName3;
     private TextView gemsAmount;
     private ImageView heroPic;
     private ImageView rollBg;
-    private List<HeroRoll> legendaryHeroes;
-    private List<HeroRoll> eliteHeroes;
-    private List<HeroRoll> ordinaryHeroes;
+    private ImageView heroPic2;
+    private ImageView rollBg2;
+    private ImageView heroPic3;
+    private ImageView rollBg3;
+    private ArrayList<HeroRoll> legendaryHeroes;
+    private ArrayList<HeroRoll> eliteHeroes;
+    private ArrayList<HeroRoll> ordinaryHeroes;
     private RollAdapter legendaryRA;
     private RollAdapter eliteRA;
     private RollAdapter ordinaryRA;
@@ -43,9 +50,18 @@ public class RollActivity extends BaseActivity {
         heroName.setTypeface(Typeface.createFromAsset(getAssets(), "igg.ttf"));
 
         gemsAmount = findViewById(R.id.gemsAmount);
-        gemsVal = 0;
         heroPic = findViewById(R.id.heroPicture);
         rollBg = findViewById(R.id.roll_bg);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            heroPic2 = findViewById(R.id.heroPicture2);
+            rollBg2 = findViewById(R.id.roll_bg2);
+            heroPic3 = findViewById(R.id.heroPicture3);
+            rollBg3 = findViewById(R.id.roll_bg3);
+            heroName2 = findViewById(R.id.heroName2);
+            heroName2.setTypeface(Typeface.createFromAsset(getAssets(), "igg.ttf"));
+            heroName3 = findViewById(R.id.heroName3);
+            heroName3.setTypeface(Typeface.createFromAsset(getAssets(), "igg.ttf"));
+        }
 
         findViewById(R.id.rollButton).setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
@@ -57,7 +73,11 @@ public class RollActivity extends BaseActivity {
                 }
                 case MotionEvent.ACTION_UP:
                     v.performClick();
-                    roll(rollBg);
+                    if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                        roll450(heroPic, rollBg, heroName, heroPic2, rollBg2, heroName2, heroPic3, rollBg3, heroName3);
+                    } else {
+                        roll150(heroPic, rollBg, heroName);
+                    }
                 case MotionEvent.ACTION_CANCEL: {
                     ImageView view = (ImageView) v;
                     view.getDrawable().clearColorFilter();
@@ -68,9 +88,19 @@ public class RollActivity extends BaseActivity {
             return false;
         });
 
-        ordinaryHeroes = new ArrayList<>();
-        eliteHeroes = new ArrayList<>();
-        legendaryHeroes = new ArrayList<>();
+        if (savedInstanceState != null) {
+            ordinaryHeroes = savedInstanceState.getParcelableArrayList("ordinary");
+            eliteHeroes = savedInstanceState.getParcelableArrayList("elite");
+            legendaryHeroes = savedInstanceState.getParcelableArrayList("legendary");
+            gemsVal = savedInstanceState.getInt("gems");
+            gemsAmount.setText(NumberFormat.getNumberInstance(Locale.FRANCE).format(gemsVal));
+        } else {
+            Sets.getInstance().zeroRollCounts();
+            ordinaryHeroes = new ArrayList<>();
+            eliteHeroes = new ArrayList<>();
+            legendaryHeroes = new ArrayList<>();
+            gemsVal = 0;
+        }
 
         RecyclerView ordinaryRecyclerView = findViewById(R.id.ordinaryScroll);
         RecyclerView eliteRecyclerView = findViewById(R.id.eliteScroll);
@@ -88,7 +118,7 @@ public class RollActivity extends BaseActivity {
         legendaryRecyclerView.setAdapter(legendaryRA);
     }
 
-    private void roll(ImageView image) {
+    private void roll150(ImageView heroImg, ImageView bgImg, TextView heroName) {
         gemsVal += 150;
         gemsAmount.setText(NumberFormat.getNumberInstance(Locale.FRANCE).format(gemsVal));
         HeroRoll hero = Sets.getInstance().getHeroRoll();
@@ -111,22 +141,29 @@ public class RollActivity extends BaseActivity {
                 if (!"Gelatinous Champion".equals(hero.getEnName())) {
                     pic += "2";
                 }
-                image.setImageResource(R.drawable.roll_bg_purple);
+                bgImg.setImageResource(R.drawable.roll_bg_purple);
                 index = addHeroInList(hero, legendaryHeroes);
                 legendaryRA.notifyItemChanged(index);
                 break;
             case 2:
-                image.setImageResource(R.drawable.roll_bg_blue);
+                bgImg.setImageResource(R.drawable.roll_bg_blue);
                 index = addHeroInList(hero, eliteHeroes);
                 eliteRA.notifyItemChanged(index);
                 break;
             case 1:
-                image.setImageResource(R.drawable.roll_bg_green);
+                bgImg.setImageResource(R.drawable.roll_bg_green);
                 index = addHeroInList(hero, ordinaryHeroes);
                 ordinaryRA.notifyItemChanged(index);
                 break;
         }
-        heroPic.setImageResource(getResources().getIdentifier(pic, "drawable", getPackageName()));
+        heroImg.setImageResource(getResources().getIdentifier(pic, "drawable", getPackageName()));
+    }
+
+    private void roll450(ImageView heroImg1, ImageView bgImg1, TextView heroName1, ImageView heroImg2, ImageView bgImg2, TextView heroName2,
+                         ImageView heroImg3, ImageView bgImg3, TextView heroName3) {
+        roll150(heroImg1, bgImg1, heroName1);
+        roll150(heroImg2, bgImg2, heroName2);
+        roll150(heroImg3, bgImg3, heroName3);
     }
 
     private int addHeroInList(HeroRoll hero, List<HeroRoll> heroes) {
@@ -137,5 +174,14 @@ public class RollActivity extends BaseActivity {
         }
         heroes.add(hero);
         return heroes.size() - 1;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelableArrayList("ordinary", ordinaryHeroes);
+        outState.putParcelableArrayList("elite", eliteHeroes);
+        outState.putParcelableArrayList("legendary", legendaryHeroes);
+        outState.putInt("gems", gemsVal);
     }
 }

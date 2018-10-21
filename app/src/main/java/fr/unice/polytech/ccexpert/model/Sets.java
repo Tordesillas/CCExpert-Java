@@ -219,4 +219,10 @@ public class Sets {
         int i = rand.nextInt(heroNamesSet.size());
         return heroesRoll.get(heroNamesSet.get(i));
     }
+
+    public void zeroRollCounts() {
+        for (HeroRoll h : heroesRoll.values()) {
+            h.zeroOccurences();
+        }
+    }
 }

@@ -49,11 +49,11 @@
 
                 <ImageView
                     android:id="@+id/heroPicture"
-                    android:layout_width="115dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:layout_centerHorizontal="true"
-                    android:paddingTop="45dp"/>
+                    android:paddingTop="15dp"/>
 
                 <TextView
                     android:id="@+id/heroName"
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/heroPicture"
                     android:layout_centerInParent="true"
-                    android:paddingTop="10dp"
+                    android:paddingTop="7dp"
                     android:textColor="@color/white"
                     android:textSize="10sp"
                     android:shadowColor="@color/black"

@@ -1,21 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/rollTitle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginBottom="20dp"
-        android:textSize="26sp"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
-        android:text="@string/roll"/>
+        android:padding="10dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/heroName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/rollTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"
+            android:textSize="26sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:text="@string/roll"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_corners"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/roll_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_bg_red"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_title_bg"/>
+
+                <ImageView
+                    android:id="@+id/heroPicture"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/heroName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heroPicture"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/roll_bg2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_bg_red"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_title_bg"/>
+
+                <ImageView
+                    android:id="@+id/heroPicture2"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/heroName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heroPicture2"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/roll_bg3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_bg_red"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/roll_title_bg"/>
+
+                <ImageView
+                    android:id="@+id/heroPicture3"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/heroName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heroPicture3"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="4"
+                    android:shadowDy="4"
+                    android:shadowRadius="2"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/gemsAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="textEnd"
+                        android:paddingEnd="3dp"
+                        android:text="@string/zero"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/gem"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rollButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/roll450"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:text="@string/legendary"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/legendaryScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elite"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/eliteScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ordinary"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ordinaryScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>
