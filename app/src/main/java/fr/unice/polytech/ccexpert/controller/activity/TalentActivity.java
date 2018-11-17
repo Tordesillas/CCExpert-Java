@@ -47,7 +47,7 @@ public class TalentActivity extends BaseActivity {
         if (talent.getDescription()[7] == null) {
             picker.setMaxValue(5);
         } else {
-            picker.setMaxValue(8);
+            picker.setMaxValue(9);
         }
 
         picker.setOnValueChangedListener((numPicker, oldVal, newVal) -> des.setText(talent.getDescription()[newVal-1]));
