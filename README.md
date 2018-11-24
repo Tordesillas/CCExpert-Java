@@ -1,6 +1,6 @@
 ﻿# CCExpert - Android
 
-CCExpert, the Castle Clash guide. Available [on the Play Store](https://play.google.com/store/apps/details?id=fr.unice.polytech.ccexpert).
+CCExpert, the Castle Clash guide. Available [on the Play Store](https://play.google.com/store/apps/details?id=fr.tordesillas.ccexpert).
 
 ## Application presentation
 
