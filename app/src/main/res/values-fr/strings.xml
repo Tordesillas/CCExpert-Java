@@ -131,4 +131,8 @@
     <string name="skinTitle">Niveau du skin</string>
     <string name="roll">Simulateur de tirages</string>
     <string name="recommendations">Recommandations</string>
+
+    <string name="petLevel">Niveau du familier</string>
+    <string name="petTypeLabel">Familier rare</string>
+    <string name="petLoseLevel">Le familier ne peut pas perdre de niveau.</string>
 </resources>

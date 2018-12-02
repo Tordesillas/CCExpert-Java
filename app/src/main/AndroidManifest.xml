@@ -50,6 +50,7 @@
         <activity android:name=".controller.activity.EnchantmentsActivity" />
         <activity android:name=".controller.activity.SkinsActivity" />
         <activity android:name=".controller.activity.RollActivity" />
+        <activity android:name=".controller.activity.PetLevelActivity" />
     </application>
 
 </manifest>

@@ -76,6 +76,8 @@ public class CardAdapter extends ArrayAdapter<String> {
             return R.drawable.roll;
         } else if (title.equals(getContext().getResources().getString(R.string.recommendations))) {
             return R.drawable.armory_building;
+        } else if(title.equals(getContext().getResources().getString(R.string.petLevel))) {
+            return R.drawable.piblob;
         } else {
             return R.drawable.ccexpert_logo;
         }

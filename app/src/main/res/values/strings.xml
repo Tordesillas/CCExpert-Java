@@ -131,4 +131,8 @@
     <string name="skinTitle">Skin level</string>
     <string name="roll">Roll simulator</string>
     <string name="recommendations">Recommendations</string>
+
+    <string name="petLevel">Pet level</string>
+    <string name="petTypeLabel">Rare pet</string>
+    <string name="petLoseLevel">The pet cannot lose levels.</string>
 </resources>

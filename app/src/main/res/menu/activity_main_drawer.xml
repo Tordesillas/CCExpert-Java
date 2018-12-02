@@ -65,6 +65,9 @@
             <item
                 android:id="@+id/nav_roll"
                 android:title="@string/roll"/>
+            <item
+                android:id="@+id/nav_pet_level"
+                android:title="@string/petLevel"/>
         </menu>
     </item>
 </menu>
