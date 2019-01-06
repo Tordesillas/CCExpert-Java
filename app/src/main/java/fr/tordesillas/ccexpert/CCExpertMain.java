@@ -22,9 +22,9 @@ public class CCExpertMain extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MobileAds.initialize(this,"ca-app-pub-7552728611291260~3834633923"); //for tests: ca-app-pub-3940256099942544~3347511713
+        MobileAds.initialize(this,"ca-app-pub-7552728611291260~9498643006"); //for tests: ca-app-pub-3940256099942544~3347511713
         InterstitialAd mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-7552728611291260/7325665684"); //for tests: ca-app-pub-3940256099942544/1033173712
+        mInterstitialAd.setAdUnitId("ca-app-pub-7552728611291260/9825698645"); //for tests: ca-app-pub-3940256099942544/1033173712
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdLoaded() {

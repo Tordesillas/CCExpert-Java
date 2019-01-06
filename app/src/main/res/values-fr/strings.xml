@@ -67,7 +67,7 @@
     <string name="guildWarText4">Insérer le score du joueur</string>
     <string name="guildWarText5">Position de la guilde :</string>
 
-    <string name="altarHeroes">Autel des Héros\ \ </string>
+    <string name="altarHeroes">"Autel des Héros  "</string>
     <string name="propNotAvailable">Il n\'y a aucune suggestion pour ce héros.</string>
 
     <string name="shard">Niveau du talent</string>
@@ -77,31 +77,31 @@
     <string name="loseLevel">Le héros ne peut pas perdre de niveau.</string>
     <string name="incorrectData">Il semble que les données saisies sont incorrectes.</string>
 
-    <string name="talentLevel">Niveau du talent :\ </string>
-    <string name="dukeLevel">Niveau du pouvoir du Duc :\ </string>
-    <string name="dukeProcs">Coups que le Duc a effectués :\ </string>
-    <string name="mikaLevel">Niveau du talent de Mickael :\ </string>
+    <string name="talentLevel">"Niveau du talent : "</string>
+    <string name="dukeLevel">"Niveau du pouvoir du Duc : "</string>
+    <string name="dukeProcs">"Coups que le Duc a effectués : "</string>
+    <string name="mikaLevel">"Niveau du talent de Mickael : "</string>
 
     <string name="simulationCompleted">Simulation terminée</string>
 
-    <string name="processorText1">Le héros a\ </string>
-    <string name="processorText2">% de chance de toucher le héros adverse. Il a donc 100% de chance d\'attendre un héros possédant\ </string>
+    <string name="processorText1">"Le héros a "</string>
+    <string name="processorText2">"% de chance de toucher le héros adverse. Il a donc 100% de chance d\'attendre un héros possédant "</string>
     <string name="processorText3">% d\'esquive.</string>
-    <string name="processorText4">Contre un héros à\ </string>
-    <string name="processorText5">% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de\ </string>
-    <string name="processorText6">% d\'esquive, le héros a\ </string>
+    <string name="processorText4">"Contre un héros à "</string>
+    <string name="processorText5">"% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de "</string>
+    <string name="processorText6">"% d\'esquive, le héros a "</string>
     <string name="processorText7">% de chance de toucher sa cible.</string>
-    <string name="processorText11">Nouvelle vitesse d\'attaque :\ </string>
-    <string name="processorText12">Le héros attaquera donc une fois toutes les\ </string>
-    <string name="processorText18">Le héros sera capable d\'annuler les dégâts de\ </string>
+    <string name="processorText11">"Nouvelle vitesse d\'attaque : "</string>
+    <string name="processorText12">"Le héros attaquera donc une fois toutes les "</string>
+    <string name="processorText18">"Le héros sera capable d\'annuler les dégâts de "</string>
     <string name="processorText19">% des attaques reçues.</string>
-    <string name="processorText20">Il annulera donc environ\ </string>
-    <string name="processorText21">\ coups sur 10.</string>
-    <string name="processorText22">Pour acquérir\ </string>
-    <string name="processorText25">Le joueur attaque en moyenne des adversaires à\ </string>
+    <string name="processorText20">"Il annulera donc environ "</string>
+    <string name="processorText21">" coups sur 10."</string>
+    <string name="processorText22">"Pour acquérir "</string>
+    <string name="processorText25">"Le joueur attaque en moyenne des adversaires à "</string>
     <string name="processorText26">k de puissance.</string>
-    <string name="processorText27">Avec un tel score, le joueur obtiendra\ </string>
-    <string name="processorText28">\ gloires.</string>
+    <string name="processorText27">"Avec un tel score, le joueur obtiendra "</string>
+    <string name="processorText28">" gloires."</string>
 
     <string name="heroText1">Mode GdG - Attaque</string>
     <string name="heroText2">Mode GdG - Défense</string>

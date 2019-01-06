@@ -14,7 +14,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7552728611291260~3834633923"/>
+            android:value="ca-app-pub-7552728611291260~9498643006"/>
 
         <activity
             android:name=".CCExpertMain"
