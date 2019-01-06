@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -16,6 +17,8 @@ public class PetLevelActivity extends BaseActivity {
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private Switch isRare;
+    private ImageView classicPet;
+    private ImageView rarePet;
     private TextView shardAmount;
     private TextView expAmount;
     private TextView levelNeeded;
@@ -48,7 +51,14 @@ public class PetLevelActivity extends BaseActivity {
         aimLvlPicker.setOnValueChangedListener((numberPicker, i, i1) -> updateNumbers());
 
         isRare = findViewById(R.id.switchPetType);
-        isRare.setOnCheckedChangeListener((compoundButton, b) -> updateNumbers());
+        isRare.setOnCheckedChangeListener((compoundButton, b) -> {
+            changePetBackground();
+            updateNumbers();
+        });
+        classicPet = findViewById(R.id.classic_pet);
+        rarePet = findViewById(R.id.rare_pet);
+        rarePet.setOnClickListener(view -> isRare.setChecked(true));
+        classicPet.setOnClickListener(view -> isRare.setChecked(false));
 
         expAmount = findViewById(R.id.expAmount);
         shardAmount = findViewById(R.id.shardAmount);
@@ -58,7 +68,18 @@ public class PetLevelActivity extends BaseActivity {
         sacrifice3Amount = findViewById(R.id.s3Amount);
         sacrifice4Amount = findViewById(R.id.s4Amount);
 
+        changePetBackground();
         updateNumbers();
+    }
+
+    private void changePetBackground() {
+        if (isRare.isChecked()) {
+            classicPet.setBackgroundColor(getResources().getColor(R.color.black));
+            rarePet.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        } else {
+            classicPet.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            rarePet.setBackgroundColor(getResources().getColor(R.color.black));
+        }
     }
 
     @SuppressLint("SetTextI18n")
