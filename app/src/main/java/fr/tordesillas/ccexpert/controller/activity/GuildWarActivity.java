@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
-import fr.tordesillas.ccexpert.controller.processor.StatsGuildWar;
+import fr.tordesillas.ccexpert.controller.processor.GuildWarProcessor;
 
 public class GuildWarActivity extends BaseActivity {
     @Override
@@ -17,7 +17,7 @@ public class GuildWarActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guildwar);
 
-        final StatsGuildWar sgw = new StatsGuildWar(getResources());
+        final GuildWarProcessor gwp = new GuildWarProcessor(getResources());
 
         ((TextView) findViewById(R.id.guildWarTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
         final EditText playerPower = findViewById(R.id.playerPower);
@@ -30,7 +30,7 @@ public class GuildWarActivity extends BaseActivity {
                 Toast.makeText(GuildWarActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
                 return;
             }
-            createSimulatorDialog(sgw.printStats(GuildWarActivity.this,
+            createSimulatorDialog(gwp.printStats(GuildWarActivity.this,
                     Integer.parseInt(playerPower.getText().toString()),
                     Integer.parseInt(playerScore.getText().toString())));
             playerPower.setText("");
@@ -42,7 +42,7 @@ public class GuildWarActivity extends BaseActivity {
                 Toast.makeText(GuildWarActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
                 return;
             }
-            createSimulatorDialog(sgw.printFameStats(Integer.parseInt(score.getText().toString()),
+            createSimulatorDialog(gwp.printFameStats(Integer.parseInt(score.getText().toString()),
                     findPosition(radioGroupPosition.getCheckedRadioButtonId())));
             score.setText("");
         });

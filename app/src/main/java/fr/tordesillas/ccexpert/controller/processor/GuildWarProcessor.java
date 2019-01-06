@@ -6,11 +6,12 @@ import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 
-public class StatsGuildWar {
+public class GuildWarProcessor {
     private Resources res;
-    private static final double[] fameTab = {0.45, 0.39, 0.36, 0.33, 0.30};
+    private static final double[] FAME_COEFF = {0.45, 0.39, 0.36, 0.33, 0.30};
+    private static final int[] MAX_FAME = {1800, 1500, 1350, 1200, 1100};
 
-    public StatsGuildWar(Resources res) {
+    public GuildWarProcessor(Resources res) {
         this.res = res;
     }
 
@@ -27,7 +28,7 @@ public class StatsGuildWar {
     }
 
     public String printFameStats(int score, int position) {
-        int fame = (int)(score * (float)fameTab[position]);
+        int fame = Math.min((int)(score * (float) FAME_COEFF[position]), MAX_FAME[position]);
 
         return res.getString(R.string.processorText27) + fame + res.getString(R.string.processorText28);
     }
