@@ -135,4 +135,6 @@
     <string name="petLevel">Niveau du familier</string>
     <string name="petTypeLabel">Familier rare</string>
     <string name="petLoseLevel">Le familier ne peut pas perdre de niveau.</string>
+
+    <string name="breakthroughLevels">Super évolution</string>
 </resources>

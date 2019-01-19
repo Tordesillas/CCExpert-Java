@@ -135,4 +135,6 @@
     <string name="petLevel">Pet level</string>
     <string name="petTypeLabel">Rare pet</string>
     <string name="petLoseLevel">The pet cannot lose levels.</string>
+
+    <string name="breakthroughLevels">Breakthrough levels</string>
 </resources>
