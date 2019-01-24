@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Database extends SQLiteOpenHelper {
-    private static String DB_NAME = "ccexpert_database";
+    private static String DB_NAME = "ccexpert_database.db";
     private SQLiteDatabase db;
     private final Context myContext;
     private Sets sets;
@@ -89,6 +89,12 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    }
+
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
+        db.disableWriteAheadLogging();
     }
 
     private void loadHeroes() {
