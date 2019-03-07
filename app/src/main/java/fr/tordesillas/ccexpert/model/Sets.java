@@ -41,6 +41,7 @@ public class Sets {
         return mInstance;
     }
 
+    /* Adders */
     void addHero(Hero hero, int id) {
         heroesIds.put(id, hero);
         heroesNames.put(hero.getFrenchName(), hero);
@@ -63,9 +64,10 @@ public class Sets {
     }
 
     void addHeroRoll(HeroRoll hero) {
-        heroesRoll.put(hero.getNameFr(), hero);
+        heroesRoll.put(hero.getName(), hero);
     }
 
+    /* Getters */
     public Hero getHero(String name) {
         return heroesNames.get(name);
     }
@@ -176,8 +178,8 @@ public class Sets {
                 Map<String, Talent> enTalents = new HashMap<>();
                 nameSorted = new LinkedList<>();
                 for (Talent talent : talents.values()) {
-                    nameSorted.add(talent.getName());
-                    enTalents.put(talent.getName(), talent);
+                    nameSorted.add(talent.getEnglishName());
+                    enTalents.put(talent.getEnglishName(), talent);
                 }
                 Collections.sort(nameSorted);
                 for (String name : nameSorted) {
@@ -195,21 +197,15 @@ public class Sets {
         if (talents.containsKey(name)) {
             return talents.get(name);
         }
-        else {
-            for (Talent t : talents.values()) {
-                if (t.getName().equals(name)) {
-                    return t;
-                }
-            }
-            return talents.get("Feinte");
-        }
+        return talents.get(talents.keySet().iterator().next());
     }
 
+    /* Roll */
     private static final int STEP = 5;
     void createRollSet() {
         for (HeroRoll h : heroesRoll.values()) {
             for (int i = 0; i < h.getProba() / STEP; i++) {
-                heroNamesSet.add(h.getNameFr());
+                heroNamesSet.add(h.getName());
             }
         }
     }

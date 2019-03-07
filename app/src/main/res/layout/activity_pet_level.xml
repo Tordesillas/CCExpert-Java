@@ -263,7 +263,7 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/gelatinous_champion"/>
+                    android:src="@drawable/gelatinous_champion2"/>
 
                 <TextView
                     android:id="@+id/s3Amount"

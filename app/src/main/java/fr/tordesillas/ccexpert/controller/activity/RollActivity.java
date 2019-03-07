@@ -125,24 +125,13 @@ public class RollActivity extends BaseActivity {
         gemsAmount.setText(NumberFormat.getNumberInstance(Locale.FRANCE).format(gemsVal));
         HeroRoll hero = Sets.getInstance().getHeroRoll();
 
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
-                heroName.setText(hero.getNameFr()); break;
-            case "german":
-            case "deutsch":
-                heroName.setText(hero.getDeName()); break;
-            default:
-                heroName.setText(hero.getEnName());
-        }
+        heroName.setText(hero.getName());
 
         String pic = hero.getPicture();
         int index;
         switch (hero.getType()) {
             case 3:
-                if (!"Gelatinous Champion".equals(hero.getEnName())) {
-                    pic += "2";
-                }
+                pic += "2";
                 bgImg.setImageResource(R.drawable.roll_bg_purple);
                 index = addHeroInList(hero, legendaryHeroes);
                 legendaryRA.notifyItemChanged(index);
@@ -173,7 +162,7 @@ public class RollActivity extends BaseActivity {
 
     private int addHeroInList(HeroRoll hero, List<HeroRoll> heroes) {
         for (int i = 0; i < heroes.size(); i++) {
-            if (heroes.get(i).getEnName().equals(hero.getEnName())) {
+            if (heroes.get(i).getName().equals(hero.getName())) {
                 return i;
             }
         }

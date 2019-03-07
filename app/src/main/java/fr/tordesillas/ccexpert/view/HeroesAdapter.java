@@ -29,17 +29,7 @@ public class HeroesAdapter extends ArrayAdapter<Hero> {
         Hero hero = getItem(position);
 
         ((ImageView) convertView.findViewById(R.id.imageHero)).setImageResource(getContext().getResources().getIdentifier(hero.getPicture(), "drawable", getContext().getPackageName()));
-
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
-                ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getFrenchName()); break;
-            case "german":
-            case "deutsch":
-                ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getGermanName()); break;
-            default:
-                ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getEnglishName());
-        }
+        ((TextView) convertView.findViewById(R.id.heroName)).setText(hero.getName());
 
         return convertView;
     }

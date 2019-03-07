@@ -3,16 +3,18 @@ package fr.tordesillas.ccexpert.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Locale;
+
 public class HeroRoll implements Parcelable {
-    private String nameFr;
+    private String frName;
     private String enName;
     private String deName;
     private int proba;
     private int type;
     private int occurrences;
 
-    public HeroRoll(String nameFr, String enName, String deName, int proba, int type) {
-        this.nameFr = nameFr;
+    public HeroRoll(String frName, String enName, String deName, int proba, int type) {
+        this.frName = frName;
         this.enName = enName;
         this.deName = deName;
         this.proba = proba;
@@ -20,16 +22,17 @@ public class HeroRoll implements Parcelable {
         occurrences = 0;
     }
 
-    public String getNameFr() {
-        return nameFr;
-    }
-
-    public String getEnName() {
-        return enName;
-    }
-
-    public String getDeName() {
-        return deName;
+    public String getName() {
+        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
+            case "french":
+            case "français":
+                return frName;
+            case "german":
+            case "deutsch":
+                return deName;
+            default:
+                return enName;
+        }
     }
 
     public int getProba() {
@@ -54,7 +57,7 @@ public class HeroRoll implements Parcelable {
     }
 
     private HeroRoll(Parcel in) {
-        nameFr = in.readString();
+        frName = in.readString();
         enName = in.readString();
         deName = in.readString();
         proba = in.readInt();
@@ -81,7 +84,7 @@ public class HeroRoll implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(nameFr);
+        parcel.writeString(frName);
         parcel.writeString(enName);
         parcel.writeString(deName);
         parcel.writeInt(proba);

@@ -22,14 +22,7 @@ public class TalentActivity extends BaseActivity {
 
         TextView title = findViewById(R.id.talentName);
         title.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
-                title.setText(talent.getFrenchName());
-                break;
-            default:
-                title.setText(talent.getName());
-        }
+        title.setText(talent.getName());
 
         ((ImageView) findViewById(R.id.talentPicture)).setImageResource(getResources().getIdentifier(talent.getTalentResource(), "drawable", getPackageName()));
         TextView des = findViewById(R.id.talentDescription);

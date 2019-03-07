@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Locale;
-
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.model.Archdemon;
 import fr.tordesillas.ccexpert.model.Sets;
@@ -38,15 +36,7 @@ public class ArchdemonFragment extends Fragment {
         }
 
         Archdemon archdemon = Sets.getInstance().getArchdemon(position);
-
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
-                ((TextView) rootView.findViewById(R.id.description)).setText(archdemon.getDescriptionFr().replace(" + ", "\n"));
-                break;
-            default:
-                ((TextView) rootView.findViewById(R.id.description)).setText(archdemon.getDescriptionEn().replace(" + ", "\n"));
-        }
+        ((TextView) rootView.findViewById(R.id.description)).setText(archdemon.getDescription());
 
         ((ImageView) rootView.findViewById(R.id.hero1)).setImageResource(getResources().getIdentifier(archdemon.getHero(0).getPicture(), "drawable", getActivity().getPackageName()));
         ((ImageView) rootView.findViewById(R.id.hero2)).setImageResource(getResources().getIdentifier(archdemon.getHero(1).getPicture(), "drawable", getActivity().getPackageName()));

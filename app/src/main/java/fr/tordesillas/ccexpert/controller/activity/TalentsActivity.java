@@ -37,7 +37,7 @@ public class TalentsActivity extends BaseActivity {
             Talent t = talents.get(i);
             try {
                 Intent intent = new Intent(TalentsActivity.this, TalentActivity.class);
-                intent.putExtra("talentName", t.getName());
+                intent.putExtra("talentName", t.getFrenchName());
                 startActivity(intent);
             } catch (NullPointerException ignored) { }
         });

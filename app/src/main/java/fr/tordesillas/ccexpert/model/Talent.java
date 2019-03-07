@@ -3,17 +3,17 @@ package fr.tordesillas.ccexpert.model;
 import java.util.Locale;
 
 public class Talent {
-    private String nom;
-    private String name;
+    private String frName;
+    private String enName;
     private boolean isEnchantment;
     private String[] desFr;
     private String[] desEn;
 
-    Talent(String nom, String name, boolean isEnchantment, String des1fr, String des2fr, String des3fr, String des4fr, String des5fr,
+    Talent(String frName, String enName, boolean isEnchantment, String des1fr, String des2fr, String des3fr, String des4fr, String des5fr,
            String des6fr, String des7fr, String des8fr, String des9fr, String des1en, String des2en, String des3en, String des4en,
            String des5en, String des6en, String des7en, String des8en, String des9en) {
-        this.nom = nom;
-        this.name = name;
+        this.frName = frName;
+        this.enName = enName;
         this.isEnchantment = isEnchantment;
         desFr = new String[]{ des1fr, des2fr, des3fr, des4fr, des5fr, des6fr, des7fr, des8fr, des9fr };
         desEn = new String[]{ des1en, des2en, des3en, des4en, des5en, des6en, des7en, des8en, des9en };
@@ -21,15 +21,25 @@ public class Talent {
     }
 
     public String getFrenchName() {
-        return nom;
+        return frName;
+    }
+
+    public String getEnglishName() {
+        return enName;
     }
 
     public String getName() {
-        return name;
+        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
+            case "french":
+            case "français":
+                return frName;
+            default:
+                return enName;
+        }
     }
 
     public String getTalentResource() {
-        return name.toLowerCase().trim().replace(' ', '_').replace("-", "_").replace("\'", "");
+        return enName.toLowerCase().trim().replace(' ', '_').replace("-", "_").replace("\'", "");
     }
 
     public String getCrestResource() {

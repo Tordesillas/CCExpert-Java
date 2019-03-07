@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
-import java.util.Locale;
 
 import fr.tordesillas.ccexpert.CCExpertMain;
 import fr.tordesillas.ccexpert.R;
@@ -34,16 +33,7 @@ public class HeroActivity extends BaseActivity {
         heroName.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         try {
-            switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-                case "french":
-                case "français":
-                    heroName.setText(hero.getFrenchName()); break;
-                case "german":
-                case "deutsch":
-                    heroName.setText(hero.getGermanName()); break;
-                default:
-                    heroName.setText(hero.getEnglishName());
-            }
+            heroName.setText(hero.getName());
 
             appearance = 2;
 
