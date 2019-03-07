@@ -29,14 +29,14 @@ public class TalentsAdapter extends ArrayAdapter<Talent> {
         Talent talent = getItem(position);
 
         assert talent != null;
-        ((ImageView) convertView.findViewById(R.id.imageHero)).setImageResource(getContext().getResources().getIdentifier(talent.getTalentResource(), "drawable", getContext().getPackageName()));
+        ((ImageView) convertView.findViewById(R.id.imageTalent)).setImageResource(getContext().getResources().getIdentifier(talent.getTalentResource(), "drawable", getContext().getPackageName()));
 
         switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
             case "french":
             case "français":
-                ((TextView) convertView.findViewById(R.id.heroName)).setText(talent.getFrenchName()); break;
+                ((TextView) convertView.findViewById(R.id.talentName)).setText(talent.getFrenchName()); break;
             default:
-                ((TextView) convertView.findViewById(R.id.heroName)).setText(talent.getName());
+                ((TextView) convertView.findViewById(R.id.talentName)).setText(talent.getName());
         }
 
         return convertView;
