@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,7 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:layout_weight="1"
             android:baselineAligned="false"
             android:orientation="horizontal">
 
@@ -25,232 +25,305 @@
                 android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="0dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:src="@drawable/archdemon"
                     android:adjustViewBounds="true"/>
 
                 <TextView
                     android:id="@+id/description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:textAlignment="center"
-                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:layout_weight="2"
                     android:textStyle="bold|italic" />
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout1"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="4dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_corners"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout2"
+                app:layout_constraintBottom_toTopOf="@id/layout3"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/hero1"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/talent1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/talent1"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/crest1"
+                    app:layout_constraintStart_toEndOf="@id/hero1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
                     android:id="@+id/crest1"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
-            </LinearLayout>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/talent1"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout2"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_corners"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintStart_toEndOf="@id/layout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/layout4"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/hero2"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/talent2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/talent2"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/crest2"
+                    app:layout_constraintStart_toEndOf="@id/hero2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
                     android:id="@+id/crest2"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
-            </LinearLayout>
-        </LinearLayout>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/talent2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout3"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="4dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_corners"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout4"
+                app:layout_constraintBottom_toTopOf="@id/layout5"
+                app:layout_constraintTop_toBottomOf="@id/layout1">
 
                 <ImageView
                     android:id="@+id/hero3"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/talent3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/talent3"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/crest3"
+                    app:layout_constraintStart_toEndOf="@id/hero3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
                     android:id="@+id/crest3"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
-            </LinearLayout>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/talent3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout4"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_corners"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintStart_toEndOf="@id/layout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/layout6"
+                app:layout_constraintTop_toBottomOf="@id/layout2">
 
                 <ImageView
                     android:id="@+id/hero4"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/talent4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/talent4"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/crest4"
+                    app:layout_constraintStart_toEndOf="@id/hero4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
                     android:id="@+id/crest4"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
-            </LinearLayout>
-        </LinearLayout>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/talent4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout5"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="4dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_corners"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layout6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout3">
 
                 <ImageView
                     android:id="@+id/hero5"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/talent5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/talent5"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/crest5"
+                    app:layout_constraintStart_toEndOf="@id/hero5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
                     android:id="@+id/crest5"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
-            </LinearLayout>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/talent5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout6"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@drawable/rectangle_corners"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@id/layout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout4">
 
                 <ImageView
                     android:id="@+id/hero6"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toStartOf="@id/talent6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/talent6"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/crest6"
+                    app:layout_constraintStart_toEndOf="@id/hero6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
                     android:id="@+id/crest6"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"/>
-            </LinearLayout>
-        </LinearLayout>
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/talent6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
     </LinearLayout>
 </ScrollView>
