@@ -10,24 +10,25 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:background="@color/colorPrimaryDark" >
 
             <ImageView
                 android:id="@+id/imageHero"
                 android:layout_width="wrap_content"
-                android:layout_height="76dp"
-                android:padding="7dp"
+                android:layout_height="75dp"
+                android:paddingTop="5dp"
                 android:layout_centerHorizontal="true" />
 
             <TextView
                 android:id="@+id/heroName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:textAlignment="center"
-                android:padding="3dp"
+                android:gravity="center"
+                android:padding="2dp"
                 android:textColor="@color/white"
-                android:textSize="9sp"
+                android:textSize="11sp"
                 android:layout_below="@id/imageHero" />
 
         </RelativeLayout>
