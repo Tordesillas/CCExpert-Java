@@ -105,14 +105,14 @@ public class Database extends SQLiteOpenHelper {
 
         while (!c.isAfterLast()) {
             enchantments = new ArrayList<>();
-            for (int i = 11; i <= 13; i++) {
+            for (int i = 12; i <= 14; i++) {
                 if (!c.isNull(i)) {
                     enchantments.add(c.getString(i));
                 }
             }
 
             hero = new Hero(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6),
-                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), enchantments);
+                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), enchantments);
             sets.addHero(hero, c.getInt(0));
 
             c.moveToNext();
@@ -180,7 +180,7 @@ public class Database extends SQLiteOpenHelper {
         c.moveToFirst();
         HeroRoll h;
         while (!c.isAfterLast()) {
-            h = new HeroRoll(c.getString(0), c.getString(1), c.getString(2), c.getInt(3), c.getInt(4));
+            h = new HeroRoll(c.getString(0), c.getString(1), c.getString(2), c.getString(3), c.getInt(4), c.getInt(5));
             sets.addHeroRoll(h);
             c.moveToNext();
         }

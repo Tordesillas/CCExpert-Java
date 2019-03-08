@@ -9,27 +9,29 @@ public class HeroRoll implements Parcelable {
     private String frName;
     private String enName;
     private String deName;
+    private String ruName;
     private int proba;
     private int type;
     private int occurrences;
 
-    public HeroRoll(String frName, String enName, String deName, int proba, int type) {
+    public HeroRoll(String frName, String enName, String deName, String ruName, int proba, int type) {
         this.frName = frName;
         this.enName = enName;
         this.deName = deName;
+        this.ruName = ruName;
         this.proba = proba;
         this.type = type;
         occurrences = 0;
     }
 
     public String getName() {
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fr":
                 return frName;
-            case "german":
-            case "deutsch":
+            case "de":
                 return deName;
+            case "ru":
+                return ruName;
             default:
                 return enName;
         }

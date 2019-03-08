@@ -29,9 +29,8 @@ public class Talent {
     }
 
     public String getName() {
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
                 return frName;
             default:
                 return enName;
@@ -51,9 +50,8 @@ public class Talent {
     }
 
     public String[] getDescription() {
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
                 return desFr;
             default:
                 return desEn;

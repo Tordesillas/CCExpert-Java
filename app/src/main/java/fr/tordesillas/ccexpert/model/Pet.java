@@ -1,23 +1,29 @@
 package fr.tordesillas.ccexpert.model;
 
-public class Pet {
-    private String nom;
-    private String name;
+import java.util.Locale;
 
-    public Pet(String nom, String name) {
-        this.nom = nom;
-        this.name = name;
+public class Pet {
+    private String frName;
+    private String enName;
+
+    public Pet(String frName, String enName) {
+        this.frName = frName;
+        this.enName = enName;
     }
 
     public String getFrenchName() {
-        return nom;
+        return frName;
     }
 
     public String getName() {
-        return name;
-    }
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
+                return frName;
+            default:
+                return enName;
+        }    }
 
     public String getResource() {
-        return name.toLowerCase().trim().replace(' ', '_').replace("-", "_");
+        return enName.toLowerCase().trim().replace(' ', '_').replace("-", "_");
     }
 }

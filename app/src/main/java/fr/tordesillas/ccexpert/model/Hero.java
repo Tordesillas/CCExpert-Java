@@ -8,6 +8,7 @@ public class Hero {
     private String frName;
     private String enName;
     private String deName;
+    private String ruName;
     private String talentGwAttack;
     private String crestGwAttack;
     private String talentGwDefense;
@@ -17,11 +18,12 @@ public class Hero {
     private String pet;
     private List<String> enchantments;
 
-    public Hero(String frName, String enName, String deName, String talentGwAttack, String crestGwAttack, String talentGwDefense,
+    public Hero(String frName, String enName, String deName, String ruName, String talentGwAttack, String crestGwAttack, String talentGwDefense,
                 String crestGwDefense, String talentDungeon, String crestDungeon, String pet, List<String> enchantments) {
         this.frName = frName;
         this.enName = enName;
         this.deName = deName;
+        this.ruName = ruName;
         this.talentGwAttack = talentGwAttack;
         this.crestGwAttack = crestGwAttack;
         this.talentGwDefense = talentGwDefense;
@@ -33,13 +35,13 @@ public class Hero {
     }
 
     public String getName() {
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
                 return frName;
-            case "german":
-            case "deutsch":
+            case "deu":
                 return deName;
+            case "rus":
+                return ruName;
             default:
                 return enName;
         }

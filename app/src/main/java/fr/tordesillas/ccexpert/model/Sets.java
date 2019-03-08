@@ -105,17 +105,15 @@ public class Sets {
         List<String> nameSorted = new ArrayList<>();
         List<Hero> heroesSorted = new ArrayList<>();
 
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
                 nameSorted = new ArrayList<>(heroesNames.keySet());
                 Collections.sort(nameSorted);
                 for (String name : nameSorted) {
                     heroesSorted.add(heroesNames.get(name));
                 }
                 break;
-            case "german":
-            case "deutsch":
+            case "deu":
                 Map<String, Hero> geHeroes = new HashMap<>();
                 for (Hero hero : heroesNames.values()) {
                     nameSorted.add(hero.getGermanName());
@@ -162,9 +160,8 @@ public class Sets {
         List<Talent> talentsSorted = new LinkedList<>();
         Talent t;
 
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
                 nameSorted = new LinkedList<>(talents.keySet());
                 Collections.sort(nameSorted);
                 for (String name : nameSorted) {

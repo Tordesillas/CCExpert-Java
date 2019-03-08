@@ -30,9 +30,8 @@ public class Archdemon {
     }
 
     public String getDescription() {
-        switch (Locale.getDefault().getDisplayLanguage().toLowerCase()) {
-            case "french":
-            case "français":
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
                 return descriptionFr.replace(" + ", "\n");
             default:
                 return descriptionEn.replace(" + ", "\n");
