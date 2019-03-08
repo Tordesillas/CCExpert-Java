@@ -26,230 +26,255 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout1"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
-                    android:layout_weight="1"
+                    android:layout_marginBottom="4dp"
                     android:background="@drawable/rectangle_corners"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/layout2"
+                    app:layout_constraintBottom_toTopOf="@id/layout3">
 
                     <TextView
+                        android:id="@+id/textGWA"
                         android:layout_width="wrap_content"
-                        android:layout_height="31dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/heroText1"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/talent1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/crest1"
+                        app:layout_constraintTop_toBottomOf="@id/textGWA"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                        <ImageView
-                            android:id="@+id/talent1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:id="@+id/crest1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toEndOf="@id/talent1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textGWA"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </android.support.constraint.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/crest1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout2"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    app:layout_constraintVertical_weight="1"
                     android:background="@drawable/rectangle_corners"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="5dp"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintStart_toEndOf="@id/layout1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/enchantmentsLayout">
 
                     <TextView
+                        android:id="@+id/textGWD"
                         android:layout_width="wrap_content"
-                        android:layout_height="31dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/heroText2"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/talent2"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/crest2"
+                        app:layout_constraintTop_toBottomOf="@id/textGWD"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                        <ImageView
-                            android:id="@+id/talent2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:id="@+id/crest2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toEndOf="@id/talent2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textGWD"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </android.support.constraint.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/crest2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <LinearLayout
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout3"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
-                    android:layout_weight="1"
                     android:background="@drawable/rectangle_corners"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/enchantmentsLayout">
 
                     <TextView
+                        android:id="@+id/textD"
                         android:layout_width="wrap_content"
-                        android:layout_height="31dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/heroText3"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/talent3"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/crest3"
+                        app:layout_constraintTop_toBottomOf="@id/textD"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                        <ImageView
-                            android:id="@+id/talent3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:id="@+id/crest3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="4dp"
+                        app:layout_constraintStart_toEndOf="@id/talent3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textD"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </android.support.constraint.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/crest3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
+                <android.support.constraint.ConstraintLayout
                     android:id="@+id/enchantmentsLayout"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    app:layout_constraintVertical_weight="1"
                     android:background="@drawable/rectangle_corners"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:padding="5dp"
+                    app:layout_constraintStart_toEndOf="@id/layout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout2"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
                     <TextView
+                        android:id="@+id/textE"
                         android:layout_width="wrap_content"
-                        android:layout_height="31dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/heroText4"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="16sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold|italic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/enchantment1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:adjustViewBounds="true"
+                        android:padding="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/enchantment2"
+                        app:layout_constraintTop_toBottomOf="@id/textE"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                        <ImageView
-                            android:id="@+id/enchantment1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:id="@+id/enchantment2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="2dp"
+                        app:layout_constraintStart_toEndOf="@id/enchantment1"
+                        app:layout_constraintEnd_toStartOf="@id/enchantment3"
+                        app:layout_constraintTop_toBottomOf="@id/textE"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                        <ImageView
-                            android:id="@+id/enchantment2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
+                    <ImageView
+                        android:id="@+id/enchantment3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="2dp"
+                        app:layout_constraintStart_toEndOf="@id/enchantment2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textE"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
 
-                        <ImageView
-                            android:id="@+id/enchantment3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/heroLargePicture"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/pet"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/heroLargePicture"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true" />
-                </LinearLayout>
-
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/pet"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    app:layout_constraintHorizontal_weight="2"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintStart_toEndOf="@id/heroLargePicture"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/evoHero"/>
 
-                    <ImageView
-                        android:id="@+id/pet"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="30dp"
-                        android:adjustViewBounds="true"/>
-
-                    <android.support.design.widget.FloatingActionButton
-                        android:id="@+id/evoHero"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="30dp"
-                        android:src="@drawable/ic_avatar"
-                        app:backgroundTint="@color/colorPrimary"
-                        app:fabSize="normal" />
-                </LinearLayout>
-            </LinearLayout>
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/evoHero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/ic_avatar"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="normal"
+                    app:layout_constraintStart_toEndOf="@id/heroLargePicture"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pet"/>
+            </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
