@@ -140,7 +140,13 @@ public class Sets {
     }
 
     public Archdemon getArchdemon(int position) {
-        return archdemons.get(position);
+        if (position >= archdemons.size() - 1) {
+            return archdemons.get(archdemons.size() - 1);
+        } else if (position <= 0) {
+            return archdemons.get(0);
+        } else {
+            return archdemons.get(position);
+        }
     }
 
     public int getArchdemonsSize() {

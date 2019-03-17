@@ -1,13 +1,14 @@
 package fr.tordesillas.ccexpert.controller.activity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.Locale;
-
+import fr.tordesillas.ccexpert.CCExpertMain;
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.model.Sets;
 import fr.tordesillas.ccexpert.model.Talent;
@@ -19,6 +20,16 @@ public class TalentActivity extends BaseActivity {
         setContentView(R.layout.activity_talent);
 
         Talent talent = Sets.getInstance().getTalent(getIntent().getStringExtra("talentName"));
+
+        /* Fix NPException with talent variable */
+        try {
+            talent.getDescription();
+        } catch (NullPointerException e) {
+            Toast.makeText(TalentActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
+            Intent closeActivitiesIntent = new Intent(this, CCExpertMain.class);
+            closeActivitiesIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(closeActivitiesIntent);
+        }
 
         TextView title = findViewById(R.id.talentName);
         title.setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
