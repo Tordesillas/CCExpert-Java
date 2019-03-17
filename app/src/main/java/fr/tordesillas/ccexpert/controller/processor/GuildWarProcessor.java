@@ -9,7 +9,7 @@ import fr.tordesillas.ccexpert.R;
 public class GuildWarProcessor {
     private Resources res;
     private static final double[] FAME_COEFF = {0.45, 0.39, 0.36, 0.33, 0.30};
-    private static final int[] MAX_FAME = {1800, 1500, 1350, 1200, 1100};
+    private static final int[] MAX_FAME = {3200, 2750, 2400, 2100, 1800};
 
     public GuildWarProcessor(Resources res) {
         this.res = res;
