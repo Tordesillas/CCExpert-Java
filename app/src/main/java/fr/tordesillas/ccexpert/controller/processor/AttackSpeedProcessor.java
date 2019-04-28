@@ -18,6 +18,7 @@ public class AttackSpeedProcessor {
     public String printAttackSpeedAmount(int basic, int ff, int fury, int duke, int hits, int mika) {
         double amount = basic / (Math.pow(skill[duke], hits) * skillMichael[mika] * ffStats[ff] * furyStats[fury]);
         return res.getString(R.string.processorText11) + (int)amount + "\n" +
-                res.getString(R.string.processorText12) + (int)(Math.ceil(amount/200)*200) + "ms.";
+                res.getString(R.string.processorText12) + (int)(Math.ceil(amount/200)*200) +
+                res.getString(R.string.processorText13);
     }
 }

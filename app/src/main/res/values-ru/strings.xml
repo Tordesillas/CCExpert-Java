@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">CCExpert</string>
+
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+
+    <string name="dungeon">Подземелье</string>
+    <string name="selectDungeon">Выбрать подземелье</string>
+    <string name="dungeonChoice">Выбор подземелья</string>
+    <string name="twoVideos">Два видео подходят под ваш запрос, какую версию вы хотите?</string>
+    <string name="noVideo">Ни одного видео не найдено</string>
+    <string name="wait">Видео загружается…</string>
+    <string name="onlyF2P">По вашему запросу есть только бездонатное прохождение. Продолжить?</string>
+    <string name="onlyP2W">По вашему запросу есть только донатное прохождение. Продолжить?</string>
+    <string name="dungeonNegativeButton">Нет</string>
+    <string name="dungeonPositiveButton">Да</string>
+
+    <string name="analyze">Анализировать</string>
+    <string name="validate">Подтвердить</string>
+
+    <string name="home">Главная</string>
+    <string name="heroes">Герои</string>
+    <string name="dungeons">Подземелья</string>
+    <string name="simulators">Симуляторы</string>
+
+    <string name="legendary">Легендарный</string>
+    <string name="elite">Элитный</string>
+    <string name="ordinary">Обычный</string>
+    <string-array name="heroType">
+        <item>@string/legendary</item>
+        <item>@string/elite</item>
+        <item>@string/ordinary</item>
+    </string-array>
+
+    <string name="accuracy">Точность</string>
+    <string name="accuracyText1">Базовая точность героя</string>
+    <string name="accuracyText2">Введите точность героя</string>
+    <string name="accuracyText3">Точность, добавленная снаряжением</string>
+    <string name="accuracyText4">Введите дополнительную точность</string>
+
+    <string name="aetherock">Снаряжение</string>
+
+    <string name="spinnerText1">Текущий уровень</string>
+    <string name="spinnerText2">Нужный уровень</string>
+
+    <string name="attackSpeed">Скорость атаки</string>
+    <string name="attackSpeedText1">Базовая скорость атаки</string>
+    <string name="attackSpeedText2">Введите скорость атаки героя</string>
+    <string name="attackSpeedText3">У героя есть талант Берсерк?</string>
+    <string name="attackSpeedText5">Есть ли у героя чара Необузданная ярость?</string>
+    <string name="attackSpeedText6">Есть ли в команде героя Князь Тыква?</string>
+    <string name="attackSpeedText7">Есть ли в команде героя Хранитель?</string>
+
+    <string name="crystal">Просвещение</string>
+
+    <string name="dodge">Уклонение</string>
+    <string name="dodgeText1">Базовое уклонение героя</string>
+    <string name="dodgeText2">Введите уклонение героя</string>
+    <string name="dodgeText3">Уклонение, добавленное снаряжением</string>
+    <string name="dodgeText4">Введите дополнительное уклонение</string>
+    <string name="dodgeText5">Есть ли у героя Ожог?</string>
+
+    <string name="guildWar">Битва гильдий</string>
+    <string name="guildWarText1">Сила</string>
+    <string name="guildWarText2">Введите силу игрока</string>
+    <string name="guildWarText3">Очки БГ</string>
+    <string name="guildWarText4">Введите очки игрока</string>
+    <string name="guildWarText5">Место гильдии</string>
+
+    <string name="altarHeroes">Алтарь героев</string>
+    <string name="propNotAvailable">Для этого героя нет предложений</string>
+
+    <string name="shard">Уровень навыка</string>
+    <string name="shardText">Категория героя</string>
+
+    <string name="missingData">Не хватает данных</string>
+    <string name="loseLevel">Герой не может потерять уровни</string>
+    <string name="incorrectData">Похоже, введенные данные не корректны</string>
+
+    <string name="talentLevel">Уровень таланта</string>
+    <string name="dukeLevel">Уровень умения Тыквы</string>
+    <string name="dukeProcs">Количество ударов Тыквы</string>
+    <string name="mikaLevel">Уровень умения Хранителя</string>
+
+    <string name="simulationCompleted">Симуляция выполнена</string>
+
+    <string name="processorText1">"У героя есть "</string>
+    <string name="processorText2">"% шанс нанести удар вражескому герою. Так, у него есть 100% шанс достичь героя с "</string>
+    <string name="processorText3">% уклонения</string>
+    <string name="processorText4">"Против героя с "</string>
+    <string name="processorText5">"100% уклонения, ваш герой имеет "</string>
+    <string name="processorText6">"% уклонения, ваш герой имеет "</string>
+    <string name="processorText7">% шанс нанести удар цели</string>
+    <string name="processorText11">"Новая скорость атаки: "</string>
+    <string name="processorText12">"Герой будет атаковать раз в "</string>
+    <string name="processorText13">мс.</string>
+    <string name="processorText18">"Герой сможет уклониться от "</string>
+    <string name="processorText19">% вражеских атак</string>
+    <string name="processorText20">"Так, он сможет уклониться примерно от "</string>
+    <string name="processorText21">" атак из 10"</string>
+    <string name="processorText25">"Игрок нападал на врагов с "</string>
+    <string name="processorText26">" силой в среднем"</string>
+    <string name="processorText27">"С таким счетом он получит "</string>
+    <string name="processorText28">" славы"</string>
+
+    <string name="heroText1">БГ - атака</string>
+    <string name="heroText2">БГ - защита</string>
+    <string name="heroText3">Подземки</string>
+    <string name="heroText4">Чары</string>
+
+    <string name="destiny">Судьба</string>
+    <string name="destinyText">Необходимо ресурсов</string>
+    <string name="zero">0</string>
+    <string name="error">Произошла ошибка</string>
+
+    <string name="archdemons">Архидемоны</string>
+    <string name="archdemon">Архидемон</string>
+
+    <string name="protectors">Смотрители</string>
+    <string name="prophet">Пророк</string>
+    <string name="saint">Святой</string>
+    <string name="brawler">Борец</string>
+    <string name="protectorSpinnerText">Текущий уровень смотрителя</string>
+    <string name="protectorText">Бонусные параметры</string>
+
+    <string name="talents">Таланты</string>
+    <string name="enchantments">Чары</string>
+    <string name="encyclopedia">Энциклопедия</string>
+    <string name="level">Уровень</string>
+    <string name="description">Описание</string>
+    <string name="skinTitle">Уровень облика</string>
+    <string name="roll">Симулятор роллинга</string>
+    <string name="recommendations">Рекомендации</string>
+
+    <string name="petLevel">Уровень питомца</string>
+    <string name="petTypeLabel">Редкий питомец</string>
+    <string name="petLoseLevel">Питомец не может терять уровни</string>
+
+    <string name="breakthroughLevels">Уровень прорыва</string>
+</resources>

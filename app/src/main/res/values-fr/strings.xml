@@ -93,11 +93,11 @@
     <string name="processorText7">% de chance de toucher sa cible.</string>
     <string name="processorText11">"Nouvelle vitesse d\'attaque : "</string>
     <string name="processorText12">"Le héros attaquera donc une fois toutes les "</string>
+    <string name="processorText13">ms.</string>
     <string name="processorText18">"Le héros sera capable d\'annuler les dégâts de "</string>
     <string name="processorText19">% des attaques reçues.</string>
     <string name="processorText20">"Il annulera donc environ "</string>
     <string name="processorText21">" coups sur 10."</string>
-    <string name="processorText22">"Pour acquérir "</string>
     <string name="processorText25">"Le joueur attaque en moyenne des adversaires à "</string>
     <string name="processorText26">" de puissance."</string>
     <string name="processorText27">"Avec un tel score, le joueur obtiendra "</string>

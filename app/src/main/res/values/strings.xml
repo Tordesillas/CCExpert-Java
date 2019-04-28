@@ -93,11 +93,11 @@
     <string name="processorText7">% chance to hit his target.</string>
     <string name="processorText11">"New attack speed: "</string>
     <string name="processorText12">"So, the hero will attack once every "</string>
+    <string name="processorText13">ms.</string>
     <string name="processorText18">"The hero will be able to cancel "</string>
     <string name="processorText19">% of the opposite attacks damages.</string>
     <string name="processorText20">"So, he will cancel approximately "</string>
     <string name="processorText21">" hits on 10."</string>
-    <string name="processorText22">"To acquire "</string>
     <string name="processorText25">"The player attacks on average opponents with "</string>
     <string name="processorText26">" of power."</string>
     <string name="processorText27">"With such a score, he will get "</string>

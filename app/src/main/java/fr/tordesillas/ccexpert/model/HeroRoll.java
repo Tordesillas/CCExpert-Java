@@ -26,11 +26,11 @@ public class HeroRoll implements Parcelable {
 
     public String getName() {
         switch (Locale.getDefault().getISO3Language()) {
-            case "fr":
+            case "fra":
                 return frName;
-            case "de":
+            case "deu":
                 return deName;
-            case "ru":
+            case "rus":
                 return ruName;
             default:
                 return enName;
