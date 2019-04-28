@@ -21,6 +21,7 @@ public class HeroActivity extends BaseActivity {
     private int resHero;
     private int resHeroEvo;
     private int resHeroSkin;
+    private int resHeroSkin2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class HeroActivity extends BaseActivity {
             resHero = getResources().getIdentifier(hero.getPicture() + "2", "drawable", getPackageName());
             resHeroEvo = getResources().getIdentifier(hero.getPicture() + "3", "drawable", getPackageName());
             resHeroSkin = getResources().getIdentifier(hero.getPicture() + "4", "drawable", getPackageName());
+            resHeroSkin2 = getResources().getIdentifier(hero.getPicture() + "5", "drawable", getPackageName());
 
             changePicture();
 
@@ -109,11 +111,19 @@ public class HeroActivity extends BaseActivity {
                     appearance++;
                     break;
                 case 4:
-                    appearance = 2;
+                    appearance++;
                     if (resHeroSkin == 0) {
                         changePicture();
                     } else {
                         ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroSkin);
+                    }
+                    break;
+                case 5:
+                    appearance++;
+                    if (resHeroSkin2 == 0) {
+                        changePicture();
+                    } else {
+                        ((ImageView) findViewById(R.id.heroLargePicture)).setImageResource(resHeroSkin2);
                     }
                     break;
                 default:
