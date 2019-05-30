@@ -59,7 +59,7 @@ public class CardAdapter extends ArrayAdapter<String> {
         } else if (title.equals(getContext().getResources().getString(R.string.attackSpeed))) {
             return R.drawable.blitz_scroll;
         } else if (title.equals(getContext().getResources().getString(R.string.destiny))) {
-            return R.drawable.karmic_rock1;
+            return R.drawable.karmic_rock4;
         } else if (title.equals(getContext().getResources().getString(R.string.archdemons))) {
             return R.drawable.archdemon;
         } else if (title.equals(getContext().getResources().getString(R.string.protectors))) {

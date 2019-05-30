@@ -20,6 +20,7 @@ public class DestinyActivity extends BaseActivity {
     private TextView ihAmount;
     private TextView heroCardsAmount;
     private TextView crystalsAmount;
+    private TextView karmic4Amount;
     private Toast toast;
 
     @SuppressLint("ShowToast")
@@ -36,8 +37,8 @@ public class DestinyActivity extends BaseActivity {
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);
         aimLvlPicker.setMinValue(2);
-        currentLvlPicker.setMaxValue(39);
-        aimLvlPicker.setMaxValue(40);
+        currentLvlPicker.setMaxValue(59);
+        aimLvlPicker.setMaxValue(60);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
@@ -46,6 +47,7 @@ public class DestinyActivity extends BaseActivity {
         ihAmount = findViewById(R.id.ihAmount);
         heroCardsAmount = findViewById(R.id.heroCardsAmount);
         crystalsAmount = findViewById(R.id.crystalsAmount);
+        karmic4Amount = findViewById(R.id.karmic4Amount);
 
         currentLvlPicker.setOnValueChangedListener((numberPicker, i, i1) -> updateNumbers());
         aimLvlPicker.setOnValueChangedListener((numberPicker, i, i1) -> updateNumbers());
@@ -62,6 +64,7 @@ public class DestinyActivity extends BaseActivity {
             ihAmount.setText("0");
             heroCardsAmount.setText("0");
             crystalsAmount.setText("0");
+            karmic4Amount.setText("0");
         } else {
             if (toast != null) {
                 toast.cancel();
@@ -73,6 +76,7 @@ public class DestinyActivity extends BaseActivity {
             ihAmount.setText(dp.computeIH(firstLevel, secondLevel));
             heroCardsAmount.setText(dp.computeHeroCards(firstLevel, secondLevel));
             crystalsAmount.setText(dp.computeCrystals(firstLevel, secondLevel));
+            karmic4Amount.setText(dp.computeKarmic4(firstLevel, secondLevel));
         }
     }
 
