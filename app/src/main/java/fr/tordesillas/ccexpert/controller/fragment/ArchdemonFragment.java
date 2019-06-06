@@ -35,29 +35,31 @@ public class ArchdemonFragment extends Fragment {
             position = Sets.getInstance().getArchdemonsSize() - 1;
         }
 
-        Archdemon archdemon = Sets.getInstance().getArchdemon(position);
-        ((TextView) rootView.findViewById(R.id.description)).setText(archdemon.getDescription());
+        try {
+            Archdemon archdemon = Sets.getInstance().getArchdemon(position);
+            ((TextView) rootView.findViewById(R.id.description)).setText(archdemon.getDescription());
 
-        ((ImageView) rootView.findViewById(R.id.hero1)).setImageResource(getResources().getIdentifier(archdemon.getHero(0).getPicture(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.hero2)).setImageResource(getResources().getIdentifier(archdemon.getHero(1).getPicture(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.hero3)).setImageResource(getResources().getIdentifier(archdemon.getHero(2).getPicture(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.hero4)).setImageResource(getResources().getIdentifier(archdemon.getHero(3).getPicture(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.hero5)).setImageResource(getResources().getIdentifier(archdemon.getHero(4).getPicture(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.hero6)).setImageResource(getResources().getIdentifier(archdemon.getHero(5).getPicture(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.hero1)).setImageResource(getResources().getIdentifier(archdemon.getHero(0).getPicture(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.hero2)).setImageResource(getResources().getIdentifier(archdemon.getHero(1).getPicture(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.hero3)).setImageResource(getResources().getIdentifier(archdemon.getHero(2).getPicture(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.hero4)).setImageResource(getResources().getIdentifier(archdemon.getHero(3).getPicture(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.hero5)).setImageResource(getResources().getIdentifier(archdemon.getHero(4).getPicture(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.hero6)).setImageResource(getResources().getIdentifier(archdemon.getHero(5).getPicture(), "drawable", getActivity().getPackageName()));
 
-        ((ImageView) rootView.findViewById(R.id.talent1)).setImageResource(getResources().getIdentifier(archdemon.getTalent(0).getTalentResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.talent2)).setImageResource(getResources().getIdentifier(archdemon.getTalent(1).getTalentResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.talent3)).setImageResource(getResources().getIdentifier(archdemon.getTalent(2).getTalentResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.talent4)).setImageResource(getResources().getIdentifier(archdemon.getTalent(3).getTalentResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.talent5)).setImageResource(getResources().getIdentifier(archdemon.getTalent(4).getTalentResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.talent6)).setImageResource(getResources().getIdentifier(archdemon.getTalent(5).getTalentResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.talent1)).setImageResource(getResources().getIdentifier(archdemon.getTalent(0).getTalentResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.talent2)).setImageResource(getResources().getIdentifier(archdemon.getTalent(1).getTalentResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.talent3)).setImageResource(getResources().getIdentifier(archdemon.getTalent(2).getTalentResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.talent4)).setImageResource(getResources().getIdentifier(archdemon.getTalent(3).getTalentResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.talent5)).setImageResource(getResources().getIdentifier(archdemon.getTalent(4).getTalentResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.talent6)).setImageResource(getResources().getIdentifier(archdemon.getTalent(5).getTalentResource(), "drawable", getActivity().getPackageName()));
 
-        ((ImageView) rootView.findViewById(R.id.crest1)).setImageResource(getResources().getIdentifier(archdemon.getCrest(0).getCrestResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.crest2)).setImageResource(getResources().getIdentifier(archdemon.getCrest(1).getCrestResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.crest3)).setImageResource(getResources().getIdentifier(archdemon.getCrest(2).getCrestResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.crest4)).setImageResource(getResources().getIdentifier(archdemon.getCrest(3).getCrestResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.crest5)).setImageResource(getResources().getIdentifier(archdemon.getCrest(4).getCrestResource(), "drawable", getActivity().getPackageName()));
-        ((ImageView) rootView.findViewById(R.id.crest6)).setImageResource(getResources().getIdentifier(archdemon.getCrest(5).getCrestResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.crest1)).setImageResource(getResources().getIdentifier(archdemon.getCrest(0).getCrestResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.crest2)).setImageResource(getResources().getIdentifier(archdemon.getCrest(1).getCrestResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.crest3)).setImageResource(getResources().getIdentifier(archdemon.getCrest(2).getCrestResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.crest4)).setImageResource(getResources().getIdentifier(archdemon.getCrest(3).getCrestResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.crest5)).setImageResource(getResources().getIdentifier(archdemon.getCrest(4).getCrestResource(), "drawable", getActivity().getPackageName()));
+            ((ImageView) rootView.findViewById(R.id.crest6)).setImageResource(getResources().getIdentifier(archdemon.getCrest(5).getCrestResource(), "drawable", getActivity().getPackageName()));
+        } catch (ArrayIndexOutOfBoundsException ignored) {}
 
         return rootView;
     }
