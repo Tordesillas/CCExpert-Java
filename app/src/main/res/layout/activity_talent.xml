@@ -19,9 +19,8 @@
 
             <ImageView
                 android:id="@+id/talentPicture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
                 android:padding="5dp"/>
 
             <TextView
@@ -31,7 +30,7 @@
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
