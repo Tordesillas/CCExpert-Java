@@ -3,7 +3,7 @@ package fr.tordesillas.ccexpert.controller.activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.GridView;
 import android.widget.TextView;
 

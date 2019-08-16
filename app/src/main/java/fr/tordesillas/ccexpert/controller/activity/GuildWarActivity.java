@@ -2,7 +2,7 @@ package fr.tordesillas.ccexpert.controller.activity;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;

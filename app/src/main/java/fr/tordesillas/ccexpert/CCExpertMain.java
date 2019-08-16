@@ -1,7 +1,7 @@
 package fr.tordesillas.ccexpert;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdListener;

@@ -1,9 +1,9 @@
 package fr.tordesillas.ccexpert.controller.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.Nullable;
+import com.google.android.material.tabs.TabLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.view.ArchdemonAdapter;

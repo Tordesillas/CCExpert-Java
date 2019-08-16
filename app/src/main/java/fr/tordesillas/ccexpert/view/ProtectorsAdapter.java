@@ -1,9 +1,9 @@
 package fr.tordesillas.ccexpert.view;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.fragment.ProtectorsFragment;

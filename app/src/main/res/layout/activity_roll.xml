@@ -121,7 +121,7 @@
                 android:textStyle="bold|italic"
                 android:text="@string/legendary"/>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/legendaryScroll"
                 android:scrollbars="horizontal"
                 android:orientation="horizontal"
@@ -144,7 +144,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold|italic"/>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/eliteScroll"
                 android:scrollbars="horizontal"
                 android:orientation="horizontal"
@@ -165,7 +165,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold|italic"/>
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/ordinaryScroll"
                 android:scrollbars="horizontal"
                 android:orientation="horizontal"

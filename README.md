@@ -12,5 +12,3 @@ CCExpert will help you reach the top ranking of your favorite game, Castle Clash
 - Calculate a hero’s attack speed, dodge and accuracy according to certain criteria  
 - Compare Guild War statistics  
 - Read recommendations for heroes’ talents and artefacts
-
-Contact : gcasagrande2812@gmail.com

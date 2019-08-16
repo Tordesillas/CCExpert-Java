@@ -38,7 +38,7 @@
                 android:textStyle="bold|italic"
                 android:text="@string/petTypeLabel"/>
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -73,7 +73,7 @@
                         android:src="@drawable/little_havoc_small" />
 
                 </LinearLayout>
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
