@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">CCExpert</string>
+
+    <string name="navigation_drawer_open">Abrir el navegador</string>
+    <string name="navigation_drawer_close">Cerrar el navegador</string>
+
+    <string name="dungeon">Calabozo</string>
+    <string name="selectDungeon">Selecciona un calabozo</string>
+    <string name="dungeonChoice">Calabozo seleccionado</string>
+    <string name="twoVideos">Existen dos vídeos associados a su búsqueda, ¿ Qué versión quiere ?</string>
+    <string name="noVideo">No encontramos ningún vídeo.</string>
+    <string name="wait">El vídeo esta cargando…</string>
+    <string name="onlyF2P">Para esta selección, sólo existe un vídeo F2P. Deseas continuar ?</string>
+    <string name="onlyP2W">Para esta selección, sólo existe un vídeo P2W. Deseas continuar ?</string>
+    <string name="dungeonNegativeButton">No</string>
+    <string name="dungeonPositiveButton">Sí</string>
+
+    <string name="analyze">Analizar</string>
+    <string name="validate">Validar</string>
+
+    <string name="home">Inicio</string>
+    <string name="heroes">Héroes</string>
+    <string name="dungeons">Calabozos</string>
+    <string name="simulators">Simuladores</string>
+
+    <string name="legendary">Legendarios</string>
+    <string name="elite">Élite</string>
+    <string name="ordinary">Ordinario</string>
+    <string-array name="heroType">
+        <item>@string/legendary</item>
+        <item>@string/elite</item>
+        <item>@string/ordinary</item>
+    </string-array>
+
+    <string name="accuracy">Precisión</string>
+    <string name="accuracyText1">Precisión inicial del héroe:</string>
+    <string name="accuracyText2">Indica la precisión del héroe</string>
+    <string name="accuracyText3">Precisión añadida por los atributos:</string>
+    <string name="accuracyText4">Indica la precisión adicional</string>
+
+    <string name="aetherock">Atributos</string>
+
+    <string name="spinnerText1">Nivel actual</string>
+    <string name="spinnerText2">Nivel a alcanzar</string>
+
+    <string name="attackSpeed">Velocidad de ataque</string>
+    <string name="attackSpeedText1">Velocidad de ataque inicial del héroe:</string>
+    <string name="attackSpeedText2">Indica la velocidad de ataque del héroe</string>
+    <string name="attackSpeedText3">¿Tiene el héroe el talento Furioso ?</string>
+    <string name="attackSpeedText5">¿Tiene el héroe el segundo talento Furioso ?</string>
+    <string name="attackSpeedText6">¿Tiene el héroe al Príncipe Calabaza luchando a su lado ?</string>
+    <string name="attackSpeedText7">¿Tiene el héroe al Michael luchando a su lado ?</string>
+
+    <string name="crystal">Iluminar</string>
+
+    <string name="dodge">Evasión</string>
+    <string name="dodgeText1">Evasión inicial del héroe:</string>
+    <string name="dodgeText2">Insert the hero\'s dodge</string>
+    <string name="dodgeText3">Evasión añadida por los atributos:</string>
+    <string name="dodgeText4">Indica la evasión adicional</string>
+    <string name="dodgeText5">¿ Tiene el héroe el talento Quemar ?</string>
+
+    <string name="guildWar">Guerra de alianzas</string>
+    <string name="guildWarText1">Poder:</string>
+    <string name="guildWarText2">Indica el poder del jugador</string>
+    <string name="guildWarText3">Puntuación:</string>
+    <string name="guildWarText4">Indica la puntuación del jugador</string>
+    <string name="guildWarText5">Rango de la hermandad:</string>
+
+    <string name="altarHeroes">Altar de Héroes</string>
+    <string name="propNotAvailable">No existen sugerencias para este héroe.</string>
+
+    <string name="shard">Nivel del talento</string>
+    <string name="shardText">Categoría del héroe</string>
+
+    <string name="missingData">Faltan datos.</string>
+    <string name="loseLevel">El héroe no puede perder niveles.</string>
+    <string name="incorrectData">Parece que los datos registrados no son corrector.</string>
+
+    <string name="talentLevel">"Nivel del talento: "</string>
+    <string name="dukeLevel">"Nivel del podel de Príncipe Calabaza: "</string>
+    <string name="dukeProcs">"Activaciones del Príncipe Calabaza: "</string>
+    <string name="mikaLevel">"Nivel del talento de Michael: "</string>
+
+    <string name="simulationCompleted">Simulación completada</string>
+
+    <string name="processorText1">"El héroe tiene un "</string>
+    <string name="processorText2">"% de probabilidad de tocar su objetivo. Por lo que tiene 100% de probabilidad de tocar un héroe con "</string>
+    <string name="processorText3">% de evasión.</string>
+    <string name="processorText4">"Contra un héroe con "</string>
+    <string name="processorText5">"% de evasión, El héroe tocará su objetivo con una probabilidad de "</string>
+    <string name="processorText6">"% de evasión, el héroe tiene un "</string>
+    <string name="processorText7">% de probabilidad de tocar su objetivo.</string>
+    <string name="processorText11">"Nueva velocidad de ataque: "</string>
+    <string name="processorText12">"Entonces, el héroe atacará cada "</string>
+    <string name="processorText13">ms.</string>
+    <string name="processorText18">"El héroe podra anular "</string>
+    <string name="processorText19">% de daño del ataque de sus adversarios.</string>
+    <string name="processorText20">"Entonces, anulará aprocimadamente "</string>
+    <string name="processorText21">" golpe(s) de 10."</string>
+    <string name="processorText25">"El jugador ataca en promedio oponentes con "</string>
+    <string name="processorText26">" de poder."</string>
+    <string name="processorText27">"Con esta puntuación, recibirá "</string>
+    <string name="processorText28">" puntos de gloria."</string>
+
+    <string name="heroText1">GdA - Ataque</string>
+    <string name="heroText2">GdA - Defensa</string>
+    <string name="heroText3">Modo calabozo</string>
+    <string name="heroText4">Encantamientos</string>
+
+    <string name="destiny">Destino</string>
+    <string name="destinyText">Recursos para gastar</string>
+    <string name="zero">0</string>
+    <string name="error">Un error ha sucedido.</string>
+
+    <string name="archdemons">Archidemonios</string>
+    <string name="archdemon">Archidemonio</string>
+
+    <string name="protectors">Guardianes</string>
+    <string name="prophet">Oráculo</string>
+    <string name="saint">Santa</string>
+    <string name="brawler">Renegado</string>
+    <string name="protectorSpinnerText">Nivel actual del guardián</string>
+    <string name="protectorText">Bonificación ganada</string>
+
+    <string name="talents">Talentos</string>
+    <string name="enchantments">Encantamientos</string>
+    <string name="encyclopedia">Enciclopedia</string>
+    <string name="level">Nivel</string>
+    <string name="description">Descripción</string>
+    <string name="skinTitle">Nivel del aspecto</string>
+    <string name="roll">Simulador de roleo</string>
+    <string name="recommendations">Recommendaciones</string>
+
+    <string name="petLevel">Nivel de mascota</string>
+    <string name="petTypeLabel">Mascota rara</string>
+    <string name="petLoseLevel">La mascota no puede perder niveles.</string>
+
+    <string name="breakthroughLevels">Nivel de ascensión</string>
+</resources>

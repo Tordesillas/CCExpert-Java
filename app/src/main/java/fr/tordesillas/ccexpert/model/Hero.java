@@ -9,6 +9,7 @@ public class Hero {
     private String enName;
     private String deName;
     private String ruName;
+    private String esName;
     private String talentGwAttack;
     private String crestGwAttack;
     private String talentGwDefense;
@@ -18,12 +19,13 @@ public class Hero {
     private String pet;
     private List<String> enchantments;
 
-    public Hero(String frName, String enName, String deName, String ruName, String talentGwAttack, String crestGwAttack, String talentGwDefense,
-                String crestGwDefense, String talentDungeon, String crestDungeon, String pet, List<String> enchantments) {
+    public Hero(String frName, String enName, String deName, String ruName, String esName, String talentGwAttack, String crestGwAttack,
+                String talentGwDefense, String crestGwDefense, String talentDungeon, String crestDungeon, String pet, List<String> enchantments) {
         this.frName = frName;
         this.enName = enName;
         this.deName = deName;
         this.ruName = ruName;
+        this.esName = esName;
         this.talentGwAttack = talentGwAttack;
         this.crestGwAttack = crestGwAttack;
         this.talentGwDefense = talentGwDefense;
@@ -42,6 +44,8 @@ public class Hero {
                 return deName;
             case "rus":
                 return ruName;
+            case "spa":
+                return esName;
             default:
                 return enName;
         }
@@ -57,6 +61,14 @@ public class Hero {
 
     public String getGermanName() {
         return deName;
+    }
+
+    public String getRussianName() {
+        return ruName;
+    }
+
+    public String getSpanishName() {
+        return esName;
     }
 
     public String getPicture() {

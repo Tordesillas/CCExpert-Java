@@ -10,15 +10,17 @@ public class HeroRoll implements Parcelable {
     private String enName;
     private String deName;
     private String ruName;
+    private String esName;
     private int proba;
     private int type;
     private int occurrences;
 
-    public HeroRoll(String frName, String enName, String deName, String ruName, int proba, int type) {
+    public HeroRoll(String frName, String enName, String deName, String ruName, String esName, int proba, int type) {
         this.frName = frName;
         this.enName = enName;
         this.deName = deName;
         this.ruName = ruName;
+        this.esName = esName;
         this.proba = proba;
         this.type = type;
         occurrences = 0;
@@ -32,6 +34,8 @@ public class HeroRoll implements Parcelable {
                 return deName;
             case "rus":
                 return ruName;
+            case "spa":
+                return esName;
             default:
                 return enName;
         }

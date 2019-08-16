@@ -124,6 +124,28 @@ public class Sets {
                     heroesSorted.add(geHeroes.get(name));
                 }
                 break;
+            case "rus":
+                Map<String, Hero> ruHeroes = new HashMap<>();
+                for (Hero hero : heroesNames.values()) {
+                    nameSorted.add(hero.getRussianName());
+                    ruHeroes.put(hero.getRussianName(), hero);
+                }
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    heroesSorted.add(ruHeroes.get(name));
+                }
+                break;
+            case "spa":
+                Map<String, Hero> esHeroes = new HashMap<>();
+                for (Hero hero : heroesNames.values()) {
+                    nameSorted.add(hero.getSpanishName());
+                    esHeroes.put(hero.getSpanishName(), hero);
+                }
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    heroesSorted.add(esHeroes.get(name));
+                }
+                break;
             default:
                 Map<String, Hero> enHeroes = new HashMap<>();
                 for (Hero hero : heroesNames.values()) {
