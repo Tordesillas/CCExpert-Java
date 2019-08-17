@@ -105,57 +105,22 @@ public class Sets {
         List<String> nameSorted = new ArrayList<>();
         List<Hero> heroesSorted = new ArrayList<>();
 
-        switch (Locale.getDefault().getISO3Language()) {
-            case "fra":
-                nameSorted = new ArrayList<>(heroesNames.keySet());
-                Collections.sort(nameSorted);
-                for (String name : nameSorted) {
-                    heroesSorted.add(heroesNames.get(name));
-                }
-                break;
-            case "deu":
-                Map<String, Hero> geHeroes = new HashMap<>();
-                for (Hero hero : heroesNames.values()) {
-                    nameSorted.add(hero.getGermanName());
-                    geHeroes.put(hero.getGermanName(), hero);
-                }
-                Collections.sort(nameSorted);
-                for (String name : nameSorted) {
-                    heroesSorted.add(geHeroes.get(name));
-                }
-                break;
-            case "rus":
-                Map<String, Hero> ruHeroes = new HashMap<>();
-                for (Hero hero : heroesNames.values()) {
-                    nameSorted.add(hero.getRussianName());
-                    ruHeroes.put(hero.getRussianName(), hero);
-                }
-                Collections.sort(nameSorted);
-                for (String name : nameSorted) {
-                    heroesSorted.add(ruHeroes.get(name));
-                }
-                break;
-            case "spa":
-                Map<String, Hero> esHeroes = new HashMap<>();
-                for (Hero hero : heroesNames.values()) {
-                    nameSorted.add(hero.getSpanishName());
-                    esHeroes.put(hero.getSpanishName(), hero);
-                }
-                Collections.sort(nameSorted);
-                for (String name : nameSorted) {
-                    heroesSorted.add(esHeroes.get(name));
-                }
-                break;
-            default:
-                Map<String, Hero> enHeroes = new HashMap<>();
-                for (Hero hero : heroesNames.values()) {
-                    nameSorted.add(hero.getEnglishName());
-                    enHeroes.put(hero.getEnglishName(), hero);
-                }
-                Collections.sort(nameSorted);
-                for (String name : nameSorted) {
-                    heroesSorted.add(enHeroes.get(name));
-                }
+        if ("fra".equals(Locale.getDefault().getISO3Language())) {
+            nameSorted = new ArrayList<>(heroesNames.keySet());
+            Collections.sort(nameSorted);
+            for (String name : nameSorted) {
+                heroesSorted.add(heroesNames.get(name));
+            }
+        } else {
+            Map<String, Hero> heroes = new HashMap<>();
+            for (Hero hero : heroesNames.values()) {
+                nameSorted.add(hero.getName());
+                heroes.put(hero.getName(), hero);
+            }
+            Collections.sort(nameSorted);
+            for (String name : nameSorted) {
+                heroesSorted.add(heroes.get(name));
+            }
         }
 
         return heroesSorted;
@@ -223,6 +188,33 @@ public class Sets {
             return talents.get(name);
         }
         return talents.get(talents.keySet().iterator().next());
+    }
+
+    public List<Pet> getPets() {
+        List<String> namesSorted;
+        List<Pet> sortedPets = new LinkedList<>();
+
+        if ("fra".equals(Locale.getDefault().getISO3Language())) {
+            namesSorted = new LinkedList<>(pets.keySet());
+
+            Collections.sort(namesSorted);
+            for (String name : namesSorted) {
+                sortedPets.add(pets.get(name));
+            }
+        } else {
+            namesSorted = new LinkedList<>();
+            Map<String, Pet> petMap = new HashMap<>();
+            for (Pet pet : pets.values()) {
+                namesSorted.add(pet.getName());
+                petMap.put(pet.getName(), pet);
+            }
+            Collections.sort(namesSorted);
+            for (String name : namesSorted) {
+                sortedPets.add(petMap.get(name));
+            }
+        }
+
+        return sortedPets;
     }
 
     /* Roll */

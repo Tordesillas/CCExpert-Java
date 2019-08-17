@@ -110,6 +110,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_breakthrough_levels:
                 startActivity(new Intent(this, BreakthroughLevelsActivity.class));
                 return true;
+            case R.id.nav_pets:
+                startActivity(new Intent(this, PetsActivity.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

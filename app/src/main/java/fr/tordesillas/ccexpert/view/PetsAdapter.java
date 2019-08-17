@@ -11,11 +11,11 @@ import android.widget.TextView;
 import java.util.List;
 
 import fr.tordesillas.ccexpert.R;
-import fr.tordesillas.ccexpert.model.Talent;
+import fr.tordesillas.ccexpert.model.Pet;
 
-public class TalentsAdapter extends ArrayAdapter<Talent> {
-    public TalentsAdapter(Context context, List<Talent> talents) {
-        super(context, 0, talents);
+public class PetsAdapter extends ArrayAdapter<Pet> {
+    public PetsAdapter(Context context, List<Pet> pets) {
+        super(context, 0, pets);
     }
 
     @Override
@@ -25,11 +25,11 @@ public class TalentsAdapter extends ArrayAdapter<Talent> {
             convertView = inflater.inflate(R.layout.talent_littlecard, null);
         }
 
-        Talent talent = getItem(position);
+        Pet pet = getItem(position);
 
-        assert talent != null;
-        ((ImageView) convertView.findViewById(R.id.imageTalent)).setImageResource(getContext().getResources().getIdentifier(talent.getTalentResource(), "drawable", getContext().getPackageName()));
-        ((TextView) convertView.findViewById(R.id.talentName)).setText(talent.getName());
+        assert pet != null;
+        ((ImageView) convertView.findViewById(R.id.imageTalent)).setImageResource(getContext().getResources().getIdentifier(pet.getResource(), "drawable", getContext().getPackageName()));
+        ((TextView) convertView.findViewById(R.id.talentName)).setText(pet.getName());
 
         return convertView;
     }

@@ -137,4 +137,7 @@
     <string name="petLoseLevel">Питомец не может терять уровни</string>
 
     <string name="breakthroughLevels">Уровень прорыва</string>
+
+    <string name="pets">Питомцы</string>
+    <string name="recommendedModes">Рекомендуемые режимы</string>
 </resources>

@@ -137,4 +137,7 @@
     <string name="petLoseLevel">The pet cannot lose levels.</string>
 
     <string name="breakthroughLevels">Breakthrough levels</string>
+
+    <string name="pets">Pets</string>
+    <string name="recommendedModes">Recommended modes</string>
 </resources>

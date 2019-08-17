@@ -137,4 +137,7 @@
     <string name="petLoseLevel">La mascota no puede perder niveles.</string>
 
     <string name="breakthroughLevels">Nivel de ascensión</string>
+
+    <string name="pets">Mascotas</string>
+    <string name="recommendedModes">Modos recomendados</string>
 </resources>

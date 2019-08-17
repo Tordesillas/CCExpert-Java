@@ -14,6 +14,7 @@ import java.util.List;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.activity.EnchantmentsActivity;
+import fr.tordesillas.ccexpert.controller.activity.PetsActivity;
 import fr.tordesillas.ccexpert.controller.activity.TalentsActivity;
 import fr.tordesillas.ccexpert.view.CardAdapter;
 
@@ -34,7 +35,8 @@ public class EncyclopediaFragment extends Fragment {
     public void onActivityCreated(Bundle bundle) {
         final List<String> titles = Arrays.asList(
                 getResources().getString(R.string.talents),
-                getResources().getString(R.string.enchantments)
+                getResources().getString(R.string.enchantments),
+                getResources().getString(R.string.pets)
         );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
@@ -48,6 +50,9 @@ public class EncyclopediaFragment extends Fragment {
                     break;
                 case 1:
                     startActivity(new Intent(getActivity(), EnchantmentsActivity.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(getActivity(), PetsActivity.class));
                     break;
             }
         });

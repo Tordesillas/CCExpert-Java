@@ -52,6 +52,8 @@
         <activity android:name=".controller.activity.RollActivity" />
         <activity android:name=".controller.activity.PetLevelActivity" />
         <activity android:name=".controller.activity.BreakthroughLevelsActivity" />
+        <activity android:name=".controller.activity.PetsActivity" />
+        <activity android:name=".controller.activity.PetActivity" />
     </application>
 
 </manifest>

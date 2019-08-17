@@ -27,6 +27,9 @@
             <item
                 android:id="@+id/nav_enchantments"
                 android:title="@string/enchantments" />
+            <item
+                android:id="@+id/nav_pets"
+                android:title="@string/pets" />
         </menu>
     </item>
 

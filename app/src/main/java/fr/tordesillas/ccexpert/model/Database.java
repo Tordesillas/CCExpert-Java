@@ -152,7 +152,11 @@ public class Database extends SQLiteOpenHelper {
         c.moveToFirst();
         Pet p;
         while (!c.isAfterLast()) {
-            p = new Pet(c.getString(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4));
+            p = new Pet(c.getString(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4),
+                    new String[]{c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12), c.getString(13), c.getString(14)},
+                    new String[]{c.getString(15), c.getString(16), c.getString(17), c.getString(18), c.getString(19), c.getString(20), c.getString(21), c.getString(22), c.getString(23), c.getString(24)},
+                    c.getString(25)
+            );
             sets.addPet(p);
             c.moveToNext();
         }

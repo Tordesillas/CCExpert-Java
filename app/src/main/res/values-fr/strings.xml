@@ -137,4 +137,7 @@
     <string name="petLoseLevel">Le familier ne peut pas perdre de niveau.</string>
 
     <string name="breakthroughLevels">Super évolution</string>
+
+    <string name="pets">Familiers</string>
+    <string name="recommendedModes">Modes recommandés</string>
 </resources>
