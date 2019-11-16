@@ -39,8 +39,8 @@ public class SkinsActivity extends BaseActivity {
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
         aimLvlPicker.setMinValue(1);
-        currentLvlPicker.setMaxValue(9);
-        aimLvlPicker.setMaxValue(10);
+        currentLvlPicker.setMaxValue(19);
+        aimLvlPicker.setMaxValue(20);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 

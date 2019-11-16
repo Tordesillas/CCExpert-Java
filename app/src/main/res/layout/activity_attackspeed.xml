@@ -87,7 +87,7 @@
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
-                    android:max="8" />
+                    android:max="10" />
             </LinearLayout>
         </LinearLayout>
 
@@ -136,7 +136,7 @@
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
-                    android:max="5" />
+                    android:max="7" />
             </LinearLayout>
         </LinearLayout>
 

@@ -56,6 +56,6 @@ public class Pet {
     }
 
     public String getResource() {
-        return enName.toLowerCase().trim().replace(' ', '_').replace("-", "_");
+        return enName.toLowerCase().trim().replaceAll("[ \\-]", "_").replaceAll("[()]", "");
     }
 }

@@ -9,7 +9,7 @@ import fr.tordesillas.ccexpert.R;
 
 public class DodgeProcessor {
     private Resources res;
-    private static final double AMOUNTS_TALENT[] = {0, 0.05, 0.06, 0.07, 0.08, 0.09, 0.15, 0.35, 0.5};
+    private static final double[] AMOUNTS_TALENT = {0, 0.05, 0.06, 0.07, 0.08, 0.09, 0.15, 0.35, 0.5, 0.65, 0.8};
 
     public DodgeProcessor(Resources res) {
         this.res = res;

@@ -40,11 +40,11 @@ public class AttackSpeedActivity extends BaseActivity {
             }
         });
         final TextView talentLvlText = findViewById(R.id.talentLvlText);
-        talentLvlText.setText(getResources().getString(R.string.talentLevel) + "0/8");
+        talentLvlText.setText(String.format("%s 0/10", getResources().getString(R.string.talentLevel)));
         talentBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                talentLvlText.setText(getResources().getString(R.string.talentLevel) + progress + "/8");
+                talentLvlText.setText(String.format("%s %s/10", getResources().getString(R.string.talentLevel), progress));
             }
 
             @Override
@@ -67,12 +67,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView furyText = findViewById(R.id.furyText);
-        furyText.setText(getResources().getString(R.string.talentLevel) + "0/5");
+        furyText.setText(String.format("%s 0/7", getResources().getString(R.string.talentLevel)));
         final SeekBar furyBar = findViewById(R.id.furyProgressBar);
         furyBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                furyText.setText(getResources().getString(R.string.talentLevel) + progress + "/5");
+                furyText.setText(String.format("%s %s/7", getResources().getString(R.string.talentLevel), progress));
             }
 
             @Override
@@ -95,12 +95,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView dukeText = findViewById(R.id.dukeText);
-        dukeText.setText(getResources().getString(R.string.dukeLevel) + "0/10");
+        dukeText.setText(String.format("%s 0/10", getResources().getString(R.string.dukeLevel)));
         final SeekBar dukeProgressBar = findViewById(R.id.dukeProgressBar);
         dukeProgressBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dukeText.setText(getResources().getString(R.string.dukeLevel) + progress + "/10");
+                dukeText.setText(String.format("%s %s/10", getResources().getString(R.string.dukeLevel), progress));
             }
 
             @Override
@@ -111,12 +111,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView dukeProcText = findViewById(R.id.dukeProcText);
-        dukeProcText.setText(getResources().getString(R.string.dukeProcs) + "0/4");
+        dukeProcText.setText(String.format("%s 0/4", getResources().getString(R.string.dukeProcs)));
         final SeekBar dukeProcBar = findViewById(R.id.dukeProcBar);
         dukeProcBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                dukeProcText.setText(getResources().getString(R.string.dukeProcs) + progress + "/4");
+                dukeProcText.setText(String.format("%s %s/4", getResources().getString(R.string.dukeProcs), progress));
             }
 
             @Override
@@ -139,12 +139,12 @@ public class AttackSpeedActivity extends BaseActivity {
         });
 
         final TextView mikaText = findViewById(R.id.mikaLvlText);
-        mikaText.setText(getResources().getString(R.string.mikaLevel) + "0/10");
+        mikaText.setText(String.format("%s 0/10", getResources().getString(R.string.mikaLevel)));
         final SeekBar mikaBar = findViewById(R.id.mikaProgressBar);
         mikaBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mikaText.setText(getResources().getString(R.string.mikaLevel) + progress + "/10");
+                mikaText.setText(String.format("%s %s/10", getResources().getString(R.string.mikaLevel), progress));
             }
 
             @Override

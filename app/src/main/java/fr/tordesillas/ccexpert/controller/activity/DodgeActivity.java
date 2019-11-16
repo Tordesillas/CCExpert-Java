@@ -41,11 +41,11 @@ public class DodgeActivity extends BaseActivity {
            }
         });
         final TextView talentLvlText = findViewById(R.id.talentLvlText);
-        talentLvlText.setText(getResources().getString(R.string.talentLevel) + "0/8");
+        talentLvlText.setText(String.format("%s 0/10", getResources().getString(R.string.talentLevel)));
         talentBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                talentLvlText.setText(getResources().getString(R.string.talentLevel) + progress + "/8");
+                talentLvlText.setText(String.format("%s %s/10", getResources().getString(R.string.talentLevel), progress));
             }
 
             @Override
