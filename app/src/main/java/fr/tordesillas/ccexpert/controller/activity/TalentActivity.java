@@ -41,7 +41,7 @@ public class TalentActivity extends BaseActivity {
                 des.setText(talent.getDescription()[0]);
             }
             if (talent.getDescription()[7] == null) {
-                picker.setMaxValue(5);
+                picker.setMaxValue(7);
             } else {
                 picker.setMaxValue(10);
             }

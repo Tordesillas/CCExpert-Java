@@ -4,11 +4,15 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 public class DestinyProcessor {
-    private static final int[] GOLD_BY_LEVEL = {0, 0, 100000, 100000, 0, 300000, 300000, 300000, 300000, 0, 600000, 600000, 600000, 600000, 0, 1200000, 1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    private static final int[] IH_BY_LEVEL = {0, 0, 3000, 3000, 0, 6500, 6500, 6500, 6500, 0, 10500, 10500, 10500, 10500, 0, 15000, 15000, 15000, 15000, 0, 20000, 20000, 20000, 20000, 0, 25500, 25500, 25500, 25500, 0, 31500, 31500, 31500, 31500, 0, 38000, 38000, 38000, 38000, 0, 45000, 45000, 45000, 45000, 0, 52500, 52500, 52500, 52500, 0, 60500, 60500, 60500, 60500, 0, 69000, 69000, 69000, 69000, 0};
-    private static final int[] FAME_BY_LEVEL = {0, 0, 0, 0, 4800, 0, 0, 0, 0, 4800, 0, 0, 0, 0, 5400, 0, 0, 0, 0, 18400, 0, 0, 0, 0, 6000, 0, 0, 0, 0, 6000, 0, 0, 0, 0, 8400, 0, 0, 0, 0, 24000, 0, 0, 0, 0, 9200, 0, 0, 0, 0, 9200, 0, 0, 0, 0, 10600, 0, 0, 0, 0, 24000};
-    private static final int[] HERO_CARDS_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4};
-    private static final int[] BLUE_CRYSTALS_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5970, 5970, 5970, 5970, 0, 27420, 27420, 27420, 27420, 0, 57050, 57050, 57050, 57050, 0, 92250, 92250, 92250, 92250, 0, 125000, 125000, 125000, 125000, 0, 179000, 179000, 179000, 179000, 0, 239000, 239000, 239000, 239000, 0, 304000, 304000, 304000, 304000, 0};
+    private static final int[] GOLD_BY_LEVEL = {0, 0, 100000, 100000, 0, 300000, 300000, 300000, 300000, 0, 600000, 600000, 600000, 600000, 0, 1200000, 1200000, 1200000, 1200000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static final int[] IH_BY_LEVEL = {0, 0, 3000, 3000, 0, 6500, 6500, 6500, 6500, 0, 10500, 10500, 10500, 10500, 0, 15000, 15000, 15000, 15000, 0, 20000, 20000, 20000, 20000, 0, 25500, 25500, 25500, 25500, 0, 31500, 31500, 31500, 31500, 0, 38000, 38000, 38000, 38000, 0, 45000, 45000, 45000, 45000, 0, 52500, 52500, 52500, 52500, 0, 60500, 60500, 60500, 60500, 0, 69000, 69000, 69000, 69000, 0, 78000, 78000, 78000, 78000, 0, 88000, 88000, 88000, 88000, 0, 100000, 100000, 100000, 100000, 0, 115000, 115000, 115000, 115000, 0};
+    private static final int[] BLUE_CRYSTALS_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5970, 5970, 5970, 5970, 0, 27420, 27420, 27420, 27420, 0, 57050, 57050, 57050, 57050, 0, 92250, 92250, 92250, 92250, 0, 125000, 125000, 125000, 125000, 0, 179000, 179000, 179000, 179000, 0, 239000, 239000, 239000, 239000, 0, 304000, 304000, 304000, 304000, 0, 380000, 380000, 380000, 380000, 0, 470000, 470000, 470000, 470000, 0, 570000, 570000, 570000, 570000, 0, 680000, 680000, 680000, 680000, 0};
+    private static final int[] HERO_CARDS_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6};
+    private static final int[] KARMIC1_BY_LEVEL = {0, 0, 0, 0, 16, 0, 0, 0, 0, 16, 0, 0, 0, 0, 18, 0, 0, 0, 0, 24, 0, 0, 0, 0, 20, 0, 0, 0, 0, 20, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static final int[] KARMIC2_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 16, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static final int[] KARMIC3_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4, 0, 0, 0, 0, 15, 0, 0, 0, 0, 6, 0, 0, 0, 0, 6, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0};
+    private static final int[] KARMIC4_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 3, 0, 0, 0, 0, 10};
+    private static final int[] KARMIC5_BY_LEVEL = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6};
 
     public String computeGold(int firstLevel, int secondLevel) {
         return computeEverything(firstLevel, secondLevel, GOLD_BY_LEVEL);
@@ -18,20 +22,32 @@ public class DestinyProcessor {
         return computeEverything(firstLevel, secondLevel, IH_BY_LEVEL);
     }
 
-    public String computeFame(int firstLevel, int secondLevel) {
-        return computeEverything(firstLevel, secondLevel, FAME_BY_LEVEL);
+    public String computeCrystals(int firstLevel, int secondLevel) {
+        return computeEverything(firstLevel, secondLevel, BLUE_CRYSTALS_BY_LEVEL);
     }
 
     public String computeHeroCards(int firstLevel, int secondLevel) {
         return computeEverything(firstLevel, secondLevel, HERO_CARDS_BY_LEVEL);
     }
 
-    public String computeCrystals(int firstLevel, int secondLevel) {
-        return computeEverything(firstLevel, secondLevel, BLUE_CRYSTALS_BY_LEVEL);
+    public String computeKarmic1(int firstLevel, int secondLevel) {
+        return computeEverything(firstLevel, secondLevel, KARMIC1_BY_LEVEL);
+    }
+
+    public String computeKarmic2(int firstLevel, int secondLevel) {
+        return computeEverything(firstLevel, secondLevel, KARMIC2_BY_LEVEL);
+    }
+
+    public String computeKarmic3(int firstLevel, int secondLevel) {
+        return computeEverything(firstLevel, secondLevel, KARMIC3_BY_LEVEL);
     }
 
     public String computeKarmic4(int firstLevel, int secondLevel) {
-        return (firstLevel != 60 && secondLevel == 60) ? "6" : "0";
+        return computeEverything(firstLevel, secondLevel, KARMIC4_BY_LEVEL);
+    }
+
+    public String computeKarmic5(int firstLevel, int secondLevel) {
+        return computeEverything(firstLevel, secondLevel, KARMIC5_BY_LEVEL);
     }
 
     private String computeEverything(int firstLevel, int secondLevel, int[] array) {

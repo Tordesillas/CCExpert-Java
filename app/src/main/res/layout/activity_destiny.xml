@@ -141,46 +141,10 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/fame"/>
+                    android:src="@drawable/gold"/>
 
                 <TextView
-                    android:id="@+id/fameAmount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/zero" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="@dimen/destiny_pic_size"
-                    android:layout_height="@dimen/destiny_pic_size"
-                    android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/legendary_hero_card"/>
-
-                <TextView
-                    android:id="@+id/heroCardsAmount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/zero" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="@dimen/destiny_pic_size"
-                    android:layout_height="@dimen/destiny_pic_size"
-                    android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/crystals"/>
-
-                <TextView
-                    android:id="@+id/crystalsAmount"
+                    android:id="@+id/goldAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -213,10 +177,82 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/gold"/>
+                    android:src="@drawable/crystals"/>
 
                 <TextView
-                    android:id="@+id/goldAmount"
+                    android:id="@+id/crystalsAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/legendary_hero_card"/>
+
+                <TextView
+                    android:id="@+id/heroCardsAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/karmic_rock1"/>
+
+                <TextView
+                    android:id="@+id/karmic1Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/karmic_rock2"/>
+
+                <TextView
+                    android:id="@+id/karmic2Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/karmic_rock3"/>
+
+                <TextView
+                    android:id="@+id/karmic3Amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -235,6 +271,24 @@
 
                 <TextView
                     android:id="@+id/karmic4Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/karmic_rock5"/>
+
+                <TextView
+                    android:id="@+id/karmic5Amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
