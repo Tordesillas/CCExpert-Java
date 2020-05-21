@@ -40,8 +40,8 @@ public class DestinyActivity extends BaseActivity {
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);
         aimLvlPicker.setMinValue(2);
-        currentLvlPicker.setMaxValue(79);
-        aimLvlPicker.setMaxValue(80);
+        currentLvlPicker.setMaxValue(99);
+        aimLvlPicker.setMaxValue(100);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
