@@ -14,12 +14,15 @@ import java.util.List;
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.model.Hero;
 import fr.tordesillas.ccexpert.model.Sets;
+import fr.tordesillas.ccexpert.service.AdService;
 import fr.tordesillas.ccexpert.view.HeroesAdapter;
 
 public class HeroesActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AdService.getInstance().showAd();
+
         setContentView(R.layout.activity_heroes);
 
         ((TextView) findViewById(R.id.heroesTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
