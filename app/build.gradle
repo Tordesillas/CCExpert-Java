@@ -7,8 +7,8 @@ android {
         applicationId "fr.tordesillas.ccexpert"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 16
-        versionName "1.6.1"
+        versionCode 17
+        versionName "1.6.2"
     }
     buildTypes {
         release {
