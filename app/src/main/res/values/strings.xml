@@ -26,6 +26,7 @@
     <string name="legendary">Legendary</string>
     <string name="elite">Elite</string>
     <string name="ordinary">Ordinary</string>
+    <string name="epic">Epic</string>
     <string-array name="heroType">
         <item>@string/legendary</item>
         <item>@string/elite</item>

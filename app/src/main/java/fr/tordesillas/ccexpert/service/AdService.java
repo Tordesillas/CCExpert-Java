@@ -28,8 +28,10 @@ public class AdService {
     }
 
     public void showAd() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        }
+        try {
+            if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            }
+        } catch (NullPointerException ignored) {}
     }
 }

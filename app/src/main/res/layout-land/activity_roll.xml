@@ -194,6 +194,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/epic"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/epicScroll"
+                android:scrollbars="horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold|italic"

@@ -34,9 +34,11 @@ public class RollActivity extends BaseActivity {
     private ImageView rollBg2;
     private ImageView heroPic3;
     private ImageView rollBg3;
+    private ArrayList<HeroRoll> epicHeroes;
     private ArrayList<HeroRoll> legendaryHeroes;
     private ArrayList<HeroRoll> eliteHeroes;
     private ArrayList<HeroRoll> ordinaryHeroes;
+    private RollAdapter epicRA;
     private RollAdapter legendaryRA;
     private RollAdapter eliteRA;
     private RollAdapter ordinaryRA;
@@ -94,6 +96,7 @@ public class RollActivity extends BaseActivity {
             ordinaryHeroes = savedInstanceState.getParcelableArrayList("ordinary");
             eliteHeroes = savedInstanceState.getParcelableArrayList("elite");
             legendaryHeroes = savedInstanceState.getParcelableArrayList("legendary");
+            epicHeroes = savedInstanceState.getParcelableArrayList("epic");
             gemsVal = savedInstanceState.getInt("gems");
             gemsAmount.setText(NumberFormat.getNumberInstance(Locale.FRANCE).format(gemsVal));
         } else {
@@ -101,16 +104,19 @@ public class RollActivity extends BaseActivity {
             ordinaryHeroes = new ArrayList<>();
             eliteHeroes = new ArrayList<>();
             legendaryHeroes = new ArrayList<>();
+            epicHeroes = new ArrayList<>();
             gemsVal = 0;
         }
 
         RecyclerView ordinaryRecyclerView = findViewById(R.id.ordinaryScroll);
         RecyclerView eliteRecyclerView = findViewById(R.id.eliteScroll);
         RecyclerView legendaryRecyclerView = findViewById(R.id.legendaryScroll);
+        RecyclerView epicRecyclerView = findViewById(R.id.epicScroll);
 
         ordinaryRA = new RollAdapter(ordinaryHeroes, getApplicationContext());
         eliteRA = new RollAdapter(eliteHeroes, getApplicationContext());
         legendaryRA = new RollAdapter(legendaryHeroes, getApplicationContext());
+        epicRA = new RollAdapter(epicHeroes, getApplicationContext());
 
         ordinaryRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         ordinaryRecyclerView.setAdapter(ordinaryRA);
@@ -118,6 +124,8 @@ public class RollActivity extends BaseActivity {
         eliteRecyclerView.setAdapter(eliteRA);
         legendaryRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         legendaryRecyclerView.setAdapter(legendaryRA);
+        epicRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        epicRecyclerView.setAdapter(epicRA);
     }
 
     private void roll150(ImageView heroImg, ImageView bgImg, TextView heroName) {
@@ -130,6 +138,12 @@ public class RollActivity extends BaseActivity {
         String pic = hero.getPicture();
         int index;
         switch (hero.getType()) {
+            case 4:
+                pic += "2";
+                bgImg.setImageResource(R.drawable.roll_bg_purple);
+                index = addHeroInList(hero, epicHeroes);
+                epicRA.notifyItemChanged(index);
+                break;
             case 3:
                 pic += "2";
                 bgImg.setImageResource(R.drawable.roll_bg_purple);
@@ -176,6 +190,7 @@ public class RollActivity extends BaseActivity {
         outState.putParcelableArrayList("ordinary", ordinaryHeroes);
         outState.putParcelableArrayList("elite", eliteHeroes);
         outState.putParcelableArrayList("legendary", legendaryHeroes);
+        outState.putParcelableArrayList("epic", epicHeroes);
         outState.putInt("gems", gemsVal);
     }
 }
