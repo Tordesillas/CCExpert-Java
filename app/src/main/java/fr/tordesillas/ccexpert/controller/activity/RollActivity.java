@@ -140,7 +140,7 @@ public class RollActivity extends BaseActivity {
         switch (hero.getType()) {
             case 4:
                 pic += "2";
-                bgImg.setImageResource(R.drawable.roll_bg_purple);
+                bgImg.setImageResource(R.drawable.roll_bg_orange);
                 index = addHeroInList(hero, epicHeroes);
                 epicRA.notifyItemChanged(index);
                 break;
