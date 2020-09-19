@@ -58,7 +58,6 @@ public class HeroActivity extends BaseActivity {
             ((ImageView) findViewById(R.id.pet)).setImageResource(resPet);
         } catch (NullPointerException ignored) {}
 
-
         try {
             int resTalent1 = getResources().getIdentifier(hero.getTalentGwAttack(), "drawable", getPackageName());
             int resTalent2 = getResources().getIdentifier(hero.getTalentGwDefense(), "drawable", getPackageName());

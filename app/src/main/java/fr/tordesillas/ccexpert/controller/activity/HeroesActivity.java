@@ -27,7 +27,7 @@ public class HeroesActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.heroesTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        final boolean[] sortedByName = {true};
+        final boolean[] sortedByName = {false};
         final List[] heroes = new List[]{
                 Sets.getInstance().getHeroSorted(true),
                 Sets.getInstance().getHeroSorted(false)
@@ -36,7 +36,7 @@ public class HeroesActivity extends BaseActivity {
         final HeroesAdapter adapterByAlphabet = new HeroesAdapter(this, heroes[0]);
         final HeroesAdapter adapterByOrder = new HeroesAdapter(this, heroes[1]);
         final GridView gridView = findViewById(R.id.heroesGrid);
-        gridView.setAdapter(adapterByAlphabet);
+        gridView.setAdapter(adapterByOrder);
 
         final FloatingActionButton sortButton = findViewById(R.id.sortButton);
         sortButton.setOnClickListener(v -> {
