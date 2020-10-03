@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/petTitle"
+            android:id="@+id/relicTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -21,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="@string/petLevel"/>
+            android:text="@string/relic"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +35,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:textStyle="bold|italic"
-                android:text="@string/petTypeLabel"/>
+                android:text="@string/shardText"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -45,7 +44,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:orientation="horizontal"
@@ -55,13 +54,13 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/classic_pet"
+                        android:id="@+id/legendaryHero"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/drako_small" />
+                        android:src="@drawable/legendary_hero_mini_card" />
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switchPetType"
+                        android:id="@+id/switchHeroType"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -69,23 +68,21 @@
                         android:layout_marginEnd="15dp" />
 
                     <ImageView
-                        android:id="@+id/rare_pet"
+                        android:id="@+id/epicHero"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/little_havoc_small" />
+                        android:src="@drawable/epic_hero_mini_card" />
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:baselineAligned="false">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -97,7 +94,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/currentlvlLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
@@ -139,8 +135,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/aimLvlLabel"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -171,36 +166,25 @@
                         android:layout_weight="1"/>
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/destinyText"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/rectangle_corners"
             android:orientation="vertical"
             android:padding="10dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="@dimen/destiny_pic_size"
-                    android:layout_height="@dimen/destiny_pic_size"
-                    android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/exp"/>
-
-                <TextView
-                    android:id="@+id/expAmount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/zero" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -222,17 +206,16 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/level"/>
+                    android:src="@drawable/legendary_hero_card"/>
 
                 <TextView
-                    android:id="@+id/levelNeeded"
+                    android:id="@+id/heroCardsAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -247,64 +230,10 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/master_slime"/>
+                    android:src="@drawable/vestige"/>
 
                 <TextView
-                    android:id="@+id/s4Amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/zero" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="@dimen/destiny_pic_size"
-                    android:layout_height="@dimen/destiny_pic_size"
-                    android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/gelatinous_champion2"/>
-
-                <TextView
-                    android:id="@+id/s3Amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/zero" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="@dimen/destiny_pic_size"
-                    android:layout_height="@dimen/destiny_pic_size"
-                    android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/crystal_ooze"/>
-
-                <TextView
-                    android:id="@+id/s2Amount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/zero" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="@dimen/destiny_pic_size"
-                    android:layout_height="@dimen/destiny_pic_size"
-                    android:layout_marginEnd="@dimen/destiny_pic_size"
-                    android:src="@drawable/slime"/>
-
-                <TextView
-                    android:id="@+id/s1Amount"
+                    android:id="@+id/vestigeAmount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -312,5 +241,60 @@
             </LinearLayout>
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/protectorText"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_corners"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/ico_attack"/>
+
+                <TextView
+                    android:id="@+id/attackAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/ico_hp"/>
+
+                <TextView
+                    android:id="@+id/hpAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

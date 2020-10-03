@@ -6,9 +6,10 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.PetProcessor;
@@ -16,7 +17,7 @@ import fr.tordesillas.ccexpert.controller.processor.PetProcessor;
 public class PetLevelActivity extends BaseActivity {
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
-    private Switch isRare;
+    private SwitchMaterial isRare;
     private ImageView classicPet;
     private ImageView rarePet;
     private TextView shardAmount;

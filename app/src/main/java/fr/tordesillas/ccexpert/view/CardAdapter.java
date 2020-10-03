@@ -51,7 +51,7 @@ public class CardAdapter extends ArrayAdapter<String> {
         } else if (title.equals(getContext().getResources().getString(R.string.crystal))) {
             return R.drawable.crystal;
         } else if (title.equals(getContext().getResources().getString(R.string.aetherock))) {
-            return R.drawable.aetherock;
+            return R.drawable.equipment;
         } else if (title.equals(getContext().getResources().getString(R.string.dodge))) {
             return R.drawable.lightning_rock;
         } else if (title.equals(getContext().getResources().getString(R.string.accuracy))) {
@@ -82,6 +82,8 @@ public class CardAdapter extends ArrayAdapter<String> {
             return R.drawable.breakthrough_levels;
         } else if (title.equals(getContext().getResources().getString(R.string.pets))) {
             return R.drawable.pets;
+        } else if (title.equals(getContext().getResources().getString(R.string.relic))) {
+            return R.drawable.relic;
         } else {
             return R.drawable.ccexpert_logo;
         }

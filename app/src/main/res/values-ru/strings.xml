@@ -142,4 +142,6 @@
 
     <string name="pets">Питомцы</string>
     <string name="recommendedModes">Рекомендуемые режимы</string>
+
+    <string name="relic">Реликвии</string>
 </resources>

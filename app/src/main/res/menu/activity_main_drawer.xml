@@ -74,6 +74,9 @@
             <item
                 android:id="@+id/nav_breakthrough_levels"
                 android:title="@string/breakthroughLevels"/>
+            <item
+                android:id="@+id/nav_relic"
+                android:title="@string/relic"/>
         </menu>
     </item>
 </menu>

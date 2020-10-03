@@ -23,6 +23,7 @@ import fr.tordesillas.ccexpert.controller.activity.DodgeActivity;
 import fr.tordesillas.ccexpert.controller.activity.GuildWarActivity;
 import fr.tordesillas.ccexpert.controller.activity.PetLevelActivity;
 import fr.tordesillas.ccexpert.controller.activity.ProtectorsActivity;
+import fr.tordesillas.ccexpert.controller.activity.RelicActivity;
 import fr.tordesillas.ccexpert.controller.activity.RollActivity;
 import fr.tordesillas.ccexpert.controller.activity.ShardActivity;
 import fr.tordesillas.ccexpert.controller.activity.SkinsActivity;
@@ -56,7 +57,8 @@ public class SimulatorsFragment extends Fragment {
                 getResources().getString(R.string.skinTitle),
                 getResources().getString(R.string.roll),
                 getResources().getString(R.string.petLevel),
-                getResources().getString(R.string.breakthroughLevels)
+                getResources().getString(R.string.breakthroughLevels),
+                getResources().getString(R.string.relic)
         );
 
         ListAdapter la = new CardAdapter(this.getContext(), titles);
@@ -103,6 +105,9 @@ public class SimulatorsFragment extends Fragment {
                     break;
                 case 12:
                     startActivity(new Intent(getActivity(), BreakthroughLevelsActivity.class));
+                    break;
+                case 13:
+                    startActivity(new Intent(getActivity(), RelicActivity.class));
                     break;
             }
         });

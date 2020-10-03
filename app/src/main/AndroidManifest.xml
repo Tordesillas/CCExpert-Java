@@ -55,6 +55,7 @@
         <activity android:name=".controller.activity.BreakthroughLevelsActivity" />
         <activity android:name=".controller.activity.PetsActivity" />
         <activity android:name=".controller.activity.PetActivity" />
+        <activity android:name=".controller.activity.RelicActivity" />
     </application>
 
 </manifest>

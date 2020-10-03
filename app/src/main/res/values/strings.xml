@@ -142,4 +142,6 @@
 
     <string name="pets">Pets</string>
     <string name="recommendedModes">Recommended modes</string>
+
+    <string name="relic">Relic</string>
 </resources>

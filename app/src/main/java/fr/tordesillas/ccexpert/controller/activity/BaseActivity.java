@@ -113,6 +113,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_pets:
                 startActivity(new Intent(this, PetsActivity.class));
                 return true;
+            case R.id.nav_relic:
+                startActivity(new Intent(this, RelicActivity.class));
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

@@ -142,4 +142,6 @@
 
     <string name="pets">Mascotas</string>
     <string name="recommendedModes">Modos recomendados</string>
+
+    <string name="relic">Reliquia</string>
 </resources>
