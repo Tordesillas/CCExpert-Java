@@ -34,7 +34,7 @@ public class ShardActivity extends BaseActivity {
 
         ((TextView) findViewById(R.id.shardTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        sp = new ShardProcessor();
+        sp = new ShardProcessor(getBaseContext());
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);

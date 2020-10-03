@@ -28,6 +28,7 @@
     <string name="ordinary">Обычный</string>
     <string name="epic">Эпический</string>
     <string-array name="heroType">
+        <item>@string/epic</item>
         <item>@string/legendary</item>
         <item>@string/elite</item>
         <item>@string/ordinary</item>

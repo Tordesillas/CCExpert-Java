@@ -1,14 +1,19 @@
 package fr.tordesillas.ccexpert.controller.processor;
 
+import android.content.Context;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import fr.tordesillas.ccexpert.R;
+
 public class ShardProcessor {
+    private Context context;
     private NumberFormat f;
     private static final int[] EXP_BY_LEVEL = {0, 2000, 10000, 30000, 70000, 120000, 200000, 500000, 800000, 1600000};
     private static final int[] EXP_BY_SACRIFICE = {100, 600, 3000, 15000};
 
-    public ShardProcessor() {
+    public ShardProcessor(Context context) {
+        this.context = context;
         f = NumberFormat.getNumberInstance(Locale.FRANCE);
     }
 
@@ -27,14 +32,12 @@ public class ShardProcessor {
                 amount += EXP_BY_LEVEL[i];
             }
         }
-        switch (category) {
-            case "Élite":
-            case "Elite":
-                amount *= 0.75;
-                break;
-            case "Ordinary":
-            case "Ordinaire":
-                amount *= 0.5;
+        if (context.getResources().getString(R.string.epic).equals(category)) {
+            amount *= 2;
+        } else if (context.getResources().getString(R.string.elite).equals(category)) {
+            amount *= 0.75;
+        } else if (context.getResources().getString(R.string.ordinary).equals(category)) {
+            amount *= 0.5;
         }
 
         return amount;
