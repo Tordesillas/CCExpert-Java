@@ -3,63 +3,59 @@ package fr.tordesillas.ccexpert.controller.activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.GuildWarProcessor;
 
 public class GuildWarActivity extends BaseActivity {
+    private EditText playerPower;
+    private EditText playerScore;
+    private TextView resultLabel;
+    private GuildWarProcessor gwp;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guildwar);
 
-        final GuildWarProcessor gwp = new GuildWarProcessor(getResources());
+        gwp = new GuildWarProcessor(getResources());
 
         ((TextView) findViewById(R.id.guildWarTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
-        final EditText playerPower = findViewById(R.id.playerPower);
-        final EditText playerScore = findViewById(R.id.playerScore);
-        final RadioGroup radioGroupPosition = findViewById(R.id.radioGroupPosition);
-        final EditText score = findViewById(R.id.score);
+        playerPower = findViewById(R.id.playerPower);
+        playerScore = findViewById(R.id.playerScore);
+        resultLabel = findViewById(R.id.resultLabel);
 
-        (findViewById(R.id.firstButtonGuild)).setOnClickListener(v -> {
-            if (playerPower.getText().length() <= 1 || playerScore.getText().length() <= 1) {
-                Toast.makeText(GuildWarActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
-                return;
-            }
-            createSimulatorDialog(gwp.printStats(GuildWarActivity.this,
-                    Integer.parseInt(playerPower.getText().toString()),
-                    Integer.parseInt(playerScore.getText().toString())));
-            playerPower.setText("");
-            playerScore.setText("");
-        });
+        TextWatcher listener = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-        (findViewById(R.id.secondButtonGuild)).setOnClickListener(v -> {
-            if (score.getText().toString().length() <= 1) {
-                Toast.makeText(GuildWarActivity.this, getResources().getString(R.string.missingData), Toast.LENGTH_SHORT).show();
-                return;
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                onFormChange();
             }
-            createSimulatorDialog(gwp.printFameStats(Integer.parseInt(score.getText().toString()),
-                    findPosition(radioGroupPosition.getCheckedRadioButtonId())));
-            score.setText("");
-        });
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        };
+        playerScore.addTextChangedListener(listener);
+        playerPower.addTextChangedListener(listener);
     }
 
-    private int findPosition(int id) {
-        switch (id) {
-            case R.id.radio1:
-                return 0;
-            case R.id.radio2:
-                return 1;
-            case R.id.radio3:
-                return 2;
-            case R.id.radio4:
-                return 3;
-            default:
-                return 4;
+    private void onFormChange() {
+        if (playerPower.getText().length() >= 4 && playerScore.getText().length() >= 3) {
+            resultLabel.setText(
+                    gwp.printStats(
+                            Integer.parseInt(playerPower.getText().toString()),
+                            Integer.parseInt(playerScore.getText().toString())
+                    )
+            );
+        } else {
+            resultLabel.setText("");
         }
     }
 }

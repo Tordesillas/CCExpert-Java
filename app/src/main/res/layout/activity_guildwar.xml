@@ -35,10 +35,11 @@
             android:id="@+id/playerPower"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="14sp"
             android:inputType="number"
-            android:maxLength="6"
+            android:maxLength="7"
             android:hint="@string/guildWarText2"/>
 
         <TextView
@@ -55,117 +56,20 @@
             android:id="@+id/playerScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="14sp"
             android:inputType="number"
-            android:maxLength="4"
+            android:maxLength="5"
             android:hint="@string/guildWarText4"/>
 
-        <Button
-            android:id="@+id/firstButtonGuild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@color/secondaryLightColor"
-            android:layout_marginTop="10dp"
-            android:text="@string/analyze"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"/>
-
         <TextView
-            android:id="@+id/guildPosition"
+            android:id="@+id/resultLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:text="@string/guildWarText5"/>
-
-        <RadioGroup
-            android:id="@+id/radioGroupPosition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:checkedButton="@id/radio1">
-
-            <RadioButton
-                android:id="@+id/radio1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLightColor"
-                android:textColor="@color/white"
-                android:layout_marginEnd="20dp"
-                android:text="1"/>
-
-            <RadioButton
-                android:id="@+id/radio2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLightColor"
-                android:textColor="@color/white"
-                android:layout_marginEnd="20dp"
-                android:text="2"/>
-
-            <RadioButton
-                android:id="@+id/radio3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLightColor"
-                android:textColor="@color/white"
-                android:layout_marginEnd="20dp"
-                android:text="3"/>
-
-            <RadioButton
-                android:id="@+id/radio4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLightColor"
-                android:textColor="@color/white"
-                android:layout_marginEnd="20dp"
-                android:text="4"/>
-
-            <RadioButton
-                android:id="@+id/radio5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/secondaryLightColor"
-                android:textColor="@color/white"
-                android:text="5"/>
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/scoreLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
             android:textSize="16sp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:text="@string/guildWarText3"/>
-
-        <EditText
-            android:id="@+id/score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/white"
-            android:textSize="14sp"
-            android:inputType="number"
-            android:maxLength="4"
-            android:hint="@string/guildWarText4"/>
-
-        <Button
-            android:id="@+id/secondButtonGuild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@color/secondaryLightColor"
-            android:layout_marginTop="10dp"
-            android:text="@string/analyze"/>
+            android:textColor="@color/orange"/>
     </LinearLayout>
 </ScrollView>

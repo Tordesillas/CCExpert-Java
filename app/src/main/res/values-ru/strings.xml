@@ -67,7 +67,6 @@
     <string name="guildWarText2">Введите силу игрока</string>
     <string name="guildWarText3">Очки БГ</string>
     <string name="guildWarText4">Введите очки игрока</string>
-    <string name="guildWarText5">Место гильдии</string>
 
     <string name="altarHeroes">Алтарь героев</string>
     <string name="propNotAvailable">Для этого героя нет предложений</string>
@@ -102,8 +101,6 @@
     <string name="processorText21">" атак из 10"</string>
     <string name="processorText25">"Игрок нападал на врагов с "</string>
     <string name="processorText26">" силой в среднем"</string>
-    <string name="processorText27">"С таким счетом он получит "</string>
-    <string name="processorText28">" славы"</string>
 
     <string name="heroText1">БГ - атака</string>
     <string name="heroText2">БГ - защита</string>

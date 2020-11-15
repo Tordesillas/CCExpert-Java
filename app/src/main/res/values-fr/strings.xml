@@ -67,7 +67,6 @@
     <string name="guildWarText2">Insérer la puissance du joueur</string>
     <string name="guildWarText3">Score :</string>
     <string name="guildWarText4">Insérer le score du joueur</string>
-    <string name="guildWarText5">Position de la guilde :</string>
 
     <string name="altarHeroes">"Autel des Héros  "</string>
     <string name="propNotAvailable">Il n\'y a aucune suggestion pour ce héros.</string>
@@ -102,8 +101,6 @@
     <string name="processorText21">" coups sur 10."</string>
     <string name="processorText25">"Le joueur attaque en moyenne des adversaires à "</string>
     <string name="processorText26">" de puissance."</string>
-    <string name="processorText27">"Avec un tel score, le joueur obtiendra "</string>
-    <string name="processorText28">" gloires."</string>
 
     <string name="heroText1">Mode GdG - Attaque</string>
     <string name="heroText2">Mode GdG - Défense</string>

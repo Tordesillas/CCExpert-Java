@@ -67,7 +67,6 @@
     <string name="guildWarText2">Indica el poder del jugador</string>
     <string name="guildWarText3">Puntuación:</string>
     <string name="guildWarText4">Indica la puntuación del jugador</string>
-    <string name="guildWarText5">Rango de la hermandad:</string>
 
     <string name="altarHeroes">Altar de Héroes</string>
     <string name="propNotAvailable">No existen sugerencias para este héroe.</string>
@@ -102,8 +101,6 @@
     <string name="processorText21">" golpe(s) de 10."</string>
     <string name="processorText25">"El jugador ataca en promedio oponentes con "</string>
     <string name="processorText26">" de poder."</string>
-    <string name="processorText27">"Con esta puntuación, recibirá "</string>
-    <string name="processorText28">" puntos de gloria."</string>
 
     <string name="heroText1">GdA - Ataque</string>
     <string name="heroText2">GdA - Defensa</string>

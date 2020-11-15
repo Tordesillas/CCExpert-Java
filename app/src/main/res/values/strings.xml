@@ -67,7 +67,6 @@
     <string name="guildWarText2">Insert the player\'s power</string>
     <string name="guildWarText3">Score:</string>
     <string name="guildWarText4">Insert the player\'s score</string>
-    <string name="guildWarText5">Guild position:</string>
 
     <string name="altarHeroes">Hero Altar</string>
     <string name="propNotAvailable">There is no suggestion for this hero.</string>
@@ -102,8 +101,6 @@
     <string name="processorText21">" hits on 10."</string>
     <string name="processorText25">"The player attacks on average opponents with "</string>
     <string name="processorText26">" of power."</string>
-    <string name="processorText27">"With such a score, he will get "</string>
-    <string name="processorText28">" glories."</string>
 
     <string name="heroText1">GW mode - Attack</string>
     <string name="heroText2">GW mode - Defence</string>
