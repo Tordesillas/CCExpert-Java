@@ -24,6 +24,8 @@ public class RelicActivity extends BaseActivity {
     private TextView shardAmount;
     private TextView heroCardsAmount;
     private TextView vestigeAmount;
+    private TextView legendaryMarkAmount;
+    private TextView epicMarkAmount;
     private TextView lifeAmount;
     private TextView attackAmount;
     private Toast toast;
@@ -40,8 +42,8 @@ public class RelicActivity extends BaseActivity {
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
         aimLvlPicker.setMinValue(1);
-        currentLvlPicker.setMaxValue(49);
-        aimLvlPicker.setMaxValue(50);
+        currentLvlPicker.setMaxValue(59);
+        aimLvlPicker.setMaxValue(60);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
@@ -61,6 +63,8 @@ public class RelicActivity extends BaseActivity {
         shardAmount = findViewById(R.id.shardAmount);
         heroCardsAmount = findViewById(R.id.heroCardsAmount);
         vestigeAmount = findViewById(R.id.vestigeAmount);
+        legendaryMarkAmount = findViewById(R.id.legendaryMarkAmount);
+        epicMarkAmount = findViewById(R.id.epicMarkAmount);
         lifeAmount = findViewById(R.id.hpAmount);
         attackAmount = findViewById(R.id.attackAmount);
 
@@ -87,6 +91,8 @@ public class RelicActivity extends BaseActivity {
             shardAmount.setText("0");
             heroCardsAmount.setText("0");
             vestigeAmount.setText("0");
+            legendaryMarkAmount.setText("0");
+            epicMarkAmount.setText("0");
             lifeAmount.setText("0");
             attackAmount.setText("0");
         } else {
@@ -96,6 +102,8 @@ public class RelicActivity extends BaseActivity {
             shardAmount.setText(rp.computeShards(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             heroCardsAmount.setText(rp.computeCards(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             vestigeAmount.setText(rp.computeVestiges(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            legendaryMarkAmount.setText(rp.computeLegendaryMarks(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
+            epicMarkAmount.setText(rp.computeEpicMarks(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             lifeAmount.setText(rp.computeLife(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             attackAmount.setText(rp.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
         }
