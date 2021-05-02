@@ -16,6 +16,8 @@ public class InscriptionActivity extends BaseActivity {
     private NumberPicker aimLvlPicker;
     private TextView crystalAmount;
     private TextView manaAmount;
+    private TextView diskAmount;
+    private TextView codexAmount;
     private TextView lifeAmount;
     private TextView attackAmount;
     private Toast toast;
@@ -32,8 +34,8 @@ public class InscriptionActivity extends BaseActivity {
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
         aimLvlPicker.setMinValue(1);
-        currentLvlPicker.setMaxValue(99);
-        aimLvlPicker.setMaxValue(100);
+        currentLvlPicker.setMaxValue(199);
+        aimLvlPicker.setMaxValue(200);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
@@ -42,6 +44,8 @@ public class InscriptionActivity extends BaseActivity {
 
         crystalAmount = findViewById(R.id.crystalAmount);
         manaAmount = findViewById(R.id.manaAmount);
+        diskAmount = findViewById(R.id.diskAmount);
+        codexAmount = findViewById(R.id.codexAmount);
         lifeAmount = findViewById(R.id.hpAmount);
         attackAmount = findViewById(R.id.attackAmount);
 
@@ -56,6 +60,8 @@ public class InscriptionActivity extends BaseActivity {
             }
             crystalAmount.setText("0");
             manaAmount.setText("0");
+            diskAmount.setText("0");
+            codexAmount.setText("0");
             lifeAmount.setText("0");
             attackAmount.setText("0");
         } else {
@@ -64,6 +70,8 @@ public class InscriptionActivity extends BaseActivity {
             }
             crystalAmount.setText(ip.computeCrystal(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             manaAmount.setText(ip.computeMana(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            diskAmount.setText(ip.computeDisk(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            codexAmount.setText(ip.computeCodex(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             lifeAmount.setText(ip.computeLife(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             attackAmount.setText(ip.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
         }

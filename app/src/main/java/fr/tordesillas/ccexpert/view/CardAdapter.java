@@ -43,13 +43,13 @@ public class CardAdapter extends ArrayAdapter<String> {
         } else if (title.equals(getContext().getResources().getString(R.string.simulators))) {
             return R.drawable.guild_building2;
         } else if (title.equals(getContext().getResources().getString(R.string.dungeons))) {
-            return R.drawable.dungeon;
+            return R.drawable.dungeon_door;
         } else if (title.equals(getContext().getResources().getString(R.string.guildWar))) {
             return R.drawable.guild_wars;
         } else if (title.equals(getContext().getResources().getString(R.string.shard))) {
             return R.drawable.talent_chest;
         } else if (title.equals(getContext().getResources().getString(R.string.inscription))) {
-            return R.drawable.crystal;
+            return R.drawable.inscription;
         } else if (title.equals(getContext().getResources().getString(R.string.aetherock))) {
             return R.drawable.equipment;
         } else if (title.equals(getContext().getResources().getString(R.string.dodge))) {
@@ -65,7 +65,7 @@ public class CardAdapter extends ArrayAdapter<String> {
         } else if (title.equals(getContext().getResources().getString(R.string.talents))) {
             return R.drawable.talents;
         } else if (title.equals(getContext().getResources().getString(R.string.encyclopedia))) {
-            return R.drawable.guild_building;
+            return R.drawable.opened_book;
         } else if (title.equals(getContext().getResources().getString(R.string.enchantments))) {
             return R.drawable.enchantments;
         } else if (title.equals(getContext().getResources().getString(R.string.skinTitle))) {

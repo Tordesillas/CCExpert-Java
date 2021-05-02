@@ -28,7 +28,7 @@ public class HeroesActivity extends BaseActivity {
         ((TextView) findViewById(R.id.heroesTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         final boolean[] sortedByName = {false};
-        final List[] heroes = new List[]{
+        final List<Hero>[] heroes = new List[]{
                 Sets.getInstance().getHeroSorted(true),
                 Sets.getInstance().getHeroSorted(false)
         };
