@@ -68,17 +68,14 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_shard:
                 startActivity(new Intent(this, ShardActivity.class));
                 return true;
-            case R.id.nav_crystal:
-                startActivity(new Intent(this, CrystalActivity.class));
+            case R.id.nav_inscription:
+                startActivity(new Intent(this, InscriptionActivity.class));
                 return true;
             case R.id.nav_aetherock:
                 startActivity(new Intent(this, AetherockActivity.class));
                 return true;
             case R.id.nav_dodge:
                 startActivity(new Intent(this, DodgeActivity.class));
-                return true;
-            case R.id.nav_accuracy:
-                startActivity(new Intent(this, AccuracyActivity.class));
                 return true;
             case R.id.nav_speedAttack:
                 startActivity(new Intent(this, AttackSpeedActivity.class));

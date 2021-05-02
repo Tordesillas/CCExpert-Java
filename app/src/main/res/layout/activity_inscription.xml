@@ -20,7 +20,7 @@
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
             android:paddingTop="10dp"
-            android:text="@string/crystal"/>
+            android:text="@string/inscription"/>
 
         <LinearLayout
             android:layout_width="match_parent"

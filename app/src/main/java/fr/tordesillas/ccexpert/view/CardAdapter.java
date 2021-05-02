@@ -47,23 +47,21 @@ public class CardAdapter extends ArrayAdapter<String> {
         } else if (title.equals(getContext().getResources().getString(R.string.guildWar))) {
             return R.drawable.guild_wars;
         } else if (title.equals(getContext().getResources().getString(R.string.shard))) {
-            return R.drawable.shards;
-        } else if (title.equals(getContext().getResources().getString(R.string.crystal))) {
+            return R.drawable.talent_chest;
+        } else if (title.equals(getContext().getResources().getString(R.string.inscription))) {
             return R.drawable.crystal;
         } else if (title.equals(getContext().getResources().getString(R.string.aetherock))) {
             return R.drawable.equipment;
         } else if (title.equals(getContext().getResources().getString(R.string.dodge))) {
             return R.drawable.lightning_rock;
-        } else if (title.equals(getContext().getResources().getString(R.string.accuracy))) {
-            return R.drawable.eye_of_garuda;
         } else if (title.equals(getContext().getResources().getString(R.string.attackSpeed))) {
             return R.drawable.blitz_scroll;
         } else if (title.equals(getContext().getResources().getString(R.string.destiny))) {
-            return R.drawable.karmic_rock4;
+            return R.drawable.fate;
         } else if (title.equals(getContext().getResources().getString(R.string.archdemons))) {
             return R.drawable.archdemon;
         } else if (title.equals(getContext().getResources().getString(R.string.protectors))) {
-            return R.drawable.saint;
+            return R.drawable.protectors;
         } else if (title.equals(getContext().getResources().getString(R.string.talents))) {
             return R.drawable.talents;
         } else if (title.equals(getContext().getResources().getString(R.string.encyclopedia))) {

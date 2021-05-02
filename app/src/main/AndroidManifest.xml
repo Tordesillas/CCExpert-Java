@@ -38,9 +38,8 @@
         <activity android:name=".controller.activity.HeroActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity android:name=".controller.activity.ShardActivity" />
-        <activity android:name=".controller.activity.CrystalActivity" />
+        <activity android:name=".controller.activity.InscriptionActivity" />
         <activity android:name=".controller.activity.AetherockActivity" />
-        <activity android:name=".controller.activity.AccuracyActivity" />
         <activity android:name=".controller.activity.AttackSpeedActivity" />
         <activity android:name=".controller.activity.DodgeActivity" />
         <activity android:name=".controller.activity.DestinyActivity" />

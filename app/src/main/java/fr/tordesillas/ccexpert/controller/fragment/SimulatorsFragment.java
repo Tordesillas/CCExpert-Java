@@ -13,11 +13,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.tordesillas.ccexpert.R;
-import fr.tordesillas.ccexpert.controller.activity.AccuracyActivity;
 import fr.tordesillas.ccexpert.controller.activity.AetherockActivity;
 import fr.tordesillas.ccexpert.controller.activity.AttackSpeedActivity;
 import fr.tordesillas.ccexpert.controller.activity.BreakthroughLevelsActivity;
-import fr.tordesillas.ccexpert.controller.activity.CrystalActivity;
+import fr.tordesillas.ccexpert.controller.activity.InscriptionActivity;
 import fr.tordesillas.ccexpert.controller.activity.DestinyActivity;
 import fr.tordesillas.ccexpert.controller.activity.DodgeActivity;
 import fr.tordesillas.ccexpert.controller.activity.GuildWarActivity;
@@ -47,10 +46,9 @@ public class SimulatorsFragment extends Fragment {
         final List<String> titles = Arrays.asList(
                 getResources().getString(R.string.guildWar),
                 getResources().getString(R.string.shard),
-                getResources().getString(R.string.crystal),
+                getResources().getString(R.string.inscription),
                 getResources().getString(R.string.aetherock),
                 getResources().getString(R.string.dodge),
-                getResources().getString(R.string.accuracy),
                 getResources().getString(R.string.attackSpeed),
                 getResources().getString(R.string.destiny),
                 getResources().getString(R.string.protectors),
@@ -74,7 +72,7 @@ public class SimulatorsFragment extends Fragment {
                     startActivity(new Intent(getActivity(), ShardActivity.class));
                     break;
                 case 2:
-                    startActivity(new Intent(getActivity(), CrystalActivity.class));
+                    startActivity(new Intent(getActivity(), InscriptionActivity.class));
                     break;
                 case 3:
                     startActivity(new Intent(getActivity(), AetherockActivity.class));
@@ -83,30 +81,27 @@ public class SimulatorsFragment extends Fragment {
                     startActivity(new Intent(getActivity(), DodgeActivity.class));
                     break;
                 case 5:
-                    startActivity(new Intent(getActivity(), AccuracyActivity.class));
-                    break;
-                case 6:
                     startActivity(new Intent(getActivity(), AttackSpeedActivity.class));
                     break;
-                case 7:
+                case 6:
                     startActivity(new Intent(getActivity(), DestinyActivity.class));
                     break;
-                case 8:
+                case 7:
                     startActivity(new Intent(getActivity(), ProtectorsActivity.class));
                     break;
-                case 9:
+                case 8:
                     startActivity(new Intent(getActivity(), SkinsActivity.class));
                     break;
-                case 10:
+                case 9:
                     startActivity(new Intent(getActivity(), RollActivity.class));
                     break;
-                case 11:
+                case 10:
                     startActivity(new Intent(getActivity(), PetLevelActivity.class));
                     break;
-                case 12:
+                case 11:
                     startActivity(new Intent(getActivity(), BreakthroughLevelsActivity.class));
                     break;
-                case 13:
+                case 12:
                     startActivity(new Intent(getActivity(), RelicActivity.class));
                     break;
             }

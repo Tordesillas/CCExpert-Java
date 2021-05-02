@@ -34,12 +34,6 @@
         <item>@string/ordinary</item>
     </string-array>
 
-    <string name="accuracy">Accuracy</string>
-    <string name="accuracyText1">Hero\'s basic accuracy:</string>
-    <string name="accuracyText2">Insert the hero\'s accuracy</string>
-    <string name="accuracyText3">Accuracy added by the equipments:</string>
-    <string name="accuracyText4">Insert the additional accuracy</string>
-
     <string name="aetherock">Equipment</string>
 
     <string name="spinnerText1">Current level</string>
@@ -53,7 +47,7 @@
     <string name="attackSpeedText6">Has the hero a Pumpkin Duke by his side?</string>
     <string name="attackSpeedText7">Has the hero a Michael by his side?</string>
 
-    <string name="crystal">Inscription</string>
+    <string name="inscription">Inscription</string>
 
     <string name="dodge">Dodge</string>
     <string name="dodgeText1">Hero\'s basic dodge:</string>
@@ -85,13 +79,6 @@
 
     <string name="simulationCompleted">Simulation completed</string>
 
-    <string name="processorText1">"The hero has a "</string>
-    <string name="processorText2">"% chance to hit the opposing hero. So, he has a 100% chance to reach a hero having "</string>
-    <string name="processorText3">% of dodge.</string>
-    <string name="processorText4">"Against a hero with "</string>
-    <string name="processorText5">"% of dodge, the hero will hit his target for sure with technically a probability of "</string>
-    <string name="processorText6">"% of dodge, the hero has a "</string>
-    <string name="processorText7">% chance to hit his target.</string>
     <string name="processorText11">"New attack speed: "</string>
     <string name="processorText12">"So, the hero will attack once every "</string>
     <string name="processorText13">ms.</string>

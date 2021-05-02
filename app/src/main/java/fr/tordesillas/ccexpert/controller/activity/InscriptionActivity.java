@@ -8,10 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
-import fr.tordesillas.ccexpert.controller.processor.CrystalProcessor;
+import fr.tordesillas.ccexpert.controller.processor.InscriptionProcessor;
 
-public class CrystalActivity extends BaseActivity {
-    private CrystalProcessor cp;
+public class InscriptionActivity extends BaseActivity {
+    private InscriptionProcessor ip;
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private TextView crystalAmount;
@@ -23,11 +23,11 @@ public class CrystalActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crystal);
+        setContentView(R.layout.activity_inscription);
 
         ((TextView) findViewById(R.id.crystalTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
-        cp = new CrystalProcessor();
+        ip = new InscriptionProcessor();
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
@@ -50,8 +50,8 @@ public class CrystalActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (!CrystalActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
-                toast = Toast.makeText(CrystalActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
+            if (!InscriptionActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
+                toast = Toast.makeText(InscriptionActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
                 toast.show();
             }
             crystalAmount.setText("0");
@@ -62,10 +62,10 @@ public class CrystalActivity extends BaseActivity {
             if (toast != null) {
                 toast.cancel();
             }
-            crystalAmount.setText(cp.computeCrystal(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
-            manaAmount.setText(cp.computeMana(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
-            lifeAmount.setText(cp.computeLife(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
-            attackAmount.setText(cp.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            crystalAmount.setText(ip.computeCrystal(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            manaAmount.setText(ip.computeMana(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            lifeAmount.setText(ip.computeLife(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            attackAmount.setText(ip.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
         }
     }
 

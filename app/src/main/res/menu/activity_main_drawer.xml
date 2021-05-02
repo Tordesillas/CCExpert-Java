@@ -42,17 +42,14 @@
                 android:id="@+id/nav_shard"
                 android:title="@string/shard"/>
             <item
-                android:id="@+id/nav_crystal"
-                android:title="@string/crystal" />
+                android:id="@+id/nav_inscription"
+                android:title="@string/inscription" />
             <item
                 android:id="@+id/nav_aetherock"
                 android:title="@string/aetherock" />
             <item
                 android:id="@+id/nav_dodge"
                 android:title="@string/dodge" />
-            <item
-                android:id="@+id/nav_accuracy"
-                android:title="@string/accuracy" />
             <item
                 android:id="@+id/nav_speedAttack"
                 android:title="@string/attackSpeed" />

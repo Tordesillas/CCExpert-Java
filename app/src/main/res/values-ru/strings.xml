@@ -34,12 +34,6 @@
         <item>@string/ordinary</item>
     </string-array>
 
-    <string name="accuracy">Точность</string>
-    <string name="accuracyText1">Базовая точность героя</string>
-    <string name="accuracyText2">Введите точность героя</string>
-    <string name="accuracyText3">Точность, добавленная снаряжением</string>
-    <string name="accuracyText4">Введите дополнительную точность</string>
-
     <string name="aetherock">Снаряжение</string>
 
     <string name="spinnerText1">Текущий уровень</string>
@@ -53,7 +47,7 @@
     <string name="attackSpeedText6">Есть ли в команде героя Князь Тыква?</string>
     <string name="attackSpeedText7">Есть ли в команде героя Хранитель?</string>
 
-    <string name="crystal">Просвещение</string>
+    <string name="inscription">Просвещение</string>
 
     <string name="dodge">Уклонение</string>
     <string name="dodgeText1">Базовое уклонение героя</string>
@@ -85,13 +79,6 @@
 
     <string name="simulationCompleted">Симуляция выполнена</string>
 
-    <string name="processorText1">"У героя есть "</string>
-    <string name="processorText2">"% шанс нанести удар вражескому герою. Так, у него есть 100% шанс достичь героя с "</string>
-    <string name="processorText3">% уклонения</string>
-    <string name="processorText4">"Против героя с "</string>
-    <string name="processorText5">"100% уклонения, ваш герой имеет "</string>
-    <string name="processorText6">"% уклонения, ваш герой имеет "</string>
-    <string name="processorText7">% шанс нанести удар цели</string>
     <string name="processorText11">"Новая скорость атаки: "</string>
     <string name="processorText12">"Герой будет атаковать раз в "</string>
     <string name="processorText13">мс.</string>

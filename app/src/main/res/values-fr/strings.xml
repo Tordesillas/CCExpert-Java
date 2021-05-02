@@ -34,12 +34,6 @@
         <item>@string/ordinary</item>
     </string-array>
 
-    <string name="accuracy">Précision</string>
-    <string name="accuracyText1">Précision de base du héros :</string>
-    <string name="accuracyText2">Insérer la précision du héros</string>
-    <string name="accuracyText3">Précision ajoutée par les équipements :</string>
-    <string name="accuracyText4">Insérer la précision supplémentaire</string>
-
     <string name="aetherock">Équipement</string>
 
     <string name="spinnerText1">Niveau actuel</string>
@@ -53,7 +47,7 @@
     <string name="attackSpeedText6">Le héros a t\'il à ses côté Duc ?</string>
     <string name="attackSpeedText7">Le héros a t\'il à ses côté Mickael ?</string>
 
-    <string name="crystal">Inscription</string>
+    <string name="inscription">Inscription</string>
 
     <string name="dodge">Esquive</string>
     <string name="dodgeText1">Esquive de base du héros :</string>
@@ -85,13 +79,6 @@
 
     <string name="simulationCompleted">Simulation terminée</string>
 
-    <string name="processorText1">"Le héros a "</string>
-    <string name="processorText2">"% de chance de toucher le héros adverse. Il a donc 100% de chance d\'attendre un héros possédant "</string>
-    <string name="processorText3">% d\'esquive.</string>
-    <string name="processorText4">"Contre un héros à "</string>
-    <string name="processorText5">"% d\'esquive, le héros va toucher sa cible à coup sûr avec techniquement une probabilité de "</string>
-    <string name="processorText6">"% d\'esquive, le héros a "</string>
-    <string name="processorText7">% de chance de toucher sa cible.</string>
     <string name="processorText11">"Nouvelle vitesse d\'attaque : "</string>
     <string name="processorText12">"Le héros attaquera donc une fois toutes les "</string>
     <string name="processorText13">ms.</string>
