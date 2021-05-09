@@ -54,9 +54,9 @@ public class HeroesActivity extends BaseActivity {
         gridView.setOnItemClickListener((parent, view, position, id) -> {
             Hero hero;
             if (sortedByName[0]) {
-                hero = (Hero) heroes[0].get(position);
+                hero = heroes[0].get(position);
             } else {
-                hero = (Hero) heroes[1].get(position);
+                hero = heroes[1].get(position);
             }
 
             try {
