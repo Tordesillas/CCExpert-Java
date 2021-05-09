@@ -71,7 +71,7 @@ public class RollActivity extends BaseActivity {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN: {
                     ImageView view = (ImageView) v;
-                    view.getDrawable().setColorFilter(0x77000000,PorterDuff.Mode.SRC_ATOP);
+                    view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
                     view.invalidate();
                     break;
                 }
@@ -132,6 +132,7 @@ public class RollActivity extends BaseActivity {
         gemsVal += 150;
         gemsAmount.setText(NumberFormat.getNumberInstance(Locale.FRANCE).format(gemsVal));
         HeroRoll hero = Sets.getInstance().getHeroRoll();
+        hero.incrementOccurrences();
 
         heroName.setText(hero.getName());
 

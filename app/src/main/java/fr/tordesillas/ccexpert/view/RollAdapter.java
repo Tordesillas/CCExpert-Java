@@ -35,7 +35,7 @@ public class RollAdapter extends RecyclerView.Adapter<RollAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull RollAdapter.ViewHolder viewHolder, int position) {
         HeroRoll hero = heroes.get(position);
 
-        viewHolder.heroCount.setText("x" + hero.getOccurrencesAndInc());
+        viewHolder.heroCount.setText("x" + hero.getOccurrences());
 
         String pic = hero.getPicture() + "_card";
         viewHolder.imageHero.setImageResource(context.getResources().getIdentifier(pic, "drawable", context.getPackageName()));

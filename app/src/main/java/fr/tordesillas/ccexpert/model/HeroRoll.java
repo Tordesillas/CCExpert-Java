@@ -53,9 +53,12 @@ public class HeroRoll implements Parcelable {
         return enName.toLowerCase().trim().replace(' ', '_').replace("-", "_");
     }
 
-    public int getOccurrencesAndInc() {
-        occurrences++;
+    public int getOccurrences() {
         return occurrences;
+    }
+
+    public void incrementOccurrences() {
+        occurrences++;
     }
 
     public void zeroOccurences() {
