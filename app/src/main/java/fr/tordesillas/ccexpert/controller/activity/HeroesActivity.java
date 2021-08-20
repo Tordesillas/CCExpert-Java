@@ -21,7 +21,7 @@ public class HeroesActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AdService.getInstance().showAd();
+        AdService.getInstance().showAd(this);
 
         setContentView(R.layout.activity_heroes);
 
