@@ -13,8 +13,8 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     buildToolsVersion '30.0.3'
@@ -40,7 +40,7 @@ dependencies {
 
     implementation 'com.github.PierfrancescoSoffritti:AndroidYouTubePlayer:4.1.4'
     implementation 'com.google.android.gms:play-services-ads:20.2.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.20'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21'
     implementation 'io.github.ShawnLin013:number-picker:2.4.13'
 }
 

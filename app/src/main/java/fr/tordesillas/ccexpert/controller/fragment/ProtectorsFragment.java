@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.ProtectorsProcessor;
@@ -28,7 +27,6 @@ public class ProtectorsFragment extends Fragment {
     private TextView tenacityAmount;
     private TextView critAmount;
     private TextView dmgAmount;
-    private Toast toast;
     private int position;
 
     public static ProtectorsFragment newInstance(int position) {
@@ -90,11 +88,6 @@ public class ProtectorsFragment extends Fragment {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (toast == null || !toast.getView().isShown()) {
-                toast = Toast.makeText(ProtectorsFragment.this.getActivity(), getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
-            toast.show();
             meritAmount.setText("0");
             birthrockAmount.setText("0");
             attackAmount.setText("0");
@@ -105,9 +98,6 @@ public class ProtectorsFragment extends Fragment {
             critAmount.setText("0");
             dmgAmount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             meritAmount.setText(pp.computeMerit(firstLevel, secondLevel));
@@ -120,13 +110,5 @@ public class ProtectorsFragment extends Fragment {
             critAmount.setText(pp.computeCrit(firstLevel, secondLevel));
             dmgAmount.setText(pp.computeDmg(firstLevel, secondLevel));
         }
-    }
-
-    @Override
-    public void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }
