@@ -1,12 +1,12 @@
 package fr.tordesillas.ccexpert.controller.activity;
 
-import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.DestinyProcessor;
@@ -15,6 +15,7 @@ public class DestinyActivity extends BaseActivity {
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private DestinyProcessor dp;
+    private TextView loseLevel;
     private TextView goldAmount;
     private TextView ihAmount;
     private TextView crystalsAmount;
@@ -24,9 +25,7 @@ public class DestinyActivity extends BaseActivity {
     private TextView karmic3Amount;
     private TextView karmic4Amount;
     private TextView karmic5Amount;
-    private Toast toast;
 
-    @SuppressLint("ShowToast")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,7 @@ public class DestinyActivity extends BaseActivity {
 
         dp = new DestinyProcessor();
 
+        loseLevel = findViewById(R.id.loseLevel);
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);
@@ -61,10 +61,7 @@ public class DestinyActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (!DestinyActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
-                toast = Toast.makeText(DestinyActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
+            loseLevel.setVisibility(View.VISIBLE);
             goldAmount.setText("0");
             ihAmount.setText("0");
             crystalsAmount.setText("0");
@@ -75,9 +72,7 @@ public class DestinyActivity extends BaseActivity {
             karmic4Amount.setText("0");
             karmic5Amount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             goldAmount.setText(dp.computeGold(firstLevel, secondLevel));
@@ -90,13 +85,5 @@ public class DestinyActivity extends BaseActivity {
             karmic4Amount.setText(dp.computeKarmic4(firstLevel, secondLevel));
             karmic5Amount.setText(dp.computeKarmic5(firstLevel, secondLevel));
         }
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

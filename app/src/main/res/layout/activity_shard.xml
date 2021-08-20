@@ -142,6 +142,16 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/loseLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-15dp"
+            android:text="@string/loseLevel"
+            android:textColor="@color/orange"
+            android:textSize="14sp"
+            android:visibility="invisible"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -4,10 +4,11 @@ import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
@@ -28,7 +29,7 @@ public class PetLevelActivity extends BaseActivity {
     private TextView sacrifice3Amount;
     private TextView sacrifice4Amount;
     private PetProcessor pp;
-    private Toast toast;
+    private TextView loseLevel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class PetLevelActivity extends BaseActivity {
 
         pp = new PetProcessor();
 
+        loseLevel = findViewById(R.id.loseLevel);
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);
@@ -86,10 +88,7 @@ public class PetLevelActivity extends BaseActivity {
     @SuppressLint("SetTextI18n")
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (!PetLevelActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
-                toast = Toast.makeText(PetLevelActivity.this, getResources().getString(R.string.petLoseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
+            loseLevel.setVisibility(View.VISIBLE);
             expAmount.setText("0");
             shardAmount.setText("0");
             levelNeeded.setText("0");
@@ -98,9 +97,7 @@ public class PetLevelActivity extends BaseActivity {
             sacrifice3Amount.setText("0");
             sacrifice4Amount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             expAmount.setText(pp.computeExp(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isRare.isChecked()));
             shardAmount.setText(pp.computeShard(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isRare.isChecked()));
             levelNeeded.setText(pp.computeLevelNeeded(aimLvlPicker.getValue()));
@@ -110,13 +107,5 @@ public class PetLevelActivity extends BaseActivity {
             sacrifice3Amount.setText(sacrifices[2] + "");
             sacrifice4Amount.setText(sacrifices[3] + "");
         }
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

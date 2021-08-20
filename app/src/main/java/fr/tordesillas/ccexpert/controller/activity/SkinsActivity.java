@@ -1,12 +1,12 @@
 package fr.tordesillas.ccexpert.controller.activity;
 
-import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.SkinsProcessor;
@@ -15,6 +15,7 @@ public class SkinsActivity extends BaseActivity {
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private SkinsProcessor sp;
+    private TextView loseLevel;
     private TextView shardAmount;
     private TextView scrapAmount;
     private TextView attackAmount;
@@ -23,9 +24,7 @@ public class SkinsActivity extends BaseActivity {
     private TextView accuracyAmount;
     private TextView tenacityAmount;
     private TextView critAmount;
-    private Toast toast;
 
-    @SuppressLint("ShowToast")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +34,7 @@ public class SkinsActivity extends BaseActivity {
 
         sp = new SkinsProcessor();
 
+        loseLevel = findViewById(R.id.loseLevel);
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
@@ -61,11 +61,7 @@ public class SkinsActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (toast == null || !toast.getView().isShown()) {
-                toast = Toast.makeText(SkinsActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
-            toast.show();
+            loseLevel.setVisibility(View.VISIBLE);
             shardAmount.setText("0");
             scrapAmount.setText("0");
             attackAmount.setText("0");
@@ -75,9 +71,7 @@ public class SkinsActivity extends BaseActivity {
             tenacityAmount.setText("0");
             critAmount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             shardAmount.setText(sp.computeShard(firstLevel, secondLevel));
@@ -89,13 +83,5 @@ public class SkinsActivity extends BaseActivity {
             tenacityAmount.setText(sp.computeTenacity(firstLevel, secondLevel));
             critAmount.setText(sp.computeCrit(firstLevel, secondLevel));
         }
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

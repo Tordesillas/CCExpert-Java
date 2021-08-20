@@ -4,10 +4,10 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
@@ -16,6 +16,7 @@ import fr.tordesillas.ccexpert.controller.processor.RelicProcessor;
 
 public class RelicActivity extends BaseActivity {
     private RelicProcessor rp;
+    private TextView loseLevel;
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private SwitchMaterial isEpic;
@@ -28,7 +29,6 @@ public class RelicActivity extends BaseActivity {
     private TextView epicMarkAmount;
     private TextView lifeAmount;
     private TextView attackAmount;
-    private Toast toast;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class RelicActivity extends BaseActivity {
         ((TextView) findViewById(R.id.relicTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         rp = new RelicProcessor();
+        loseLevel = findViewById(R.id.loseLevel);
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
@@ -84,10 +85,7 @@ public class RelicActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (!RelicActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
-                toast = Toast.makeText(RelicActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
+            loseLevel.setVisibility(View.VISIBLE);
             shardAmount.setText("0");
             heroCardsAmount.setText("0");
             vestigeAmount.setText("0");
@@ -96,9 +94,7 @@ public class RelicActivity extends BaseActivity {
             lifeAmount.setText("0");
             attackAmount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             shardAmount.setText(rp.computeShards(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             heroCardsAmount.setText(rp.computeCards(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             vestigeAmount.setText(rp.computeVestiges(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
@@ -107,13 +103,5 @@ public class RelicActivity extends BaseActivity {
             lifeAmount.setText(rp.computeLife(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
             attackAmount.setText(rp.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue(), isEpic.isChecked()));
         }
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

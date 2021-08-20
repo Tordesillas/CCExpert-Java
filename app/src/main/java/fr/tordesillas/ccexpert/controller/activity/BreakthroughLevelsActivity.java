@@ -1,12 +1,12 @@
 package fr.tordesillas.ccexpert.controller.activity;
 
-import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +19,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private BreakthroughLevelsProcessor blp;
+    private TextView loseLevel;
     private TextView ignitingStoneAmount;
     private TextView zenithStoneAmount;
     private TextView apexCrystalAmount;
@@ -32,9 +33,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
     private TextView accuracyAmount;
     private TextView tenacityAmount;
     private TextView critAmount;
-    private Toast toast;
 
-    @SuppressLint("ShowToast")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +43,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
 
         blp = new BreakthroughLevelsProcessor();
 
+        loseLevel = findViewById(R.id.loseLevel);
         String[] levels = generateLevelsArray();
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
@@ -78,11 +78,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (toast == null || !toast.getView().isShown()) {
-                toast = Toast.makeText(BreakthroughLevelsActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
-            toast.show();
+            loseLevel.setVisibility(View.VISIBLE);
             ignitingStoneAmount.setText("0");
             zenithStoneAmount.setText("0");
             apexCrystalAmount.setText("0");
@@ -97,9 +93,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
             tenacityAmount.setText("0");
             critAmount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             int firstLevel = currentLvlPicker.getValue();
             int secondLevel = aimLvlPicker.getValue();
             ignitingStoneAmount.setText(blp.computeIgnitingStone(firstLevel, secondLevel));
@@ -129,13 +123,5 @@ public class BreakthroughLevelsActivity extends BaseActivity {
             }
         }
         return levels.toArray(new String[0]);
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

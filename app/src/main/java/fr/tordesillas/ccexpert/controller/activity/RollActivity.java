@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -132,6 +133,10 @@ public class RollActivity extends BaseActivity {
         gemsVal += 150;
         gemsAmount.setText(NumberFormat.getNumberInstance(Locale.FRANCE).format(gemsVal));
         HeroRoll hero = Sets.getInstance().getHeroRoll();
+        if (hero == null) {
+            Toast.makeText(RollActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
+            return;
+        }
         hero.incrementOccurrences();
 
         heroName.setText(hero.getName());

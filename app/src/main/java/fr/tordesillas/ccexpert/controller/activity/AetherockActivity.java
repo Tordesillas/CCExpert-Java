@@ -3,21 +3,22 @@ package fr.tordesillas.ccexpert.controller.activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.view.View;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.AetherockProcessor;
 
 public class AetherockActivity extends BaseActivity {
     private AetherockProcessor ap;
+    private TextView loseLevel;
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private TextView aetherockAmount;
     private TextView lifeAmount;
     private TextView attackAmount;
-    private Toast toast;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class AetherockActivity extends BaseActivity {
         ((TextView) findViewById(R.id.aetherockTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         ap = new AetherockProcessor();
+        loseLevel = findViewById(R.id.loseLevel);
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
@@ -48,28 +50,15 @@ public class AetherockActivity extends BaseActivity {
 
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (!AetherockActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
-                toast = Toast.makeText(AetherockActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
+            loseLevel.setVisibility(View.VISIBLE);
             aetherockAmount.setText("0");
             lifeAmount.setText("0");
             attackAmount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             aetherockAmount.setText(ap.computeAetherock(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             lifeAmount.setText(ap.computeHealth(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             attackAmount.setText(ap.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
         }
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import fr.tordesillas.ccexpert.R;
 import fr.tordesillas.ccexpert.controller.processor.ShardProcessor;
@@ -25,7 +24,7 @@ public class ShardActivity extends BaseActivity {
     private TextView sacrifice3Amount;
     private TextView sacrifice4Amount;
     private ShardProcessor sp;
-    private Toast toast;
+    private TextView loseLevel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +34,7 @@ public class ShardActivity extends BaseActivity {
         ((TextView) findViewById(R.id.shardTitle)).setTypeface(Typeface.createFromAsset(getAssets(), "Script1Rager.otf"));
 
         sp = new ShardProcessor(getBaseContext());
+        loseLevel = findViewById(R.id.loseLevel);
         currentLvlPicker = findViewById(R.id.currentLvl);
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(1);
@@ -72,10 +72,7 @@ public class ShardActivity extends BaseActivity {
     @SuppressLint("SetTextI18n")
     private void updateNumbers() {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
-            if (!ShardActivity.this.isFinishing() && (toast == null || !toast.getView().isShown())) {
-                toast = Toast.makeText(ShardActivity.this, getResources().getString(R.string.loseLevel), Toast.LENGTH_SHORT);
-                toast.show();
-            }
+            loseLevel.setVisibility(View.VISIBLE);
             expAmount.setText("0");
             shardAmount.setText("0");
             sacrifice1Amount.setText("0");
@@ -83,9 +80,7 @@ public class ShardActivity extends BaseActivity {
             sacrifice3Amount.setText("0");
             sacrifice4Amount.setText("0");
         } else {
-            if (toast != null) {
-                toast.cancel();
-            }
+            loseLevel.setVisibility(View.INVISIBLE);
             expAmount.setText(sp.computeExp(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
             shardAmount.setText(sp.computeShard(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString()));
             int[] sacrifices = sp.computeSacrifices(currentLvlPicker.getValue(), aimLvlPicker.getValue(), heroType.getSelectedItem().toString());
@@ -94,13 +89,5 @@ public class ShardActivity extends BaseActivity {
             sacrifice3Amount.setText(sacrifices[2] + "");
             sacrifice4Amount.setText(sacrifices[3] + "");
         }
-    }
-
-    @Override
-    protected void onStop() {
-        if (toast != null) {
-            toast.cancel();
-        }
-        super.onStop();
     }
 }

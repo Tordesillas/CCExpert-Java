@@ -228,13 +228,11 @@ public class Sets {
     }
 
     public HeroRoll getHeroRoll() {
-        try {
-            Random rand = new Random();
-            int i = rand.nextInt(heroNamesSet.size());
-            return heroesRoll.get(heroNamesSet.get(i));
-        } catch (IllegalArgumentException e) {
-            return getHeroRoll();
+        if (heroNamesSet.size() <= 0) {
+            return null;
         }
+        int i = new Random().nextInt(heroNamesSet.size());
+        return heroesRoll.get(heroNamesSet.get(i));
     }
 
     public void zeroRollCounts() {
