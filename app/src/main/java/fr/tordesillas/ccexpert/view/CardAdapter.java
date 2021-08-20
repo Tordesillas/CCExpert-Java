@@ -83,7 +83,7 @@ public class CardAdapter extends ArrayAdapter<String> {
         } else if (title.equals(getContext().getResources().getString(R.string.relic))) {
             return R.drawable.relic;
         } else {
-            return R.drawable.ccexpert_logo;
+            return R.drawable.ccexpert_logo_s;
         }
     }
 }
