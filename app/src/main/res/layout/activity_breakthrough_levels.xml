@@ -224,6 +224,24 @@
                     android:layout_width="@dimen/destiny_pic_size"
                     android:layout_height="@dimen/destiny_pic_size"
                     android:layout_marginEnd="@dimen/destiny_pic_size"
+                    android:src="@drawable/magmatic_rock"/>
+
+                <TextView
+                    android:id="@+id/magmaticRockAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zero" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/destiny_pic_size"
+                    android:layout_height="@dimen/destiny_pic_size"
+                    android:layout_marginEnd="@dimen/destiny_pic_size"
                     android:src="@drawable/ih"/>
 
                 <TextView

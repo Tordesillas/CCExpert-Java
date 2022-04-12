@@ -24,6 +24,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
     private TextView zenithStoneAmount;
     private TextView apexCrystalAmount;
     private TextView capstoneRubyAmount;
+    private TextView magmaticRockAmount;
     private TextView ihAmount;
     private TextView crystalAmount;
     private TextView expAmount;
@@ -60,6 +61,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
         zenithStoneAmount = findViewById(R.id.zenithStoneAmount);
         apexCrystalAmount = findViewById(R.id.apexCrystalAmount);
         capstoneRubyAmount = findViewById(R.id.capstoneRubyAmount);
+        magmaticRockAmount = findViewById(R.id.magmaticRockAmount);
         ihAmount = findViewById(R.id.ihAmount);
         crystalAmount = findViewById(R.id.crystalAmount);
         expAmount = findViewById(R.id.expAmount);
@@ -83,6 +85,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
             zenithStoneAmount.setText("0");
             apexCrystalAmount.setText("0");
             capstoneRubyAmount.setText("0");
+            magmaticRockAmount.setText("0");
             ihAmount.setText("0");
             crystalAmount.setText("0");
             expAmount.setText("0");
@@ -100,6 +103,7 @@ public class BreakthroughLevelsActivity extends BaseActivity {
             zenithStoneAmount.setText(blp.computeZenithStone(firstLevel, secondLevel));
             apexCrystalAmount.setText(blp.computeApexCrystal(firstLevel, secondLevel));
             capstoneRubyAmount.setText(blp.computeCapstoneRuby(firstLevel, secondLevel));
+            magmaticRockAmount.setText(blp.computeMagmaticRock(firstLevel, secondLevel));
             ihAmount.setText(blp.computeIH(firstLevel, secondLevel));
             crystalAmount.setText(blp.computeCrystal(firstLevel, secondLevel));
             expAmount.setText(blp.computeExp(firstLevel, secondLevel));
@@ -113,10 +117,11 @@ public class BreakthroughLevelsActivity extends BaseActivity {
     }
 
     private String[] generateLevelsArray() {
+        int LEVEL_MAX = 40;
         List<String> levels = new ArrayList<>();
-        for (int i = 1; i <= 35; i++) {
+        for (int i = 1; i <= LEVEL_MAX; i++) {
             levels.add(i + "");
-            if (i != 35) {
+            if (i != LEVEL_MAX) {
                 for (int j = 1; j <= 5; j++) {
                     levels.add(i + "-" + j);
                 }
