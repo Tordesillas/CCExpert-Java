@@ -82,6 +82,8 @@ public class CardAdapter extends ArrayAdapter<String> {
             return R.drawable.pets;
         } else if (title.equals(getContext().getResources().getString(R.string.relic))) {
             return R.drawable.relic;
+        } else if (title.equals(getContext().getResources().getString(R.string.insignias))) {
+            return R.drawable.insignias;
         } else {
             return R.drawable.ccexpert_logo_s;
         }

@@ -25,6 +25,9 @@
                 android:id="@+id/nav_talents"
                 android:title="@string/talents" />
             <item
+                android:id="@+id/nav_insignias"
+                android:title="@string/insignias" />
+            <item
                 android:id="@+id/nav_enchantments"
                 android:title="@string/enchantments" />
             <item

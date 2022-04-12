@@ -92,6 +92,9 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_talents:
                 startActivity(new Intent(this, TalentsActivity.class));
                 return true;
+            case R.id.nav_insignias:
+                startActivity(new Intent(this, InsigniasActivity.class));
+                return true;
             case R.id.nav_enchantments:
                 startActivity(new Intent(this, EnchantmentsActivity.class));
                 return true;

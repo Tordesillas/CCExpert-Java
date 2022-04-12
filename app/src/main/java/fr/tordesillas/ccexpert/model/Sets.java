@@ -18,6 +18,7 @@ public class Sets {
     private Map<String, Hero> heroesNames;
     private List<Dungeon> dungeonSet;
     private Map<String, Talent> talents;
+    private Map<String, Insignia> insignias;
     private Map<String, Pet> pets;
     private List<Archdemon> archdemons;
     private Map<String, HeroRoll> heroesRoll;
@@ -28,6 +29,7 @@ public class Sets {
         heroesNames = new HashMap<>();
         dungeonSet = new ArrayList<>();
         talents = new HashMap<>();
+        insignias = new HashMap<>();
         pets = new HashMap<>();
         archdemons = new ArrayList<>();
         heroesRoll = new HashMap<>();
@@ -53,6 +55,10 @@ public class Sets {
 
     void addTalent(Talent talent) {
         talents.put(talent.getFrenchName(), talent);
+    }
+
+    void addInsignia(Insignia insignia) {
+        insignias.put(insignia.getFrenchName(), insignia);
     }
 
     void addPet(Pet pet) {
@@ -183,11 +189,46 @@ public class Sets {
         return talentsSorted;
     }
 
+    public List<Insignia> getInsignias() {
+        List<String> nameSorted;
+        List<Insignia> insigniasSorted = new LinkedList<>();
+
+        switch (Locale.getDefault().getISO3Language()) {
+            case "fra":
+                nameSorted = new LinkedList<>(insignias.keySet());
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    insigniasSorted.add(insignias.get(name));
+                }
+                break;
+            default:
+                Map<String, Insignia> enInsignias = new HashMap<>();
+                nameSorted = new LinkedList<>();
+                for (Insignia i : insignias.values()) {
+                    nameSorted.add(i.getEnglishName());
+                    enInsignias.put(i.getEnglishName(), i);
+                }
+                Collections.sort(nameSorted);
+                for (String name : nameSorted) {
+                    insigniasSorted.add(enInsignias.get(name));
+                }
+        }
+
+        return insigniasSorted;
+    }
+
     public Talent getTalent(String name) {
         if (talents.containsKey(name)) {
             return talents.get(name);
         }
         return talents.get(talents.keySet().iterator().next());
+    }
+
+    public Insignia getInsignia(String name) {
+        if (insignias.containsKey(name)) {
+            return insignias.get(name);
+        }
+        return insignias.get(insignias.keySet().iterator().next());
     }
 
     public List<Pet> getPets() {

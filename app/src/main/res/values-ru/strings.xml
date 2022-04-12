@@ -128,4 +128,7 @@
     <string name="recommendedModes">Рекомендуемые режимы</string>
 
     <string name="relic">Реликвии</string>
+
+    <string name="insignia">Эмблему</string>
+    <string name="insignias">Эмблемы</string>
 </resources>

@@ -128,4 +128,7 @@
     <string name="recommendedModes">Modos recomendados</string>
 
     <string name="relic">Reliquia</string>
+
+    <string name="insignia">Emblema</string>
+    <string name="insignias">Emblemas</string>
 </resources>

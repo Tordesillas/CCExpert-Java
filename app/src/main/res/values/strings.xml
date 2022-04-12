@@ -128,4 +128,7 @@
     <string name="recommendedModes">Recommended modes</string>
 
     <string name="relic">Relic</string>
+
+    <string name="insignia">Insignia</string>
+    <string name="insignias">Insignias</string>
 </resources>

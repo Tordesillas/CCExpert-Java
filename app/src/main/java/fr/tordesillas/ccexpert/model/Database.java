@@ -34,6 +34,7 @@ public class Database extends SQLiteOpenHelper {
         loadHeroes();
         loadDungeons();
         loadTalents();
+        loadInsignias();
         loadPets();
         loadArchdemons();
         loadHeroesFromRoll();
@@ -143,6 +144,21 @@ public class Database extends SQLiteOpenHelper {
                     new String[]{c.getString(13), c.getString(14), c.getString(15), c.getString(16), c.getString(17), c.getString(18), c.getString(19), c.getString(20), c.getString(21), c.getString(22)}
             );
             sets.addTalent(t);
+            c.moveToNext();
+        }
+        c.close();
+    }
+
+    private void loadInsignias() {
+        Cursor c = db.rawQuery("select * from insignias", null);
+        c.moveToFirst();
+        Insignia i;
+        while (!c.isAfterLast()) {
+            i = new Insignia(c.getString(0), c.getString(1),
+                    new String[]{c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6), c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11)},
+                    new String[]{c.getString(12), c.getString(13), c.getString(14), c.getString(15), c.getString(16), c.getString(17), c.getString(18), c.getString(19), c.getString(20), c.getString(21)}
+            );
+            sets.addInsignia(i);
             c.moveToNext();
         }
         c.close();

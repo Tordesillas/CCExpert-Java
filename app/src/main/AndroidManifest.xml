@@ -53,6 +53,8 @@
         <activity android:name=".controller.activity.PetsActivity" />
         <activity android:name=".controller.activity.PetActivity" />
         <activity android:name=".controller.activity.RelicActivity" />
+        <activity android:name=".controller.activity.InsigniasActivity" />
+        <activity android:name=".controller.activity.InsigniaActivity" />
     </application>
 
 </manifest>
