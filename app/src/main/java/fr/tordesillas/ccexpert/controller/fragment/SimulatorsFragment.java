@@ -19,7 +19,6 @@ import fr.tordesillas.ccexpert.controller.activity.BreakthroughLevelsActivity;
 import fr.tordesillas.ccexpert.controller.activity.InscriptionActivity;
 import fr.tordesillas.ccexpert.controller.activity.DestinyActivity;
 import fr.tordesillas.ccexpert.controller.activity.DodgeActivity;
-import fr.tordesillas.ccexpert.controller.activity.GuildWarActivity;
 import fr.tordesillas.ccexpert.controller.activity.PetLevelActivity;
 import fr.tordesillas.ccexpert.controller.activity.ProtectorsActivity;
 import fr.tordesillas.ccexpert.controller.activity.RelicActivity;
@@ -44,7 +43,6 @@ public class SimulatorsFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle bundle) {
         final List<String> titles = Arrays.asList(
-                getResources().getString(R.string.guildWar),
                 getResources().getString(R.string.shard),
                 getResources().getString(R.string.inscription),
                 getResources().getString(R.string.aetherock),
@@ -66,42 +64,39 @@ public class SimulatorsFragment extends Fragment {
         gridView.setOnItemClickListener((parent, v, position, id) -> {
             switch (position) {
                 case 0:
-                    startActivity(new Intent(getActivity(), GuildWarActivity.class));
-                    break;
-                case 1:
                     startActivity(new Intent(getActivity(), ShardActivity.class));
                     break;
-                case 2:
+                case 1:
                     startActivity(new Intent(getActivity(), InscriptionActivity.class));
                     break;
-                case 3:
+                case 2:
                     startActivity(new Intent(getActivity(), AetherockActivity.class));
                     break;
-                case 4:
+                case 3:
                     startActivity(new Intent(getActivity(), DodgeActivity.class));
                     break;
-                case 5:
+                case 4:
                     startActivity(new Intent(getActivity(), AttackSpeedActivity.class));
                     break;
-                case 6:
+                case 5:
                     startActivity(new Intent(getActivity(), DestinyActivity.class));
                     break;
-                case 7:
+                case 6:
                     startActivity(new Intent(getActivity(), ProtectorsActivity.class));
                     break;
-                case 8:
+                case 7:
                     startActivity(new Intent(getActivity(), SkinsActivity.class));
                     break;
-                case 9:
+                case 8:
                     startActivity(new Intent(getActivity(), RollActivity.class));
                     break;
-                case 10:
+                case 9:
                     startActivity(new Intent(getActivity(), PetLevelActivity.class));
                     break;
-                case 11:
+                case 10:
                     startActivity(new Intent(getActivity(), BreakthroughLevelsActivity.class));
                     break;
-                case 12:
+                case 11:
                     startActivity(new Intent(getActivity(), RelicActivity.class));
                     break;
             }

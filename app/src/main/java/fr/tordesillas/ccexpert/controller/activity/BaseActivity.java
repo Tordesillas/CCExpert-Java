@@ -52,70 +52,67 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_home:
-                startActivity(new Intent(this, CCExpertMain.class));
-                return true;
-            case R.id.nav_heroes:
-                startActivity(new Intent(this, HeroesActivity.class));
-                return true;
-            case R.id.nav_dungeons:
-                startActivity(new Intent(this, DungeonsActivity.class));
-                return true;
-            case R.id.nav_guildwar:
-                startActivity(new Intent(this, GuildWarActivity.class));
-                return true;
-            case R.id.nav_shard:
-                startActivity(new Intent(this, ShardActivity.class));
-                return true;
-            case R.id.nav_inscription:
-                startActivity(new Intent(this, InscriptionActivity.class));
-                return true;
-            case R.id.nav_aetherock:
-                startActivity(new Intent(this, AetherockActivity.class));
-                return true;
-            case R.id.nav_dodge:
-                startActivity(new Intent(this, DodgeActivity.class));
-                return true;
-            case R.id.nav_speedAttack:
-                startActivity(new Intent(this, AttackSpeedActivity.class));
-                return true;
-            case R.id.nav_destiny:
-                startActivity(new Intent(this, DestinyActivity.class));
-                return true;
-            case R.id.nav_archdemons:
-                startActivity(new Intent(this, ArchdemonsActivity.class));
-                return true;
-            case R.id.nav_protectors:
-                startActivity(new Intent(this, ProtectorsActivity.class));
-                return true;
-            case R.id.nav_talents:
-                startActivity(new Intent(this, TalentsActivity.class));
-                return true;
-            case R.id.nav_insignias:
-                startActivity(new Intent(this, InsigniasActivity.class));
-                return true;
-            case R.id.nav_enchantments:
-                startActivity(new Intent(this, EnchantmentsActivity.class));
-                return true;
-            case R.id.nav_skins:
-                startActivity(new Intent(this, SkinsActivity.class));
-                return true;
-            case R.id.nav_roll:
-                startActivity(new Intent(this, RollActivity.class));
-                return true;
-            case R.id.nav_pet_level:
-                startActivity(new Intent(this, PetLevelActivity.class));
-                return true;
-            case R.id.nav_breakthrough_levels:
-                startActivity(new Intent(this, BreakthroughLevelsActivity.class));
-                return true;
-            case R.id.nav_pets:
-                startActivity(new Intent(this, PetsActivity.class));
-                return true;
-            case R.id.nav_relic:
-                startActivity(new Intent(this, RelicActivity.class));
-                return true;
+        int itemId = item.getItemId();
+        if (itemId == R.id.nav_home) {
+            startActivity(new Intent(this, CCExpertMain.class));
+            return true;
+        } else if (itemId == R.id.nav_heroes) {
+            startActivity(new Intent(this, HeroesActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_dungeons) {
+            startActivity(new Intent(this, DungeonsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_shard) {
+            startActivity(new Intent(this, ShardActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_inscription) {
+            startActivity(new Intent(this, InscriptionActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_aetherock) {
+            startActivity(new Intent(this, AetherockActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_dodge) {
+            startActivity(new Intent(this, DodgeActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_speedAttack) {
+            startActivity(new Intent(this, AttackSpeedActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_destiny) {
+            startActivity(new Intent(this, DestinyActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_archdemons) {
+            startActivity(new Intent(this, ArchdemonsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_protectors) {
+            startActivity(new Intent(this, ProtectorsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_talents) {
+            startActivity(new Intent(this, TalentsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_insignias) {
+            startActivity(new Intent(this, InsigniasActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_enchantments) {
+            startActivity(new Intent(this, EnchantmentsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_skins) {
+            startActivity(new Intent(this, SkinsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_roll) {
+            startActivity(new Intent(this, RollActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_pet_level) {
+            startActivity(new Intent(this, PetLevelActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_breakthrough_levels) {
+            startActivity(new Intent(this, BreakthroughLevelsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_pets) {
+            startActivity(new Intent(this, PetsActivity.class));
+            return true;
+        } else if (itemId == R.id.nav_relic) {
+            startActivity(new Intent(this, RelicActivity.class));
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

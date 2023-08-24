@@ -44,8 +44,6 @@ public class CardAdapter extends ArrayAdapter<String> {
             return R.drawable.guild_building2;
         } else if (title.equals(getContext().getResources().getString(R.string.dungeons))) {
             return R.drawable.dungeon_door;
-        } else if (title.equals(getContext().getResources().getString(R.string.guildWar))) {
-            return R.drawable.guild_wars;
         } else if (title.equals(getContext().getResources().getString(R.string.shard))) {
             return R.drawable.talent_chest;
         } else if (title.equals(getContext().getResources().getString(R.string.inscription))) {
