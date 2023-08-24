@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 32
+    compileSdk 34
     defaultConfig {
         applicationId "fr.tordesillas.ccexpert"
-        minSdkVersion 19
-        targetSdkVersion 32
+        minSdk 19
+        targetSdk 34
         multiDexEnabled true
-        versionCode 20
-        versionName "1.8.1"
+        versionCode 21
+        versionName "1.8.2"
     }
     buildTypes {
         release {
@@ -26,22 +26,22 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.5.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    implementation 'androidx.browser:browser:1.6.0'
     implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
     implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'com.github.PierfrancescoSoffritti:AndroidYouTubePlayer:4.1.4'
-    implementation 'com.google.android.gms:play-services-ads:21.2.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21'
+    implementation 'com.google.android.gms:play-services-ads:22.3.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10'
     implementation 'io.github.ShawnLin013:number-picker:2.4.13'
 }
 
