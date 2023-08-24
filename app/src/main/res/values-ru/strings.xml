@@ -56,12 +56,6 @@
     <string name="dodgeText4">Введите дополнительное уклонение</string>
     <string name="dodgeText5">Есть ли у героя Ожог?</string>
 
-    <string name="guildWar">Битва гильдий</string>
-    <string name="guildWarText1">Сила</string>
-    <string name="guildWarText2">Введите силу игрока</string>
-    <string name="guildWarText3">Очки БГ</string>
-    <string name="guildWarText4">Введите очки игрока</string>
-
     <string name="altarHeroes">Алтарь героев</string>
     <string name="propNotAvailable">Для этого героя нет предложений</string>
 

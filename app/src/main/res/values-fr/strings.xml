@@ -56,12 +56,6 @@
     <string name="dodgeText4">Insérer l\'esquive supplémentaire</string>
     <string name="dodgeText5">Le héros possède-t\'il le talent Brûlure ?</string>
 
-    <string name="guildWar">Guerre de guilde</string>
-    <string name="guildWarText1">Puissance :</string>
-    <string name="guildWarText2">Insérer la puissance du joueur</string>
-    <string name="guildWarText3">Score :</string>
-    <string name="guildWarText4">Insérer le score du joueur</string>
-
     <string name="altarHeroes">"Autel des Héros  "</string>
     <string name="propNotAvailable">Il n\'y a aucune suggestion pour ce héros.</string>
 

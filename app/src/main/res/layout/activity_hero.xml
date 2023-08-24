@@ -58,8 +58,8 @@
                     <ImageView
                         android:id="@+id/talent1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
                         android:padding="4dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/crest1"
@@ -69,8 +69,8 @@
                     <ImageView
                         android:id="@+id/crest1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
                         android:padding="4dp"
                         app:layout_constraintStart_toEndOf="@id/talent1"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout2"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     app:layout_constraintVertical_weight="1"
                     android:background="@drawable/rectangle_corners"
                     android:padding="5dp"
@@ -106,8 +106,8 @@
                     <ImageView
                         android:id="@+id/talent2"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
                         android:padding="4dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/crest2"
@@ -117,8 +117,8 @@
                     <ImageView
                         android:id="@+id/crest2"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
                         android:padding="4dp"
                         app:layout_constraintStart_toEndOf="@id/talent2"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -153,7 +153,8 @@
                     <ImageView
                         android:id="@+id/talent3"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
                         android:adjustViewBounds="true"
                         android:padding="4dp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -164,8 +165,8 @@
                     <ImageView
                         android:id="@+id/crest3"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
                         android:padding="4dp"
                         app:layout_constraintStart_toEndOf="@id/talent3"
                         app:layout_constraintEnd_toEndOf="parent"

@@ -56,12 +56,6 @@
     <string name="dodgeText4">Indica la evasión adicional</string>
     <string name="dodgeText5">¿ Tiene el héroe el talento Quemar ?</string>
 
-    <string name="guildWar">Guerra de alianzas</string>
-    <string name="guildWarText1">Poder:</string>
-    <string name="guildWarText2">Indica el poder del jugador</string>
-    <string name="guildWarText3">Puntuación:</string>
-    <string name="guildWarText4">Indica la puntuación del jugador</string>
-
     <string name="altarHeroes">Altar de Héroes</string>
     <string name="propNotAvailable">No existen sugerencias para este héroe.</string>
 

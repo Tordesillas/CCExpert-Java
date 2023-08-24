@@ -56,12 +56,6 @@
     <string name="dodgeText4">Insert the additional dodge</string>
     <string name="dodgeText5">Has the hero the talent Scorch?</string>
 
-    <string name="guildWar">Guild war</string>
-    <string name="guildWarText1">Power:</string>
-    <string name="guildWarText2">Insert the player\'s power</string>
-    <string name="guildWarText3">Score:</string>
-    <string name="guildWarText4">Insert the player\'s score</string>
-
     <string name="altarHeroes">Hero Altar</string>
     <string name="propNotAvailable">There is no suggestion for this hero.</string>
 

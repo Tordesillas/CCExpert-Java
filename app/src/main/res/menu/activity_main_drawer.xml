@@ -39,9 +39,6 @@
     <item android:title="@string/simulators">
         <menu>
             <item
-                android:id="@+id/nav_guildwar"
-                android:title="@string/guildWar" />
-            <item
                 android:id="@+id/nav_shard"
                 android:title="@string/shard"/>
             <item

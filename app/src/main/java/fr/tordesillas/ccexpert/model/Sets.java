@@ -218,17 +218,11 @@ public class Sets {
     }
 
     public Talent getTalent(String name) {
-        if (talents.containsKey(name)) {
-            return talents.get(name);
-        }
-        return talents.get(talents.keySet().iterator().next());
+        return talents.get(name);
     }
 
     public Insignia getInsignia(String name) {
-        if (insignias.containsKey(name)) {
-            return insignias.get(name);
-        }
-        return insignias.get(insignias.keySet().iterator().next());
+        return insignias.get(name);
     }
 
     public List<Pet> getPets() {
@@ -269,7 +263,7 @@ public class Sets {
     }
 
     public HeroRoll getHeroRoll() {
-        if (heroNamesSet.size() <= 0) {
+        if (heroNamesSet.size() == 0) {
             return null;
         }
         int i = new Random().nextInt(heroNamesSet.size());
