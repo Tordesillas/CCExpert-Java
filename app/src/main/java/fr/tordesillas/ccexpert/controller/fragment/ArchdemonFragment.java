@@ -59,7 +59,7 @@ public class ArchdemonFragment extends Fragment {
             ((ImageView) rootView.findViewById(R.id.crest4)).setImageResource(getResources().getIdentifier(archdemon.getCrest(3).getCrestResource(), "drawable", getActivity().getPackageName()));
             ((ImageView) rootView.findViewById(R.id.crest5)).setImageResource(getResources().getIdentifier(archdemon.getCrest(4).getCrestResource(), "drawable", getActivity().getPackageName()));
             ((ImageView) rootView.findViewById(R.id.crest6)).setImageResource(getResources().getIdentifier(archdemon.getCrest(5).getCrestResource(), "drawable", getActivity().getPackageName()));
-        } catch (ArrayIndexOutOfBoundsException ignored) {}
+        } catch (ArrayIndexOutOfBoundsException | NullPointerException ignored) {}
 
         return rootView;
     }

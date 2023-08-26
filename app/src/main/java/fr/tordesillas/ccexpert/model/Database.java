@@ -106,14 +106,15 @@ public class Database extends SQLiteOpenHelper {
 
         while (!c.isAfterLast()) {
             enchantments = new ArrayList<>();
-            for (int i = 13; i <= 15; i++) {
+            for (int i = 16; i <= 18; i++) {
                 if (!c.isNull(i)) {
                     enchantments.add(c.getString(i));
                 }
             }
 
             hero = new Hero(c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5), c.getString(6),
-                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12), enchantments);
+                    c.getString(7), c.getString(8), c.getString(9), c.getString(10), c.getString(11), c.getString(12),
+                    c.getString(13), c.getString(14), c.getString(15), enchantments);
             sets.addHero(hero, c.getInt(0));
 
             c.moveToNext();

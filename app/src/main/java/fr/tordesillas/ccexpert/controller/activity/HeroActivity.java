@@ -60,30 +60,45 @@ public class HeroActivity extends BaseActivity {
 
         try {
             int resTalent1 = getResources().getIdentifier(hero.getTalentGwAttack(), "drawable", getPackageName());
-            int resCrest1 = getResources().getIdentifier(hero.getCrestGwAttack(), "drawable", getPackageName());
-
             ((ImageView) findViewById(R.id.talent1)).setImageResource(resTalent1);
+
+            int resCrest1 = getResources().getIdentifier(hero.getCrestGwAttack(), "drawable", getPackageName());
             ((ImageView) findViewById(R.id.crest1)).setImageResource(resCrest1);
+
+            try {
+                int resInsignia1 = getResources().getIdentifier(hero.getInsigniaGwAttack(), "drawable", getPackageName());
+                ((ImageView) findViewById(R.id.insignia1)).setImageResource(resInsignia1);
+            } catch (NullPointerException ignored) {}
         } catch (NullPointerException e) {
             findViewById(R.id.layout1).setVisibility(View.INVISIBLE);
         }
 
         try {
             int resTalent2 = getResources().getIdentifier(hero.getTalentGwDefense(), "drawable", getPackageName());
-            int resCrest2 = getResources().getIdentifier(hero.getCrestGwDefense(), "drawable", getPackageName());
-
             ((ImageView) findViewById(R.id.talent2)).setImageResource(resTalent2);
+
+            int resCrest2 = getResources().getIdentifier(hero.getCrestGwDefense(), "drawable", getPackageName());
             ((ImageView) findViewById(R.id.crest2)).setImageResource(resCrest2);
+
+            try {
+                int resInsignia2 = getResources().getIdentifier(hero.getInsigniaGwDefense(), "drawable", getPackageName());
+                ((ImageView) findViewById(R.id.insignia2)).setImageResource(resInsignia2);
+            } catch (NullPointerException ignored) {}
         } catch (NullPointerException e) {
             findViewById(R.id.layout2).setVisibility(View.INVISIBLE);
         }
 
         try {
             int resTalent3 = getResources().getIdentifier(hero.getTalentDungeon(), "drawable", getPackageName());
-            int resCrest3 = getResources().getIdentifier(hero.getCrestDungeon(), "drawable", getPackageName());
-
             ((ImageView) findViewById(R.id.talent3)).setImageResource(resTalent3);
+
+            int resCrest3 = getResources().getIdentifier(hero.getCrestDungeon(), "drawable", getPackageName());
             ((ImageView) findViewById(R.id.crest3)).setImageResource(resCrest3);
+
+            try {
+                int resInsignia3 = getResources().getIdentifier(hero.getInsigniaDungeon(), "drawable", getPackageName());
+                ((ImageView) findViewById(R.id.insignia3)).setImageResource(resInsignia3);
+            } catch (NullPointerException ignored) {}
         } catch (NullPointerException e) {
             findViewById(R.id.layout3).setVisibility(View.INVISIBLE);
         }

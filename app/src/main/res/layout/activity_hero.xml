@@ -52,6 +52,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold|italic"
+                        android:paddingBottom="4dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -59,8 +60,8 @@
                         android:id="@+id/talent1"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
-                        android:padding="4dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/crest1"
                         app:layout_constraintTop_toBottomOf="@id/textGWA"
@@ -70,9 +71,20 @@
                         android:id="@+id/crest1"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
-                        android:padding="4dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
                         app:layout_constraintStart_toEndOf="@id/talent1"
+                        app:layout_constraintEnd_toEndOf="@id/insignia1"
+                        app:layout_constraintTop_toBottomOf="@id/textGWA"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/insignia1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
+                        app:layout_constraintStart_toEndOf="@id/crest1"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textGWA"
                         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -100,6 +112,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold|italic"
+                        android:paddingBottom="4dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -107,8 +120,8 @@
                         android:id="@+id/talent2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
-                        android:padding="4dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/crest2"
                         app:layout_constraintTop_toBottomOf="@id/textGWD"
@@ -118,9 +131,20 @@
                         android:id="@+id/crest2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
-                        android:padding="4dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
                         app:layout_constraintStart_toEndOf="@id/talent2"
+                        app:layout_constraintEnd_toEndOf="@id/insignia2"
+                        app:layout_constraintTop_toBottomOf="@id/textGWD"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/insignia2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
+                        app:layout_constraintStart_toEndOf="@id/crest2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textGWD"
                         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -147,6 +171,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold|italic"
+                        android:paddingBottom="4dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -156,7 +181,7 @@
                         android:layout_height="0dp"
                         app:layout_constraintDimensionRatio="1"
                         android:adjustViewBounds="true"
-                        android:padding="4dp"
+                        android:padding="2dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/crest3"
                         app:layout_constraintTop_toBottomOf="@id/textD"
@@ -166,9 +191,20 @@
                         android:id="@+id/crest3"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        app:layout_constraintDimensionRatio="1"                        android:adjustViewBounds="true"
-                        android:padding="4dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
                         app:layout_constraintStart_toEndOf="@id/talent3"
+                        app:layout_constraintEnd_toEndOf="@id/insignia3"
+                        app:layout_constraintTop_toBottomOf="@id/textD"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/insignia3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
+                        android:padding="2dp"
+                        app:layout_constraintStart_toEndOf="@id/crest3"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textD"
                         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -195,14 +231,15 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold|italic"
+                        android:paddingBottom="4dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
                     <ImageView
                         android:id="@+id/enchantment1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
                         android:padding="2dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/enchantment2"
@@ -212,8 +249,8 @@
                     <ImageView
                         android:id="@+id/enchantment2"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
                         android:padding="2dp"
                         app:layout_constraintStart_toEndOf="@id/enchantment1"
                         app:layout_constraintEnd_toStartOf="@id/enchantment3"
@@ -223,8 +260,8 @@
                     <ImageView
                         android:id="@+id/enchantment3"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1"
                         android:padding="2dp"
                         app:layout_constraintStart_toEndOf="@id/enchantment2"
                         app:layout_constraintEnd_toEndOf="parent"
