@@ -11,7 +11,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="122dp"
-            android:background="@color/colorPrimaryDark" >
+            android:background="@color/black" >
 
             <ImageView
                 android:id="@+id/imageHero"
