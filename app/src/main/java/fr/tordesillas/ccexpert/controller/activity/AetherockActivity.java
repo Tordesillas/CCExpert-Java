@@ -17,6 +17,7 @@ public class AetherockActivity extends BaseActivity {
     private NumberPicker currentLvlPicker;
     private NumberPicker aimLvlPicker;
     private TextView aetherockAmount;
+    private TextView equipmentTomeAmount;
     private TextView lifeAmount;
     private TextView attackAmount;
 
@@ -33,8 +34,8 @@ public class AetherockActivity extends BaseActivity {
         aimLvlPicker = findViewById(R.id.aimLvl);
         currentLvlPicker.setMinValue(0);
         aimLvlPicker.setMinValue(1);
-        currentLvlPicker.setMaxValue(19);
-        aimLvlPicker.setMaxValue(20);
+        currentLvlPicker.setMaxValue(59);
+        aimLvlPicker.setMaxValue(60);
         currentLvlPicker.setWrapSelectorWheel(true);
         aimLvlPicker.setWrapSelectorWheel(true);
 
@@ -42,6 +43,7 @@ public class AetherockActivity extends BaseActivity {
         aimLvlPicker.setOnValueChangedListener((numberPicker, i, i1) -> updateNumbers());
 
         aetherockAmount = findViewById(R.id.aetherockAmount);
+        equipmentTomeAmount = findViewById(R.id.equipmentTomeAmount);
         lifeAmount = findViewById(R.id.hpAmount);
         attackAmount = findViewById(R.id.attackAmount);
 
@@ -52,11 +54,13 @@ public class AetherockActivity extends BaseActivity {
         if (currentLvlPicker.getValue() > aimLvlPicker.getValue()) {
             loseLevel.setVisibility(View.VISIBLE);
             aetherockAmount.setText("0");
+            equipmentTomeAmount.setText("0");
             lifeAmount.setText("0");
             attackAmount.setText("0");
         } else {
             loseLevel.setVisibility(View.INVISIBLE);
             aetherockAmount.setText(ap.computeAetherock(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
+            equipmentTomeAmount.setText(ap.computeEquipmentTome(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             lifeAmount.setText(ap.computeHealth(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
             attackAmount.setText(ap.computeAttack(currentLvlPicker.getValue(), aimLvlPicker.getValue()));
         }
